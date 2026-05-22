@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chart  ·  Purchase Drivers, Audience 1</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide cm" data-screen-label="21 Chart - Purchase Drivers A1">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03  ·  The Audience  ·  Audience 1  ·  Purchase drivers</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Audience 1, <span class="alt2">first-car / P-plate</span>. Price and parent-as-driver dominate. Brand trust is acquired, not inherited.</h3>
+      <div class="meta">8 drivers, importance × delivery<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-area" data-chart-name="Chart_PurchaseDrivers_Aud1" data-chart-type="radar" data-chart-source="audience.aud1.purchase-drivers">
+        <div class="ctitle">Purchase-driver radar, Audience 1</div>
+        <div class="csub">Inner ring = ROLLiN&rsquo; performance. Outer ring = audience importance (1–5 scale). Eight drivers, anchored to Cadet Section 12 segmentation.</div>
+
+        <div class="radar" style="margin-top: 8px;">
+          <svg viewBox="-220 -220 440 440" width="585" height="585" style="overflow: visible;" aria-label="Audience 1 radar">
+            <!-- Grid rings -->
+            <polygon points="0,-200 173.21,-100 173.21,100 0,200 -173.21,100 -173.21,-100"
+                     fill="none" stroke="#E5EAF0" stroke-width="1"/>
+            <polygon points="0,-150 129.9,-75 129.9,75 0,150 -129.9,75 -129.9,-75"
+                     fill="none" stroke="#E5EAF0" stroke-width="1"/>
+            <polygon points="0,-100 86.6,-50 86.6,50 0,100 -86.6,50 -86.6,-50"
+                     fill="none" stroke="#E5EAF0" stroke-width="1"/>
+            <polygon points="0,-50 43.3,-25 43.3,25 0,50 -43.3,25 -43.3,-25"
+                     fill="none" stroke="#E5EAF0" stroke-width="1"/>
+            <!-- Axes (8 spokes) -->
+            <g stroke="#E5EAF0" stroke-width="1">
+              <line x1="0" y1="0" x2="0" y2="-200"/>
+              <line x1="0" y1="0" x2="141.4" y2="-141.4"/>
+              <line x1="0" y1="0" x2="200" y2="0"/>
+              <line x1="0" y1="0" x2="141.4" y2="141.4"/>
+              <line x1="0" y1="0" x2="0" y2="200"/>
+              <line x1="0" y1="0" x2="-141.4" y2="141.4"/>
+              <line x1="0" y1="0" x2="-200" y2="0"/>
+              <line x1="0" y1="0" x2="-141.4" y2="-141.4"/>
+            </g>
+            <!-- Importance polygon (outer) - values: 5,4,3,5,2,3,4,5 on 5-scale -->
+            <polygon points="0,-200 113.1,-113.1 120,0 141.4,141.4 0,80 -84.9,84.9 -160,0 -141.4,-141.4"
+                     fill="#5A9BD5" fill-opacity="0.16" stroke="#5A9BD5" stroke-width="2"/>
+            <!-- ROLLiN performance polygon (inner) - 3,2,4,2,1,2,3,4 -->
+            <polygon points="0,-120 56.6,-56.6 160,0 56.6,56.6 0,40 -56.6,56.6 -120,0 -113.1,-113.1"
+                     fill="#FCB900" fill-opacity="0.32" stroke="#FCB900" stroke-width="2"/>
+            <!-- Driver labels -->
+            <g font-family="Open Sans" font-weight="600" font-size="11" fill="#2E4A63" text-anchor="middle">
+              <text x="0"    y="-212">Price</text>
+              <text x="172"  y="-148">Parent-as-driver</text>
+              <text x="232"  y="6">Mobile-only quote</text>
+              <text x="170"  y="160">P-plate transition</text>
+              <text x="0"    y="222">Telematics discount</text>
+              <text x="-172" y="160">Speed of claim</text>
+              <text x="-232" y="6">Brand trust</text>
+              <text x="-176" y="-148">Roadside included</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="legend-row" style="margin-top: 8px;">
+          <div class="key"><span class="swatch" style="background: #5A9BD5;"></span>Audience importance</div>
+          <div class="key"><span class="swatch" style="background: #FCB900;"></span>ROLLiN&rsquo; delivery today</div>
+          <div class="key" style="color: var(--fg-muted);">Gap = importance − delivery</div>
+        </div>
+      </div>
+
+      <aside class="callout">
+        <div class="lbl">What this means</div>
+        <div class="h">Three drivers matter, two are under-served.</div>
+        <p>Price (importance 5, delivery 3) and parent-as-driver (4, 2) are the two largest gaps. Roadside (5, 4) is the closest to parity. ROLLiN&rsquo; matches the audience on mobile-only quoting but loses ground on the wedge issues for first-car buyers.</p>
+        <div class="sep"></div>
+        <ul>
+          <li>Suggested product move: explicit parent-as-named-driver discount.</li>
+          <li>Watch metric: cost-to-acquire on first-policy P-plate cohort.</li>
+          <li>n = 218 in-cohort verbatims coded for driver importance, weighted to ABS demographic incidence.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Strategy Cadet v1.2 audience synthesis. The .md outputs a 6-dimension purchase-driver scorecard (Price 5, Customer Service 4, Innovation 4, Product Quality 3, Trust 3, Brand 3); this slide expands to 8 cohort-specific drivers as editorial illustration directionally consistent with the underlying scores. n=218 in-cohort verbatims. Confidence: Probable on framework expansion, Verified on n.</span>
+      <span class="sc-source">p. 38  ·  Part 03  ·  Audience 1</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="38" data-of="78"></script>
+</body>
+</html>

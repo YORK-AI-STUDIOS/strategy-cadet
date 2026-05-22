@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Table — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .tbl .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .tbl .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .tbl .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+  .tbl-wrap { margin-top: 24px; flex: 1; min-height: 0; }
+  .tbl-wrap table { table-layout: fixed; }
+  .tbl-wrap table td.brand { font-weight: 700; color: var(--fg-heading); }
+  .tbl-wrap table td.brand .sub { display:block; font: 400 11px/1.4 var(--font-sans); color: var(--fg-muted); margin-top:3px; }
+  .tbl-wrap .pos-pill { display:inline-flex; align-items:center; height: 18px; padding: 0 8px; font: 700 10px/1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 2px; }
+  .pos-pill.def { background: #EAF1F8; color: var(--mr-blue-dark); }
+  .pos-pill.exp { background: #FFF4D6; color: #8A6500; }
+  .pos-pill.und { background: #FDE6E8; color: var(--mr-red); }
+  .pos-pill.mix { background: #ECEFF3; color: var(--fg-heading); }
+  .footnotes { display:flex; gap: 28px; flex-wrap:wrap; margin-top: 12px; font: var(--t-source); color: var(--fg-muted); }
+  .footnotes .fn { max-width: 280px; }
+  .footnotes .fn .m { font-weight: 700; margin-right: 4px; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide tbl" data-screen-label="07 Data Table">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  ESOV scorecard</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Two competitors are in expansion mode. ROLLiN&rsquo; is under-indexed in the same window. Voice does not match its award shelf.</h3>
+      <div class="meta">Six competitors, scored<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="sc-table">
+        <colgroup>
+          <col style="width: 18%;">
+          <col style="width: 9%;">
+          <col style="width: 9%;">
+          <col style="width: 8%;">
+          <col style="width: 9%;">
+          <col style="width: 11%;">
+          <col style="width: 11%;">
+          <col style="width: 25%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th class="num">Est. SoM<sup>*</sup></th>
+            <th class="num">SoV (Nielsen)<sup>†</sup></th>
+            <th class="num">ESOV</th>
+            <th class="num">SoS, 12-mo</th>
+            <th class="num">SoS delta</th>
+            <th>Posture</th>
+            <th>Read</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="brand">Youi<span class="sub">OUTsurance Holdings (RMI)</span></td>
+            <td class="num">~5.0%</td>
+            <td class="num">14.2%</td>
+            <td class="num delta-pos">+9.2 pp</td>
+            <td class="num">7.9%</td>
+            <td class="num delta-pos">+2.1 pp</td>
+            <td><span class="pos-pill exp">Expansion</span></td>
+            <td>#1 insurance advertiser, AU. Pushing for structural share gain on personalised-pricing platform.</td>
+          </tr>
+          <tr>
+            <td class="brand">Budget Direct<span class="sub">Auto &amp; General (BHL)</span></td>
+            <td class="num">~12.0%</td>
+            <td class="num">11.8%</td>
+            <td class="num">−0.2 pp</td>
+            <td class="num">21.5%</td>
+            <td class="num">0.0 pp</td>
+            <td><span class="pos-pill def">Defense</span></td>
+            <td>19th consecutive Canstar value award. Spend is calibrated to defend, not to expand.</td>
+          </tr>
+          <tr>
+            <td class="brand">NRMA Insurance<span class="sub">IAG (sibling)</span></td>
+            <td class="num">~18.0%</td>
+            <td class="num">12.6%</td>
+            <td class="num">−5.4 pp</td>
+            <td class="num">9.7%</td>
+            <td class="num">0.0 pp</td>
+            <td><span class="pos-pill def">Defense</span></td>
+            <td>Centenary &ldquo;Lighthouse&rdquo; brand film. Calibrated to defend NSW/ACT dominance.</td>
+          </tr>
+          <tr>
+            <td class="brand">AAMI<span class="sub">Suncorp Group</span></td>
+            <td class="num">~16.5%</td>
+            <td class="num">10.4%</td>
+            <td class="num">−6.1 pp</td>
+            <td class="num">12.1%</td>
+            <td class="num">0.0 pp</td>
+            <td><span class="pos-pill def">Defense</span></td>
+            <td>&ldquo;Lucky You&rdquo; platform + mobile-first redesign Jan 2024. Investing in digital parity.</td>
+          </tr>
+          <tr>
+            <td class="brand">Bingle<span class="sub">Suncorp Group</span></td>
+            <td class="num">~2.0%</td>
+            <td class="num">2.1%</td>
+            <td class="num">+0.1 pp</td>
+            <td class="num">4.6%</td>
+            <td class="num delta-neg">−0.2 pp</td>
+            <td><span class="pos-pill und">Under-indexed</span></td>
+            <td>&ldquo;No Fluffy Bits&rdquo; relaunch, Jul 2025. Watch for Expansion-mode pivot inside 12 mo.</td>
+          </tr>
+          <tr>
+            <td class="brand">Coles Insurance<span class="sub">Auto &amp; General</span></td>
+            <td class="num">~3.0%</td>
+            <td class="num">0.8%</td>
+            <td class="num delta-neg">−2.2 pp</td>
+            <td class="num">1.0%</td>
+            <td class="num delta-pos">+0.2 pp</td>
+            <td><span class="pos-pill und">Under-indexed</span></td>
+            <td>Distribution-led, no dedicated app. Acquires through supermarket flywheel, not voice.</td>
+          </tr>
+          <tr class="is-total">
+            <td class="brand">ROLLiN&rsquo;<span class="sub" style="color: var(--mr-red);">IAG  ·  This report</span></td>
+            <td class="num">n/d<sup>‡</sup></td>
+            <td class="num">~0.4%</td>
+            <td class="num delta-neg">~−0.5 pp</td>
+            <td class="num">0.8%</td>
+            <td class="num delta-neg">−0.3 pp</td>
+            <td><span class="pos-pill und">Under-indexed</span></td>
+            <td><strong>Awards parity, voice deficit.</strong> A larger entrant can replicate the value position with media weight ROLLiN&rsquo; cannot match.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footnotes">
+        <span class="fn"><span class="m">*</span>Share of Market estimated from APRA general-insurance GWP filings and analyst commentary; not disclosed at sub-brand level for IAG or Suncorp.</span>
+        <span class="fn"><span class="m">†</span>Nielsen Ad Intel, Sep 2024 – Aug 2025, AU insurance category. Share of total category ad spend.</span>
+        <span class="fn"><span class="m">‡</span>ROLLiN&rsquo; SoM is not publicly disclosed; IAG does not break out sub-brand GWP. Confidence: Uncertain.</span>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Nielsen Ad Intel AU; Canstar &amp; Finder 2025–26 awards databases; Google Trends; APRA general-insurance returns Q3 2025; mediaweek.com.au; insurancebusinessmag.com.au. Compiled by Strategy Cadet v1.2.</span>
+      <span class="sc-source">p. 66  ·  Part 05  ·  ESOV scorecard</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="66" data-of="78"></script>
+</body>
+</html>

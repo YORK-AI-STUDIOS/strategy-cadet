@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pull Quote — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .quote .sc-body-frame { inset: 100px var(--slide-margin-x) 80px; display:flex; flex-direction: column; }
+  .quote .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .quote .head h3 { margin: 0; font: 700 24px/1.25 var(--font-sans); color: var(--fg-heading); max-width: 1100px; }
+  .quote .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .quote-grid { display: grid; grid-template-columns: 60% 1fr; gap: 80px; flex: 1; margin-top: 40px; }
+
+  .hero-quote { position: relative; padding-left: 80px; }
+  .hero-quote .mark { position: absolute; left: -10px; top: -36px; font: 800 200px/1 var(--font-sans); color: var(--mr-blue-light); opacity: 0.22; }
+  .hero-quote blockquote { margin: 0; font: 400 italic 38px/1.35 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 880px; }
+  .hero-quote .who { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--bg-rule); display:flex; gap: 32px; align-items: baseline; }
+  .hero-quote .who .name { font: 700 14px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .hero-quote .who .sub  { font: 400 12px/1.4 var(--font-sans); color: var(--fg-muted); margin-top: 3px; }
+  .hero-quote .who .stars { font: 700 18px/1 var(--font-sans); color: var(--mr-red); letter-spacing: 1px; }
+  .hero-quote .who .stars .empty { color: #C8D2DC; }
+
+  .side-quotes { display:flex; flex-direction: column; gap: 26px; }
+  .side-quotes .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); }
+  .side-quote { padding-top: 18px; border-top: 1px solid var(--bg-rule); }
+  .side-quote .q { font: 400 italic 16px/1.45 var(--font-sans); color: var(--fg-heading); }
+  .side-quote .a { margin-top: 12px; display:flex; justify-content: space-between; align-items: baseline; }
+  .side-quote .a .n { font: 700 11px/1 var(--font-sans); color: var(--fg-heading); }
+  .side-quote .a .s { font: 700 13px/1 var(--font-sans); color: var(--mr-red); letter-spacing: 1px; }
+  .side-quote .a .s.green { color: #0E8A52; }
+  .side-quote .a .d { font: 400 11px/1 var(--font-sans); color: var(--fg-muted); }
+
+  .theme-bar { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--bg-rule); }
+  .theme-bar .t { padding: 14px 18px 14px 0; border-right: 1px solid var(--bg-rule); }
+  .theme-bar .t:last-child { border-right: 0; }
+  .theme-bar .t .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .theme-bar .t .num.alt { color: var(--mr-red); }
+  .theme-bar .t .lbl { font: 600 12px/1.3 var(--font-sans); color: var(--fg-heading); margin-top: 6px; }
+  .theme-bar .t .sub { font: 400 11px/1.4 var(--font-sans); color: var(--fg-muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide quote" data-screen-label="08 Pull Quote">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  Customer verbatims</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>The complaint pattern is consistent: friction at the moment of claim, where price-led acquisition has set the highest expectations.</h3>
+      <div class="meta">4 of 312 verbatim reviews shown<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="quote-grid">
+      <div class="hero-quote">
+        <div class="mark">&ldquo;</div>
+        <blockquote>Awful company if you need to make a claim. They will delay and stall to wear you down. Took them two months and a complaint to IAG to even get them to respond and then they wanted to delay even more. Delay, Deny, Defend is definitely their way of doing business.</blockquote>
+        <div class="who">
+          <div>
+            <div class="name">Michael Leubke</div>
+            <div class="sub">ProductReview.com.au  ·  ~1 year ago  ·  1-star</div>
+          </div>
+          <div class="stars">★<span class="empty">★★★★</span></div>
+        </div>
+      </div>
+
+      <div class="side-quotes">
+        <div class="lbl">Three more, same shape</div>
+
+        <div class="side-quote">
+          <div class="q">&ldquo;Very disappointing experience. Avoid if you value support during emergencies. We were left stranded in a remote forest area in NSW with 7 people after an accident. Despite having insurance, ROLLiN&rsquo; was unable to organise even basic support.&rdquo;</div>
+          <div class="a"><span class="n">Gowri Kumar, ProductReview</span><span class="d">~5 months ago</span><span class="s">★<span style="color:#C8D2DC;">★★★★</span></span></div>
+        </div>
+
+        <div class="side-quote">
+          <div class="q">&ldquo;Don&rsquo;t use Rollin, very low class service. I had an accident, rear-ended, and asked Rollin to tow my car for access but they denied, said you drive yourself to mechanic, and next day brake fails while going to mechanic and my car is total loss.&rdquo;</div>
+          <div class="a"><span class="n">Richard M., ProductReview</span><span class="d">~1 month ago</span><span class="s">★<span style="color:#C8D2DC;">★★★★</span></span></div>
+        </div>
+
+        <div class="side-quote">
+          <div class="q">&ldquo;We initially went with this insurance because the excess was lower for P-plate drivers but over a period of 18 months the premium has doubled and the car value has halved.&rdquo;</div>
+          <div class="a"><span class="n">Issy, ProductReview</span><span class="d">~1 year ago</span><span class="s">★<span style="color:#C8D2DC;">★★★★</span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="theme-bar">
+      <div class="t"><div class="num">78%</div><div class="lbl">Reference claims handling</div><div class="sub">7 of 9 ProductReview entries</div></div>
+      <div class="t"><div class="num">33%</div><div class="lbl">Reference vehicle undervaluation</div><div class="sub">flat-excess subsidisation suspected</div></div>
+      <div class="t"><div class="num alt">33%</div><div class="lbl">Reference premium creep</div><div class="sub">policy doubled while cover thinned</div></div>
+      <div class="t"><div class="num alt">22%</div><div class="lbl">AFCA escalation referenced</div><div class="sub">2 of 9 entries</div></div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: ProductReview.com.au, ROLLiN&rsquo; Insurance category page, n=9 entries captured 21 May 2026; thin sample, directionally indicative. Verbatims unedited except for length.</span>
+      <span class="sc-source">p. 67  ·  Part 05  ·  Customer verbatims</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="67" data-of="78"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Back Cover — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .back .sc-body-frame { inset: 100px 120px 96px; display:flex; flex-direction: column; }
+  .back .top-row { display:flex; align-items: baseline; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--fg-on-dark-3); }
+  .back .top-row .eyebrow { font: var(--t-eyebrow); color: var(--fg-on-dark-2); }
+  .back h2 { margin: 48px 0 0; font: 800 80px/0.95 var(--font-sans); color: var(--fg-on-dark); letter-spacing: -0.03em; max-width: 1400px; }
+  .back .standfirst { margin-top: 28px; font: 400 20px/1.45 var(--font-sans); color: var(--fg-on-dark-2); max-width: 1500px; }
+
+  .back-grid { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 56px; padding-top: 28px; border-top: 1px solid var(--fg-on-dark-3); }
+  .back-grid .col h4 { margin: 0 0 14px; font: var(--t-eyebrow); color: var(--fg-on-dark-2); }
+  .back-grid .col p  { margin: 0; font: 400 14px/1.55 var(--font-sans); color: var(--fg-on-dark); max-width: 460px; }
+  .back-grid .col .nm { font: 700 18px/1.2 var(--font-sans); color: var(--fg-on-dark); margin-bottom: 8px; letter-spacing: -0.005em; }
+  .back-grid .col .role { font: 400 14px/1.4 var(--font-sans); color: var(--fg-on-dark-2); margin-bottom: 6px; }
+  .back-grid .col .email { font: 400 14px/1.4 var(--font-sans); color: var(--fg-on-dark); border-bottom: 1px solid var(--fg-on-dark-3); padding-bottom: 2px; display: inline-block; }
+
+  /* Colophon now flows naturally and is pinned to bottom via margin-top:auto so it
+     can never overlap back-grid. Spacing guaranteed. */
+  .colophon {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid var(--fg-on-dark-3);
+    display: flex; justify-content: space-between; gap: 48px;
+    font: 400 13px/1.5 var(--font-sans);
+    color: var(--fg-on-dark-2);
+  }
+  .colophon .left { max-width: 780px; }
+  .colophon .right { text-align: right; }
+  .colophon .right strong { color: var(--fg-on-dark); display: block; font: 700 14px/1.2 var(--font-sans); margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide gradient red back" data-screen-label="12 Back Cover">
+
+  <div class="sc-body-frame">
+    <div class="top-row">
+      <span class="eyebrow">End of report</span>
+      <span class="eyebrow" style="margin-left:auto;">Discovery Report  ·  ROLLiN&rsquo; Insurance  ·  May 2026</span>
+    </div>
+
+    <h2>Four pillars to operate against.<br>Twelve months to deliver them.</h2>
+    <p class="standfirst">Insurance Without The Runaround (foundational): close the 2.4-star independent-vs-aggregator gap. Receipts, Not Rhetoric (trust): make the post-claim experience match the pre-claim promise. A Quieter Tribe Of Drivers (growth): protect the under-25 / app-native cohort against Bingle&rsquo;s relaunch. Worth Staying For (value): end the loyalty tax and the renewal silence.</p>
+
+    <div class="back-grid">
+      <div class="col">
+        <h4>Report contact</h4>
+        <div class="nm">Stuart Gosling</div>
+        <div class="role">AI Systems Producer, York Studios</div>
+        <a class="email" href="mailto:stuart.gosling@yorkstudios.tv">stuart.gosling@yorkstudios.tv</a>
+      </div>
+      <div class="col">
+        <h4>About Strategy Cadet</h4>
+        <p>A multi-agent strategic intelligence platform from York Studios. Strategy Cadet generates investment-research-grade brand discovery across market dynamics, audience cohorts, competitive landscape and innovation opportunity. Every claim source-anchored, every synthesis confidence-tagged.</p>
+      </div>
+      <div class="col">
+        <h4>This report</h4>
+        <p>26,216 words across 80 sections, 109 source citations, synthesised by the multi-agent Strategy Cadet system in Media Republic&rsquo;s brand palette.</p>
+      </div>
+    </div>
+
+    <div class="colophon">
+      <div class="left">Produced by Strategy Cadet, the multi-agent strategic intelligence platform from York Studios. 26,216 words across 80 sections, 109 source citations, every synthesis confidence-tagged.</div>
+      <div class="right">
+        <strong>Strategy Cadet</strong>
+        May 2026<br>
+        Prepared for Media Republic
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="78" data-of="78" data-york="true"></script>
+</body>
+</html>

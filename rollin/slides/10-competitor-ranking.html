@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Competitor Ranking — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .rank .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .rank .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .rank .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .rank-table { margin-top: 18px; flex: 1; min-height: 0; }
+  .rank-row {
+    display: grid;
+    grid-template-columns: 38px 72px 1fr 200px 200px 160px;
+    align-items: center;
+    gap: 22px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--bg-rule);
+  }
+  .rank-row.head-row {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--fg-heading);
+    font: 600 11px/1.3 var(--font-sans);
+    color: var(--fg-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .rank-row .rnk { font: 800 26px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .rank-row .logo {
+    width: 64px; height: 64px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--bg-rule);
+    border-radius: 50%;
+    background: #FAFBFD;
+    overflow: hidden;
+  }
+  .rank-row .logo .mono {
+    font: 700 16px/1 var(--font-sans);
+    letter-spacing: -0.02em;
+    color: var(--fg-heading);
+    text-align: center;
+  }
+  .rank-row .logo .mono small { display:block; font: 400 7px/1.2 var(--font-sans); color: var(--fg-muted); letter-spacing: 0.06em; margin-top: 3px; }
+  .rank-row .mono.amber { color: #D9A000; }
+  .rank-row .mono.red   { color: var(--mr-red); }
+  .rank-row .mono.green { color: #0E8A52; }
+  .rank-row .mono.coles { color: #E01A1C; }
+
+  .rank-row .body { }
+  .rank-row .body .nm { font: 700 17px/1.15 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .rank-row .body .pos { font: 400 12.5px/1.4 var(--font-sans); color: var(--fg-body); margin-top: 4px; max-width: 560px; }
+
+  .rank-row .stats { display:flex; gap: 22px; }
+  .rank-row .stats .s { display:flex; flex-direction:column; gap:2px; }
+  .rank-row .stats .v { font: 700 16px/1 var(--font-sans); color: var(--fg-heading); }
+  .rank-row .stats .l { font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .esov-pill { display:inline-flex; align-items:center; height: 24px; padding: 0 12px; font: 700 11px/1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 2px; }
+  .esov-pill.exp { background: #FFF4D6; color: #8A6500; }
+  .esov-pill.def { background: #EAF1F8; color: var(--mr-blue-dark); }
+  .esov-pill.und { background: #FDE6E8; color: var(--mr-red); }
+
+  .esov-cell { display:flex; flex-direction: column; gap: 8px; }
+  .esov-cell .note { font: 400 11px/1.3 var(--font-sans); color: var(--fg-muted); }
+
+  .rank-row.is-subject { background: linear-gradient(90deg, #FFF9E6 0%, transparent 60%); padding-left: 12px; margin-left: -12px; margin-right: -12px; padding-right: 12px; }
+  .rank-row.is-subject .rnk { color: var(--mr-red); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide rank" data-screen-label="10 Competitor Ranking">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  Six competitors</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Six brands, three postures. The expansion-mode players are the immediate threat to ROLLiN&rsquo;s value position.</h3>
+      <div class="meta">Ranked by ESOV impact<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="rank-table">
+      <div class="rank-row head-row">
+        <div>#</div><div>&nbsp;</div><div>Brand &amp; positioning</div><div>Key metrics</div><div>ESOV posture</div><div>SoS / 12-mo</div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">01</div>
+        <div class="logo"><div class="mono amber">Youi<small>★</small></div></div>
+        <div class="body">
+          <div class="nm">Youi</div>
+          <div class="pos">Personalised pricing for individual driving profile. South-African owned (OUTsurance / RMI). #1 AU insurance advertiser by Nielsen, Sep 24 – Aug 25. Finder Best Features 2026.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~5.0%</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">14.2%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill exp">Expansion +9.2pp</span><span class="note">Pushing for structural share gain.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">7.9%</strong> <span style="color: #0E8A52; font-weight: 700;">▲ +2.1pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">02</div>
+        <div class="logo"><div class="mono">BD<small>BUDGET DIRECT</small></div></div>
+        <div class="body">
+          <div class="nm">Budget Direct</div>
+          <div class="pos">Auto &amp; General / BHL Group. 19th consecutive Canstar national value award. Most-awarded AU insurer. Ranked 17th in Nielsen&rsquo;s top 20 AU advertisers, 2025.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~12.0%</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">11.8%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill def">Defense −0.2pp</span><span class="note">Spend calibrated to defend.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">21.5%</strong> <span style="color: #6B7480; font-weight: 700;">0.0pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">03</div>
+        <div class="logo"><div class="mono" style="color:#0033A0;">NRMA</div></div>
+        <div class="body">
+          <div class="nm">NRMA Insurance</div>
+          <div class="pos">IAG flagship retail brand. Centenary &ldquo;Lighthouse&rdquo; film 2025. Surfing Australia partnership. Dominant in NSW/ACT, building national relevance.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~18.0%</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">12.6%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill def">Defense −5.4pp</span><span class="note">Brand-building, not share-grabbing.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">9.7%</strong> <span style="color: #6B7480; font-weight: 700;">0.0pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">04</div>
+        <div class="logo"><div class="mono" style="color:#003F87;">AAMI</div></div>
+        <div class="body">
+          <div class="nm">AAMI</div>
+          <div class="pos">Suncorp&rsquo;s largest consumer brand. &ldquo;Lucky You&rdquo; platform. Suncorp AUD 560m digital upgrade, late 2024. Mobile-first quote redesigned Jan 2024.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~16.5%</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">10.4%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill def">Defense −6.1pp</span><span class="note">Investing in digital parity.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">12.1%</strong> <span style="color: #6B7480; font-weight: 700;">0.0pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">05</div>
+        <div class="logo"><div class="mono green">Bingle</div></div>
+        <div class="body">
+          <div class="nm">Bingle</div>
+          <div class="pos">Suncorp Group, online-only. &ldquo;No Fluffy Bits&rdquo; relaunch with Leo Australia, July 2025. Finder Best Low Cost 2025 + Canstar national. The watch-this-space brand.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~2.0%</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">2.1%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill und">Under-indexed +0.1pp</span><span class="note">May pivot to Expansion in 12 mo.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">4.6%</strong> <span style="color: var(--mr-red); font-weight: 700;">▼ −0.2pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">06</div>
+        <div class="logo"><div class="mono coles">coles</div></div>
+        <div class="body">
+          <div class="nm">Coles Insurance</div>
+          <div class="pos">Auto &amp; General underwritten, Flybuys-integrated. Finder Best Features + Best Low Cost 2026. Distribution-led, no dedicated app.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~3.0%</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">0.8%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill und">Under-indexed −2.2pp</span><span class="note">Acquires through supermarket flywheel.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">1.0%</strong> <span style="color: #0E8A52; font-weight: 700;">▲ +0.2pp</span></div>
+      </div>
+
+      <div class="rank-row is-subject">
+        <div class="rnk">·</div>
+        <div class="logo"><div class="mono red">ROLLiN&rsquo;</div></div>
+        <div class="body">
+          <div class="nm">ROLLiN&rsquo; Insurance  <span style="font: 600 11px/1 var(--font-sans); color: var(--mr-red); text-transform: uppercase; letter-spacing: 0.08em; margin-left: 8px;">This report</span></div>
+          <div class="pos">IAG digital challenger. Awards parity (Canstar national + 5 state, Mozo 2025) but voice deficit. The structural risk is replication, not preference.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">n/d</span><span class="l">Est. SoM</span></div>
+          <div class="s"><span class="v">~0.4%</span><span class="l">SoV</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill und">Under-indexed ~−0.5pp</span><span class="note">Awards strong, voice weak.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--mr-red);">0.8%</strong> <span style="color: var(--mr-red); font-weight: 700;">▼ −0.3pp</span></div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Nielsen Ad Intel, Sep 2024 – Aug 2025; Canstar &amp; Finder 2025–26 awards; Mozo Experts Choice 2025; mi-3.com.au; mediaweek.com.au. ROLLiN&rsquo; SoM not publicly disclosed (IAG does not break out sub-brand GWP). Synthesis: Strategy Cadet v1.2. Logo placeholders shown as monograms pending licensed brand assets.</span>
+      <span class="sc-source">p. 60  ·  Part 05  ·  Six competitors</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="60" data-of="78"></script>
+</body>
+</html>

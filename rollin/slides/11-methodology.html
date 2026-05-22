@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Methodology — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .meth .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .meth .head .head-text { flex: 1; }
+  .meth .head h3 { margin: 0 0 10px; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .meth .head .head-sub { margin: 0; font: 400 14px/1.5 var(--font-sans); color: var(--fg-body); max-width: 1100px; }
+  .meth .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); white-space: nowrap; }
+
+  .meth-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .agents { display:flex; flex-direction: column; gap: 0; }
+  .agents .row { display: grid; grid-template-columns: 64px 1fr 130px; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--bg-rule); }
+  .agents .row:last-child { border-bottom: 0; }
+  .agents .row .tag { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .agents .row .nm { font: 700 15px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .agents .row .nm .sub { display: block; font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .agents .row .det { text-align: right; }
+  .agents .row .det .v { font: 700 13px/1 var(--font-sans); color: var(--fg-heading); }
+  .agents .row .det .l { font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+
+  .integrity { display:flex; flex-direction: column; gap: 14px; }
+  .integrity .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); margin-bottom: 4px; }
+  .integrity h4 { margin: 0; font: 700 24px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; }
+  .integrity p  { margin: 0; font: 400 13.5px/1.55 var(--font-sans); color: var(--fg-body); }
+
+  .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; margin-top: 12px; }
+  .checks .c { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: baseline; font: 400 12.5px/1.45 var(--font-sans); color: var(--fg-body); }
+  .checks .c .ck { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.06em; }
+
+  .chip-legend { display:flex; gap: 28px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--bg-rule); }
+  .chip-legend .item { display: flex; flex-direction: column; gap: 6px; max-width: 200px; }
+  .chip-legend .item .row { display:flex; align-items: baseline; gap: 8px; }
+  .chip-legend .item .pct { font: 800 28px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.02em; }
+  .chip-legend .item .body { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+
+  .bigstats { position: absolute; left: var(--slide-margin-x); bottom: 96px; right: var(--slide-margin-x); display:grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--fg-heading); padding-top: 14px; }
+  .bigstats .b { padding-right: 24px; border-right: 1px solid var(--bg-rule); }
+  .bigstats .b:last-child { border-right: 0; }
+  .bigstats .b .v { font: 800 36px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+  .bigstats .b .l { font: 600 12px/1.3 var(--font-sans); color: var(--fg-heading); margin-top: 6px; }
+  .bigstats .b .s { font: 400 11px/1.4 var(--font-sans); color: var(--fg-muted); margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide meth" data-screen-label="11 Methodology">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Methodology  ·  How this was made</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="head-text">
+        <h3>How this was made: four agents, one integrity check, every claim source-anchored.</h3>
+        <p class="head-sub">Strategy Cadet runs on a combination of locally-hosted AI models and frontier-class API models, orchestrated as a multi-agent and sub-agent process.</p>
+      </div>
+      <div class="meta">Strategy Cadet  ·  May 2026</div>
+    </div>
+
+    <div class="meth-grid">
+      <div class="agents">
+        <div class="lbl" style="font: var(--t-eyebrow); color: var(--mr-blue-dark); margin-bottom: 14px;">Four-agent process</div>
+
+        <div class="row">
+          <div class="tag">A</div>
+          <div class="nm">Company &amp; Market Research<span class="sub">Quick facts, six competitors, industry drivers, macroeconomic, market size, ESOV. Parallel with B + C.</span></div>
+          <div class="det"><div class="v">Phase 1</div><div class="l">23 sections</div></div>
+        </div>
+        <div class="row">
+          <div class="tag">B</div>
+          <div class="nm">Brand DNA &amp; Messaging<span class="sub">16-prompt brand DNA, three-theme messaging, strategy pillars, five actions. Parallel with A + C.</span></div>
+          <div class="det"><div class="v">Phase 1</div><div class="l">18 sections</div></div>
+        </div>
+        <div class="row">
+          <div class="tag">C</div>
+          <div class="nm">Audience &amp; Cultural Signals<span class="sub">Three target audiences (verbatim-named for D), cultural signals, customer problem, value prop. Parallel with A + B.</span></div>
+          <div class="det"><div class="v">Phase 1</div><div class="l">22 sections</div></div>
+        </div>
+        <div class="row">
+          <div class="tag">D</div>
+          <div class="nm">Where to Play &amp; Innovation<span class="sub">Brand opportunity, Deloitte Ten Types innovation builder × C&rsquo;s audiences, business planning. Sequential after C closes.</span></div>
+          <div class="det"><div class="v">Phase 2</div><div class="l">17 sections</div></div>
+        </div>
+      </div>
+
+      <div class="integrity">
+        <div class="lbl">Integrity check, nine criteria</div>
+        <h4>Every synthesis claim carries a confidence chip. Every chip is auditable to its source.</h4>
+        <p>Before assembly, the report runs through a nine-point integrity pass. Claims that fail any check are demoted from <em>Verified</em> to <em>Probable</em> or <em>Uncertain</em>, and the failure is documented inline in the citation index.</p>
+
+        <div class="checks">
+          <div class="c"><span class="ck">01</span><span>Primary-source presence (URL accessible, not paywalled-only).</span></div>
+          <div class="c"><span class="ck">02</span><span>Two-source agreement on quantitative figures.</span></div>
+          <div class="c"><span class="ck">03</span><span>Date stamp on every cited dataset.</span></div>
+          <div class="c"><span class="ck">04</span><span>Methodology disclosed by source publisher.</span></div>
+          <div class="c"><span class="ck">05</span><span>No LLM-only claim without &ldquo;Probable&rdquo; chip.</span></div>
+          <div class="c"><span class="ck">06</span><span>No claim about private financials of subsidiaries.</span></div>
+          <div class="c"><span class="ck">07</span><span>Citation index covers 100% of synthesis claims.</span></div>
+          <div class="c"><span class="ck">08</span><span>Data gaps explicit, not glossed.</span></div>
+          <div class="c"><span class="ck">09</span><span>Confidence chip distribution disclosed on this page.</span></div>
+        </div>
+
+        <div class="chip-legend">
+          <div class="item">
+            <span class="sc-chip sc-chip--verified">Verified</span>
+            <div class="row"><span class="pct">62%</span></div>
+            <div class="body">Primary source + secondary corroboration.</div>
+          </div>
+          <div class="item">
+            <span class="sc-chip sc-chip--probable">Probable</span>
+            <div class="row"><span class="pct">28%</span></div>
+            <div class="body">Single source or analyst inference.</div>
+          </div>
+          <div class="item">
+            <span class="sc-chip sc-chip--uncertain">Uncertain</span>
+            <div class="row"><span class="pct">10%</span></div>
+            <div class="body">Inference, training-data, or partial data.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bigstats">
+      <div class="b"><div class="v">26,216</div><div class="l">Words</div><div class="s">End-to-end report length.</div></div>
+      <div class="b"><div class="v">80</div><div class="l">Sections</div><div class="s">Across five parts plus appendices.</div></div>
+      <div class="b"><div class="v">109</div><div class="l">Citations</div><div class="s">Indexed in appendix, grouped by part.</div></div>
+      <div class="b"><div class="v">~3 hrs</div><div class="l">Generation time</div><div class="s">From brand brief to draft deliverable.</div></div>
+      <div class="b"><div class="v">TBC</div><div class="l">Marginal cost</div><div class="s">Per-report pricing model under review.</div></div>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="76" data-of="78"></script>
+</body>
+</html>

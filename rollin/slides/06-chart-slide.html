@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chart Slide — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .chart .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .chart .head h3 { margin: 0; font: 700 32px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .chart .head h3 .alt { color: var(--mr-red); }
+  .chart .head h3 .alt2 { color: var(--mr-blue-dark); }
+  .chart .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .chart-grid { display: grid; grid-template-columns: 1fr 380px; gap: 56px; flex: 1; margin-top: 28px; }
+  .chart-area { display: flex; flex-direction: column; }
+  .chart-area .ctitle { font: 600 13px/1.3 var(--font-sans); color: var(--fg-heading); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .chart-area .csub   { font: 400 12px/1.3 var(--font-sans); color: var(--fg-muted); margin-bottom: 24px; }
+
+  /* Horizontal bar chart */
+  .bar-rows { display: flex; flex-direction: column; gap: 14px; }
+  .bar-row { display: grid; grid-template-columns: 180px 1fr 80px; gap: 16px; align-items: center; }
+  .bar-row .name { font: 600 14px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .bar-row .name .sub { display:block; font: 400 11px/1.3 var(--font-sans); color: var(--fg-muted); margin-top:2px; }
+  .bar-row .bar-wrap { position: relative; height: 28px; }
+  .bar-row .bar { height: 28px; background: var(--mr-blue-dark); position: relative; }
+  .bar-row .bar.alt { background: var(--mr-blue-light); }
+  .bar-row .bar.hero { background: #FCB900; }
+  .bar-row .bar.neg  { background: var(--mr-red); }
+  .bar-row .bar.muted { background: #C8D2DC; }
+  .bar-row .bar .data-label {
+    position: absolute; right: -56px; top: 50%; transform: translateY(-50%);
+    font: 700 14px/1 var(--font-sans); color: var(--fg-heading);
+  }
+  .bar-row .bar .data-label.inside {
+    right: 10px; color: var(--fg-on-dark);
+  }
+  .bar-row .delta { font: 700 12px/1 var(--font-sans); color: var(--fg-muted); white-space: nowrap; }
+  .bar-row .delta.up   { color: #0E8A52; }
+  .bar-row .delta.down { color: var(--mr-red); }
+
+  .x-axis { display:flex; justify-content: space-between; margin-top: 18px; padding-left: 196px; padding-right: 96px; }
+  .x-axis span { font: var(--t-caption); color: var(--fg-muted); }
+  .x-grid { position: absolute; inset: 0; pointer-events: none; }
+
+  .callout {
+    background: #F4F7FB;
+    padding: 22px 24px;
+    border-left: 3px solid var(--mr-blue-dark);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .callout .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); }
+  .callout .h { font: 700 18px/1.3 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .callout p { margin: 0; font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); }
+  .callout .sep { height: 1px; background: var(--bg-rule); }
+  .callout ul { margin: 0; padding-left: 18px; font: 400 12.5px/1.5 var(--font-sans); color: var(--fg-body); }
+  .callout ul li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide chart" data-screen-label="06 Chart Slide">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  Share of search</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Budget Direct owns the value segment&rsquo;s mind. ROLLiN&rsquo; <span class="alt">trails the field at 0.8%</span>, despite winning every value award on offer.</h3>
+      <div class="meta">Finding 14 of 23<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-area">
+        <div class="ctitle">Share of search, AU car insurance, 12-month average</div>
+        <div class="csub">% share of category-relevant search volume, normalised. n=18 brands tracked, top 8 shown.</div>
+
+        <div class="bar-rows" data-chart-name="Chart_ShareOfSearch" data-chart-source="googletrends.brand-search-share.12mo">
+          <div class="bar-row">
+            <div class="name">Budget Direct<span class="sub">Auto &amp; General  ·  Defense</span></div>
+            <div class="bar-wrap"><div class="bar alt" style="width:86%;"><span class="data-label inside">21.5%</span></div></div>
+            <div class="delta">0.0 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name">AAMI<span class="sub">Suncorp  ·  Defense</span></div>
+            <div class="bar-wrap"><div class="bar alt" style="width:48.4%;"><span class="data-label inside">12.1%</span></div></div>
+            <div class="delta">0.0 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name">NRMA Insurance<span class="sub">IAG  ·  Defense</span></div>
+            <div class="bar-wrap"><div class="bar alt" style="width:38.8%;"><span class="data-label inside">9.7%</span></div></div>
+            <div class="delta">0.0 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name">Youi<span class="sub">OUTsurance  ·  Expansion</span></div>
+            <div class="bar-wrap"><div class="bar alt" style="width:31.6%;"><span class="data-label inside">7.9%</span></div></div>
+            <div class="delta up">+2.1 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name">Bingle<span class="sub">Suncorp  ·  Under-indexed</span></div>
+            <div class="bar-wrap"><div class="bar muted" style="width:18.4%;"><span class="data-label">4.6%</span></div></div>
+            <div class="delta down">−0.2 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name">Coles Insurance<span class="sub">Auto &amp; General  ·  Under-indexed</span></div>
+            <div class="bar-wrap"><div class="bar muted" style="width:4.0%;"><span class="data-label">1.0%</span></div></div>
+            <div class="delta up">+0.2 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name">RACV<span class="sub">Mutual  ·  Defense</span></div>
+            <div class="bar-wrap"><div class="bar muted" style="width:3.6%;"><span class="data-label">0.9%</span></div></div>
+            <div class="delta">0.0 pp</div>
+          </div>
+          <div class="bar-row">
+            <div class="name" style="color: var(--mr-red);"><strong>ROLLiN&rsquo;</strong><span class="sub" style="color: var(--mr-red);">IAG  ·  Under-indexed</span></div>
+            <div class="bar-wrap"><div class="bar hero" style="width:3.2%;"><span class="data-label">0.8%</span></div></div>
+            <div class="delta down">−0.3 pp</div>
+          </div>
+        </div>
+
+        <div class="x-axis"><span>0%</span><span>5%</span><span>10%</span><span>15%</span><span>20%</span><span>25%</span></div>
+      </div>
+
+      <aside>
+        <div class="callout">
+          <div class="lbl">What this means</div>
+          <div class="h">A 20-point demand-capture deficit against the value-segment leader.</div>
+          <p>Budget Direct&rsquo;s 21.5% share of search is structural, the product of 19 consecutive Canstar national awards plus consistent above-the-line spend. ROLLiN&rsquo;s 0.8% is not a positioning failure, it is an awareness failure.</p>
+          <div class="sep"></div>
+          <ul>
+            <li>Awards parity already achieved (Canstar, Mozo, Finder 2025–26).</li>
+            <li>Voice gap is the binding constraint, not preference.</li>
+            <li>Risk: Bingle&rsquo;s &ldquo;No Fluffy Bits&rdquo; relaunch may compress this window inside twelve months.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Google Trends 12-month average (May 2025 – Apr 2026), brand-name + category-modifier query basket; share normalised to top-18 AU motor insurance brands. Delta vs prior 12-mo window. Synthesis: Strategy Cadet v1.2.</span>
+      <span class="sc-source">p. 64  ·  Part 05  ·  Share of search</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="64" data-of="78"></script>
+</body>
+</html>

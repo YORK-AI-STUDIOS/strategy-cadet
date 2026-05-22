@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strategy Cadet — Rollin Insurance Deck</title>
+<link rel="stylesheet" href="deck-viewer.css">
+</head>
+<body>
+
+<div class="stage">
+  <iframe class="slide-frame" id="slideFrame" src="slides/01-cover.html" tabindex="-1"></iframe>
+</div>
+
+<div class="iframe-shield" id="iframeShield" title="Click to advance"></div>
+
+<div class="progress" id="progress"><div class="progress-bar" id="progressBar" style="width: 4.3%;"></div></div>
+
+<div class="deck-tag" id="deckTag">ROLLiN&rsquo; Insurance</div>
+
+<div class="chrome" id="chrome">
+  <button class="btn" id="prev" title="Previous (←)">‹</button>
+  <button class="btn" id="next" title="Next (→ or space)">›</button>
+  <div class="counter"><span id="curIdx">1</span> <span class="total" id="totalSlides">/ 23</span></div>
+  <button class="btn wide" id="grid" title="Grid overview (G)">GRID</button>
+  <button class="btn wide" id="full" title="Fullscreen (F)">FULL</button>
+  <div class="title" id="slideTitle">Cover</div>
+</div>
+
+<div class="help-tag" id="helpTag">←  →  Space  ·  F fullscreen  ·  G grid  ·  Esc  ·  Click slide to advance</div>
+
+<div class="grid-overlay" id="gridOverlay">
+  <div class="close-row">
+    <div>
+      <h1>Strategy Cadet — ROLLiN&rsquo; Insurance · 23 slides</h1>
+      <div class="sub">Click any thumbnail to jump · Press G or Esc to return</div>
+    </div>
+    <button class="btn" id="gridClose" style="margin-left:auto;" title="Close (Esc)">✕</button>
+  </div>
+  <div class="grid" id="thumbGrid"></div>
+</div>
+
+<script>
+window.DECK_CONFIG = {
+  base: 'slides/',
+  slides: [
+    { file: '01-cover.html',                       title: 'Cover — A digital challenger, structurally at risk', label: 'Cover' },
+    { file: '03-executive-summary.html',           title: 'Five things to act on now',                       label: 'Exec summary' },
+    { file: '02-section-divider.html',             title: 'Part 01 — The Market',                            label: 'Section divider' },
+    { file: '04-standard-content.html',            title: 'Premium inflation is doing the marketing work',   label: 'Drivers' },
+    { file: '13-chart-market-size.html',           title: 'AU motor AUD 22.6B, 6.34% CAGR',                  label: 'Market size' },
+    { file: '09-four-panel.html',                  title: 'Four strategy pillars',                           label: 'Pillars' },
+    { file: '21-chart-purchase-drivers-aud1.html', title: 'First-car / P-plate drivers',                     label: 'Aud 1' },
+    { file: '22-chart-purchase-drivers-aud2.html', title: 'App-native millennial urban renters',             label: 'Aud 2' },
+    { file: '23-chart-purchase-drivers-aud3.html', title: 'Cost-conscious gig + side-hustle workers',        label: 'Aud 3' },
+    { file: '10-competitor-ranking.html',          title: 'Six brands, three postures',                      label: 'Ranking' },
+    { file: '05-kpi-hero.html',                    title: 'Customers love the price, not the claim',         label: 'Reviews KPI' },
+    { file: '06-chart-slide.html',                 title: "Budget Direct owns the value segment's mind",     label: 'SoS chart' },
+    { file: '14-chart-esov-quadrant.html',         title: "Youi in expansion; ROLLiN' under-indexed",        label: 'ESOV quadrant' },
+    { file: '07-data-table.html',                  title: 'ESOV scorecard, 6 competitors',                   label: 'ESOV table' },
+    { file: '08-pull-quote.html',                  title: 'Delay, Deny, Defend',                             label: 'Verbatims' },
+    { file: '15-chart-geo-donut.html',             title: '3/8 PRIMARY + 5/8 SECONDARY + 0 BURIED',          label: 'GEO donut' },
+    { file: '16-chart-ad-format-mix.html',         title: 'Zero broadcast = zero reach above niche-digital', label: 'Ad mix' },
+    { file: '17-chart-brand-vs-activation.html',   title: 'Brand : Activation 40 : 60 (inverted)',           label: 'Brand vs act.' },
+    { file: '18-chart-social-followers.html',      title: 'Comparable to Bingle, fraction of Budget Direct', label: 'Social' },
+    { file: '19-chart-news-activity.html',         title: '10 events, zero crises in 12 months',             label: 'News' },
+    { file: '20-chart-reviews-stars.html',         title: 'The 2.4-star independent-vs-aggregator gap',      label: 'Reviews stars' },
+    { file: '11-methodology.html',                 title: 'How this was made',                               label: 'Methodology' },
+    { file: '12-back-cover.html',                  title: 'Four pillars. Twelve months.',                    label: 'Back cover' }
+  ]
+};
+</script>
+<script src="deck-viewer.js"></script>
+
+</body>
+</html>

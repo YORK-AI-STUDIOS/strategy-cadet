@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Standard Content — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1200px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .std .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+  .std .head .meta .topic { font: 600 13px/1.2 var(--font-sans); color: var(--fg-heading); margin-top:4px; }
+
+  .std-body { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr 460px; gap: 56px; flex: 1; min-height: 0; }
+  .std-body .col h4 { margin: 0 0 12px; font: var(--t-h4); color: var(--fg-heading); }
+  .std-body .col p { margin: 0 0 12px; font: 400 14px/1.5 var(--font-sans); color: var(--fg-body); }
+  .std-body .col .lead-stat { font: 800 48px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.025em; margin: 4px 0 6px; }
+  .std-body .col .lead-label { font: var(--t-caption); color: var(--fg-muted); margin-bottom: 14px; }
+
+  .driver-list { display:flex; flex-direction:column; gap: 18px; }
+  .driver-list .item { display: grid; grid-template-columns: 28px 1fr 110px; gap: 14px; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .driver-list .item:last-child { border-bottom: 0; }
+  .driver-list .item .n { font: 700 14px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.04em; }
+  .driver-list .item .ttl { font: 600 14px/1.35 var(--font-sans); color: var(--fg-heading); }
+  .driver-list .item .ttl .sub { display:block; font: 400 12.5px/1.45 var(--font-sans); color: var(--fg-body); margin-top:4px; }
+  .driver-list .item .val { font: 700 14px/1 var(--font-sans); color: var(--fg-heading); text-align: right; }
+  .driver-list .item .val .small { display:block; font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 4px; text-transform: uppercase; letter-spacing:0.06em; }
+
+  .sidebar-stat {
+    background: #F4F7FB;
+    padding: 22px 24px;
+    border-top: 3px solid var(--mr-blue-dark);
+  }
+  .sidebar-stat .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); margin-bottom: 8px; }
+  .sidebar-stat .num { font: 800 56px/0.95 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+  .sidebar-stat .unit { font: 400 12px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 8px; }
+  .sidebar-stat .body { font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--bg-rule); }
+  .sidebar-stat .src { font: var(--t-source); color: var(--fg-muted); margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="04 Standard Content">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 01  ·  The Market  ·  Industry drivers</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">02</div>
+      <div>
+        <h3>Premium inflation is doing the marketing work for low-cost digital insurers.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Synthesis</div>
+        <div class="topic"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+
+    <div class="std-body">
+      <div class="col">
+        <h4>Why this matters now</h4>
+        <p>Australian car-insurance premiums rose <strong style="color:var(--fg-heading)">42% between 2019 and 2024</strong> and another 10% is forecast for 2025. Insurance-specific CPI is running at 6.2%, more than double headline CPI at 2.8%.</p>
+        <p>An estimated <strong style="color:var(--fg-heading)">1.61 million Australian households</strong>, or roughly 15%, are now in extreme insurance stress, paying more than four weeks of gross household income to keep a policy current.</p>
+        <p>The category has stopped being optional and started being painful. That pain creates structural pull-demand for month-to-month, no-lock-in products that let drivers walk if they cannot afford this month&rsquo;s premium.</p>
+      </div>
+
+      <div class="col">
+        <h4>Six drivers, ranked by tailwind to ROLLiN&rsquo;</h4>
+        <div class="driver-list">
+          <div class="item"><span class="n">01</span><span class="ttl">Telematics &amp; UBI expansion<span class="sub">14.4% of global motor policies now telematics-linked; AU vehicle telematics CAGR 18.9% to 2031.</span></span><span class="val">+++<span class="small">Tailwind</span></span></div>
+          <div class="item"><span class="n">02</span><span class="ttl">Sustained premium inflation<span class="sub">Insurance CPI 6.2% vs headline 2.8%; +10% forecast 2025.</span></span><span class="val">+++<span class="small">Tailwind</span></span></div>
+          <div class="item"><span class="n">03</span><span class="ttl">AI &amp; digital claims automation<span class="sub">No legacy stack to retrofit; ROLLiN&rsquo; can deploy AI-first workflows directly.</span></span><span class="val">++<span class="small">Tailwind</span></span></div>
+          <div class="item"><span class="n">04</span><span class="ttl">EV underwriting complexity<span class="sub">EV premiums avg AUD 843 above petrol equivalents; risks the tech-forward cohort.</span></span><span class="val">+/−<span class="small">Mixed</span></span></div>
+          <div class="item"><span class="n">05</span><span class="ttl">Climate-related claims repricing<span class="sub">APRA CVA covers 80% of market; insurers exiting high-risk postcodes.</span></span><span class="val">−<span class="small">Headwind</span></span></div>
+          <div class="item"><span class="n">06</span><span class="ttl">APRA CPS 230 compliance<span class="sub">New operational-risk standard, effective 1 Jul 2025.</span></span><span class="val">−−<span class="small">Headwind</span></span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="sidebar-stat">
+          <div class="lbl">Pull-stat</div>
+          <div class="num">+42<span style="font-size:0.5em;">%</span></div>
+          <div class="unit">AU car-insurance premiums, 2019 to 2024 cumulative.</div>
+          <div class="body">More than ten percentage points faster than wage growth across the same window. The gap hands a structural advantage to month-to-month, value-positioned brands.</div>
+          <div class="src">Source: thenightly.com.au business desk, citing ICA &amp; ABS data, Jan 2025.</div>
+        </div>
+        <div class="sidebar-stat" style="margin-top:18px; border-top-color: var(--mr-red);">
+          <div class="lbl" style="color: var(--mr-red);">Watch</div>
+          <div class="num" style="font-size:36px;">15%</div>
+          <div class="unit">AU households in extreme insurance stress (>4 weeks GHI on a policy).</div>
+          <div class="src">Source: Brotherhood of St Laurence &amp; ICA estimates, 2024.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Mordor Intelligence; Expert Market Research; APRA Insurance CVA 2022; GlobeNewswire Usage-Based &amp; Telematics Motor Insurance 2025; Twobirds CPS 230 brief; Insurance Council of Australia EV Industry Paper, May 2024. Synthesis by Strategy Cadet v1.2, May 2026.</span>
+      <span class="sc-source">p. 08  ·  Part 01  ·  Industry drivers</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="08" data-of="78"></script>
+</body>
+</html>

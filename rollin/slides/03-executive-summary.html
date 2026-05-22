@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Executive Summary — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .exec .sc-body-frame { inset: 100px 96px 80px; }
+  .exec .lhs { max-width: 380px; }
+  .exec h2 { margin: 0; font: 800 88px/0.95 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+  .exec .standfirst { margin-top: 22px; font: 400 17px/1.5 var(--font-sans); color: var(--fg-body); max-width: 360px; }
+  .exec .lhs .meta { margin-top: 32px; font: var(--t-eyebrow); color: var(--fg-body); }
+  .exec .lhs .meta .pill { display:inline-block; padding: 3px 8px; background: var(--bg-row-alt); color: var(--fg-heading); margin-right: 6px; letter-spacing: 0.04em; }
+  .exec-grid { display: grid; grid-template-columns: 380px repeat(5, 1fr); gap: 32px; flex: 1; min-height: 0; }
+  .exec .find { display: flex; flex-direction: column; }
+  .exec .find .rule { width: 100%; height: 1px; background: var(--bg-rule); margin-bottom: 18px; }
+  .exec .find .num-row { display:flex; align-items:baseline; gap: 10px; margin-bottom: 14px; }
+  .exec .find .idx { font: 800 22px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .exec .find .idx.alt { color: var(--mr-red); }
+  .exec .find .ttl { font: 700 18px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .exec .find .big { font: 800 56px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; margin-bottom: 8px; }
+  .exec .find .big.red { color: var(--mr-red); }
+  .exec .find .big.blue { color: var(--mr-blue-dark); }
+  .exec .find .unit { font: var(--t-caption); color: var(--fg-muted); margin-bottom: 12px; }
+  .exec .find .body { font: var(--t-body-tight); color: var(--fg-body); margin-bottom: 10px; flex: 1; }
+  .exec .find .src  { font: var(--t-source); color: var(--fg-muted); }
+  .exec .find .chip-row { margin-top: 6px; }
+  .sowhat {
+    margin-top: 24px;
+    background: #F4F7FB;
+    border-left: 3px solid var(--mr-blue-dark);
+    padding: 18px 24px;
+    display: flex;
+    gap: 28px;
+    align-items: baseline;
+  }
+  .sowhat .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); letter-spacing: 0.14em; white-space: nowrap; }
+  .sowhat .txt { font: 600 16px/1.4 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; max-width: 1500px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide exec" data-screen-label="03 Executive Summary">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Executive Summary  ·  Five findings</span></div>
+
+  <div class="sc-body-frame" style="display:flex; flex-direction:column;">
+    <div class="exec-grid">
+      <div class="lhs">
+        <div class="rule" style="width:100%; height:1px; background: var(--fg-heading); margin-bottom: 20px;"></div>
+        <h2>Five things to<br>act on now.</h2>
+        <p class="standfirst">ROLLiN&rsquo; wins on acquisition and product simplicity, but loses on operational delivery. Premium positioning is structurally at risk until claims handling improves.</p>
+        <div class="meta">
+          <span class="pill">Rollin Insurance</span>
+          <span class="pill">May 2026</span>
+        </div>
+      </div>
+
+      <div class="find">
+        <div class="rule"></div>
+        <div class="num-row"><span class="idx">01</span><span class="ttl">Market scale</span></div>
+        <div class="big blue">$22.6<span style="font-size:0.55em;letter-spacing:-0.02em;">B</span></div>
+        <div class="unit">AU motor insurance, 2025, 6.34% CAGR to 2034</div>
+        <div class="body">A growing category that disproportionately rewards low-cost, digital-native challengers as premiums keep outrunning wages.</div>
+        <div class="chip-row"><span class="sc-chip sc-chip--verified">Verified</span></div>
+        <div class="src">Expert Market Research AU, 2025</div>
+      </div>
+
+      <div class="find">
+        <div class="rule"></div>
+        <div class="num-row"><span class="idx alt">02</span><span class="ttl">Review chasm</span></div>
+        <div class="big red">1.7 ★</div>
+        <div class="unit">ProductReview vs 4.1 ★ on Finder</div>
+        <div class="body">A 2.4-star gap between independent and aggregator reviews signals customers love the price and hate the claim.</div>
+        <div class="chip-row"><span class="sc-chip sc-chip--verified">Verified</span></div>
+        <div class="src">ProductReview.com.au, Finder.com.au, May 2026</div>
+      </div>
+
+      <div class="find">
+        <div class="rule"></div>
+        <div class="num-row"><span class="idx">03</span><span class="ttl">Share of search</span></div>
+        <div class="big blue">0.8<span style="font-size:0.55em;">%</span></div>
+        <div class="unit">vs Budget Direct 21.5%, 12-mo avg</div>
+        <div class="body">Demand-capture deficit of 20pp against the value-segment leader. Awareness is the binding constraint, not preference.</div>
+        <div class="chip-row"><span class="sc-chip sc-chip--probable">Probable</span></div>
+        <div class="src">Google Trends via pytrends, geo=AU, 12-month window May 2025 – May 2026</div>
+      </div>
+
+      <div class="find">
+        <div class="rule"></div>
+        <div class="num-row"><span class="idx">04</span><span class="ttl">ESOV posture</span></div>
+        <div class="big blue" style="font-size:38px;line-height:1.05;">Under-<br>indexed</div>
+        <div class="unit">Strong product awards, low media weight</div>
+        <div class="body">ROLLiN&rsquo; punches above its weight on awards but trails on share-of-voice. A larger competitor can replicate the value play with more reach.</div>
+        <div class="chip-row"><span class="sc-chip sc-chip--probable">Probable</span></div>
+        <div class="src">Nielsen Ad Intel, Sep 2024 – Aug 2025</div>
+      </div>
+
+      <div class="find">
+        <div class="rule"></div>
+        <div class="num-row"><span class="idx alt">05</span><span class="ttl">ESG content gap</span></div>
+        <div class="big red">0</div>
+        <div class="unit">Sustainability or ESG posts, last 12 mo</div>
+        <div class="body">A category-anomalous silence. Sibling brands NRMA and AAMI publish monthly. Risks losing the EV-curious cohort ROLLiN&rsquo; nominally serves.</div>
+        <div class="chip-row"><span class="sc-chip sc-chip--uncertain">Uncertain</span></div>
+        <div class="src">Strategy Cadet content scan, Apr 2025 – May 2026</div>
+      </div>
+    </div>
+
+    <div class="sowhat">
+      <div class="lbl">So what</div>
+      <div class="txt">ROLLiN&rsquo; is acquisition-strong, retention-fragile. The next twelve months are about closing the claims-experience gap before a better-capitalised challenger replicates the value position with media weight ROLLiN&rsquo; cannot match.</div>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="04" data-of="78"></script>
+</body>
+</html>
