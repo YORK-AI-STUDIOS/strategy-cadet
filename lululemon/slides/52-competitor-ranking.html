@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Competitor Ranking — Strategy Cadet — Lululemon</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .rank .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .rank .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .rank .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .rank-table { margin-top: 18px; flex: 1; min-height: 0; }
+  .rank-row {
+    display: grid;
+    grid-template-columns: 38px 72px 1fr 200px 200px 160px;
+    align-items: center;
+    gap: 22px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--bg-rule);
+  }
+  .rank-row.head-row {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--fg-heading);
+    font: 600 11px/1.3 var(--font-sans);
+    color: var(--fg-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .rank-row .rnk { font: 800 26px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .rank-row .logo {
+    width: 64px; height: 64px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--bg-rule);
+    border-radius: 50%;
+    background: #FAFBFD;
+    overflow: hidden;
+  }
+  .rank-row .logo .mono {
+    font: 700 14px/1 var(--font-sans);
+    letter-spacing: -0.02em;
+    color: var(--fg-heading);
+    text-align: center;
+  }
+  .rank-row .logo .mono small { display:block; font: 400 7px/1.2 var(--font-sans); color: var(--fg-muted); letter-spacing: 0.06em; margin-top: 3px; }
+  .rank-row .mono.lulu { color: var(--mr-blue-dark); }
+  .rank-row .mono.nike { color: #111; }
+  .rank-row .mono.adidas { color: #000; }
+  .rank-row .mono.lj { color: #E0006D; }
+  .rank-row .mono.pen { color: #FF5400; }
+  .rank-row .mono.upside { color: #0E1F45; }
+  .rank-row .mono.ua { color: #DC143C; }
+
+  .rank-row .body .nm { font: 700 17px/1.15 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .rank-row .body .pos { font: 400 12.5px/1.4 var(--font-sans); color: var(--fg-body); margin-top: 4px; max-width: 560px; }
+
+  .rank-row .stats { display:flex; gap: 22px; }
+  .rank-row .stats .s { display:flex; flex-direction:column; gap:2px; }
+  .rank-row .stats .v { font: 700 16px/1 var(--font-sans); color: var(--fg-heading); }
+  .rank-row .stats .l { font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .esov-pill { display:inline-flex; align-items:center; height: 24px; padding: 0 12px; font: 700 11px/1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 2px; }
+  .esov-pill.exp { background: #FFF4D6; color: #8A6500; }
+  .esov-pill.def { background: #EAF1F8; color: var(--mr-blue-dark); }
+  .esov-pill.und { background: #FDE6E8; color: var(--mr-red); }
+
+  .esov-cell { display:flex; flex-direction: column; gap: 8px; }
+  .esov-cell .note { font: 400 11px/1.3 var(--font-sans); color: var(--fg-muted); }
+
+  .rank-row.is-subject { background: linear-gradient(90deg, #FFF9E6 0%, transparent 60%); padding-left: 12px; margin-left: -12px; margin-right: -12px; padding-right: 12px; }
+  .rank-row.is-subject .rnk { color: var(--mr-blue-dark); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide rank" data-screen-label="52 Competitor Ranking">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  Seven competitors</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Seven brands, three postures. Adidas is the only other expansion-mode player. Lorna Jane is the most credible AU-native defender.</h3>
+      <div class="meta">Ranked by SoS<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="rank-table">
+      <div class="rank-row head-row">
+        <div>#</div><div>&nbsp;</div><div>Brand &amp; positioning</div><div>Key metrics</div><div>ESOV posture</div><div>SoS / 12-mo</div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">01</div>
+        <div class="logo"><div class="mono nike">Nike</div></div>
+        <div class="body">
+          <div class="nm">Nike Australia</div>
+          <div class="pos">Market leader at 17% AU sportswear value share. Heavy ATL, athlete sponsorships, dense DTC plus wholesale. Global brand-relevance pressure 2024-25; AU "Never Done Inspiring" first AU brand campaign in a decade.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">17.0%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">~60+</span><span class="l">Meta ads</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill def">Defense</span><span class="note">Defending challenged incumbent.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">51.2%</strong> <span style="color: var(--mr-red); font-weight: 700;">&#9660; &minus;2.7pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">02</div>
+        <div class="logo"><div class="mono adidas">adidas</div></div>
+        <div class="body">
+          <div class="nm">Adidas Australia</div>
+          <div class="pos">10% AU value share. Marketing spend +12% latest period. Heritage and retro track running alongside performance. AU women's sport and athleisure outperforming Nike on creative effectiveness.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">10.0%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">+12%</span><span class="l">Spend YoY</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill exp">Expansion</span><span class="note">Taking Nike's shed share.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">26.5%</strong> <span style="color: #0E8A52; font-weight: 700;">&#9650; +1.5pp</span></div>
+      </div>
+
+      <div class="rank-row is-subject">
+        <div class="rnk">03</div>
+        <div class="logo"><div class="mono lulu">lulu&middot;</div></div>
+        <div class="body">
+          <div class="nm">Lululemon  <span style="font: 600 11px/1 var(--font-sans); color: var(--mr-blue-dark); text-transform: uppercase; letter-spacing: 0.08em; margin-left: 8px;">This report</span></div>
+          <div class="pos">9.1% AU athleisure share with under 50 stores (vs Lorna Jane 100). Premium retail plus ambassador network carries mindshare. 80%+ of global marketing spend on performance digital channels.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">9.1%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">362</span><span class="l">Meta ads (global)</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill exp">Expansion</span><span class="note">Mindshare exceeds footprint.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--mr-blue-dark);">12.2%</strong> <span style="color: var(--mr-red); font-weight: 700;">&#9660; &minus;0.3pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">04</div>
+        <div class="logo"><div class="mono lj">LJ</div></div>
+        <div class="body">
+          <div class="nm">Lorna Jane</div>
+          <div class="pos">AU-owned activewear pioneer. Nearly 100 stores, $166M FY24 revenue. "Active Living" platform. Heavy owned-social (1M+ IG), deliberately low paid-media. TikTok 4x ROAS, 95% CPA reduction.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~13.0%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">~100</span><span class="l">AU stores</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill def">Defense</span><span class="note">Community-led, paid-media-light.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">4.5%</strong> <span style="color: #0E8A52; font-weight: 700;">&#9650; +0.2pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">05</div>
+        <div class="logo"><div class="mono ua">UA</div></div>
+        <div class="body">
+          <div class="nm">Under Armour Australia</div>
+          <div class="pos">Global multi-year turnaround under Kevin Plank. Spend "micro doses" rather than mass campaigns. ISC Sport 2024 partnership: 800K+ athletes, 2,500+ clubs as grassroots play. ATL minimal.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~3.0%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">flat</span><span class="l">Spend</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill und">Under-indexed</span><span class="note">Voice lags category ambitions.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">2.9%</strong> <span style="color: #6B7480; font-weight: 700;">0.0pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">06</div>
+        <div class="logo"><div class="mono pen">P.E</div></div>
+        <div class="body">
+          <div class="nm">P.E Nation</div>
+          <div class="pos">Sydney-founded 2016 (Pip Edwards and Claire Tregoning). Sport meets street fashion. Vogue AU, Marie Claire, Russh editorial. David Jones, THE ICONIC, Stylerunner. Lacks ATL budget at scale.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~1.5%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">100%</span><span class="l">3-mo SoS growth</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill und">Under-indexed</span><span class="note">Fastest relative mover; watch list.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">1.5%</strong> <span style="color: #0E8A52; font-weight: 700;">&#9650; +1.5pp</span></div>
+      </div>
+
+      <div class="rank-row">
+        <div class="rnk">07</div>
+        <div class="logo"><div class="mono upside">Upside</div></div>
+        <div class="body">
+          <div class="nm">The Upside</div>
+          <div class="pos">Premium AU activewear (est. 2013, Jodhi Meares). Net-A-Porter, FWRD, David Jones. Italian and AU-milled technical fabrics. Premium positioning limits TAM; flat SoS signals no momentum.</div>
+        </div>
+        <div class="stats">
+          <div class="s"><span class="v">~1.0%</span><span class="l">AU SoM</span></div>
+          <div class="s"><span class="v">flat</span><span class="l">Spend</span></div>
+        </div>
+        <div class="esov-cell"><span class="esov-pill und">Under-indexed</span><span class="note">Defensible niche, no growth.</span></div>
+        <div><strong style="font:800 24px var(--font-sans); color: var(--fg-heading);">1.1%</strong> <span style="color: #6B7480; font-weight: 700;">0.0pp</span></div>
+      </div>
+
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Ragtrader Nov 2025; IMARC AU Activewear; Euromonitor 2025; Blankboard analysis; GoMarble Meta library Mar 2026; TikTok Lorna Jane case study; Marketing Week Adidas revival. SoS data: brand-discovery-skill extension outputs (lululemon-extension-sos.md). Synthesis: Strategy Cadet v1.2. Logo placeholders shown as monograms pending licensed brand assets.</span>
+      <span class="sc-source">p. 52  &middot;  Part 05  &middot;  Seven competitors</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="52" data-of="80"></script>
+</body>
+</html>

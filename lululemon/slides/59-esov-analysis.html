@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ESOV Analysis — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .es .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--bg-rule); }
+  .es .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .es .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1240px; }
+  .es .head .meta { margin-left: auto; text-align: right; }
+  .es .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+  .es .head .meta .topic { margin-top: 6px; }
+
+  .es-def {
+    margin: 16px 0 18px; padding: 16px 22px;
+    background: #F4F7FB; border-left: 4px solid var(--mr-blue-dark);
+    display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px;
+  }
+  .es-def .lead { font: 400 13.5px/1.5 var(--font-sans); color: var(--fg-body); }
+  .es-def .lead strong { color: var(--fg-heading); }
+  .es-def .lead .eq { font: 700 13.5px/1.5 var(--font-sans); color: var(--mr-blue-dark); }
+  .es-def .post { display:flex; flex-direction: column; gap: 5px; }
+  .es-def .post .pl { display:flex; align-items:center; gap: 8px; }
+  .es-def .post .swatch { width: 10px; height: 10px; border-radius: 2px; flex:none; }
+  .es-def .post .swatch.exp { background: #FCB900; }
+  .es-def .post .swatch.def { background: var(--mr-blue-dark); }
+  .es-def .post .swatch.und { background: var(--mr-red); }
+  .es-def .post .pn { font: 700 12px/1.3 var(--font-sans); color: var(--fg-heading); }
+  .es-def .post .pd { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+
+  .es-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; flex: 1; min-height: 0; }
+
+  .bcard {
+    display:flex; flex-direction: column;
+    padding: 14px 16px 13px;
+    background: #FFFFFF; border: 1px solid var(--bg-rule);
+    border-top: 3px solid var(--mr-blue-dark);
+  }
+  .bcard.exp { border-top-color: #D9A000; }
+  .bcard.def { border-top-color: var(--mr-blue-dark); }
+  .bcard.und { border-top-color: var(--mr-red); }
+  .bcard.subject { background: linear-gradient(135deg, #FFF9E6 0%, #FFFFFF 70%); }
+
+  .bcard .b-top { display:flex; align-items:baseline; justify-content:space-between; margin-bottom: 8px; }
+  .bcard .b-nm { font: 700 16px/1.15 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; }
+  .bcard .b-nm .tag { display:block; font: 600 9px/1 var(--font-sans); color: var(--mr-red); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+  .esov-pill { display:inline-flex; align-items:center; height: 20px; padding: 0 9px; font: 700 9.5px/1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em; border-radius: 2px; }
+  .esov-pill.exp { background: #FFF4D6; color: #8A6500; }
+  .esov-pill.def { background: #EAF1F8; color: var(--mr-blue-dark); }
+  .esov-pill.und { background: #FDE6E8; color: var(--mr-red); }
+  .bcard .b-reason { font: 400 11.5px/1.5 var(--font-sans); color: var(--fg-body); }
+  .bcard .b-reason strong { color: var(--fg-heading); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide es" data-screen-label="59 ESOV Analysis">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  ESOV analysis</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">59</div>
+      <div>
+        <h3>Excess Share of Voice, brand by brand. Adidas is buying share. Lululemon is in expansion on mindshare leverage. Nike and Lorna Jane are defending.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Method  ·  Binet ESOV framework</div>
+        <div class="topic"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="es-def">
+      <div class="lead">
+        <strong>Excess Share of Voice (ESOV)</strong> is a brand's share of advertising voice minus its estimated share of market: <span class="eq">ESOV = Share of Voice &minus; Share of Market.</span> A positive ESOV, where voice exceeds share, correlates with market-share growth. A negative ESOV, where share exceeds voice, signals a brand coasting on installed base.
+      </div>
+      <div class="post">
+        <div class="pl"><span class="swatch und"></span><span class="pn">Under-indexed</span></div>
+        <div class="pd">Voice trails share or recognition. Vulnerable to louder rivals replicating the position.</div>
+        <div class="pl" style="margin-top:6px;"><span class="swatch exp"></span><span class="pn">Expansion</span></div>
+        <div class="pd">Voice runs well ahead of share. The posture of a brand pushing for structural gains.</div>
+      </div>
+      <div class="post">
+        <div class="pl"><span class="swatch def"></span><span class="pn">Defense</span></div>
+        <div class="pd">Voice broadly proportionate to share. Calibrated to hold an established position, not to grow it.</div>
+        <div class="pd" style="margin-top:8px; color:var(--fg-muted); font-style:italic;">No AU activewear-specific SOV data is published. Classifications are directional, drawn from observed spend direction, market share estimates, and brand activity.</div>
+      </div>
+    </div>
+
+    <div class="es-grid">
+      <div class="bcard subject exp">
+        <div class="b-top">
+          <div class="b-nm">Lululemon<span class="tag">This report</span></div>
+          <span class="esov-pill exp">Expansion</span>
+        </div>
+        <div class="b-reason">Holds 9.1% AU fitness clothing market share (Ragtrader, 2025) but commands outsized mindshare through premium retail placement, 2,000+ global ambassadors, and consistent AU earned media. <strong>Over 80% of 2024 global marketing spend deployed to performance digital channels measured on customer lifetime value.</strong> Mindshare exceeds physical footprint.</div>
+      </div>
+
+      <div class="bcard exp">
+        <div class="b-top">
+          <div class="b-nm">Adidas</div>
+          <span class="esov-pill exp">Expansion</span>
+        </div>
+        <div class="b-reason">10% AU market share with documented marketing spend +12% in most recent period, further increases planned for 2025. AU women's sport and athleisure lines outperforming Nike on creative effectiveness. <strong>The most active share-buyer in the category.</strong> Taking Nike's lost ground, not Lululemon's.</div>
+      </div>
+
+      <div class="bcard def">
+        <div class="b-top">
+          <div class="b-nm">Nike</div>
+          <span class="esov-pill def">Defense</span>
+        </div>
+        <div class="b-reason">Market leader at 17% AU share, sustaining position through heavyweight above-the-line and sports sponsorships. Facing brand relevance pressure in 2024-25, responding with heavier media investment. <strong>First AU brand campaign in a decade signals defensive reinvestment.</strong> SoS decelerating -2.7pp.</div>
+      </div>
+
+      <div class="bcard def">
+        <div class="b-top">
+          <div class="b-nm">Lorna Jane</div>
+          <span class="esov-pill def">Defense</span>
+        </div>
+        <div class="b-reason">Dominant AU-born brand, nearly 100 stores and $166M revenue (2024). Deliberately low-cost marketing relying on owned social and influencer content rather than paid media. <strong>Defending with community and product credibility, not outspend.</strong> TikTok always-on model delivers 4x ROAS without heavy paid investment.</div>
+      </div>
+
+      <div class="bcard und">
+        <div class="b-top">
+          <div class="b-nm">Under Armour</div>
+          <span class="esov-pill und">Under-indexed</span>
+        </div>
+        <div class="b-reason">Global turnaround under CEO Kevin Plank, marketing spend deliberately flat in "micro doses." AU partnership with ISC Sport (800,000+ athletes, 2,500+ clubs) is grassroots, not above-the-line. <strong>Share of voice significantly lags AU market potential.</strong> SoS stalled at 2.9%.</div>
+      </div>
+
+      <div class="bcard und">
+        <div class="b-top">
+          <div class="b-nm">P.E Nation</div>
+          <span class="esov-pill und">Under-indexed</span>
+        </div>
+        <div class="b-reason">Strong editorial brand (Vogue AU, RUSSH, marie claire) but limited paid media investment at scale. David Jones and THE ICONIC wholesale distribution. <strong>Voice distinctive but does not match potential share</strong> in AU's growing athleisure category. Watch item: SoS +100% in 3 months from small base.</div>
+      </div>
+
+      <div class="bcard und">
+        <div class="b-top">
+          <div class="b-nm">The Upside</div>
+          <span class="esov-pill und">Under-indexed</span>
+        </div>
+        <div class="b-reason">Luxury niche positioning (Net-A-Porter, FWRD) limits TAM in AU but gives high credibility per impression. Media footprint concentrated in premium editorial, no significant paid media at scale confirmed. <strong>Premium positioning and limited voice leaves it exposed to share erosion from below.</strong> SoS flat at 1.1%.</div>
+      </div>
+
+      <div class="bcard" style="border-top-color: var(--mr-blue-dark); background: var(--mr-blue-dark);">
+        <div class="b-top">
+          <div class="b-nm" style="color:#fff;">Read across</div>
+        </div>
+        <div class="b-reason" style="color: rgba(255,255,255,0.88);">Five of seven brands sit in <strong style="color:#FCB900;">Defense or Under-indexed</strong>. Only Adidas and Lululemon are in Expansion. The structural risk: Adidas is absorbing Nike's lost share, not Lululemon. The category conversation is shifting toward sport-performance crossover, Adidas's lane, not premium athleisure.</div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Framework: Les Binet / Peter Field Excess Share of Voice. Sources: ragtrader.com.au athleisure boom analysis; blankboard.studio Lululemon marketing strategy; marketingweek.com Adidas brand revival; imarcgroup.com AU activewear market; lululemon-apparel-retail-company.md §6. No AU activewear-specific ESOV data is published; classifications are directional. Confidence: Probable on posture.</span>
+      <span class="sc-source">p. 59  ·  Part 05  ·  ESOV analysis</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="59" data-of="80"></script>
+</body>
+</html>

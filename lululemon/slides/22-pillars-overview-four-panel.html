@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Four-Panel — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .four .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .four .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .four .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+  .four-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+    margin-top: 28px;
+  }
+  .four-grid .panel { padding: 28px 36px; position: relative; }
+  .four-grid .panel:nth-child(1), .four-grid .panel:nth-child(3) { padding-left: 0; }
+  .four-grid .panel:nth-child(1), .four-grid .panel:nth-child(2) { padding-top: 0; border-bottom: 1px solid var(--bg-rule); }
+  .four-grid .panel:nth-child(3), .four-grid .panel:nth-child(4) { padding-bottom: 0; }
+  .four-grid .panel:nth-child(1), .four-grid .panel:nth-child(3) { border-right: 1px solid var(--bg-rule); }
+
+  .panel .row-top { display:flex; align-items: baseline; gap: 16px; margin-bottom: 14px; }
+  .panel .idx { font: 800 32px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .panel .role { font: var(--t-eyebrow); color: var(--fg-body); }
+  .panel h4 { margin: 0 0 10px; font: 700 24px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; }
+  .panel .hook { font: 600 14px/1.4 var(--font-sans); color: var(--mr-blue-dark); margin-bottom: 12px; }
+  .panel p { margin: 0 0 10px; font: 400 13.5px/1.55 var(--font-sans); color: var(--fg-body); }
+
+  .panel .metrics { display:flex; gap: 24px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--bg-rule); }
+  .panel .metric .v { font: 800 26px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.02em; }
+  .panel .metric .l { font: 400 11px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .panel .src { font: var(--t-source); color: var(--fg-muted); margin-top: 14px; }
+  .panel .chip-row { margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide four" data-screen-label="22 Pillars Overview Four-Panel">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 02  ·  The Brand  ·  Strategy pillars</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Four pillars to operate against, in order of decision-priority for the next twelve months.</h3>
+      <div class="meta">Strategy Pillars  ·  Synthesis<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="four-grid">
+      <div class="panel">
+        <div class="row-top"><span class="idx">01</span><span class="role">Foundational</span></div>
+        <h4>Movement as the Minimum Viable Ritual.</h4>
+        <div class="hook">Daily movement is the floor, not the ceiling.</div>
+        <p>Lululemon operates as if daily movement is non-negotiable, structuring every touchpoint (product, community, retail) to remove friction from showing up consistently rather than performing spectacularly. The AU ambassador network, partner studios, and SweatLife events are the operational expression. The 1.3M AU yoga participants (Roy Morgan) and Pilates&rsquo; #2 ranking in AUSactive trends sit directly in this pillar&rsquo;s path.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">1.3M</div><div class="l">AU yoga participants</div></div>
+          <div class="metric"><div class="v">#2</div><div class="l">Pilates AUSactive rank</div></div>
+          <div class="metric"><div class="v">34</div><div class="l">AU/NZ stores</div></div>
+        </div>
+        <div class="chip-row"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+
+      <div class="panel">
+        <div class="row-top"><span class="idx">02</span><span class="role">Trust-building</span></div>
+        <h4>Show the Fabric, Show the Science.</h4>
+        <div class="hook">Earn the premium by making the R&amp;D legible.</div>
+        <p>Lululemon earns trust by making its materials R&amp;D legible to ordinary customers, translating proprietary fabric development (Luon, Nulu, Everlux, Swift) into plain-language proof that the price premium is built on real engineering. The 1.4-star online-store rating, 40-50% quality-decline complaints, and the &ldquo;Get Low&rdquo; see-through pull (Jan 2026) are the brand-promise test points.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">1.4 &#9733;</div><div class="l">PR online store, n=88</div></div>
+          <div class="metric"><div class="v">40-50%</div><div class="l">Quality-decline complaints</div></div>
+          <div class="metric"><div class="v">3</div><div class="l">Legging opacity crises (13y)</div></div>
+        </div>
+        <div class="chip-row"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+
+      <div class="panel">
+        <div class="row-top"><span class="idx">03</span><span class="role">Growth-enabling</span></div>
+        <h4>Belonging You Can Sweat Your Way Into.</h4>
+        <div class="hook">An open community with a behavioural entry bar.</div>
+        <p>The ambassador network, studio partnerships, and SweatLife event calendar operate as an open community with one entry condition: show up, move, repeat. Growth comes from expanding who feels invited without diluting the earned-belonging dynamic. The Lewis Hamilton AU Grand Prix activation, &ldquo;Together We Grow&rdquo; APAC campaign, and Brookfield Place Sydney flagship (first multi-level AU store) all sit in this pillar.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">9</div><div class="l">AU/NZ projects FY25</div></div>
+          <div class="metric"><div class="v">9.1%</div><div class="l">AU athleisure share</div></div>
+          <div class="metric"><div class="v">2,000+</div><div class="l">Global ambassadors</div></div>
+        </div>
+        <div class="chip-row"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+
+      <div class="panel">
+        <div class="row-top"><span class="idx">04</span><span class="role">Value-amplifying</span></div>
+        <h4>Premium That Pays You Back in Years.</h4>
+        <div class="hook">Not low cost-per-wear. Total lifecycle value.</div>
+        <p>Lululemon&rsquo;s value proposition is total lifecycle value: durable fabrics, repair programs, re-commerce options (Like New), and product quality that outlasts trend cycles. The upfront investment becomes a long-term rational choice. The &ldquo;10+ year leggings&rdquo; praise theme is real; the &ldquo;fast-fashion quality at luxury prices&rdquo; editorial frame (Grants Pass Tribune, Sept 2024) is the live counter-narrative this pillar must defeat.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">Like New</div><div class="l">Resale programme active</div></div>
+          <div class="metric"><div class="v">6 ads</div><div class="l">Like New resale Meta</div></div>
+          <div class="metric"><div class="v">77%</div><div class="l">Recycled poly, FY24</div></div>
+        </div>
+        <div class="chip-row"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Synthesis: Strategy Pillars section (4 pillars + roles), Reviews extension (complaint themes + verbatims), News extension (campaign events + crisis flags), Audiences (Pilates / yoga participation). Metric provenance per individual sections.</span>
+      <span class="sc-source">p. 22  ·  Part 02  ·  Strategy Pillars</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="22" data-of="80"></script>
+</body>
+</html>

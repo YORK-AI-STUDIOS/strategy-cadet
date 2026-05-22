@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GEO Recommendations — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .georec .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .georec .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1280px; }
+  .georec .head h3 .alt2 { color: var(--mr-blue-dark); }
+  .georec .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .georec-intro { margin: 20px 0 22px; font: 400 14px/1.55 var(--font-sans); color: var(--fg-body); max-width: 1520px; }
+  .georec-intro strong { color: var(--fg-heading); }
+
+  .rec-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; flex: 1; min-height: 0; }
+  .rec-card { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--bg-rule); border-top: 4px solid var(--mr-blue-dark); padding: 24px 26px; }
+
+  .rec-card .rtop { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .rec-card .rtop .lbl { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.12em; text-transform: uppercase; }
+  .rec-card .rtop .idx { font: 800 34px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+
+  .rec-card h4 { margin: 0 0 12px; font: 700 18px/1.32 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .rec-card .body { font: 400 12.5px/1.55 var(--font-sans); color: var(--fg-body); margin: 0 0 auto; }
+  .rec-card .body strong { color: var(--fg-heading); font-weight: 700; }
+
+  .rec-card .targets { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--bg-rule); }
+  .rec-card .targets .t-lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); letter-spacing: 0.1em; margin-bottom: 8px; }
+  .rec-card .targets .t-line { display: flex; align-items: baseline; gap: 8px; font: 600 12px/1.4 var(--font-sans); color: var(--fg-heading); }
+  .rec-card .targets .t-line .q { font: 800 11px/1 var(--font-sans); color: var(--mr-blue-dark); background: #E2EAF4; padding: 4px 6px; border-radius: 2px; }
+  .rec-card .targets .t-conf { margin-top: 10px; font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-muted); }
+  .rec-card .targets .t-conf .cc { font-weight: 700; color: #5A6B7B; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide georec" data-screen-label="66 GEO Recommendations">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  GEO recommendations</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Three moves to lift GEO presence. <span class="alt2">Fix the AU review signal first</span>: it is the single query where an AI gives a negative recommendation.</h3>
+      <div class="meta">From the GEO extension scan<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="georec-intro">Lululemon's PRIMARY GEO positions today are earned through third-party editorial and category reputation. AI models cite Women's Weekly, Broadsheet, and comparison sites, not lululemon.com.au. The BURIED positions (Q5, Q6) are driven by AU review platform scores that Lululemon does not own or manage. ProductReview.com.au (1.8/5, 146 reviews) is the authoritative direct-scrape signal. Trustpilot AU was bot-blocked during the scan and its score is unverified. <strong>Until the AU review-score signal is repaired, any AI asked about Lululemon's value in Australia will surface a negative recommendation.</strong></div>
+
+    <div class="rec-row">
+      <div class="rec-card">
+        <div class="rtop"><span class="lbl">Recommendation</span><span class="idx">01</span></div>
+        <h4>Launch a dedicated AU customer advocacy programme targeting ProductReview and Trustpilot.</h4>
+        <p class="body">ProductReview.com.au (1.8/5, 146 reviews, direct scrape VERIFIED) is the first signal any AI model returns on "is Lululemon worth it in Australia." Trustpilot AU returned HTTP 403 on direct scrape -- score unverified. <strong>Until ProductReview scores lift above 3.5, the Q5 BURIED position cannot be repaired by any content strategy.</strong> Priority action: post-purchase AU-specific review flow targeting verified buyers, with specific focus on ProductReview.com.au. Pair with a rapid-response CS programme to address pilling and wait-time complaints that currently dominate.</p>
+        <div class="targets">
+          <div class="t-lbl">Targets</div>
+          <div class="t-line"><span class="q">Q5</span>Lululemon Australia review worth it 2026</div>
+          <div class="t-conf">Expected lift: <span class="cc">Verified need</span>. No content strategy fixes this query until scores lift. Estimated minimum 3-6 months of active advocacy to move the aggregate above 3.5.</div>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rtop"><span class="lbl">Recommendation</span><span class="idx">02</span></div>
+        <h4>Build AU-native yoga content to close the Lorna Jane gap on premium yoga queries.</h4>
+        <p class="body">For "premium yoga pants Australia" queries, AU-native brands (Lorna Jane, Nimble, Stax) dominate AI-visible editorial because they are coded as "Australian." Lululemon is absent from the top 3 in yoga-specific AU roundups despite being the global category leader. <strong>A single "Lululemon Align vs AU competitors for hot yoga" article on a high-DA AU site</strong> (Broadsheet, RUSSH, Women's Weekly) would shift the GEO signal on yoga-specific AU queries. Pitch to AU editorial as a product placement, not a paid ad.</p>
+        <div class="targets">
+          <div class="t-lbl">Targets</div>
+          <div class="t-line"><span class="q">Q2</span>Premium yoga pants Australia best brands</div>
+          <div class="t-conf">Expected lift: <span class="cc">Probable</span>. Could move Q2 from Visible-Secondary to Visible-Primary for yoga-specific AU queries.</div>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rtop"><span class="lbl">Recommendation</span><span class="idx">03</span></div>
+        <h4>Reclaim the "alternatives" query with a cost-per-wear content strategy.</h4>
+        <p class="body">The "lululemon alternatives Australia" query (Q6) is high-volume and Lululemon is currently the benchmark being abandoned rather than defended. Lorna Jane captures most of this traffic as the named alternative. <strong>A brand-owned page or editorial pitch</strong> targeting "why Lululemon is still the best value long-term" with cost-per-wear analysis, longevity data, and repair/guarantee information would shift AI visibility from "alternatives" framing to "worth it" framing. Cross-link to Recommendation 01 to reinforce the narrative with improved review scores.</p>
+        <div class="targets">
+          <div class="t-lbl">Targets</div>
+          <div class="t-line"><span class="q">Q6</span>Lululemon alternatives Australia cheaper activewear</div>
+          <div class="t-conf">Opportunity: Lorna Jane currently captures this query. Cost-per-wear framing is an uncontested angle in AU content. <span class="cc">Probable</span> to shift from Buried to Secondary within two quarters if paired with improved review scores.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: brand-discovery-lululemon-extension-geo.md "Recommendations to Improve GEO Presence" section. Strategy Cadet v1.2 --with-geo extension, 21 May 2026. Recommendations are synthesis built on the 8-query WebSearch-proxy scan. ProductReview 1.8/5 (146 reviews): brand-discovery-lululemon-extension-reviews.md, direct scrape, VERIFIED. Trustpilot AU: direct scrape bot-blocked (HTTP 403), score UNCERTAIN. Upgrade path: direct API queries against the major frontier AI models (ChatGPT, Gemini, Perplexity) would verify and refine these recommendations.</span>
+      <span class="sc-source">p. 66  &middot;  Part 05  &middot;  GEO recommendations</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="66" data-of="80"></script>
+</body>
+</html>

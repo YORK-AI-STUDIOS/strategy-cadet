@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tone of Voice — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .quote .sc-body-frame { inset: 100px var(--slide-margin-x) 80px; display:flex; flex-direction: column; }
+  .quote .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .quote .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .quote .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1200px; }
+  .quote .head .meta { margin-left: auto; text-align: right; }
+  .quote .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .tone-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; flex: 1; margin-top: 40px; }
+
+  .tone-hero { position: relative; padding-left: 80px; }
+  .tone-hero .mark { position: absolute; left: -10px; top: -36px; font: 800 200px/1 var(--font-sans); color: var(--mr-blue-light); opacity: 0.22; }
+  .tone-hero blockquote { margin: 0; font: 400 italic 32px/1.4 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; max-width: 880px; }
+  .tone-hero blockquote strong { font-weight: 700; font-style: normal; color: var(--mr-blue-dark); }
+
+  .tone-attrs { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--bg-rule); display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .tone-attrs .a { display: flex; flex-direction: column; gap: 4px; }
+  .tone-attrs .a .v { font: 800 22px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.01em; }
+  .tone-attrs .a .l { font: 400 11px/1.4 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .contrast-col { display: flex; flex-direction: column; padding-top: 24px; border-top: 3px solid var(--mr-red); }
+  .contrast-col .lbl { font: var(--t-eyebrow); color: var(--mr-red); margin-bottom: 18px; }
+  .contrast-row { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .contrast-row .ex { padding: 18px 0; border-bottom: 1px solid var(--bg-rule); }
+  .contrast-row .ex:last-child { border-bottom: 0; }
+  .contrast-row .tag { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+  .contrast-row .tag.legacy { color: var(--fg-muted); }
+  .contrast-row .tag.lulu { color: var(--mr-red); }
+  .contrast-row .line { font: 400 15px/1.5 var(--font-sans); color: var(--fg-body); font-style: italic; }
+  .contrast-row .line.lulu { color: var(--fg-heading); font-style: normal; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide quote" data-screen-label="16 Tone of Voice">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 02  ·  The Brand  ·  Tone of voice</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">14</div>
+      <div>
+        <h3>The voice: an encouraging peer who speaks to potential, not a corporate authority defending a premium.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Brand DNA  ·  Voice</div>
+        <div class="topic" style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="tone-grid">
+      <div class="tone-hero">
+        <div class="mark">&ldquo;</div>
+        <blockquote>Warm but confident. Lululemon speaks as an encouraging peer, not a corporate authority. Sentences are short and punchy. Language leans into <strong>self-improvement vocabulary</strong> (potential, intention, presence) without preachiness. The voice is aspirational without being unattainable, specific without being clinical.</blockquote>
+
+        <div class="tone-attrs">
+          <div class="a"><div class="v">Warm</div><div class="l">Register</div></div>
+          <div class="a"><div class="v">Confident</div><div class="l">Posture</div></div>
+          <div class="a"><div class="v">Aspirational</div><div class="l">Ambition</div></div>
+          <div class="a"><div class="v">Never preachy</div><div class="l">Boundary</div></div>
+        </div>
+      </div>
+
+      <div class="contrast-col">
+        <div class="lbl">Generic activewear vs. what Lululemon would say</div>
+        <div class="contrast-row">
+          <div class="ex">
+            <div class="tag legacy">Generic activewear</div>
+            <div class="line">&ldquo;Our technically advanced moisture-management fabric system is engineered to optimise thermal regulation and peak athletic output across a full range of motion.&rdquo;</div>
+          </div>
+          <div class="ex">
+            <div class="tag lulu">What Lululemon would say</div>
+            <div class="line lulu">&ldquo;It moves with you. Not because we say so; because of how we built the fabric, from the body outward.&rdquo;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Brand DNA synthesis, Lululemon, Section 4 Brand Personality, prompt 11. Contrast example is illustrative synthesis, not a verbatim Lululemon tagline. PROBABLE on tone description; voice attributes drawn from public brand language.</span>
+      <span class="sc-source">p. 16  ·  Part 02  ·  Tone of voice</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="16" data-of="80"></script>
+</body>
+</html>

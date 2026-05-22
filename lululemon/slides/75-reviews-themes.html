@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Review Themes — Strategy Cadet — Lululemon</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .rvt .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--bg-rule); }
+  .rvt .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1280px; }
+  .rvt .head h3 .alt { color: var(--mr-red); }
+  .rvt .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .rvt-body { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 44px; flex: 1; min-height: 0; }
+
+  .col-lbl { display: flex; align-items: baseline; gap: 10px; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 2px solid var(--fg-heading); }
+  .col-lbl .ct { font: 700 13px/1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.08em; }
+  .col-lbl .cn { font: 400 11px/1 var(--font-sans); color: var(--fg-muted); margin-left: auto; }
+  .col-lbl.neg { border-bottom-color: var(--mr-red); }
+  .col-lbl.neg .ct { color: var(--mr-red); }
+  .col-lbl.pos { border-bottom-color: var(--mr-blue-dark); }
+  .col-lbl.pos .ct { color: var(--mr-blue-dark); }
+
+  .theme { padding: 11px 0; border-bottom: 1px solid var(--bg-rule); }
+  .theme:last-child { border-bottom: 0; }
+  .theme .t-top { display: flex; align-items: baseline; gap: 10px; }
+  .theme .t-name { font: 700 13.5px/1.3 var(--font-sans); color: var(--fg-heading); }
+  .theme .t-freq { margin-left: auto; font: 700 10px/1 var(--font-sans); letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 7px; border-radius: 2px; white-space: nowrap; }
+  .theme.neg .t-freq { background: #FBE3E4; color: var(--mr-red); }
+  .theme.pos .t-freq { background: #E2EAF4; color: var(--mr-blue-dark); }
+
+  .theme .t-desc { font: 400 11px/1.45 var(--font-sans); color: var(--fg-body); margin-top: 6px; }
+  .theme .t-desc strong { color: var(--fg-heading); }
+
+  .theme .verb { margin-top: 8px; padding: 8px 12px; background: #F4F7FB; border-left: 2px solid #C8D2DC; }
+  .theme.neg .verb { border-left-color: var(--mr-red); }
+  .theme.pos .verb { border-left-color: var(--mr-blue-dark); }
+  .theme .verb .q { font: 400 italic 11px/1.45 var(--font-sans); color: var(--fg-heading); }
+  .theme .verb .who { font: 600 9.5px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 5px; }
+
+  .theme .trend { margin-top: 7px; display: flex; align-items: center; gap: 6px; font: 600 9.5px/1.2 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .theme .trend .arrow { font-size: 11px; }
+  .theme .trend.growing { color: var(--mr-red); }
+  .theme .trend.steady { color: #5A6B7B; }
+  .theme .trend.stable { color: var(--mr-blue-dark); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide rvt" data-screen-label="75 Review Themes">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  Review themes</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>The themes split by channel, not by product. <span class="alt">Every complaint traces to the online experience; every praise to the physical store or the legacy product.</span></h3>
+      <div class="meta">ProductReview n=234, themes coded<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="rvt-body">
+      <div>
+        <div class="col-lbl neg"><span class="ct">Complaint themes</span><span class="cn">3 themes  &middot;  ProductReview + Ajust verbatims</span></div>
+
+        <div class="theme neg">
+          <div class="t-top"><span class="t-name">1. Returns and exchange policy: rigid, ACL-adjacent tension</span><span class="t-freq">60%+  &middot;  dominant</span></div>
+          <div class="t-desc">The single highest-volume complaint. <strong>Customers report being denied exchanges on sale items, items that don't fit, and items they believe are ACL-protected.</strong> Online-to-store inconsistency compounds the frustration.</div>
+          <div class="verb">
+            <div class="q">&ldquo;Store refused exchange on sale item with receipt and tags. Policy is rigid, outdated and incredibly unfriendly.&rdquo;</div>
+            <div class="who">Mary K.  &middot;  ProductReview (Online Store)  &middot;  12mo ago  &middot;  1-star</div>
+          </div>
+          <div class="trend growing"><span class="arrow">&#9650;</span>Sentiment trend: steady to growing</div>
+        </div>
+
+        <div class="theme neg">
+          <div class="t-top"><span class="t-name">2. Product quality decline: pilling, stitching, thinning fabric</span><span class="t-freq">40-50%</span></div>
+          <div class="t-desc">Multi-platform signal: ProductReview AU (both listings), web editorial (Sept 2024), and r/lululemon globally. <strong>Lululemon's repairs programme explicitly excludes pilling - acknowledging the issue while declining to remediate it.</strong></div>
+          <div class="verb">
+            <div class="q">&ldquo;Thin see through material.&rdquo; / &ldquo;Threads unraveled before first wear.&rdquo;</div>
+            <div class="who">Natasha + Emily  &middot;  ProductReview (Online Store)  &middot;  2y ago  &middot;  1-star</div>
+          </div>
+          <div class="trend growing"><span class="arrow">&#9650;</span>Sentiment trend: growing - reaching editorial velocity</div>
+        </div>
+
+        <div class="theme neg">
+          <div class="t-top"><span class="t-name">3. Customer service: dismissive staff, AI deflection, slow resolution</span><span class="t-freq">35-40%</span></div>
+          <div class="t-desc">6-10 business day response times for AU team; bot-fronted support replacing human agents. <strong>Melbourne Factory Outlet specifically cited as "the worst" for unprofessional staff.</strong> In-store city flagships score materially better.</div>
+          <div class="verb">
+            <div class="q">&ldquo;Everything's AI. The lack of ownership over the problem was frustrating.&rdquo;</div>
+            <div class="who">Fiona C. + Eva  &middot;  ProductReview / Ajust.com.au  &middot;  12mo ago / 2025  &middot;  1-star</div>
+          </div>
+          <div class="trend steady"><span class="arrow">&#9654;</span>Sentiment trend: steady, emerging AI-deflection sub-theme</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-lbl pos"><span class="ct">Praise themes</span><span class="cn">3 themes  &middot;  positive minority + web synthesis</span></div>
+
+        <div class="theme pos">
+          <div class="t-top"><span class="t-name">1. Longevity and durability of legacy pieces</span><span class="t-freq">Dominant praise</span></div>
+          <div class="t-desc">Loyal customers citing 7-10+ years report older Lululemon pieces outlasting all competitors. <strong>Increasingly framed as historical praise rather than current-state endorsement</strong> - making it both praise and an implicit quality-decline signal.</div>
+          <div class="verb">
+            <div class="q">&ldquo;I have leggings and tops that are over 10 years old and still look as good as new.&rdquo;</div>
+            <div class="who">Unattributed  &middot;  web synthesis  &middot;  2024</div>
+          </div>
+          <div class="trend stable"><span class="arrow">&#9654;</span>Sentiment trend: stable in volume, historicising in framing</div>
+        </div>
+
+        <div class="theme pos">
+          <div class="t-top"><span class="t-name">2. In-store staff: knowledgeable, sizing-savvy, warm</span><span class="t-freq">Consistent signal</span></div>
+          <div class="t-desc">City flagship stores (Melbourne Emporium, Sydney CBD) praised for educators who diagnose fit and function needs. <strong>Staff described as willing to assist with special orders and sizing advice.</strong> Directly contrasted against online service failures.</div>
+          <div class="verb">
+            <div class="q">&ldquo;Friendly, knowledgeable staff - willing to assist with sizing and special orders.&rdquo;</div>
+            <div class="who">Positive cohort  &middot;  ProductReview (brand)  &middot;  2024</div>
+          </div>
+          <div class="trend stable"><span class="arrow">&#9654;</span>Sentiment trend: stable - clearest competitive strength in AU</div>
+        </div>
+
+        <div class="theme pos">
+          <div class="t-top"><span class="t-name">3. Product design, functionality and aesthetic</span><span class="t-freq">Cult loyalty</span></div>
+          <div class="t-desc">Specific product lines command strong loyalty: ABC pants, Scuba hoodie, Define jacket, Align leggings. <strong>Functional pockets, flattering cuts, performance fit, gym-to-street versatility.</strong> Design is not under threat; quality execution is the fracture point.</div>
+          <div class="verb">
+            <div class="q">&ldquo;Leggings, ABC pants, Scuba and Define pieces cited as holding up for years.&rdquo;</div>
+            <div class="who">Web synthesis  &middot;  2024</div>
+          </div>
+          <div class="trend stable"><span class="arrow">&#9654;</span>Sentiment trend: stable - design intent praised, execution questioned</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Strategy Cadet v1.2 --with-reviews extension, 21 May 2026. ProductReview.com.au verbatims and theme extraction Verified (brand n=146, online store n=88). Praise themes PROBABLE (web synthesis + positive minority). Sentiment trends PROBABLE (inference from review date distribution). Treat theme proportions as directional not statistically robust. ProductReview structurally over-represents 1-star ratings.</span>
+      <span class="sc-source">p. 75  &middot;  Part 05  &middot;  Review themes</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="75" data-of="80"></script>
+</body>
+</html>

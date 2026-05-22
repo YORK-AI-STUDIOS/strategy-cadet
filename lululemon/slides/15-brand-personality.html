@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand Personality &amp; Values — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1200px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .std .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .values-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    flex: 1;
+    min-height: 0;
+  }
+  .value-card { padding: 22px 22px 22px 0; border-right: 1px solid var(--bg-rule); display: flex; flex-direction: column; }
+  .value-card:first-child { padding-left: 0; }
+  .value-card:last-child { border-right: 0; padding-right: 0; }
+  .value-card:nth-child(n+2) { padding-left: 22px; }
+  .value-card .n { font: 800 32px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; margin-bottom: 14px; }
+  .value-card .n.alt { color: var(--mr-red); }
+  .value-card h4 { margin: 0 0 12px; font: 700 19px/1.25 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .value-card p { margin: 0; font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); }
+
+  .personality-callout { margin-top: 28px; padding: 26px 32px; background: linear-gradient(135deg, #F4F7FB 0%, #EAF1F8 100%); border-left: 4px solid var(--mr-red); display: grid; grid-template-columns: 220px 1fr; gap: 36px; align-items: center; }
+  .personality-callout .lbl { font: var(--t-eyebrow); color: var(--mr-red); letter-spacing: 0.14em; }
+  .personality-callout .words { font: 800 44px/1.05 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.02em; }
+  .personality-callout .words .dot { color: var(--mr-red); margin: 0 6px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="15 Brand Personality">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 02  ·  The Brand  ·  Personality &amp; values</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">13</div>
+      <div>
+        <h3>Five values Lululemon is most committed to.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Brand DNA  ·  Values</div>
+        <div class="topic" style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="n">01</div>
+        <h4>Personal growth.</h4>
+        <p>Lululemon positions itself as a catalyst for people becoming better versions of themselves, physically and mentally. This value permeates everything from product design to in-store experience and community programming.</p>
+      </div>
+      <div class="value-card">
+        <div class="n alt">02</div>
+        <h4>Community.</h4>
+        <p>The ambassador model and SweatLife event ecosystem are built around genuine local connection, not broadcast marketing. Community is both a growth mechanism and a core belief that holds the brand together.</p>
+      </div>
+      <div class="value-card">
+        <div class="n">03</div>
+        <h4>Technical excellence.</h4>
+        <p>Investing in proprietary fabric R&amp;D (Luon, Nulu, Everlux, Swift) signals that product performance is a non-negotiable commitment, not a marketing claim. Lululemon treats material science as a competitive moat.</p>
+      </div>
+      <div class="value-card">
+        <div class="n alt">04</div>
+        <h4>Wellbeing (holistic).</h4>
+        <p>The brand explicitly spans physical fitness, mental health, and mindfulness, reflecting a view that human performance is multidimensional. This extends its relevance well beyond gym wear into everyday life rituals.</p>
+      </div>
+      <div class="value-card">
+        <div class="n">05</div>
+        <h4>Inclusivity through aspiration.</h4>
+        <p>While premiumly priced, Lululemon frames its community as open to anyone committed to the lifestyle, not reserved for elite athletes. The philosophy is earned belonging, not exclusion by income or ability.</p>
+      </div>
+    </div>
+
+    <div class="personality-callout">
+      <div class="lbl">Three words, brand personality</div>
+      <div class="words">Elevated<span class="dot">.</span>Intentional<span class="dot">.</span>Energising<span class="dot">.</span></div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Brand DNA synthesis, Lululemon, Section 4 Brand Personality, prompts 9 and 10. Five values drawn from synthesised brand commitments across product, community model, and retail philosophy. Synthesis confidence PROBABLE.</span>
+      <span class="sc-source">p. 15  ·  Part 02  ·  Personality &amp; values</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="15" data-of="80"></script>
+</body>
+</html>

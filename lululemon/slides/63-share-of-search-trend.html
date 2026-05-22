@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share of Search Trend — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
+<style>
+  .cm .chart-grid.trend { grid-template-columns: 1fr 420px; }
+
+  .twin-rows { display: flex; flex-direction: column; gap: 11px; margin-top: 4px; }
+  .twin-row { display: grid; grid-template-columns: 156px 1fr 84px; gap: 16px; align-items: center; }
+  .twin-row .name { font: 600 13.5px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .twin-row .name .sub { display:block; font: 400 10.5px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 2px; }
+  .twin-row .pair { display: flex; flex-direction: column; gap: 5px; }
+  .twin-row .lane { position: relative; height: 18px; background: #EEF2F6; }
+  .twin-row .lane .fill { height: 18px; position: relative; }
+  .twin-row .lane .fill.win12 { background: var(--mr-blue-dark); }
+  .twin-row .lane .fill.win3  { background: var(--mr-blue-light); }
+  .twin-row .lane .fill.hero12 { background: #D9A000; }
+  .twin-row .lane .fill.hero3  { background: #FCB900; }
+  .twin-row .lane .dl { position: absolute; right: -50px; top: 50%; transform: translateY(-50%); font: 700 11px/1 var(--font-sans); color: var(--fg-heading); }
+  .twin-row .lane .dl.inside { right: 7px; color: var(--fg-on-dark); }
+  .twin-row .delta { font: 700 12px/1.1 var(--font-sans); color: var(--fg-muted); text-align: right; white-space: nowrap; }
+  .twin-row .delta.up   { color: #0E8A52; }
+  .twin-row .delta.down { color: var(--mr-red); }
+  .twin-row .delta .tt { display:block; font: 400 9px/1.2 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+
+  .twin-axis { display:flex; justify-content: space-between; margin-top: 12px; padding-left: 172px; padding-right: 100px; }
+  .twin-axis span { font: var(--t-caption); color: var(--fg-muted); }
+
+  .seasonal { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--bg-rule); }
+  .seasonal .s-lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); margin-bottom: 7px; }
+  .seasonal p { margin: 0; font: 400 12px/1.5 var(--font-sans); color: var(--fg-body); }
+  .seasonal p strong { color: var(--fg-heading); }
+
+  .impl-list { display: flex; flex-direction: column; gap: 0; }
+  .impl-list .imp { padding: 13px 0; border-bottom: 1px solid var(--bg-rule); display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: baseline; }
+  .impl-list .imp:last-child { border-bottom: 0; }
+  .impl-list .imp .n { font: 800 15px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .impl-list .imp .tx { font: 600 12.5px/1.4 var(--font-sans); color: var(--fg-heading); }
+  .impl-list .imp .tx span { display:block; font: 400 11.5px/1.45 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide cm" data-screen-label="63 Share of Search Trend">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  Search trend</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Read across both windows: <span class="alt2">Nike sliding, Adidas accelerating</span>. Lululemon steady at 12.2%. P.E Nation the fastest relative mover from a small base.</h3>
+      <div class="meta">12-month vs 3-month windows<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="chart-grid trend">
+      <div class="chart-area" data-chart-name="Chart_ShareOfSearchTrend" data-chart-type="paired-bar" data-chart-source="sos.window-comparison">
+        <div class="ctitle">Share of search, 12-month vs recent 3-month window</div>
+        <div class="csub">Google Trends via pytrends, geo=AU. Upper bar = 12-month average (May 2025 to May 2026). Lower bar = recent 3-month window. Delta is the directional read.</div>
+
+        <div class="twin-rows" data-chart-name="Chart_SoS_Windows">
+          <div class="twin-row">
+            <div class="name">Nike<span class="sub">Nike Inc.  &middot;  Decelerating</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill win12" style="width:100%;"><span class="dl inside">51.2%</span></div></div>
+              <div class="lane"><div class="fill win3" style="width:94.7%;"><span class="dl inside">48.5%</span></div></div>
+            </div>
+            <div class="delta down">&minus;2.7 pp<span class="tt">Losing ground</span></div>
+          </div>
+          <div class="twin-row">
+            <div class="name">Adidas<span class="sub">Adidas AG  &middot;  Accelerating</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill win12" style="width:51.8%;"><span class="dl inside">26.5%</span></div></div>
+              <div class="lane"><div class="fill win3" style="width:54.7%;"><span class="dl inside">28.0%</span></div></div>
+            </div>
+            <div class="delta up">+1.5 pp<span class="tt">Gaining fast</span></div>
+          </div>
+          <div class="twin-row">
+            <div class="name" style="color: var(--mr-blue-dark);">Lululemon<span class="sub" style="color: var(--fg-muted);">This report  &middot;  Steady</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill hero12" style="width:23.8%;"><span class="dl inside">12.2%</span></div></div>
+              <div class="lane"><div class="fill hero3" style="width:23.2%;"><span class="dl">11.9%</span></div></div>
+            </div>
+            <div class="delta down">&minus;0.3 pp<span class="tt">Within noise</span></div>
+          </div>
+          <div class="twin-row">
+            <div class="name">Lorna Jane<span class="sub">Private AU  &middot;  Steady</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill win12" style="width:8.8%;"><span class="dl">4.5%</span></div></div>
+              <div class="lane"><div class="fill win3" style="width:9.2%;"><span class="dl">4.7%</span></div></div>
+            </div>
+            <div class="delta up">+0.2 pp<span class="tt">Steady</span></div>
+          </div>
+          <div class="twin-row">
+            <div class="name">Under Armour<span class="sub">NYSE: UAA  &middot;  Stalled</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill win12" style="width:5.7%;"><span class="dl">2.9%</span></div></div>
+              <div class="lane"><div class="fill win3" style="width:5.7%;"><span class="dl">2.9%</span></div></div>
+            </div>
+            <div class="delta">0.0 pp<span class="tt">Stalled</span></div>
+          </div>
+          <div class="twin-row">
+            <div class="name">P.E Nation<span class="sub">Private AU  &middot;  Accelerating</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill win12" style="width:2.9%;"><span class="dl">1.5%</span></div></div>
+              <div class="lane"><div class="fill win3" style="width:5.9%;"><span class="dl">3.0%</span></div></div>
+            </div>
+            <div class="delta up">+1.5 pp<span class="tt">+100% relative</span></div>
+          </div>
+          <div class="twin-row">
+            <div class="name">The Upside<span class="sub">Private AU  &middot;  Flat</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill win12" style="width:2.1%;"><span class="dl">1.1%</span></div></div>
+              <div class="lane"><div class="fill win3" style="width:2.1%;"><span class="dl">1.1%</span></div></div>
+            </div>
+            <div class="delta">0.0 pp<span class="tt">No momentum</span></div>
+          </div>
+        </div>
+
+        <div class="twin-axis"><span>0%</span><span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>51%</span></div>
+
+        <div class="seasonal">
+          <div class="s-lbl">Seasonal pattern (Lululemon)</div>
+          <p>Lululemon shows two AU-specific peaks: <strong>May (EOFY gifting) and November (Black Friday / Christmas).</strong> October is the annual trough, consistent with AU retail seasonal norms. The -0.3pp 12-month vs 3-month delta is within statistical noise, not a meaningful decline. The October window offers counter-seasonal brand-building opportunity at lower auction cost.</p>
+        </div>
+      </div>
+
+      <aside>
+        <div class="callout">
+          <div class="lbl">Implications for strategy</div>
+          <div class="impl-list">
+            <div class="imp"><span class="n">1</span><span class="tx">The Nike-to-Adidas shift is the category signal.<span>Nike shedding 2.7pp while Adidas gains 1.5pp. Lululemon is not capturing Nike's lost share. If the rotation is toward sport-performance crossover (Adidas's lane), Lululemon's premium athleisure lane risks being bypassed in the upper-funnel conversation.</span></span></div>
+            <div class="imp"><span class="n">2</span><span class="tx">Lululemon's hold is structural, not growing.<span>12.2% SoS is consistent across both windows. Strategy should focus on deepening loyalty and lifetime value rather than top-of-funnel acquisition that merely defends existing share.</span></span></div>
+            <div class="imp"><span class="n">3</span><span class="tx">P.E Nation's 3-month acceleration is a conquest window.<span>+100% relative SoS growth in 3 months from 1.5% to 3.0%. The most likely brand to chip into Lululemon's premium AU-native positioning. Targeted paid search on Lululemon's key brand terms now, before P.E Nation builds further momentum.</span></span></div>
+            <div class="imp"><span class="n">4</span><span class="tx">October counter-seasonal opportunity.<span>Lululemon's lowest SoS point is October. Media weight in September-October is cheaper (lower auction competition). A brand-building campaign in this window builds base SoS ahead of the November peak.</span></span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: brand-discovery-lululemon-extension-sos.md. Strategy Cadet v1.2 --with-sos extension, 21 May 2026. Google Trends via pytrends, geo=AU. Q1: Lululemon/Nike/Adidas/Lorna Jane/PE Nation. Q2: Lululemon/The Upside/Under Armour/Nike (Nike anchor; Q1 sum 3243, Q2 sum 3242, 0.03% variance). Trends shows relative interest, not absolute volume.</span>
+      <span class="sc-source">p. 63  &middot;  Part 05  &middot;  Search trend</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="63" data-of="80"></script>
+</body>
+</html>

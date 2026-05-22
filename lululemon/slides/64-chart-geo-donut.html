@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chart  ·  GEO Scorecard — Lululemon</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide cm" data-screen-label="64 Chart - GEO Donut">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  GEO scorecard</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Lululemon is <span class="alt2">VISIBLE-PRIMARY in 3 of 8 AU activewear queries</span> and SECONDARY in 3 more. Two BURIED queries surface the AU review-score liability.</h3>
+      <div class="meta">8 category prompts via WebSearch proxy<br><span class="sc-chip sc-chip--uncertain" style="margin-top:6px;">Uncertain</span></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-area" data-chart-name="Chart_GEO_Donut" data-chart-type="donut" data-chart-source="geo.scorecard">
+        <div class="ctitle">Generative Engine Optimisation scorecard</div>
+        <div class="csub">Per-query visibility classification. Strategy Cadet v1.2 --with-geo extension, WebSearch proxy across 8 category-relevant prompts, May 2026. Not a direct LLM API query.</div>
+
+        <div class="svg-frame" style="margin-top: 16px;">
+          <svg viewBox="0 0 360 360" preserveAspectRatio="xMidYMid meet" aria-label="GEO scorecard donut">
+            <defs>
+              <linearGradient id="geo-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#5A9BD5"/>
+                <stop offset="100%" stop-color="#4971B7"/>
+              </linearGradient>
+            </defs>
+            <!-- PRIMARY 3/8 = 37.5% arc -->
+            <circle cx="180" cy="180" r="140" stroke="url(#geo-grad)" stroke-width="36" fill="none"
+                    stroke-dasharray="879.6" stroke-dashoffset="549.7"
+                    transform="rotate(-90 180 180)" stroke-linecap="butt"/>
+            <!-- SECONDARY 3/8 = 37.5% arc -->
+            <circle cx="180" cy="180" r="140" stroke="#5A9BD5" stroke-width="36" fill="none"
+                    stroke-dasharray="879.6" stroke-dashoffset="549.7"
+                    transform="rotate(45 180 180)" stroke-linecap="butt" opacity="0.55"/>
+            <!-- BURIED 2/8 = 25% arc, red -->
+            <circle cx="180" cy="180" r="140" stroke="#EF434E" stroke-width="36" fill="none"
+                    stroke-dasharray="879.6" stroke-dashoffset="659.7"
+                    transform="rotate(180 180 180)" stroke-linecap="butt" opacity="0.7"/>
+            <text x="180" y="170" text-anchor="middle" font-family="Open Sans" font-weight="800" font-size="84" fill="#2E4A63" letter-spacing="-3">3 / 8</text>
+            <text x="180" y="205" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="13" fill="#9AA3AD" letter-spacing="2" style="text-transform:uppercase;">Queries VISIBLE-PRIMARY</text>
+          </svg>
+        </div>
+
+        <div class="legend-row">
+          <div class="key"><span class="swatch" style="background: var(--mr-blue-dark);"></span>VISIBLE-PRIMARY: 3 / 8</div>
+          <div class="key"><span class="swatch" style="background: #5A9BD5; opacity: 0.55;"></span>VISIBLE-SECONDARY: 3 / 8</div>
+          <div class="key"><span class="swatch" style="background: #EF434E; opacity: 0.7;"></span>VISIBLE-BURIED: 2 / 8</div>
+          <div class="key"><span class="swatch" style="background: #E5EAF0;"></span>ABSENT: 0 / 8</div>
+        </div>
+      </div>
+
+      <aside class="callout">
+        <div class="lbl">What this means</div>
+        <div class="h">Strong on Nike-comparison and best-leggings queries. Weak when consumers ask "is Lululemon worth it" or "Lululemon alternatives" in AU.</div>
+        <p>PRIMARY positioning on Q1 best-activewear-AU, Q4 best-leggings-2026, Q7 Nike-vs-Lululemon. BURIED on Q5 "worth it" (ProductReview 1.7/Trustpilot 1.3 dominate) and Q6 "alternatives" (Lorna Jane positioned as replacement).</p>
+        <div class="sep"></div>
+        <ul>
+          <li>WebSearch proxy is not a substitute for direct LLM API queries. Real ChatGPT and Perplexity outputs may differ.</li>
+          <li>The AU review-score signal is the single biggest GEO liability: any "worth it" query surfaces 1-2 star aggregates first.</li>
+          <li>Lorna Jane appears in 7 of 8 AU queries; AU-native framing works against Lululemon.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Strategy Cadet v1.2 --with-geo extension, 21 May 2026; 8 category-relevant prompts run via WebSearch proxy (not direct LLM API). Visibility classified per query as VISIBLE-PRIMARY, VISIBLE-SECONDARY, VISIBLE-BURIED, or ABSENT. Confidence: Uncertain pending direct-API replication.</span>
+      <span class="sc-source">p. 64  ·  Part 05  ·  GEO</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="64" data-of="80"></script>
+</body>
+</html>

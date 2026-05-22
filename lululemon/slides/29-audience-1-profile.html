@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience 1 Profile — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .aud .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .aud .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .aud .head h3 { margin: 0; font: 700 28px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1200px; }
+  .aud .head h3 .alt { color: var(--mr-red); }
+  .aud .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .aud-banner { margin-top: 22px; display: grid; grid-template-columns: 360px 1fr; gap: 40px; padding-bottom: 22px; border-bottom: 1px solid var(--bg-rule); }
+  .aud-banner .name-block .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); letter-spacing: 0.14em; margin-bottom: 8px; }
+  .aud-banner .name-block .age { font: 800 56px/0.95 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.03em; }
+  .aud-banner .name-block .age-unit { font: 400 13px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 8px; }
+  .aud-banner .desc { font: 400 15px/1.55 var(--font-sans); color: var(--fg-body); }
+  .aud-banner .desc strong { color: var(--fg-heading); }
+
+  .facet-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 36px; flex: 1; min-height: 0; }
+  .facet { padding: 12px 0; border-top: 1px solid var(--bg-rule); }
+  .facet .lbl { font: 600 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .facet .v { font: 600 13.5px/1.4 var(--font-sans); color: var(--fg-heading); }
+  .facet .v .sub { display: block; font: 400 12px/1.45 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .facet .v .src { display: block; font: 400 italic 11px/1.35 var(--font-sans); color: var(--fg-muted); margin-top: 5px; }
+  .facet.full { grid-column: span 3; }
+  .facet.full .v { font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); }
+  .facet.full .v ul { margin: 6px 0 0; padding-left: 18px; }
+  .facet.full .v ul li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide aud" data-screen-label="29 Audience 1 Profile">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03  &middot;  The Audience  &middot;  Audience 01  &middot;  Profile</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">21</div>
+      <div>
+        <h3>Audience 1, <span class="alt">Urban Professional Women, Aged 28 to 44</span>. Aspirational wellness-driven, quality over volume.</h3>
+      </div>
+      <div class="meta">Profile<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="aud-banner">
+      <div class="name-block">
+        <div class="lbl">Core age band</div>
+        <div class="age">28 &ndash; 44</div>
+        <div class="age-unit">Peak engagement in the 30 to 39 bracket, with strong representation up to 44.</div>
+      </div>
+      <div class="desc">Lululemon&rsquo;s founding demographic and still its largest revenue cohort. Approximately <strong>70%</strong> of Lululemon&rsquo;s overall customer base is women. University-educated, professionally employed, earning AUD 100,000 to 180,000+ household income, living in inner-city Sydney, Melbourne, Brisbane and Perth precincts. Sees fitness as a non-negotiable self-care ritual. Values quality over volume, buys fewer items at premium price points, and seeks clothing that transitions from studio to work to social without changing.</div>
+    </div>
+
+    <div class="facet-grid">
+      <div class="facet">
+        <div class="lbl">Gender</div>
+        <div class="v">Predominantly female<span class="sub">Approx. 70% of Lululemon&rsquo;s overall customer base is women.</span><span class="src">businessmodelanalyst.com (Verified)</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Education</div>
+        <div class="v">University-educated or higher<span class="sub">Many hold postgraduate qualifications. Over-represented in professional and knowledge-sector roles.</span><span class="src">Probable</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Employment</div>
+        <div class="v">White-collar, full or part-time<span class="sub">Professional services, healthcare, education, creative industries. Growing self-employed segment.</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Income</div>
+        <div class="v">AUD 100k to 180k+ household<span class="sub">Individual income typically AUD 70k to 130k. Well above AU median household income of approx. AUD 95k/year.</span><span class="src">localinsight.com.au (Verified)</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Living arrangements</div>
+        <div class="v">Apartment or terrace, inner city<span class="sub">Mix of renting and owner-occupying. Blended work patterns (office 3 days, WFH 2 days) make activewear a daily wardrobe staple.</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Relationship status</div>
+        <div class="v">Broad spread, many partnered<span class="sub">Meaningful solo-living cohort in Sydney and Melbourne. Some with one or two children under 10.</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Children</div>
+        <div class="v">Approximately 50% with children<span class="sub">One or two children under 10 is common. No-children segment significant and growing given career prioritisation.</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Home ownership</div>
+        <div class="v">Mixed<span class="sub">Inner-city ownership aspirational but constrained. Many in the 28 to 35 bracket still renting in premium locations.</span><span class="src">Probable</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Pets</div>
+        <div class="v">Dogs very common<span class="sub">Particularly medium breeds. Pet ownership aligns with active outdoor lifestyles: morning runs, weekend park culture.</span><span class="src">Probable</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Geography</div>
+        <div class="v">Inner-ring Sydney, Melbourne, Brisbane, Perth<span class="sub">Surry Hills, Bondi, Armadale, South Yarra, Fitzroy, New Farm, Cottesloe, Subiaco.</span><span class="src">ragtrader.com.au (Verified)</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Context</div>
+        <div class="v">Urban, high foot traffic precincts<span class="sub">Premium retail and boutique fitness studios. Activewear is functional daily attire, not gym-only kit.</span></div>
+      </div>
+      <div class="facet">
+        <div class="lbl">Wellness identity</div>
+        <div class="v">Fitness as identity, not chore<span class="sub">Highly engaged with wellness as a lifestyle signal. Environmentally aware, prefers brands that align quietly rather than loudly.</span></div>
+      </div>
+
+      <div class="facet full">
+        <div class="lbl">Lifestyle and values</div>
+        <div class="v">Sees fitness as a non-negotiable self-care ritual. Values quality over volume, buys fewer items at premium price points. Seeks clothing that transitions from studio to work to social without changing. Highly engaged with wellness as identity, not just activity. Environmentally aware but not activist.
+          <ul>
+            <li><strong>Studio community membership</strong> functions as social currency. Wearing Lululemon to Pilates is a participation signal within a defined social group.</li>
+            <li><strong>Cost-per-wear logic</strong> justifies premium pricing. Price sensitivity increases outside core product lines (accessories, footwear).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Strategy Cadet v1.2 audience synthesis, May 2026. Demographic anchors from businessmodelanalyst.com Lululemon Target Market 2026, localinsight.com.au median household income 2025, ragtrader.com.au athleisure boom report. Confidence tags retained per .md.</span>
+      <span class="sc-source">p. 29  &middot;  Part 03  &middot;  Audience 1 profile</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="29" data-of="80"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GEO by Query — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .geoq .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--bg-rule); }
+  .geoq .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1280px; }
+  .geoq .head h3 .alt2 { color: var(--mr-blue-dark); }
+  .geoq .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .geoq-intro { margin: 16px 0 14px; font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); max-width: 1520px; }
+  .geoq-intro strong { color: var(--fg-heading); }
+
+  .qtable { display: flex; flex-direction: column; flex: 1; min-height: 0; border-top: 1px solid var(--fg-heading); }
+  .qrow { display: grid; grid-template-columns: 40px 1fr 138px 1.05fr; gap: 18px; padding: 11px 0; border-bottom: 1px solid var(--bg-rule); align-items: start; }
+  .qrow.hd { padding: 8px 0; border-bottom: 1px solid var(--bg-rule); }
+  .qrow.hd span { font: 700 10px/1.2 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .qrow .qn { font: 800 14px/1.2 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.01em; }
+  .qrow .qq { font: 600 13px/1.35 var(--font-sans); color: var(--fg-heading); }
+  .qrow .qq .cites { display:block; font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-muted); margin-top: 5px; }
+
+  .pos { display: inline-flex; align-items: center; gap: 6px; font: 700 10.5px/1 var(--font-sans); letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 9px; border-radius: 2px; }
+  .pos .pdot { width: 7px; height: 7px; border-radius: 50%; }
+  .pos.primary { background: #E2EAF4; color: var(--mr-blue-dark); }
+  .pos.primary .pdot { background: var(--mr-blue-dark); }
+  .pos.secondary { background: #EEF2F6; color: #5A6B7B; }
+  .pos.secondary .pdot { background: var(--mr-blue-light); }
+  .pos.buried { background: #FDE6E8; color: var(--mr-red); }
+  .pos.buried .pdot { background: var(--mr-red); }
+
+  .qrow .qframe { font: 400 11.5px/1.45 var(--font-sans); color: var(--fg-body); }
+  .qrow .qframe strong { color: var(--fg-heading); font-weight: 700; }
+
+  .geoq-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--bg-rule); display: flex; gap: 36px; }
+  .geoq-foot .ft { display: flex; flex-direction: column; }
+  .geoq-foot .ft .ftn { font: 800 24px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.02em; }
+  .geoq-foot .ft .ftn.blue { color: var(--mr-blue-dark); }
+  .geoq-foot .ft .ftl { font: 600 10px/1.3 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide geoq" data-screen-label="65 GEO by Query">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  GEO by query</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Eight category questions, query by query. Lululemon earns <span class="alt2">PRIMARY where it owns a concrete product reputation</span>. BURIED where AU review scores dominate.</h3>
+      <div class="meta">8 prompts via WebSearch proxy<br><span class="sc-chip sc-chip--uncertain" style="margin-top:6px;">Uncertain</span></div>
+    </div>
+
+    <div class="geoq-intro">The three PRIMARY results hinge on a reputation an AI model can quote directly: benchmark leggings fabric, Nike comparison, broad AU activewear presence. The two BURIED results are brand-specific queries where Lululemon's AU review aggregates (ProductReview 1.8/5, Trustpilot AU -- unverified, direct scrape was bot-blocked) and "alternatives" editorial dominate. <strong>Zero queries returned ABSENT.</strong></div>
+
+    <div class="qtable">
+      <div class="qrow hd">
+        <span>#</span><span>Category question  &middot;  top-result citations</span><span>Brand position</span><span>Brand framing</span>
+      </div>
+
+      <div class="qrow">
+        <span class="qn">Q1</span>
+        <span class="qq">Best activewear brands Australia 2026<span class="cites">Broadsheet "21 Best Activewear Brands"  &middot;  Women's Weekly  &middot;  Pedestrian.tv</span></span>
+        <span><span class="pos primary"><span class="pdot"></span>Primary</span></span>
+        <span class="qframe">"Unofficial uniform of activewear enthusiasts" (Women's Weekly). "Built reputation on technical, feel-good fabrics." <strong>Named in top-tier across all three leading roundup publications.</strong></span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q2</span>
+        <span class="qq">Premium yoga pants Australia best brands<span class="cites">Leelinessports AU yoga brands  &middot;  Flexlara activewear review</span></span>
+        <span><span class="pos secondary"><span class="pdot"></span>Secondary</span></span>
+        <span class="qframe">Present but not top-ranked. <strong>AU-native brands (Lorna Jane, Nimble, Stax) dominate</strong> the "Australian premium yoga" framing in AI-visible content. Non-Australian origin works against Lululemon on localised yoga queries.</span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q3</span>
+        <span class="qq">Athletic apparel for women Australia top picks<span class="cites">RUSSH AU activewear 2026  &middot;  Urban List  &middot;  Broadsheet</span></span>
+        <span><span class="pos secondary"><span class="pdot"></span>Secondary</span></span>
+        <span class="qframe">Implied via "premium tier" mentions. <strong>Lorna Jane leads as the named AU heritage brand.</strong> Nike prominent for sport-specific pieces. Lululemon appears in roundups but not lead-named.</span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q4</span>
+        <span class="qq">Best leggings Australia 2026 review<span class="cites">Women's Weekly best leggings  &middot;  WellEdit best leggings 2026  &middot;  Pedestrian running leggings</span></span>
+        <span><span class="pos primary"><span class="pdot"></span>Primary</span></span>
+        <span class="qframe">"Align line is still one of the softest, most flattering leggings out there" (Women's Weekly). <strong>Benchmark fabric cited directly.</strong> Muscle Nation making ground for gym/HIIT; Lorna Jane holds yoga-casual leggings share.</span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q5</span>
+        <span class="qq">Lululemon Australia review worth it 2026<span class="cites">ProductReview.com.au (1.8/5, 146 reviews)  &middot;  Trustpilot AU (score unverified -- direct scrape bot-blocked)</span></span>
+        <span><span class="pos buried"><span class="pdot"></span>Buried</span></span>
+        <span class="qframe"><strong>Highest-risk GEO position.</strong> Review aggregates dominate. Quality concerns (pilling post-purchase), slow CS response (7-10 business days). An AI asked "is Lululemon worth it in Australia?" surfaces these 1-2 star aggregates first.</span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q6</span>
+        <span class="qq">Lululemon alternatives Australia cheaper activewear<span class="cites">WHO affordable activewear  &middot;  Marie Claire AU  &middot;  Stylight brands like Lululemon</span></span>
+        <span><span class="pos buried"><span class="pdot"></span>Buried</span></span>
+        <span class="qframe">Present as the benchmark being replaced; not as the recommendation. <strong>Lorna Jane, Cotton On, Bonds cited as AU alternatives.</strong> Lululemon's name used to define "premium" while editorial recommends cheaper options.</span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q7</span>
+        <span class="qq">Nike vs Lululemon Australia activewear comparison<span class="cites">ApartStyle Nike vs Lululemon 2026  &middot;  AEL XR comparison review</span></span>
+        <span><span class="pos primary"><span class="pdot"></span>Primary</span></span>
+        <span class="qframe">Consistently positioned as the premium, comfort-forward, lifestyle option vs Nike's performance/sport focus. <strong>"Nulu and Luon fabrics famously soft, compressive, durable."</strong> Net-positive framing; Lululemon wins the lifestyle half.</span>
+      </div>
+      <div class="qrow">
+        <span class="qn">Q8</span>
+        <span class="qq">Best gym clothes brands Australia women 2026 Lorna Jane PE Nation<span class="cites">Women's Weekly  &middot;  RUSSH Australian brands  &middot;  Broadsheet</span></span>
+        <span><span class="pos secondary"><span class="pdot"></span>Secondary</span></span>
+        <span class="qframe">Mentioned in roundups but <strong>AU-native filter pushes Lorna Jane and LSKD to the front.</strong> P.E Nation favoured for fashion-gym. Non-Australian origin works against Lululemon when queries specifically invoke Australian brands.</span>
+      </div>
+    </div>
+
+    <div class="geoq-foot">
+      <div class="ft"><span class="ftn blue">3 / 8</span><span class="ftl">Visible-Primary</span></div>
+      <div class="ft"><span class="ftn">3 / 8</span><span class="ftl">Visible-Secondary</span></div>
+      <div class="ft"><span class="ftn">2 / 8</span><span class="ftl">Buried</span></div>
+      <div class="ft"><span class="ftn">0 / 8</span><span class="ftl">Absent</span></div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: brand-discovery-lululemon-extension-geo.md. Strategy Cadet v1.2 --with-geo extension, 21 May 2026. 8 category-relevant prompts run via WebSearch proxy, not direct LLM API. Per-query confidence ranges Verified to Probable; overall slide confidence Uncertain pending direct-API replication. ProductReview 1.8/5 (146 reviews): brand-discovery-lululemon-extension-reviews.md, direct scrape, VERIFIED. Trustpilot AU: direct scrape returned HTTP 403 (bot-blocked) -- score not independently verified; figure sourced from GEO proxy only, treat as UNCERTAIN.</span>
+      <span class="sc-source">p. 65  &middot;  Part 05  &middot;  GEO by query</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="65" data-of="80"></script>
+</body>
+</html>

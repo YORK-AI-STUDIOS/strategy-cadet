@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Innovation Priorities — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .pri .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .pri .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .pri .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1240px; }
+  .pri .head .meta { margin-left: auto; text-align: right; }
+  .pri .head .meta .eyebrow { font: var(--t-eyebrow); color: var(--fg-body); }
+  .pri .head .meta .topic { margin-top: 6px; }
+
+  .pri-intro { margin: 22px 0 20px; font: 400 15px/1.55 var(--font-sans); color: var(--fg-body); max-width: 1500px; }
+  .pri-intro strong { color: var(--fg-heading); }
+
+  .move-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; flex: 1; min-height: 0; }
+  .move-card { display: flex; flex-direction: column; padding: 20px 20px; background: #FFFFFF; border: 1px solid var(--bg-rule); border-top: 4px solid var(--mr-blue-dark); position: relative; }
+  .move-card:nth-child(4) { border-top-color: var(--mr-red); }
+  .move-card:nth-child(5) { border-top-color: var(--mr-red); }
+
+  .move-card .row-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid var(--bg-rule); }
+  .move-card .phase { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.12em; text-transform: uppercase; }
+  .move-card:nth-child(4) .phase,
+  .move-card:nth-child(5) .phase { color: var(--mr-red); }
+  .move-card .idx { font: 800 30px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+
+  .move-card h4 { margin: 0 0 9px; font: 700 16px/1.28 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .move-card .why { font: 400 11.5px/1.5 var(--font-sans); color: var(--fg-body); margin: 0 0 auto; }
+
+  .move-card .serves { margin-top: 12px; padding-top: 11px; border-top: 1px solid var(--bg-rule); }
+  .move-card .serves .s-lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); letter-spacing: 0.1em; margin-bottom: 6px; }
+  .move-card:nth-child(4) .serves .s-lbl,
+  .move-card:nth-child(5) .serves .s-lbl { color: var(--mr-red); }
+  .move-card .serves .s-aud { display: flex; flex-wrap: wrap; gap: 5px; }
+  .move-card .serves .a-tag { font: 700 9px/1 var(--font-sans); letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 8px; background: #E2EAF4; color: var(--mr-blue-dark); border-radius: 2px; }
+  .move-card .serves .a-tag.all { background: var(--mr-blue-dark); color: #fff; }
+
+  .pri-axis { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--bg-rule); display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .pri-axis .tick { display: flex; align-items: center; gap: 9px; }
+  .pri-axis .tick .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--mr-blue-dark); }
+  .pri-axis .tick:nth-child(4) .dot,
+  .pri-axis .tick:nth-child(5) .dot { background: var(--mr-red); }
+  .pri-axis .tick .txt { font: 600 11px/1.3 var(--font-sans); color: var(--fg-body); letter-spacing: 0.06em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide pri" data-screen-label="50 Innovation Priorities">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 04  &middot;  Innovation &amp; Growth  &middot;  Priority moves</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">38</div>
+      <div>
+        <h3>Five priority moves, sequenced. Build the community moat first; build the men&rsquo;s platform and circular commerce last.</h3>
+      </div>
+      <div class="meta">
+        <div class="eyebrow">Synthesis  &middot;  Cross-audience</div>
+        <div class="topic"><span class="sc-chip sc-chip--uncertain">Uncertain</span></div>
+      </div>
+    </div>
+
+    <div class="pri-intro">The ideation.md does not rank its concepts, so this sequence is a <strong>Strategy Cadet synthesis</strong>. It orders the five concepts by two tests: how many audiences a move serves, and how quickly it can ship. The SweatLife Hub and Fit Intelligence moves serve all three audiences and have the shortest build cycle; the Men&rsquo;s Collective and Loop and Lift require deeper infrastructure investment and are sequenced accordingly.</div>
+
+    <div class="move-row">
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 01  &middot;  Now</span><span class="idx">01</span></div>
+        <h4>Launch SweatLife Local Hubs.</h4>
+        <p class="why">The community moat that no competitor has replicated at scale in Australia. Converts store square metres from transactional retail into retention infrastructure. One concept, three distinct audience implementations: professional women&rsquo;s programming, men&rsquo;s performance collectives, Gen Z co-designed events.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 02  &middot;  Now</span><span class="idx">02</span></div>
+        <h4>Ship Precision Fit Intelligence.</h4>
+        <p class="why">The single highest-impact conversion tool across all channels. Reduces return rates for professional women, lowers purchase friction for Gen Z, and provides performance rationale for male athletes. Fit uncertainty is the primary reason premium activewear shoppers abandon carts or over-order and return.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 03  &middot;  Next</span><span class="idx">03</span></div>
+        <h4>Build the Men&rsquo;s Collective.</h4>
+        <p class="why">The highest-ceiling growth bet in the idea bank. The men&rsquo;s activewear opportunity is real and the window is closing: Vuori, On, and Pas Normal Studios are actively recruiting Lululemon&rsquo;s natural male audience. A brand-within-a-brand move requiring content, community, and store investment.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag">Male athletes</span><span class="a-tag">Gen Z men</span><span class="a-tag">Women (gifting)</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 04  &middot;  Next</span><span class="idx">04</span></div>
+        <h4>Launch Transparent Performance.</h4>
+        <p class="why">The trust architecture that defends premium pricing against a category of increasingly sophisticated sceptics. SKU-level proof for professional women, performance data for male athletes, social-native factory transparency for Gen Z. A brand claiming premium must be able to show its working.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+
+      <div class="move-card">
+        <div class="row-top"><span class="phase">Move 05  &middot;  Later</span><span class="idx">05</span></div>
+        <h4>Build Loop and Lift at scale.</h4>
+        <p class="why">The circular commerce repositioning: from garment brand to closed-loop quality ecosystem. Highest infrastructure requirement (certified resale platform, trade-in logistics, AU compliance), so sequenced after the first four moves establish revenue to fund it. Lululemon&rsquo;s Like New programme exists in the US; AU launch is an extension, not a greenfield build.</p>
+        <div class="serves">
+          <div class="s-lbl">Serves</div>
+          <div class="s-aud"><span class="a-tag all">All three audiences</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pri-axis">
+      <div class="tick"><span class="dot"></span><span class="txt">Now  &middot;  3 to 6 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Now  &middot;  3 to 6 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Next  &middot;  6 to 12 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Next  &middot;  6 to 12 months</span></div>
+      <div class="tick"><span class="dot"></span><span class="txt">Later  &middot;  12-plus months</span></div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Synthesis of lululemon-apparel-retail-ideation.md Sections 5 and 6. The ideation.md provides per-idea time horizons but no concept-level ranking; this five-move sequence and its order are a Strategy Cadet synthesis built from audience reach and ship-speed, not a verified Lululemon roadmap. Confidence: Uncertain on sequencing.</span>
+      <span class="sc-source">p. 50  &middot;  Part 04  &middot;  Priority moves</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="50" data-of="80"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>News Detail — Strategy Cadet — Lululemon</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .nws .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--bg-rule); }
+  .nws .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1280px; }
+  .nws .head h3 .alt2 { color: var(--mr-blue-dark); }
+  .nws .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .nws-body { margin-top: 20px; display: grid; grid-template-columns: 1fr 430px; gap: 48px; flex: 1; min-height: 0; }
+
+  /* annotated timeline */
+  .tl-title { font: 600 13px/1.3 var(--font-sans); color: var(--fg-heading); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .tl-sub { font: 400 12px/1.3 var(--font-sans); color: var(--fg-muted); margin-bottom: 20px; }
+
+  .tline { position: relative; padding-left: 28px; }
+  .tline::before { content: ''; position: absolute; left: 6px; top: 4px; bottom: 4px; width: 2px; background: var(--bg-rule); }
+  .tev { position: relative; padding-bottom: 17px; }
+  .tev:last-child { padding-bottom: 0; }
+  .tev::before { content: ''; position: absolute; left: -28px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--mr-blue-dark); }
+  .tev.material::before { background: var(--mr-blue-dark); }
+  .tev .when { font: 700 10.5px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.06em; text-transform: uppercase; }
+  .tev .title { font: 700 14px/1.32 var(--font-sans); color: var(--fg-heading); margin-top: 4px; }
+  .tev .desc { font: 400 11.5px/1.45 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .tev .desc strong { color: var(--fg-heading); }
+  .tev .tag { display: inline-block; font: 700 8.5px/1 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 7px; border-radius: 2px; margin-top: 7px; background: #E2EAF4; color: var(--mr-blue-dark); }
+  .tev .tag.most { background: var(--mr-blue-dark); color: #fff; }
+  .tev .tag.crisis { background: #FBE3E4; color: var(--mr-red); }
+
+  .nws-side { display: flex; flex-direction: column; gap: 0; }
+  .nws-side .panel { background: #F4F7FB; border-left: 3px solid var(--mr-blue-dark); padding: 20px 22px; }
+  .nws-side .panel + .panel { margin-top: 16px; }
+  .nws-side .panel .p-lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); margin-bottom: 10px; }
+  .nws-side .panel h4 { margin: 0 0 10px; font: 700 16px/1.3 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+  .nws-side .panel p { margin: 0; font: 400 12px/1.5 var(--font-sans); color: var(--fg-body); }
+  .nws-side .panel p strong { color: var(--fg-heading); }
+  .nws-side .panel ul { margin: 0; padding-left: 16px; font: 400 11.5px/1.5 var(--font-sans); color: var(--fg-body); }
+  .nws-side .panel ul li { margin-bottom: 6px; }
+  .nws-side .panel ul li strong { color: var(--fg-heading); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide nws" data-screen-label="71 News Detail">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  &middot;  Competitive Context  &middot;  News detail</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>The year's significant events split in two: <span class="alt2">an aggressive AU expansion arc running beneath four global crises</span>.</h3>
+      <div class="meta">12-month event scan<br><span class="sc-chip sc-chip--verified" style="margin-top:6px;">Verified</span></div>
+    </div>
+
+    <div class="nws-body">
+      <div>
+        <div class="tl-title">Significant events of the year, newest first</div>
+        <div class="tl-sub">Filled markers denote the four crisis events in the window. n=28 tagged events, May 2025 to May 2026.</div>
+
+        <div class="tline">
+          <div class="tev material">
+            <div class="when">May 2026</div>
+            <div class="title">Proxy fight escalates: settlement talks collapse</div>
+            <div class="desc">Chip Wilson's "Nosedive" campaign culminates with annual meeting set and competing board slates confirmed. <strong>Governance instability becomes the dominant external frame for the brand</strong> heading into FY2026. Settlement talks publicly collapsed.</div>
+            <span class="tag crisis">Crisis  &middot;  most material</span>
+          </div>
+          <div class="tev material">
+            <div class="when">April 2026</div>
+            <div class="title">Texas AG PFAS investigation into activewear</div>
+            <div class="desc">Texas Attorney General launches probe over alleged "forever chemicals" in activewear, targeting the brand's sustainability positioning. <strong>Lululemon denies use, says PFAS phased out 2023.</strong> Investigation ongoing. Threatens the health-and-wellness brand narrative globally.</div>
+            <span class="tag crisis">Crisis  &middot;  most material</span>
+          </div>
+          <div class="tev material">
+            <div class="when">January 2026</div>
+            <div class="title">&ldquo;Get Low&rdquo; leggings pulled after see-through complaints</div>
+            <div class="desc">Online sales paused within days of launch after customers reported transparency failures on Reddit. <strong>Third legging opacity crisis in 13 years.</strong> Stock fell 6% on the event alone, compounding a 50%+ annual decline. CEO Calvin McDonald simultaneously departed January 31.</div>
+            <span class="tag crisis">Crisis  &middot;  most material</span>
+          </div>
+          <div class="tev material">
+            <div class="when">December 2025</div>
+            <div class="title">Chip Wilson launches proxy fight: WSJ &ldquo;Nosedive&rdquo; ad</div>
+            <div class="desc">Founder publishes full-page WSJ advertisement titled "Lululemon: in a Nosedive." Nominates three independent board candidates. <strong>Brand dilution narrative becomes the dominant trade press frame</strong> for the brand heading into FY2026.</div>
+            <span class="tag crisis">Crisis</span>
+          </div>
+          <div class="tev">
+            <div class="when">March 2026</div>
+            <div class="title">Lewis Hamilton AU Grand Prix edit at Emporium Melbourne</div>
+            <div class="desc">74-piece curated edit exclusive to Emporium Melbourne, timed to the Australian Grand Prix. <strong>Highest-profile AU ambassador activation of the year</strong>, generating earned media across Man of Many, Boss Hunting, Ragtrader and Complex Australia.</div>
+            <span class="tag">Significant event</span>
+          </div>
+          <div class="tev">
+            <div class="when">July 2025</div>
+            <div class="title">Brookfield Place Sydney opens as largest AU store</div>
+            <div class="desc">First multi-level Lululemon store in Australia. Part of a <strong>9-project AU/NZ expansion program in FY2025</strong> that also included the Emporium Melbourne revamp and dedicated footwear space. AU is being treated as an active growth market.</div>
+            <span class="tag">Significant event</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nws-side">
+        <div class="panel">
+          <div class="p-lbl">Activity rhythm</div>
+          <h4>Two campaign waves, an APAC community push, an aggressive AU retail build.</h4>
+          <ul>
+            <li><strong>Q1 AU (Jan-Mar):</strong> Peak AU activation window. Australian Open (Tiafoe Jan 2025), Lewis Hamilton GP edit (Mar 2026), Spring collection, new store openings.</li>
+            <li><strong>APAC spring (Sep-Nov):</strong> Campaign season. "Together We Grow" and "Be Well, Be Together" both ran here. Community events, ambassador-led programming.</li>
+            <li><strong>Dec-Jan:</strong> Global brand disruption in FY2025/26. CEO departure, proxy fight launch, product quality crisis and earnings all landed in this window.</li>
+            <li><strong>Mid-year:</strong> Relatively quieter on campaign activity. Retail store openings cluster here (Miranda, South Australia, Brookfield).</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="p-lbl">The through-line</div>
+          <h4>AU expansion is the proof point the global story needs.</h4>
+          <p>With the US business under margin pressure and governance in public contest, <strong>Australia's 9.1% athleisure market share and 34-store footprint is the healthiest part of the brand's international narrative.</strong> Any agency engagement should lead with AU momentum and insulate from the global noise.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Source: Strategy Cadet v1.2 --with-news extension, 21 May 2026. WebSearch across 10 queries, window May 2025 to May 2026. CNBC, ESG Dive, TheStreet, BNN Bloomberg, BusinessWire, Ragtrader, Man of Many, Hypebeast, Pause Mag. Activity dates and counts Verified; rhythm patterns Probable. Crisis events shown as filled markers: 4 in window (Nosedive WSJ ad + proxy launch Dec 2025, Get Low leggings + CEO departure Jan 2026, PFAS investigation Apr 2026, proxy fight escalation + settlement collapse May 2026).</span>
+      <span class="sc-source">p. 71  &middot;  Part 05  &middot;  News detail</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="71" data-of="80"></script>
+</body>
+</html>

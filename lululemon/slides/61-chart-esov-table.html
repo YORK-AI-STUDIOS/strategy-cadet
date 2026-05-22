@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Table — ESOV Scorecard — Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .tbl .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+  .tbl .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+  .tbl .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+  .tbl-wrap { margin-top: 24px; flex: 1; min-height: 0; }
+  .tbl-wrap table { table-layout: fixed; }
+  .tbl-wrap table td.brand { font-weight: 700; color: var(--fg-heading); }
+  .tbl-wrap table td.brand .sub { display:block; font: 400 11px/1.4 var(--font-sans); color: var(--fg-muted); margin-top:3px; }
+  .tbl-wrap .pos-pill { display:inline-flex; align-items:center; height: 18px; padding: 0 8px; font: 700 10px/1 var(--font-sans); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 2px; }
+  .pos-pill.def { background: #EAF1F8; color: var(--mr-blue-dark); }
+  .pos-pill.exp { background: #FFF4D6; color: #8A6500; }
+  .pos-pill.und { background: #FDE6E8; color: var(--mr-red); }
+  .pos-pill.mix { background: #ECEFF3; color: var(--fg-heading); }
+  .footnotes { display:flex; gap: 28px; flex-wrap:wrap; margin-top: 12px; font: var(--t-source); color: var(--fg-muted); }
+  .footnotes .fn { max-width: 280px; }
+  .footnotes .fn .m { font-weight: 700; margin-right: 4px; font-style: normal; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide tbl" data-screen-label="61 ESOV Scorecard">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive Context  ·  ESOV scorecard</span></div>
+
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Adidas is expanding and Nike is decelerating. Lululemon holds steady at 12.2% SoS while the category reshapes around it.</h3>
+      <div class="meta">Six competitors, scored<br><span class="sc-chip sc-chip--probable" style="margin-top:6px;">Probable</span></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table class="sc-table">
+        <colgroup>
+          <col style="width: 18%;">
+          <col style="width: 9%;">
+          <col style="width: 9%;">
+          <col style="width: 8%;">
+          <col style="width: 9%;">
+          <col style="width: 11%;">
+          <col style="width: 11%;">
+          <col style="width: 25%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th class="num">Est. SoM<sup>*</sup></th>
+            <th class="num">SoV posture<sup>&#8224;</sup></th>
+            <th class="num">ESOV</th>
+            <th class="num">SoS, 12-mo</th>
+            <th class="num">SoS delta</th>
+            <th>Posture</th>
+            <th>Read</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="brand">Nike<span class="sub">Nike Inc. (NYSE: NKE)</span></td>
+            <td class="num">~17.0%</td>
+            <td class="num">High / defending</td>
+            <td class="num">Flat to neg.</td>
+            <td class="num">51.2%</td>
+            <td class="num delta-neg">&minus;2.7 pp</td>
+            <td><span class="pos-pill def">Defense</span></td>
+            <td>First AU brand campaign in a decade. Responding to brand relevance pressure, not growing organically.</td>
+          </tr>
+          <tr>
+            <td class="brand">Adidas<span class="sub">Adidas AG (ETR: ADS)</span></td>
+            <td class="num">~10.0%</td>
+            <td class="num">Rising (+12%)</td>
+            <td class="num delta-pos">Positive</td>
+            <td class="num">26.5%</td>
+            <td class="num delta-pos">+1.5 pp</td>
+            <td><span class="pos-pill exp">Expansion</span></td>
+            <td>Marketing spend +12% YoY. AU women's sport ads outperform Nike on creative effectiveness. Absorbing Nike's shed share.</td>
+          </tr>
+          <tr>
+            <td class="brand">Lululemon<span class="sub" style="color: var(--mr-red);">This report</span></td>
+            <td class="num">~9.1%</td>
+            <td class="num">High (digital)</td>
+            <td class="num delta-pos">Positive</td>
+            <td class="num">12.2%</td>
+            <td class="num">&minus;0.3 pp</td>
+            <td><span class="pos-pill exp">Expansion</span></td>
+            <td><strong>Mindshare exceeds physical footprint.</strong> 80%+ of marketing spend in performance digital; ambassador network of 2,000+ global fitness leaders. Steady hold at #3.</td>
+          </tr>
+          <tr>
+            <td class="brand">Lorna Jane<span class="sub">Private (AU)</span></td>
+            <td class="num">~est.</td>
+            <td class="num">Organic only</td>
+            <td class="num">n/a</td>
+            <td class="num">4.5%</td>
+            <td class="num delta-pos">+0.2 pp</td>
+            <td><span class="pos-pill def">Defense</span></td>
+            <td>$166M revenue (2024). TikTok always-on model: 95% CPA reduction, 4x ROAS. Defending with community, not paid outspend.</td>
+          </tr>
+          <tr>
+            <td class="brand">Under Armour<span class="sub">NYSE: UAA</span></td>
+            <td class="num">~est.</td>
+            <td class="num">Flat / micro</td>
+            <td class="num delta-neg">Negative</td>
+            <td class="num">2.9%</td>
+            <td class="num">0.0 pp</td>
+            <td><span class="pos-pill und">Under-indexed</span></td>
+            <td>Multi-year turnaround. AU grassroots strategy via ISC Sport (800K+ athletes). Above-the-line absent. Stalled in AU market.</td>
+          </tr>
+          <tr>
+            <td class="brand">P.E Nation<span class="sub">Private (AU)</span></td>
+            <td class="num">~est.</td>
+            <td class="num">Editorial only</td>
+            <td class="num delta-neg">Negative</td>
+            <td class="num">1.5%</td>
+            <td class="num delta-pos">+1.5 pp</td>
+            <td><span class="pos-pill und">Under-indexed</span></td>
+            <td>Fastest relative mover: +100% in 3 months (1.5% to 3.0%). Editorial-led, no paid media at scale. Watch item for Lululemon's premium AU positioning.</td>
+          </tr>
+          <tr>
+            <td class="brand">The Upside<span class="sub">Private (AU)</span></td>
+            <td class="num">~est.</td>
+            <td class="num">Minimal</td>
+            <td class="num delta-neg">Negative</td>
+            <td class="num">1.1%</td>
+            <td class="num">0.0 pp</td>
+            <td><span class="pos-pill und">Under-indexed</span></td>
+            <td>Luxury niche (Net-A-Porter, FWRD). High credibility per impression, negligible paid voice. Possibly at organic ceiling. Not a current Lululemon threat.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footnotes">
+        <span class="fn"><span class="m">*</span>Share of Market estimated from Ragtrader / IMARC / Euromonitor AU activewear 2025. Not disclosed at sub-brand level for unlisted companies. Confidence: Probable.</span>
+        <span class="fn"><span class="m">&#8224;</span>AU-specific SOV data is not publicly disclosed. SoV posture is directional, inferred from observed spend increases, campaign activity, and media presence. Confidence: Probable.</span>
+        <span class="fn"><span class="m">&#8225;</span>Lorna Jane, P.E Nation, The Upside SoM not publicly available. Rows marked est. are synthesis estimates only.</span>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: brand-discovery-lululemon-extension-sos.md (SoS data); lululemon-apparel-retail-company.md §2 and §6 (competitor data and ESOV narrative); marketingweek.com Adidas brand revival; ragtrader.com.au athleisure boom; blankboard.studio Lululemon marketing strategy. Compiled by Strategy Cadet v1.2.</span>
+      <span class="sc-source">p. 61  ·  Part 05  ·  ESOV scorecard</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="61" data-of="80"></script>
+</body>
+</html>
