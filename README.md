@@ -1,11 +1,11 @@
-# strategy-cadet-decks
+# strategy-cadet
 
 Hosting for Strategy Cadet HTML presentations. Testing phase — shared with collaborators for review.
 
 ## URLs
 
-- Landing page: https://york-ai-studios.github.io/strategy-cadet-decks/
-- Each deck: https://york-ai-studios.github.io/strategy-cadet-decks/<deck-name>/
+- Landing page: https://york-ai-studios.github.io/strategy-cadet/
+- Each deck: https://york-ai-studios.github.io/strategy-cadet/<deck-name>/
 
 ## Adding a deck
 
