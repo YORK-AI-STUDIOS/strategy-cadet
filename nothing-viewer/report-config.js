@@ -19,7 +19,7 @@
 const REPORT = {
   client:    'Nothing Technology',
   agency:    'Media Republic',
-  subtitle:  'Brand Discovery, Consumer Electronics',
+  subtitle:  'Brand and Media Analysis, Consumer Electronics',
   version:   'Run J Mk2 v6',
   date:      '24 May 2026',
   copyright: '© 2026 York Studios Pty Ltd',
