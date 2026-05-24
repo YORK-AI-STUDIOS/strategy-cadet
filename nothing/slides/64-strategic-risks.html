@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strategic Risks, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .risks-grid { margin-top: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; flex: 1; min-height: 0; }
+  .risk-card { border-top: 4px solid; padding: 12px 14px; }
+  .risk-card.high { border-top-color: #EF434E; background: #FFF5F5; }
+  .risk-card.medium { border-top-color: #856404; background: #FFF9EC; }
+  .risk-card.low { border-top-color: #8896A8; background: #F4F7FB; }
+  .rc-sev { font: 700 8px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .rc-sev.high { color: #EF434E; }
+  .rc-sev.medium { color: #856404; }
+  .rc-sev.low { color: #8896A8; }
+  .rc-title { font: 700 13px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 6px; }
+  .rc-body { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+  .rc-body strong { color: var(--fg-heading); }
+  .rc-mitigation { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 6px; margin-top: 6px; }
+  .rc-mitigation strong { color: var(--mr-blue-dark); }
+  .conf-v { color: #1A7A4A; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-p { color: var(--mr-blue-dark); font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-u { color: #8896A8; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="64 Strategic Risks">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Strategic Risks</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">64</div>
+      <div><h3>Six strategic risks identified: two HIGH (Oppo acceleration and Trustpilot service gap), two MEDIUM (Google Pixel Expansion Mode spend and AI-native device timeline), two LOWER (Facebook consolidation and ProductReview.com.au absence). Each has a defined mitigation path. [VERIFIED Oppo SoS, PROBABLE others]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Appendix  ·  Strategic Risks</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--uncertain">High risks flagged</span></div>
+      </div>
+    </div>
+    <div class="risks-grid">
+      <div class="risk-card high">
+        <div class="rc-sev high">HIGH  ·  Competitive</div>
+        <div class="rc-title">Oppo AU SoS Acceleration (14.3% to 15.5% in 3 months)</div>
+        <div class="rc-body">Oppo's 3-month AU Share of Search has accelerated from 14.3% to 15.5% [VERIFIED pytrends]. If Oppo reaches 17%, Nothing's mid-tier design positioning is under direct competitive pressure from a brand with significantly larger AU media spend. Oppo is currently in Expansion Mode (Agent A ESOV). Nothing is ESOV Under-Indexed. The compounding risk: Oppo gaining ground while Nothing's AU paid media is minimal.</div>
+        <div class="rc-mitigation"><strong>Mitigation:</strong> Kill-Switch 2 triggers immediate Oppo defensive brief at the 17% threshold. Head-to-head design comparison content for Audience 2. Monitor monthly via pytrends. <span class="conf-v">VERIFIED SoS data</span></div>
+      </div>
+      <div class="risk-card high">
+        <div class="rc-sev high">HIGH  ·  Brand Reputation</div>
+        <div class="rc-title">Trustpilot 2.5/5 Rating (587 reviews): Customer Service Gap</div>
+        <div class="rc-body">Nothing's Trustpilot average is 2.5/5 across 587 reviews (recovered via Scamadviser as direct scrape was bot-blocked). Specialist press averages 3.8/5 on product quality. The gap between product quality (high) and customer service (low) is meaningful for Audience 2 (Trust and Positive Impact: 5/5). A warranty escalation or community service failure at scale can undo brand-building investment faster than any content campaign can repair. <span class="conf-p">PROBABLE (third-party citation of Trustpilot data)</span></div>
+        <div class="rc-mitigation"><strong>Mitigation:</strong> Add Warranty Escalation Transparency initiative to AU brief. Nothing Performance Scorecard (quarterly honesty report) addresses this structurally. DM-based warranty response commitment from Agent D directly tackles the primary complaint theme. <span class="conf-p">PROBABLE mitigation effectiveness</span></div>
+      </div>
+      <div class="risk-card medium">
+        <div class="rc-sev medium">MEDIUM  ·  Competitive</div>
+        <div class="rc-title">Google Pixel Remains in Expansion Mode AU</div>
+        <div class="rc-body">Pixel holds 15.9% AU Share of Search (4.4x Nothing's 3.6%) and is in Expansion Mode, meaning Google is still spending to grow Pixel market share in AU. Nothing must earn share through community and content rather than outspending. Pixel's 3-month SoS is decelerating (15.9% to 13.9%), which is why the Pixel-defector goal has strategic merit now, but deceleration is not confirmed as permanent. <span class="conf-v">VERIFIED pytrends</span></div>
+        <div class="rc-mitigation"><strong>Mitigation:</strong> Always-on Pixel comparison content (Competitor Switcher Guide, AU YouTube access programme) intercepts defectors at research stage before Pixel's paid media re-activates. <span class="conf-p">PROBABLE</span></div>
+      </div>
+      <div class="risk-card medium">
+        <div class="rc-sev medium">MEDIUM  ·  Strategic</div>
+        <div class="rc-title">AI-Native Device Timeline Dependency</div>
+        <div class="rc-body">The USD 200M Series C is explicitly directed at an AI-first device in 2026 [VERIFIED TechCrunch]. Carl Pei's March 2026 "apps are going to disappear" statement is a public commitment. If the AI-native device launch is delayed or underwhelms, the 90-180 day roadmap's highest-impact initiative (Glyph Intelligence Layer) is de-risked from the brand strategy. The Tier 3 initiative depends on a product milestone outside marketing's control. <span class="conf-p">PROBABLE risk assessment</span></div>
+        <div class="rc-mitigation"><strong>Mitigation:</strong> Roadmap has two parallel Tier 3 initiatives (Sustainability Passport QR, Design Residency) that proceed independently of AI-native device timeline. Kill-switch architecture pauses dependent initiatives, not the whole plan. <span class="conf-p">PROBABLE</span></div>
+      </div>
+      <div class="risk-card low">
+        <div class="rc-sev low">LOWER  ·  Operational</div>
+        <div class="rc-title">Facebook Dual-Page Attribution Risk</div>
+        <div class="rc-body">Two live Facebook page IDs for Nothing Technology. Low urgency now (AU paid Meta is minimal). Becomes a material risk if AU paid Meta investment scales, as fragmented pixel data corrupts audience matching, lookalike audiences, and conversion tracking. <span class="conf-v">VERIFIED Apify pull</span></div>
+        <div class="rc-mitigation"><strong>Mitigation:</strong> Request client consolidation under page ID 724644021637509 before any paid Meta scale-up. One-time housekeeping action. <span class="conf-p">PROBABLE</span></div>
+      </div>
+      <div class="risk-card low">
+        <div class="rc-sev low">LOWER  ·  Brand Visibility</div>
+        <div class="rc-title">No ProductReview.com.au Listing</div>
+        <div class="rc-body">ProductReview.com.au is a primary AU consumer trust platform. Nothing has no listing found in the reviews aggregation pass. For Audience 3 (Budget-Conscious Gen Z, BNPL buyers) at Consideration stage, a missing ProductReview.com.au presence is a trust signal gap that Pixel, Samsung, and Oppo all fill. <span class="conf-p">PROBABLE (scraping gap vs. genuine absence unconfirmed)</span></div>
+        <div class="rc-mitigation"><strong>Mitigation:</strong> Manual verification on ProductReview.com.au. If absent, create listing as part of AU market presence build-out. Low cost, high trust signal for Audience 3. <span class="conf-p">PROBABLE</span></div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Oppo SoS acceleration: VERIFIED pytrends (Agent A ESOV extension). Pixel SoS 15.9%: VERIFIED pytrends. Trustpilot 2.5/5: PROBABLE (Scamadviser third-party citation; direct scrape bot-blocked). AI-first device: VERIFIED TechCrunch Series C coverage. Facebook dual-page: VERIFIED Apify. ProductReview.com.au absence: PROBABLE (scraping gap not ruled out). Mitigation paths: PROBABLE (analyst inference).</span>
+      <span class="sc-source">p. 64  ·  Appendix  ·  Strategic risks</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="64" data-of="88"></script>
+</body>
+</html>

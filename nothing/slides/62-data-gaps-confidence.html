@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Gaps and Confidence, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .gaps-layout { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; min-height: 0; }
+  .gaps-col { display: flex; flex-direction: column; gap: 8px; }
+  .conf-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+  .cs-box { padding: 10px; text-align: center; }
+  .cs-box.verified { background: #E8F4EC; border-top: 3px solid #1A7A4A; }
+  .cs-box.probable { background: #EEF2F7; border-top: 3px solid var(--mr-blue-dark); }
+  .cs-box.uncertain { background: #FFF5F5; border-top: 3px solid #8896A8; }
+  .cs-val { font: 800 22px/1 var(--font-sans); }
+  .cs-val.verified { color: #1A7A4A; }
+  .cs-val.probable { color: var(--mr-blue-dark); }
+  .cs-val.uncertain { color: #8896A8; }
+  .cs-lbl { font: 400 9px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .gap-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .gap-item { padding: 8px 10px; border-left: 3px solid #EF434E; background: #FFF5F5; }
+  .gi-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #EF434E; margin-bottom: 4px; }
+  .gi-title { font: 600 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .gi-path { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+  .gi-path strong { color: var(--mr-blue-dark); }
+  .flagged-item { padding: 8px 10px; border-left: 3px solid #856404; background: #FFF9EC; }
+  .fi-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #856404; margin-bottom: 4px; }
+  .fi-title { font: 600 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .fi-text { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+  .conf-v { color: #1A7A4A; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="62 Data Gaps and Confidence">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Data Gaps and Confidence  ·  Phase 3 Cross-Reference</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">62</div>
+      <div><h3>Phase 3 cross-reference pass: 70 claims extracted, 48 cross-referenced via Perplexity Sonar. Result: 32 VERIFIED, 7 UNCERTAIN, 3 FLAGGED. Three high-priority data gaps remain open: AU DTC revenue baseline, CMF AU distribution status, and AU smartphone sub-category sizing. [VERIFIED Phase 3 output]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Appendix  ·  Data Gaps</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Phase 3 verified</span></div>
+      </div>
+    </div>
+    <div class="gaps-layout">
+      <div class="gaps-col">
+        <div class="conf-summary">
+          <div class="cs-box verified"><div class="cs-val verified">32</div><div class="cs-lbl">Claims VERIFIED via Phase 3 cross-reference</div></div>
+          <div class="cs-box probable"><div class="cs-val probable">7</div><div class="cs-lbl">Claims returned UNCERTAIN after cross-reference</div></div>
+          <div class="cs-box uncertain"><div class="cs-val uncertain">3</div><div class="cs-lbl">Claims FLAGGED for correction or verification</div></div>
+        </div>
+        <div class="gap-hd">Phase 3 Flagged Items (Priority Corrections)</div>
+        <div class="flagged-item">
+          <div class="fi-lbl">F1  ·  HIGH  ·  CORRECTED</div>
+          <div class="fi-title">AU JB Hi-Fi launch date</div>
+          <div class="fi-text">Initial claim: "late 2023". Phase 3 cross-reference returned: April 2024. Second-sourced via 7NEWS AU + EFTM AU. Corrected throughout report. <span class="conf-v">VERIFIED after correction</span></div>
+        </div>
+        <div class="flagged-item">
+          <div class="fi-lbl">F2  ·  HIGH  ·  PENDING OPERATOR CHECK</div>
+          <div class="fi-title">Alphabet FY2025 net income</div>
+          <div class="fi-text">Report cites USD 132.17B. Perplexity returned USD 100.1B GAAP. Discrepancy flagged in HTML comment. Operator must verify against SEC EDGAR CIK 1652044 before client presentation. Figure appears in Section 5c Competitor Forensics (Samsung/Alphabet parent context).</div>
+        </div>
+        <div class="flagged-item">
+          <div class="fi-lbl">F3  ·  MEDIUM  ·  PENDING</div>
+          <div class="fi-title">Samsung FY2025 net profit</div>
+          <div class="fi-text">Revenue and operating profit VERIFIED. Net profit figure (KRW 45.2T) pending full-year Samsung IR PDF confirmation. Mark as UNCERTAIN if presenting to a financial audience before confirmation.</div>
+        </div>
+        <div class="gap-hd" style="margin-top:6px;">Confidence Tag Distribution (Full Report)</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px;">
+          <div style="padding:8px; background:#E8F4EC; text-align:center; border-top:3px solid #1A7A4A;"><div style="font:800 18px/1 var(--font-sans); color:#1A7A4A;">VERIFIED</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">Live API data, sourced figures, cross-referenced claims. Web research with citations.</div></div>
+          <div style="padding:8px; background:#EEF2F7; text-align:center; border-top:3px solid var(--mr-blue-dark);"><div style="font:800 18px/1 var(--font-sans); color:var(--mr-blue-dark);">PROBABLE</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">Well-evidenced LLM synthesis. Cross-referenced against multiple consistent sources but not live-verified.</div></div>
+          <div style="padding:8px; background:#FFF5F5; text-align:center; border-top:3px solid #8896A8;"><div style="font:800 18px/1 var(--font-sans); color:#8896A8;">UNCERTAIN</div><div style="font:400 9px/1.3 var(--font-sans); color:var(--fg-body); margin-top:4px;">LLM inference, no primary source. Directional only. Should not be cited directly to a client without further research.</div></div>
+        </div>
+      </div>
+      <div class="gaps-col">
+        <div class="gap-hd">Open Data Gaps (Upgrade Paths)</div>
+        <div class="gap-item">
+          <div class="gi-lbl">Gap 1  ·  High Priority</div>
+          <div class="gi-title">Nothing AU DTC Revenue Baseline</div>
+          <div class="gi-path">No AU DTC revenue baseline is available from public sources. <strong>Upgrade path:</strong> Nothing AU team provides internal DTC order volume at strategy kick-off. Required to set Kill-Switch 3 threshold and measure AU DTC Revenue Growth KPI.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gi-lbl">Gap 2  ·  High Priority</div>
+          <div class="gi-title">CMF by Nothing AU Distribution Status</div>
+          <div class="gi-path">CMF AU market entry status is UNCERTAIN. <strong>Upgrade path:</strong> Nothing AU commercial team confirms distribution agreement status by Day 60 gate. Without confirmation, the Tier 2 CMF initiative reverts to Nothing Phone (2a) BNPL strategy.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gi-lbl">Gap 3  ·  Medium Priority</div>
+          <div class="gi-title">AU Smartphone Sub-Category Market Sizing</div>
+          <div class="gi-path">IMARC AU estimate covers total consumer electronics only. AU smartphone segment requires a separate data pull. <strong>Upgrade path:</strong> IMARC or Mordor Intelligence AU smartphone market report. Required for CMF revenue modelling in the 90-180 day horizon.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gi-lbl">Gap 4  ·  Medium Priority</div>
+          <div class="gi-title">Instagram Post-Level Engagement Data</div>
+          <div class="gi-path">Instagram profile-level data only captured in v2.1. Post-level engagement data requires apify/instagram-scraper (paid per item). <strong>Upgrade path:</strong> v2.2 upgrade enables per-post ER for Instagram, which is the primary channel for Audience 1. Budget: approximately USD 20-50 per full scrape depending on post volume.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gi-lbl">Gap 5  ·  Lower Priority</div>
+          <div class="gi-title">ProductReview.com.au Coverage</div>
+          <div class="gi-path">No Nothing Phone listing found on ProductReview.com.au during the reviews aggregation pass. This is either a genuine absence (brand not yet on platform) or a scraping gap. <strong>Upgrade path:</strong> Manual verification on ProductReview.com.au. If absent, recommend client create a listing as part of AU market presence build-out.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gi-lbl">Gap 6  ·  Lower Priority</div>
+          <div class="gi-title">Nothing Community Forum (Trustpilot + Reddit)</div>
+          <div class="gi-path">Trustpilot direct scrape was bot-blocked (HTTP 403). Aggregate data recovered via Scamadviser (587 reviews, 2.5/5 avg). Reddit blocked by WebFetch. <strong>Upgrade path:</strong> PRAW (Reddit API) and Trustpilot API for direct review data. Combined provides a complete customer service and product satisfaction picture.</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Phase 3 cross-reference pass outputs, Strategy Cadet v2.3 Run J Mk2. 70 claims extracted, 48 cross-referenced via Perplexity Sonar (22 already grounded in Phase 2 pre-fetch sources). Cross-reference log at /tmp/brand-discovery-nothing-technology-crosscheck-log.md (operator-only). Phase 3 flagged items F1-F3 as documented above.</span>
+      <span class="sc-source">p. 62  ·  Appendix  ·  Data gaps and confidence</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="62" data-of="88"></script>
+</body>
+</html>

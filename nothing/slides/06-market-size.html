@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Market Size, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .ms-layout { margin-top: 24px; display: grid; grid-template-columns: 1fr 340px; gap: 40px; flex: 1; min-height: 0; }
+  .ms-table { width: 100%; border-collapse: collapse; }
+  .ms-table thead tr { border-bottom: 2px solid var(--mr-blue-dark); }
+  .ms-table th { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); padding: 0 12px 10px 0; text-align: left; }
+  .ms-table tbody tr { border-bottom: 1px solid var(--bg-rule); }
+  .ms-table tbody tr:nth-child(even) { background: #F5F7FA; }
+  .ms-table td { padding: 11px 12px 11px 0; font: 400 12.5px/1.4 var(--font-sans); color: var(--fg-body); vertical-align: top; }
+  .ms-table td strong { color: var(--fg-heading); }
+  .ms-table td.primary { background: rgba(73,113,183,0.07); font-weight: 600; color: var(--fg-heading); }
+  .ms-sidebar { display: flex; flex-direction: column; gap: 16px; }
+  .ms-kpi { padding: 18px 20px; background: #F4F7FB; border-top: 3px solid var(--mr-blue-dark); }
+  .ms-kpi .kpi-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 8px; }
+  .ms-kpi .kpi-val { font: 800 32px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.02em; }
+  .ms-kpi .kpi-sub { font: 400 12px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 6px; }
+  .ms-note { padding: 14px 16px; border: 1px solid var(--bg-rule); border-left: 3px solid var(--mr-blue-dark); }
+  .ms-note p { margin: 0; font: 400 12px/1.45 var(--font-sans); color: var(--fg-body); }
+  .ms-note strong { color: var(--fg-heading); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="06 Market Size">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 01  ·  The Market  ·  Market Size Estimate</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">06</div>
+      <div><h3>Australia consumer electronics: USD 28.2 billion in 2025 growing at 4.69% CAGR. Nothing competes in the smartphone segment, which holds 51.2% of global category revenue. [169]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Market  ·  Market size</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+    <div class="ms-layout">
+      <div>
+        <table class="ms-table">
+          <thead>
+            <tr>
+              <th>Scope</th>
+              <th>Currency</th>
+              <th>Market size</th>
+              <th>Growth</th>
+              <th>Year</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="primary"><strong>AU Consumer Electronics (primary)</strong></td>
+              <td>USD</td>
+              <td><strong>28.2 billion (2025)</strong></td>
+              <td>4.69% CAGR 2025-2034</td>
+              <td>2025</td>
+              <td>IMARC Group [169]</td>
+            </tr>
+            <tr>
+              <td>AU Consumer Electronics (alt. estimate)</td>
+              <td>USD</td>
+              <td>47,446.5 million (2025)</td>
+              <td>6.3% CAGR 2026-2033</td>
+              <td>2025</td>
+              <td>Grand View Research [174]</td>
+            </tr>
+            <tr>
+              <td>Global Consumer Electronics</td>
+              <td>USD</td>
+              <td>864.73-865.65 billion (2025)</td>
+              <td>Varies by publisher</td>
+              <td>2025</td>
+              <td>Fortune Business Insights / Straits Research [179]</td>
+            </tr>
+            <tr>
+              <td>Global Consumer Electronics (high)</td>
+              <td>USD</td>
+              <td>1,234 billion (2025)</td>
+              <td>Not stated</td>
+              <td>2025</td>
+              <td>MMR Statistics [178]</td>
+            </tr>
+            <tr>
+              <td>Smartphones (largest segment)</td>
+              <td>% revenue share</td>
+              <td>51.2% of global CE revenue</td>
+              <td></td>
+              <td>2025</td>
+              <td>Grand View Research [173]</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--fg-muted); background: #F5F7FA;">
+          <p style="margin:0; font: 400 italic 11px/1.4 var(--font-sans); color: var(--fg-muted);">Note: The two AU estimates (IMARC USD 28.2B vs Grand View USD 47.4B) reflect differing scope definitions. IMARC is the lower, more conservative estimate and is the recommended reference for brand-level analysis. No AU-specific smartphone sub-category figure was returned; global smartphone share (51.2%) is the best available proxy.</p>
+        </div>
+      </div>
+      <div class="ms-sidebar">
+        <div class="ms-kpi">
+          <div class="kpi-lbl">AU market (IMARC)</div>
+          <div class="kpi-val">USD 28.2B</div>
+          <div class="kpi-sub">2025 estimate. 4.69% CAGR to 2034.</div>
+        </div>
+        <div class="ms-kpi">
+          <div class="kpi-lbl">Smartphone revenue share</div>
+          <div class="kpi-val">51.2%</div>
+          <div class="kpi-sub">Of global consumer electronics. Nothing's primary category.</div>
+        </div>
+        <div class="ms-note">
+          <p><strong>Nothing's position:</strong> Nothing holds an estimated sub-1% AU unit market share, competing in the AUD 400-1,509 smartphone segment. The brand does not publish AU-specific share data. <span class="sc-chip sc-chip--uncertain">Uncertain</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: IMARC Group [169]; Grand View Research [173] [174]; Fortune Business Insights [179]; MMR Statistics [178]. Section 8, Market Size. [VERIFIED for published market size figures]</span>
+      <span class="sc-source">p. 06  ·  Part 01  ·  Market size</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="6" data-of="88"></script>
+</body>
+</html>

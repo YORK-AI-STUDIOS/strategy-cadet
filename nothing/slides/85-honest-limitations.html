@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Honest Limitations, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .lim-layout { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1; min-height: 0; }
+  .lim-col { display: flex; flex-direction: column; gap: 9px; }
+  .col-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .conf-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+  .conf-box { padding: 10px 8px; text-align: center; }
+  .conf-box.v { background: #E8F4EC; border-top: 3px solid #1A7A4A; }
+  .conf-box.p { background: #EEF2F7; border-top: 3px solid var(--mr-blue-dark); }
+  .conf-box.u { background: #FFF5F5; border-top: 3px solid #EF434E; }
+  .cv-val { font: 800 24px/1 var(--font-sans); }
+  .cv-val.v { color: #1A7A4A; }
+  .cv-val.p { color: var(--mr-blue-dark); }
+  .cv-val.u { color: #EF434E; }
+  .cv-lbl { font: 400 9px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .lim-item { padding: 8px 11px; background: #F4F7FB; }
+  .li-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 3px; }
+  .li-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .li-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .blocked-item { padding: 8px 11px; border-left: 3px solid #856404; background: #FFF9EC; }
+  .bi-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #856404; margin-bottom: 3px; }
+  .bi-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .upgrade-box { padding: 9px 11px; background: #E8F4EC; border-left: 3px solid #1A7A4A; }
+  .ub-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #1A7A4A; margin-bottom: 4px; }
+  .ub-text { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="85 Honest Limitations">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Honest Limitations  ·  What This Report Does Not Know</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">85</div>
+      <div><h3>Strategy Cadet is transparent about its own gaps. This slide documents what the report does not know, which data sources were blocked or unavailable, and what upgrade paths exist to close the gaps. Knowing the edges of the evidence is as strategically important as the evidence itself. [VERIFIED]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Appendix  ·  Honest limitations</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+    <div class="lim-layout">
+      <div class="lim-col">
+        <div class="col-hd">Confidence distribution across Run J</div>
+        <div class="conf-row">
+          <div class="conf-box v"><div class="cv-val v">32</div><div class="cv-lbl">Claims VERIFIED via Phase 3 cross-reference pass</div></div>
+          <div class="conf-box p"><div class="cv-val p">~60%</div><div class="cv-lbl">Of report claims are PROBABLE (logical inference from cited sources)</div></div>
+          <div class="conf-box u"><div class="cv-val u">7</div><div class="cv-lbl">Claims downgraded to UNCERTAIN after Phase 3 adjudication</div></div>
+        </div>
+        <div class="col-hd" style="margin-top:4px;">Blocked and unavailable data sources</div>
+        <div class="blocked-item">
+          <div class="bi-label">Blocked  ·  Trustpilot direct scrape</div>
+          <div class="bi-body">HTTP 403 returned on all regional variants (trustpilot.com, au.trustpilot.com, uk.trustpilot.com). Aggregate data recovered via Scamadviser third-party citation. Individual review quotes recovered via Google snippet indexing only. Star distribution breakdown unavailable. Upgrade path: Trustpilot Business API (paid subscription required).</div>
+        </div>
+        <div class="blocked-item">
+          <div class="bi-label">Blocked  ·  Reddit (r/NothingTech, r/Android)</div>
+          <div class="bi-body">reddit.com blocked by WebFetch. r/NothingTech and r/Android are likely the richest sources of both enthusiast praise and detailed complaint threads for Nothing. This report under-captures the enthusiast-positive voice. Upgrade path: Reddit Data API (free tier available, rate-limited).</div>
+        </div>
+        <div class="blocked-item">
+          <div class="bi-label">Blocked  ·  Nothing Community forum</div>
+          <div class="bi-body">All forum thread content returned loading errors (JavaScript-gated). The community forum is likely the brand's richest source of unfiltered user voice and is entirely absent from this report. Upgrade path: Headless browser scraping (Playwright or Puppeteer, adds 2-3 hours to run time).</div>
+        </div>
+        <div class="blocked-item">
+          <div class="bi-label">Absent  ·  AU market share data</div>
+          <div class="bi-body">Nothing does not publish AU-specific unit market share data. No IDC, Counterpoint Research, or Canalys AU smartphone sub-category data was retrieved that includes Nothing as a named brand. AU market share is estimated at under 1% based on SoS proxy (UNCERTAIN). Upgrade path: IDC AU smartphone tracker subscription (institutional pricing).</div>
+        </div>
+      </div>
+      <div class="lim-col">
+        <div class="col-hd">Structural limitations of this report type</div>
+        <div class="lim-item">
+          <div class="li-label">Limitation 1  ·  GEO method</div>
+          <div class="li-title">Web-search proxy, not direct AI platform API queries</div>
+          <div class="li-body">True GEO measurement requires direct API queries to multiple AI platforms (each requires a paid tier, approximately USD 5 to 20 per month minimum). The GEO scorecard in this report uses editorial content indexed by search engines as a proxy. WebSearch results may lag actual AI training data by 6 to 12 months. Results should be treated as directional, not definitive.</div>
+        </div>
+        <div class="lim-item">
+          <div class="li-label">Limitation 2  ·  Review skew</div>
+          <div class="li-title">Trustpilot data captures motivated reviewers only</div>
+          <div class="li-body">Trustpilot reviews are written by customers with strong positive or negative experiences. The silent majority of satisfied-but-not-delighted customers is unrepresented. The 2.5 out of 5 aggregate likely overstates dissatisfaction relative to the full customer base. Press review scores (3.8 out of 5) are a better proxy for product quality, but lag post-purchase support reality.</div>
+        </div>
+        <div class="lim-item">
+          <div class="li-label">Limitation 3  ·  Financial data</div>
+          <div class="li-title">Nothing does not publish audited AU or global financial statements publicly</div>
+          <div class="li-body">Revenue (USD 500M+, doubling year-on-year), lifetime sales (USD 1B), and India profitability figures are sourced from Nothing company statements reported by 9to5Google [227] and Nothing Community forum [163]. These are VERIFIED as published claims but are not independently audited. UK Companies House filings for Nothing Technology Ltd (Company Number 12984564) are the only audited financial disclosure available. [168]</div>
+        </div>
+        <div class="lim-item">
+          <div class="li-label">Limitation 4  ·  AU consumer survey data</div>
+          <div class="li-title">No primary AU consumer survey data in this report</div>
+          <div class="li-body">All audience profiles, CEPs, and purchase driver scores are constructed from secondary research (YouGov AU, IBISWorld, Mintel, cultural trend reports) and logical inference from brand DNA and competitor data. No direct survey of AU Nothing buyers or prospective buyers was conducted. The profiles are PROBABLE, not VERIFIED consumer research. A 200-person AU quantitative survey would upgrade the audience section from PROBABLE to VERIFIED.</div>
+        </div>
+        <div class="upgrade-box">
+          <div class="ub-lbl">Upgrade paths to close the four biggest gaps</div>
+          <div class="ub-text">1. AU consumer survey (200 respondents): upgrades audience confidence from PROBABLE to VERIFIED. 2. Reddit Data API: captures enthusiast voice currently absent. 3. Direct AI platform prompt-testing (4 platforms): upgrades GEO scorecard from proxy to direct measurement. 4. IDC AU smartphone tracker: provides verified AU unit market share for Nothing vs Oppo vs OnePlus. All four are addressable within a standard agency research budget.</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Phase 3 cross-reference results (Section 62, slide 62). Trustpilot block: Reviews Extension. Reddit block: Reviews Data Limitations. Community forum block: Reviews Data Limitations. Financial data: [227][163][168]. GEO method: GEO Extension, Honest Limitations section. AU market share gap: SoS Extension, Data Limitations.</span>
+      <span class="sc-source">p. 85  ·  Appendix  ·  Honest limitations</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="85" data-of="88"></script>
+</body>
+</html>

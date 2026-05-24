@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CMF Brand Architecture, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .cmf-layout { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1; min-height: 0; }
+  .cmf-col { display: flex; flex-direction: column; gap: 9px; }
+  .col-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .cmf-item { padding: 9px 12px; background: #F4F7FB; }
+  .ci-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 3px; }
+  .ci-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .ci-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .conf-tag { font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+  .conf-v { color: #1A7A4A; }
+  .conf-p { color: var(--mr-blue-dark); }
+  .conf-u { color: #8896A8; }
+  .price-table { width: 100%; border-collapse: collapse; margin-bottom: 2px; }
+  .price-table th { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); padding: 5px 8px; text-align: left; border-bottom: 2px solid var(--mr-blue-dark); }
+  .price-table td { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); padding: 5px 8px; border-bottom: 1px solid var(--bg-rule); }
+  .price-table tr:nth-child(even) td { background: #F4F7FB; }
+  .brand-row { display: flex; gap: 10px; }
+  .brand-card { flex: 1; padding: 10px 10px; text-align: center; }
+  .bc-nothing { background: #1A1A1A; color: #fff; }
+  .bc-cmf { background: #3A7BD5; color: #fff; }
+  .bc-name { font: 800 14px/1 var(--font-sans); }
+  .bc-tier { font: 400 9px/1.3 var(--font-sans); margin-top: 4px; opacity: 0.85; }
+  .bc-price { font: 700 11px/1 var(--font-sans); margin-top: 6px; }
+  .risk-box { padding: 9px 12px; border-left: 3px solid #EF434E; background: #FFF5F5; }
+  .rb-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #EF434E; margin-bottom: 3px; }
+  .rb-text { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .opp-box { padding: 9px 12px; background: #E8F4EC; border-left: 3px solid #1A7A4A; }
+  .ob-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #1A7A4A; margin-bottom: 4px; }
+  .ob-text { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="70 CMF Brand Architecture">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Brand Architecture  ·  CMF by Nothing  ·  Sub-Brand Strategy, Colour, Materials, Finish</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">70</div>
+      <div><h3>CMF by Nothing is registered as a trademark in Australia (IP Australia, Class 9, VERIFIED). It is the brand's most important AU growth lever at the sub-AUD 300 price tier, and its most significant reputational risk. CMF complaint patterns (fingerprint auth bugs, 7-month unresolved cases) are contaminating Nothing brand search results. Operational isolation is more urgent than CMF expansion. [PROBABLE]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Brand Architecture  ·  CMF sub-brand</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+    <div class="cmf-layout">
+      <div class="cmf-col">
+        <div class="col-hd">Brand architecture: two tiers</div>
+        <div class="brand-row">
+          <div class="brand-card bc-nothing">
+            <div class="bc-name">Nothing</div>
+            <div class="bc-tier">Flagship and premium mid-range tier</div>
+            <div class="bc-price">AUD 649 to 1,689</div>
+          </div>
+          <div class="brand-card bc-cmf">
+            <div class="bc-name">CMF by Nothing</div>
+            <div class="bc-tier">Budget and entry tier. Phones, buds, watches.</div>
+            <div class="bc-price">AUD 79 to 329</div>
+          </div>
+        </div>
+        <div class="col-hd" style="margin-top:4px;">AU product range (12-month window)</div>
+        <table class="price-table">
+          <thead><tr><th>Product</th><th>AU Price</th><th>Channel</th><th>Conf.</th></tr></thead>
+          <tbody>
+            <tr><td>CMF Buds 2a</td><td>AUD 79</td><td>JB Hi-Fi</td><td>VERIFIED [239]</td></tr>
+            <tr><td>CMF Buds 2</td><td>AUD 89</td><td>JB Hi-Fi</td><td>VERIFIED [239]</td></tr>
+            <tr><td>CMF Buds 2 Plus</td><td>AUD 109</td><td>JB Hi-Fi</td><td>VERIFIED [239]</td></tr>
+            <tr><td>CMF Watch 3 Pro</td><td>AUD 179</td><td>JB Hi-Fi, Optus</td><td>VERIFIED [238]</td></tr>
+            <tr><td>CMF Phone 2 Pro</td><td>TBC (not retrieved)</td><td>JB Hi-Fi</td><td>PROBABLE [239]</td></tr>
+          </tbody>
+        </table>
+        <div class="cmf-item">
+          <div class="ci-label">Trademark status  ·  Australia</div>
+          <div class="ci-title">CMF BY NOTHING registered at IP Australia, Class 9</div>
+          <div class="ci-body">Class 9 covers mobile phones, smartwatches, and software. The trademark is confirmed VERIFIED via IP Australia trade mark registry. The Nothing brand's own EUIPO, USPTO, and WIPO registrations were not confirmed in available sources. CMF is the only confirmed AU trademark. [152][153]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+      </div>
+      <div class="cmf-col">
+        <div class="col-hd">Colour, materials, finish: design language</div>
+        <div class="cmf-item">
+          <div class="ci-label">Signature material  ·  Transparent back panel</div>
+          <div class="ci-title">Nothing's transparent back is the design moat: internals as argument, not gimmick</div>
+          <div class="ci-body">The transparent back panel exposes PCB layout, battery, and structural components. Phone (3a) Community Edition (December 2025) used transparent teal referencing Y2K gaming aesthetics (Game Boy Color, 1999 iMac). The Phone (4a) Pro shifted to metallic unibody, removing the transparent back, which GadgetGuy AU described as "the brand's biggest design change yet." [241][244][222]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+        <div class="cmf-item">
+          <div class="ci-label">Sustainability inputs  ·  Phone (3) verified material composition</div>
+          <div class="ci-title">17.6% recycled content; 100% renewable electricity at final assembly</div>
+          <div class="ci-body">From the Phone (3) Sustainability Report 2025: 53 internal and external parts use recycled or bio-based materials. Recycled aluminium (midframe, buttons, SIM tray: 100%). Recycled copper foil (main circuit board: 100%). Recycled steel (27 stamping parts: 80%). Packaging is 100% fibre-based with 30% recycled content. [147]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+        <div class="cmf-item">
+          <div class="ci-label">CMF design language vs Nothing</div>
+          <div class="ci-title">CMF uses bold colour and interchangeable back covers as its differentiator, not transparency</div>
+          <div class="ci-body">CMF phones and buds use high-saturation colour options (neo gamma, orange, light green) and offer interchangeable back covers on the CMF Phone series. This is a deliberate design departure from Nothing's transparent aesthetic, targeting a younger, more expressive buyer who wants customisation over minimalism. The two brands share "considered" as a design value but not the same expression of it. [239][240]</div>
+          <div class="conf-tag conf-p">PROBABLE</div>
+        </div>
+        <div class="risk-box">
+          <div class="rb-lbl">Brand contamination risk</div>
+          <div class="rb-text">CMF Phone 2 Pro fingerprint authentication bug remained unresolved for 7 months per review site reports. CMF complaint patterns appear alongside Nothing brand results in search. If CMF issues are not operationally isolated from Nothing brand support, they will continue to drag the Trustpilot aggregate (currently 2.5 out of 5) further. [275][276]</div>
+        </div>
+        <div class="opp-box">
+          <div class="ob-lbl">CMF Halo Effect opportunity [PROBABLE]</div>
+          <div class="ob-text">A structured upgrade pathway from CMF to Nothing flagship, with CMF ownership conferring early access and trade-in credit, converts budget-tier buyers into full-ecosystem participants over 12 to 24 months. Earbuds-before-phone discovery is already evidenced as a CEP for Audience 3. Formalising the arc accelerates it. [Section 12, Brand Opportunity 4]</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: CMF trademark AU [152][153], AU product pricing [238][239][240], Phone (3) Sustainability Report [147], Community Edition design [241][242], Phone (4a) Pro design shift [244], brand contamination [275][276]. CMF Halo Effect: Section 12 Brand Opportunity 4.</span>
+      <span class="sc-source">p. 70  ·  Brand Architecture  ·  CMF sub-brand</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="70" data-of="88"></script>
+</body>
+</html>

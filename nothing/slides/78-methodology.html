@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Methodology, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .meth-layout { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; min-height: 0; }
+  .meth-col { display: flex; flex-direction: column; gap: 10px; }
+  .col-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .phase-block { padding: 12px 14px; }
+  .phase-block.p1 { background: var(--mr-blue-dark); color: #fff; }
+  .phase-block.p2 { background: #2B5FA6; color: #fff; }
+  .phase-block.p3 { background: #1A7A4A; color: #fff; }
+  .pb-num { font: 800 28px/1 var(--font-sans); opacity: 0.4; }
+  .pb-title { font: 800 14px/1.2 var(--font-sans); margin: 4px 0 6px; }
+  .pb-body { font: 400 10px/1.4 var(--font-sans); opacity: 0.9; }
+  .pb-sub { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: 6px; }
+  .arrow-row { display: flex; align-items: center; gap: 6px; margin: -4px 0; }
+  .arrow-line { flex: 1; height: 2px; background: var(--bg-rule); }
+  .arrow-head { font: 700 14px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .detail-item { padding: 8px 11px; background: #F4F7FB; }
+  .di-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 3px; }
+  .di-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .di-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .conf-tag { font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; color: #1A7A4A; }
+  .agent-table { width: 100%; border-collapse: collapse; }
+  .agent-table th { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); padding: 5px 8px; text-align: left; border-bottom: 2px solid var(--mr-blue-dark); }
+  .agent-table td { font: 400 9.5px/1.35 var(--font-sans); color: var(--fg-body); padding: 5px 8px; border-bottom: 1px solid var(--bg-rule); }
+  .agent-table tr:nth-child(even) td { background: #F8FAFB; }
+  .positioning-box { padding: 10px 12px; background: #1A1A1A; color: #fff; }
+  .pos-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 5px; }
+  .pos-text { font: 400 11px/1.5 var(--font-sans); color: #fff; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="78 Methodology">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Methodology  ·  Strategy Cadet Three-Phase Pipeline</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">78</div>
+      <div><h3>Strategy Cadet runs a three-phase pipeline: gather (web research and live data pulls), reason (synthesis, structured analysis, and cross-referencing), and adjudicate (Phase 3 cross-reference pass that flags claims for correction or uncertainty upgrade). This report is the output of Run J Mk2, built 2026-05-24. 308 unique sources. 753 footnote markers. [VERIFIED]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Appendix  ·  Methodology</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+    <div class="meth-layout">
+      <div class="meth-col">
+        <div class="col-hd">Three-phase pipeline</div>
+        <div class="phase-block p1">
+          <div class="pb-num">01</div>
+          <div class="pb-title">Gather</div>
+          <div class="pb-body">Live web research, structured data pulls, and document parsing across 308 unique sources. Covers brand DNA, competitor forensics, corporate forensics, audience signals, market sizing, share of search, news and PR, social performance, GEO tracking, and reviews aggregation. Each section uses a combination of local AI models and frontier API models operating on retrieved content.</div>
+          <div class="pb-sub">Sources: web search, pytrends, YouTube Data API, Meta Ads Library, Apify scrapers, PDF parsing, Companies House, IP Australia</div>
+        </div>
+        <div class="arrow-row"><div class="arrow-line"></div><div class="arrow-head">v</div><div class="arrow-line"></div></div>
+        <div class="phase-block p2">
+          <div class="pb-num">02</div>
+          <div class="pb-title">Reason</div>
+          <div class="pb-body">Structured synthesis across 19 report sections using a combination of local AI models and frontier API models. Each claim is assigned a confidence tag at the point of generation: VERIFIED (multiple independent sources), PROBABLE (single credible source or logical inference), UNCERTAIN (inferred from weak or single source). Confidence tags are not retroactively upgraded or downgraded without explicit re-research. This is a single-analyst constraint by design.</div>
+          <div class="pb-sub">Output: 19 sections, 753 footnote markers, 423 total source references</div>
+        </div>
+        <div class="arrow-row"><div class="arrow-line"></div><div class="arrow-head">v</div><div class="arrow-line"></div></div>
+        <div class="phase-block p3">
+          <div class="pb-num">03</div>
+          <div class="pb-title">Adjudicate</div>
+          <div class="pb-body">Phase 3 cross-reference pass: 70 claims extracted from the Phase 2 output, 48 cross-referenced via an independent search and reasoning layer. Result for Run J: 32 VERIFIED, 7 UNCERTAIN (downgraded from PROBABLE), 3 FLAGGED for correction. Three flagged items were corrected before this deck was built. This is Strategy Cadet's structural moat over single-pass research tools: the adjudication layer catches internal contradictions and source-quality errors.</div>
+          <div class="pb-sub">Run J result: 32 verified, 7 uncertain, 3 flagged and corrected</div>
+        </div>
+      </div>
+      <div class="meth-col">
+        <div class="col-hd">Run J Mk2 coverage by agent</div>
+        <table class="agent-table">
+          <thead><tr><th>Agent</th><th>Coverage</th><th>Unique to Run J</th></tr></thead>
+          <tbody>
+            <tr><td>Agent A (brand DNA + audiences)</td><td>Sections 1-5, 10-14</td><td>No (v2.0 baseline)</td></tr>
+            <tr><td>Agent A2 (competitor forensics)</td><td>Section 5b</td><td>Yes (new in v2.3)</td></tr>
+            <tr><td>Agent A (corporate forensics)</td><td>Section 5c</td><td>Yes (new in v2.3)</td></tr>
+            <tr><td>Agent B (strategy)</td><td>Sections 13, 14, 18</td><td>No (v2.0 baseline)</td></tr>
+            <tr><td>Agent E (business planning)</td><td>Section 18</td><td>No (v2.0 baseline)</td></tr>
+            <tr><td>Agent F (marketing plans)</td><td>Section 19</td><td>No (v2.1 baseline)</td></tr>
+            <tr><td>Extension: GEO tracking</td><td>GEO scorecard</td><td>Yes (v1.2 extension)</td></tr>
+            <tr><td>Extension: Share of Search</td><td>SoS 12-month</td><td>Yes (v1.2 extension)</td></tr>
+            <tr><td>Extension: News + PR</td><td>34 stories, 12-month</td><td>Yes (Mk2 extension)</td></tr>
+            <tr><td>Extension: Reviews aggregation</td><td>Multi-platform</td><td>Yes (v1.2 extension)</td></tr>
+            <tr><td>Extension: Social performance</td><td>TikTok, YT, Meta, IG</td><td>Yes (v2.1 extension)</td></tr>
+          </tbody>
+        </table>
+        <div class="detail-item" style="margin-top:4px;">
+          <div class="di-label">Phase 3 structural moat</div>
+          <div class="di-title">Cross-reference adjudication is the differentiator vs single-pass research tools</div>
+          <div class="di-body">Standard brand research tools produce a single-pass output with no internal consistency check. Strategy Cadet's Phase 3 cross-reference pass extracts the highest-stakes claims and independently re-verifies them. The three flagged and corrected items in Run J included an AU JB Hi-Fi launch date error, a company number discrepancy (Companies House 12984564 versus a third-party source returning 12121121), and a market size figure source conflict. Without Phase 3, all three errors would have propagated into this deck. [Phase 3 output, Section 62]</div>
+          <div class="conf-tag">VERIFIED (Phase 3 output documented in slide 62)</div>
+        </div>
+        <div class="positioning-box">
+          <div class="pos-lbl">AI positioning (client-facing)</div>
+          <div class="pos-text">Strategy Cadet uses a combination of local AI models and frontier API models operating on live-retrieved web content. No specific model names or providers are disclosed in client deliverables. The output is analyst-quality synthesis, not raw model output. Every claim carries a confidence tag. Every source carries a citation number. The strategist remains the decision-maker; Cadet is the analyst.</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Strategy Cadet v2.3 methodology documentation. Phase 3 cross-reference results: Section 62 Data Gaps and Confidence (slide 62). Citation count: 308 unique sources, 423 total references, 753 footnote markers. Run identifier: Run J Mk2, built 2026-05-24 by Stuart Gosling, York Studios.</span>
+      <span class="sc-source">p. 78  ·  Appendix  ·  Methodology</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="78" data-of="88"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* =============================================================================
+   slide-base.css
+   Shared slide-frame + page chrome for every Strategy Cadet master.
+   Each slide is authored at 1920×1080 in slide-pixels and scaled to viewport.
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('../colors_and_type.css');
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1a1f2b;          /* letterbox colour when viewport > slide */
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Auto-scale wrapper -------------------------------------------- */
+.sc-stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #1a1f2b;
+}
+.sc-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  background: var(--bg-slide);
+  overflow: hidden;
+  transform-origin: 0 0;
+}
+.sc-slide.gradient {
+  background: var(--brand-gradient);
+  color: var(--fg-on-dark);
+}
+/* Red variant — for action-oriented slides (back cover, CTAs).
+   Matches MR website's red palette pages. */
+.sc-slide.gradient.red {
+  background: var(--brand-gradient-red);
+}
+
+/* ---------- Page chrome --------------------------------------------------- */
+/* Strategy Cadet logo, top-right. Two variants — blue for white slides,
+   white for gradient slides — auto-swapped by .sc-slide.gradient.
+   Sized as a small unobtrusive watermark — 40px tall — so it never competes
+   with right-side slide-meta or eyebrow text. Bottom of logo at y=64,
+   body-frame content starts at y=96+ = 32px clearance. */
+.sc-chrome-cadet {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  height: 40px;
+  width: auto;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+.sc-chrome-cadet img { height: 40px; width: auto; display: block; }
+.sc-chrome-cadet .on-white { display: block; }
+.sc-chrome-cadet .on-dark { display: none; }
+.sc-slide.gradient .sc-chrome-cadet .on-white { display: none; }
+.sc-slide.gradient .sc-chrome-cadet .on-dark  { display: block; }
+
+/* Footer left — © line on body slides (text only, no logo). On the back-cover
+   the .sc-slide.is-back-cover class swaps in the York Studios logo as well
+   (rendered by chrome.js). All chrome elements lock to chrome-inset=28px. */
+.sc-chrome-copy {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.sc-chrome-copy .sc-copy-text {
+  font: 400 13px/1 var(--font-sans);
+  letter-spacing: 0.02em;
+  color: var(--fg-heading);
+  white-space: nowrap;
+}
+.sc-slide.gradient .sc-chrome-copy .sc-copy-text { color: var(--fg-on-dark-2); }
+
+/* York Studios logo (back cover only, injected by chrome.js when data-york="true"). */
+.sc-chrome-york {
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.sc-chrome-york img { height: 28px; width: auto; display: block; opacity: 0.95; }
+.sc-slide.gradient .sc-chrome-york img { filter: brightness(0) invert(1); opacity: 0.92; }
+
+/* Footer right — page number only (© moved to bottom-left per design feedback v2). */
+.sc-chrome-footer {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--fg-heading);
+  z-index: 20;
+}
+.sc-chrome-footer .sc-page {
+  font: 600 13px/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  color: var(--fg-heading);
+}
+.sc-slide.gradient .sc-chrome-footer .sc-page { color: var(--fg-on-dark-2); }
+
+/* Eyebrow strip at top of slide — slide-section locator, like Kantar's
+   "Expert Insights – Strategic Intelligence" tag at top-left.
+   v2 alignment fix 2026-05-21: bumped from 28px → 36px top, font 11px → 14px
+   for legibility and cleaner separation from the Cadet logo. */
+.sc-eyebrow-strip {
+  position: absolute;
+  top: 36px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 20;
+  font: 600 14px/1 var(--font-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-body);
+  white-space: nowrap;
+}
+.sc-eyebrow-strip .sc-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--mr-blue-dark);
+}
+.sc-slide.gradient .sc-eyebrow-strip { color: rgba(255,255,255,0.72); }
+.sc-slide.gradient .sc-eyebrow-strip .sc-dot { background: #FCB900; }
+
+/* ---------- Body container ------------------------------------------------ */
+.sc-body-frame {
+  position: absolute;
+  inset: 96px var(--slide-margin-x) 80px;   /* leaves room for chrome */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Hairline rule (used everywhere — slide-title underline, table head) -- */
+.sc-rule { height: 1px; background: var(--bg-rule); width: 100%; }
+.sc-rule-strong { height: 1px; background: var(--fg-heading); width: 100%; }
+.sc-rule.on-dark { background: var(--fg-on-dark-3); }
+
+/* ---------- Source line --------------------------------------------------- */
+.sc-source-line {
+  margin-top: auto;        /* pinned to bottom of body-frame */
+  padding-top: 10px;
+  border-top: var(--rule-hairline);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.sc-source-line .sc-source { max-width: 70%; }
+
+/* Upsized italic source-line per design feedback v2: 12px / 1.4 italic so
+   it scales to ~9pt minimum in PPTX print output. */
+.sc-source, .sc-source-line .sc-source {
+  font: 400 italic 12px/1.4 var(--font-sans);
+  color: var(--fg-muted);
+}
+
+/* ---------- Cityscape texture (cover + section dividers only) -------------
+   Very subtle Melbourne photography behind the brand gradient — matches the
+   opacity treatment on mediarepublic.com.au where the cityscape reads as a
+   faded brand-cue, not a hero image. Effective ~5-7% via soft-light blend. */
+.sc-cityscape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.08;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Blob overlays removed in v3.2 per design feedback — Melbourne cityscape
+   texture carries the brand layer instead. Class kept harmless in case future
+   slides re-introduce it. */
+.sc-blob { display: none; }
+
+/* ---------- Stacks + columns helpers -------------------------------------- */
+.sc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--col-gap); }
+.sc-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--col-gap); }
+.sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--col-gap); }
+.sc-grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--col-gap); }
+.sc-grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0; }
+
+.sc-stack-12 { display: flex; flex-direction: column; gap: 12px; }
+.sc-stack-16 { display: flex; flex-direction: column; gap: 16px; }
+.sc-stack-24 { display: flex; flex-direction: column; gap: 24px; }
+
+/* ---------- Slide title block (used on most body masters) ----------------- */
+.sc-title-block { margin-bottom: 28px; }
+.sc-title-block .sc-h3 { margin: 0 0 6px; }
+.sc-title-block .sc-eyebrow { margin: 0 0 10px; }
+.sc-title-block .sc-rule { margin-top: 18px; }
+
+/* ---------- Tables -------------------------------------------------------- */
+.sc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font: var(--t-body-tight);
+  color: var(--fg-heading);
+}
+.sc-table thead th {
+  background: var(--mr-blue-dark);
+  color: var(--fg-on-dark);
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 14px;
+  border-right: 1px solid rgba(255,255,255,0.18);
+}
+.sc-table thead th:last-child { border-right: 0; }
+.sc-table tbody td {
+  padding: 11px 14px;
+  border-bottom: var(--rule-hairline);
+  vertical-align: top;
+}
+.sc-table tbody tr:nth-child(even) td { background: var(--bg-row-alt); }
+.sc-table tbody tr.is-total td { background: #EAF1F8; font-weight: 700; color: var(--fg-heading); }
+.sc-table .num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.sc-table .delta-pos { color: #0E8A52; font-weight: 600; }
+.sc-table .delta-neg { color: var(--mr-red); font-weight: 600; }
+
+/* ---------- KPI tile ------------------------------------------------------ */
+.sc-kpi-tile {
+  padding: 24px 0 22px;
+  border-top: 1px solid var(--bg-rule);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sc-kpi-tile .sc-kpi-rule {
+  width: 36px; height: 2px; background: var(--mr-blue-dark);
+  margin-bottom: 12px;
+}
+.sc-kpi-tile .sc-kpi-num { font: var(--t-kpi-big); color: var(--mr-blue-dark); letter-spacing: -0.025em; }
+.sc-kpi-tile .sc-kpi-label { font: var(--t-h4); color: var(--fg-heading); }
+.sc-kpi-tile .sc-kpi-body { font: var(--t-body-tight); color: var(--fg-body); margin-top: 4px; }
+.sc-kpi-tile .sc-kpi-src  { font: var(--t-source); color: var(--fg-muted); margin-top: auto; padding-top: 12px; }
+
+/* ---------- Auto-scale JS injection point --------------------------------- */
+/* Slides scale to the viewport via a small inline script in each slide HTML.
+   See slides/_scale.js. */

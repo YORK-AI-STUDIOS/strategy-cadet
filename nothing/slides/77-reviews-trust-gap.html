@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reviews and Trust Gap, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .rev-layout { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1; min-height: 0; }
+  .rev-col { display: flex; flex-direction: column; gap: 9px; }
+  .col-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .gap-visual { display: flex; gap: 10px; align-items: stretch; }
+  .gv-side { flex: 1; padding: 12px 10px; text-align: center; }
+  .gv-side.customer { background: #FFF5F5; border-top: 3px solid #EF434E; }
+  .gv-side.press { background: #E8F4EC; border-top: 3px solid #1A7A4A; }
+  .gv-score { font: 800 32px/1 var(--font-sans); }
+  .gv-score.customer { color: #EF434E; }
+  .gv-score.press { color: #1A7A4A; }
+  .gv-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; margin-bottom: 4px; }
+  .gv-sub { font: 400 9px/1.3 var(--font-sans); color: var(--fg-body); }
+  .gv-arrow { display: flex; align-items: center; justify-content: center; font: 800 20px/1 var(--font-sans); color: var(--mr-blue-dark); padding: 0 4px; }
+  .theme-item { padding: 8px 11px; background: #F4F7FB; }
+  .ti-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 3px; }
+  .ti-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .ti-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .conf-tag { font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+  .conf-v { color: #1A7A4A; }
+  .conf-p { color: var(--mr-blue-dark); }
+  .conf-u { color: #8896A8; }
+  .praise-item { padding: 8px 11px; background: #E8F4EC; border-left: 3px solid #1A7A4A; }
+  .pi-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #1A7A4A; margin-bottom: 3px; }
+  .pi-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .complaint-item { padding: 8px 11px; background: #FFF5F5; border-left: 3px solid #EF434E; }
+  .ci-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #EF434E; margin-bottom: 3px; }
+  .ci-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .strat-box { padding: 9px 11px; background: #EEF2F7; border-left: 3px solid var(--mr-blue-dark); }
+  .sb-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 4px; }
+  .sb-text { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="77 Reviews and Trust Gap">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Reviews Aggregation  ·  Trust Gap Analysis  ·  Nothing Technology AU</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">77</div>
+      <div><h3>The trust gap is structurally significant: Trustpilot 2.5 out of 5 (587 reviews, customer service weighted) versus specialist press 3.8 out of 5 (product quality weighted). Nothing builds excellent products and provides poor post-purchase support. In Australia, the gap is amplified by the complete absence of a ProductReview.com.au listing, which means AU buyers have no structured review venue at all. [PROBABLE]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Reviews  ·  Trust gap</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+    <div class="rev-layout">
+      <div class="rev-col">
+        <div class="col-hd">The trust gap visualised</div>
+        <div class="gap-visual">
+          <div class="gv-side customer">
+            <div class="gv-score customer">2.5</div>
+            <div class="gv-label">Trustpilot</div>
+            <div class="gv-sub">587 reviews. Customer service weighted. Bot-blocked for direct scrape. Aggregate via Scamadviser. [269][220]</div>
+          </div>
+          <div class="gv-arrow">vs</div>
+          <div class="gv-side press">
+            <div class="gv-score press">3.8</div>
+            <div class="gv-label">Specialist press avg</div>
+            <div class="gv-sub">6 full reviews. EFTM 80%, Pickr 4/5, Android Police 7.5/10, Droid-Life positive. Product quality weighted. [209][219][274]</div>
+          </div>
+        </div>
+        <div class="col-hd" style="margin-top:4px;">Top complaint themes (Trustpilot excerpts via Google index)</div>
+        <div class="complaint-item">
+          <div class="ci-label">Complaint 1  ·  PROBABLE</div>
+          <div class="ci-body"><strong>Customer service unresponsive:</strong> Multiple reviews describe weeks without reply, automated responses only, and inability to reach a human agent. Repair and warranty cases appear to be the primary trigger. Pattern consistent across UK and AU-origin reviews.</div>
+        </div>
+        <div class="complaint-item">
+          <div class="ci-label">Complaint 2  ·  PROBABLE</div>
+          <div class="ci-body"><strong>Warranty and repair process opacity:</strong> Customers report unclear repair timelines, no tracking, devices returned unfixed, and warranty claims denied on grounds they dispute. Under Australian Consumer Law (ACL), a device at AUD 1,509 failing from light water exposure may constitute a major failure entitling the customer to a full refund. One high-profile ACL dispute could generate significant AU press. [UNCERTAIN, no confirmed AU ACL case identified]</div>
+        </div>
+        <div class="complaint-item">
+          <div class="ci-label">Complaint 3  ·  PROBABLE</div>
+          <div class="ci-body"><strong>CMF sub-brand complaint contamination:</strong> CMF Phone 2 Pro fingerprint authentication bug unresolved for 7 months per review reports. CMF complaint threads appear in searches alongside Nothing brand results. If CMF and Nothing brand support are not operationally isolated, CMF issues will continue dragging the Nothing aggregate score. [275][276]</div>
+        </div>
+        <div class="theme-item">
+          <div class="ti-label">AU-specific gap  ·  VERIFIED ABSENT</div>
+          <div class="ti-title">ProductReview.com.au: Nothing Technology has no listing</div>
+          <div class="ti-body">Australia's primary consumer review platform has no Nothing Phone listing. Unusual for a brand sold at JB Hi-Fi, Optus, The Good Guys, and Amazon AU. May reflect low AU review culture among Nothing's buyer demographic, or deliberate absence. Either way, it means AU buyers have no structured review venue on the platform most AU consumers consult. Creating a listing takes under 30 minutes and costs nothing. [220][221]</div>
+          <div class="conf-tag conf-v">VERIFIED ABSENT</div>
+        </div>
+      </div>
+      <div class="rev-col">
+        <div class="col-hd">Top praise themes (press reviews)</div>
+        <div class="praise-item">
+          <div class="pi-label">Praise 1  ·  VERIFIED</div>
+          <div class="pi-body"><strong>Design and aesthetic differentiation:</strong> GadgetGuy AU Phone (3a) Pro: "Nothing comes close." Pickr AU Phone (4a) Pro: 85% verdict, praising design, camera, and display. EFTM AU Phone (3): 80%. The transparent design language and Glyph Matrix receive consistent positive coverage as genuinely distinctive. [237][219][209]</div>
+        </div>
+        <div class="praise-item">
+          <div class="pi-label">Praise 2  ·  VERIFIED</div>
+          <div class="pi-body"><strong>Nothing OS cleanliness:</strong> Reviews consistently rate Nothing OS as one of the best Android experiences. In AU where Samsung bloatware is the dominant Android frame of reference, "clean Android" is a powerful claim. Nothing is not amplifying this sufficiently in AU marketing. [271][272]</div>
+        </div>
+        <div class="praise-item">
+          <div class="pi-label">Praise 3  ·  PROBABLE</div>
+          <div class="pi-body"><strong>Essential Space AI feature:</strong> Multiple reviewers describe the feature (converting screenshots and voice notes into structured tasks synced to Google Calendar) as more practical than Apple Intelligence. "Forget Apple Intelligence: Nothing's killer AI feature just got better" (Tom's Guide). This is an AU-relevant claim given Apple's market dominance. [216]</div>
+        </div>
+        <div class="theme-item">
+          <div class="ti-label">Cross-platform sentiment pattern  ·  PROBABLE</div>
+          <div class="ti-title">Product NPS probably positive. Post-purchase NPS probably negative. Closing the gap is more important than any product innovation.</div>
+          <div class="ti-body">The 1.3-point gap between Trustpilot (2.5) and press scores (3.8) is not a product quality problem: it is a support and warranty problem. Nothing builds phones that reviewers recommend and ships support that customers complain about. In AU, the market is too small to absorb churn from word-of-mouth defection. Closing the post-purchase gap matters more for AU market growth than any new product feature. [Reviews Extension, Strategic Implications 1]</div>
+          <div class="conf-tag conf-p">PROBABLE</div>
+        </div>
+        <div class="strat-box">
+          <div class="sb-lbl">Strategic implication for AU [PROBABLE, strategist to validate]</div>
+          <div class="sb-text">Nothing Certified AU Repair Network (Brand Opportunity 3): partnering with independent repair shops in AU metropolitan centres to create a branded authorised repair network with published pricing, genuine parts, and a longevity guarantee would directly close the post-purchase trust gap. This is the single action most likely to improve the Trustpilot aggregate score and AU word-of-mouth without requiring a product change. [Section 12, Brand Opportunity 3]</div>
+        </div>
+        <div class="theme-item">
+          <div class="ti-label">Data limitations  ·  Important</div>
+          <div class="ti-title">Trustpilot bot-blocked. Reddit inaccessible. Community forum JavaScript-gated.</div>
+          <div class="ti-body">Direct Trustpilot scrape returned HTTP 403 on all regional variants. Aggregate data recovered via Scamadviser citation [269]. Reddit r/NothingTech and r/Android inaccessible (WebFetch blocked by reddit.com). Nothing Community forum JavaScript-gated. This report under-captures enthusiast-positive voice and over-weights motivated-negative reviewers (Trustpilot selection bias). The true AU sentiment is likely more positive than the 2.5 aggregate suggests. [Reviews Data Limitations]</div>
+          <div class="conf-tag conf-u">LIMITATION NOTE</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Reviews Aggregation Extension, Strategy Cadet v1.2 Run J Mk2. Trustpilot aggregate via Scamadviser [269], Trustpilot search snippets [220]. Press reviews: EFTM AU [209], Pickr AU [219][271], Android Police [274], 9to5Google [272], Gadget Hacks [275]. ChannelNews AU bug reports [276]. ProductReview absence [221]. Tom's Guide AI feature [216].</span>
+      <span class="sc-source">p. 77  ·  Reviews  ·  Trust gap analysis</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="77" data-of="88"></script>
+</body>
+</html>

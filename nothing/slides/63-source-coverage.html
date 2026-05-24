@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Source Coverage, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .cov-layout { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; min-height: 0; }
+  .cov-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); margin-bottom: 8px; }
+  table.cov-tbl { width: 100%; border-collapse: collapse; }
+  table.cov-tbl th { font: 700 8.5px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--mr-blue-dark); padding: 6px 8px; text-align: left; border-right: 1px solid rgba(255,255,255,0.2); }
+  table.cov-tbl td { font: 400 10.5px/1.35 var(--font-sans); color: var(--fg-body); padding: 7px 8px; border-bottom: 1px solid var(--bg-rule); border-right: 1px solid var(--bg-rule); }
+  table.cov-tbl tr:nth-child(even) td { background: #F4F7FB; }
+  table.cov-tbl td.section-name { font: 600 10.5px/1.2 var(--font-sans); color: var(--fg-heading); }
+  table.cov-tbl td.count { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); text-align: right; }
+  .source-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; }
+  .ss-box { padding: 10px; background: #F4F7FB; border-top: 3px solid var(--mr-blue-dark); text-align: center; }
+  .ss-val { font: 800 22px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .ss-lbl { font: 400 9px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .conf-v { color: #1A7A4A; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="63 Source Coverage">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Source Coverage  ·  423 total citations, 308 unique</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">63</div>
+      <div><h3>308 unique sources, 423 total citation references across 18 sections. Highest citation density: Competitor Forensics (127), Brand Corporate Forensics (54), PR and News Extension (63). Comparable to BrandScout's ~150 citations per Company Profile page on a single-section basis. [VERIFIED citation count]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Appendix  ·  Source Coverage</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified citation count</span></div>
+      </div>
+    </div>
+    <div class="cov-layout">
+      <div>
+        <div class="source-summary">
+          <div class="ss-box"><div class="ss-val">308</div><div class="ss-lbl">Unique source URLs cited across all sections</div></div>
+          <div class="ss-box"><div class="ss-val">423</div><div class="ss-lbl">Total citation references (one source in three sections = 3 raw, 1 unique)</div></div>
+          <div class="ss-box"><div class="ss-val">7</div><div class="ss-lbl">Sub-agents orchestrated by Run J Mk2 (A, A2, B, C, D, E, F + Phase 3 cross-reference)</div></div>
+        </div>
+        <div class="cov-hd">Citations by Section (per-section breakdown)</div>
+        <table class="cov-tbl">
+          <thead>
+            <tr><th>Section</th><th style="width:70px; text-align:right;">Citations</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="section-name">5b. Competitor Forensics (Agent A2, v2.3)</td><td class="count">127</td></tr>
+            <tr><td class="section-name">PR and News Extension (34 stories, Story Index)</td><td class="count">63</td></tr>
+            <tr><td class="section-name">5c. Brand Corporate Forensics (Agent A, Section 8)</td><td class="count">54</td></tr>
+            <tr><td class="section-name">Social Performance (v2.1 live data)</td><td class="count">31</td></tr>
+            <tr><td class="section-name">GEO Tracking (Per-Question Breakdown)</td><td class="count">26</td></tr>
+            <tr><td class="section-name">9. ESOV Analysis</td><td class="count">20</td></tr>
+            <tr><td class="section-name">Citation Index (All Audiences)</td><td class="count">21</td></tr>
+            <tr><td class="section-name">8. Market Size Estimate</td><td class="count">15</td></tr>
+            <tr><td class="section-name">Brand vs Activation Analysis (v2.2)</td><td class="count">7</td></tr>
+            <tr><td class="section-name">Audience 3: Budget-Conscious Gen Z Experimenters</td><td class="count">9</td></tr>
+            <tr><td class="section-name">Audience 2: Anti-Mainstream Gadget Upgraders</td><td class="count">7</td></tr>
+            <tr><td class="section-name">Audience 1: Tech-Forward Urban Creatives</td><td class="count">7</td></tr>
+            <tr><td class="section-name">Reviews Aggregation Sources</td><td class="count">13</td></tr>
+            <tr><td class="section-name">6. Industry Drivers and Barriers</td><td class="count">8</td></tr>
+            <tr><td class="section-name">5. Competitors</td><td class="count">6</td></tr>
+            <tr><td class="section-name">GEO: Recommendations to Improve Presence</td><td class="count">3</td></tr>
+            <tr><td class="section-name">1. Quick Facts</td><td class="count">4</td></tr>
+            <tr><td class="section-name">GEO: Data Limitations</td><td class="count">2</td></tr>
+            <tr><td class="section-name" style="font:700 10.5px/1.2 var(--font-sans); color:var(--mr-blue-dark);">Total (raw count)</td><td class="count" style="color:var(--mr-blue-dark);">423</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="cov-hd">Sources by Agent and Method</div>
+        <table class="cov-tbl">
+          <thead>
+            <tr><th>Agent / Extension</th><th>Method</th><th style="width:80px; text-align:right;">Queries</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="section-name">Agent A (Company and Market)</td><td>Web research + Perplexity Sonar grounding (Market Size, Industry Drivers, per-competitor ESOV)</td><td class="count">~40</td></tr>
+            <tr><td class="section-name">Agent A2 (Competitor Forensics v2.3)</td><td>5 forensic queries per competitor x 6 competitors. 30 Perplexity Sonar queries in 3 parallel batches of 10</td><td class="count">30</td></tr>
+            <tr><td class="section-name">Agent B (Brand DNA + Strategy)</td><td>LLM generation from brand context. Light web research for brand claims.</td><td class="count">~5</td></tr>
+            <tr><td class="section-name">Agent C (Target Audiences)</td><td>Web research per audience. Perplexity Sonar grounding on Cultural Signals.</td><td class="count">~15</td></tr>
+            <tr><td class="section-name">Agent D (Ideation)</td><td>LLM-mostly with light web research on innovation precedents.</td><td class="count">~5</td></tr>
+            <tr><td class="section-name">Agent E (Business Planning v2.0)</td><td>Goal-driven plan with 3-check goal sanity-check via Perplexity Sonar (pytrends SoS data VERIFIED).</td><td class="count">~10</td></tr>
+            <tr><td class="section-name">Agent F (Marketing Plans v1.0)</td><td>7-section tactical plan per audience. Social performance data inputs from Extension v2.1-v2.2.</td><td class="count">~5</td></tr>
+            <tr><td class="section-name">Phase 3 Cross-Reference</td><td>70 claims extracted. 48 cross-referenced via Perplexity Sonar. 32 VERIFIED, 7 UNCERTAIN, 3 FLAGGED.</td><td class="count">48</td></tr>
+            <tr><td class="section-name">GEO Extension (--with-geo)</td><td>Perplexity Sonar 41-question GEO scorecard. AU geographic targeting.</td><td class="count">41</td></tr>
+            <tr><td class="section-name">Social Performance (--with-social-perf)</td><td>Live Apify API pulls: TikTok 250 posts, Instagram profile, Facebook Ads Library 20 ads, YouTube Data API v3 top 20.</td><td class="count">Live APIs</td></tr>
+            <tr><td class="section-name">PR / News Extension (--with-news)</td><td>34 stories across 12-month window. 11 AU-press primary sources.</td><td class="count">~34</td></tr>
+            <tr><td class="section-name">Reviews Extension (--with-reviews)</td><td>Trustpilot (bot-blocked, aggregate recovered via Scamadviser), GSMArena, specialist press, Reddit (blocked).</td><td class="count">~10</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Methodology section (Section 20), Strategy Cadet v2.3, Run J Mk2, 2026-05-24. Citation counts computed post-assembly by scripts/citations_to_footnotes.py. Unique source count: 308. Raw citation count: 423. Agent breakdown per orchestration log.</span>
+      <span class="sc-source">p. 63  ·  Appendix  ·  Source coverage</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="63" data-of="88"></script>
+</body>
+</html>

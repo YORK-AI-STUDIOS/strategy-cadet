@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Meta Ads Analysis, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .meta-layout { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; min-height: 0; }
+  .meta-col { display: flex; flex-direction: column; gap: 10px; }
+  .meta-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .ad-card { padding: 9px 11px; background: #F4F7FB; border-left: 3px solid var(--mr-blue-dark); }
+  .ad-card.ended { border-left-color: #8896A8; }
+  .ac-status { font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 4px; }
+  .ac-status.ended { color: #8896A8; }
+  .ac-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 4px; }
+  .ac-copy { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); font-style: italic; }
+  .funnel-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 4px; }
+  .funnel-box { padding: 8px; text-align: center; }
+  .funnel-box.awareness { background: #E8F4EC; }
+  .funnel-box.consideration { background: #EEF2F7; }
+  .funnel-box.conversion { background: #F9F9F9; border: 1px dashed #ccc; }
+  .fb-pct { font: 800 18px/1 var(--font-sans); }
+  .fb-pct.awareness { color: #1A7A4A; }
+  .fb-pct.consideration { color: var(--mr-blue-dark); }
+  .fb-pct.conversion { color: #8896A8; }
+  .fb-lbl { font: 400 9px/1.3 var(--font-sans); color: var(--fg-body); margin-top: 4px; }
+  .takeaway-block { padding: 10px 12px; background: #EEF2F7; border-left: 3px solid var(--mr-blue-dark); }
+  .tb-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+  .tb-text { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+  .conf-v { color: #1A7A4A; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-p { color: var(--mr-blue-dark); font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-u { color: #8896A8; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="59 Meta Ads Analysis">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 09  ·  Social Performance  ·  Meta Ads Analysis  ·  20 ads pulled 2026-05-24</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">59</div>
+      <div><h3>20 Meta Ads pulled: 4 active, 16 ended. Funnel gap confirmed: 0% conversion-layer creative, 0% loyalty creative. All active readable ads use "Learn more" CTA only. Paid posture assumes organic social carries awareness. DCO catalogue runs always-on as soft activation. [VERIFIED Apify pull]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Social Performance  ·  Meta Ads</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified Meta Ads Library</span></div>
+      </div>
+    </div>
+    <div class="meta-layout">
+      <div class="meta-col">
+        <div class="meta-hd">Active Ads (4 currently running)</div>
+        <div class="ad-card">
+          <div class="ac-status">Active  ·  VIDEO  ·  7 variants</div>
+          <div class="ac-title">Phone (4a) Pro: localised lifestyle (Spanish-language)</div>
+          <div class="ac-copy">"No, nena, me encanta cuando hablas tres horas de tus raros intereses." CTA: Learn more. Brand/awareness classified. Multi-market transcreated campaign. <span class="conf-v">VERIFIED</span></div>
+        </div>
+        <div class="ad-card">
+          <div class="ac-status">Active  ·  VIDEO  ·  3 variants</div>
+          <div class="ac-title">Phone (4a) Pro: localised lifestyle (French-language)</div>
+          <div class="ac-copy">"Non baby, j'adore quand tu me parles de tes passions pendant 3 heures." CTA: Learn more. Same concept as Spanish variant. <span class="conf-v">VERIFIED</span></div>
+        </div>
+        <div class="ad-card">
+          <div class="ac-status">Active  ·  DCO  ·  1 variant</div>
+          <div class="ac-title">Product Catalogue DCO (template)</div>
+          <div class="ac-copy">Body: "&#123;&#123;product.name&#125;&#125;" / "&#123;&#123;product.brand&#125;&#125;". CTA: Learn more. Algorithmic product surfacing. Consideration-classified. Always-on retargeting layer. <span class="conf-v">VERIFIED</span></div>
+        </div>
+        <div class="ad-card">
+          <div class="ac-status">Active  ·  DCO  ·  8 variants</div>
+          <div class="ac-title">Product Catalogue DCO (higher collation)</div>
+          <div class="ac-copy">Same DCO template as above. 8 variants suggests active A/B testing of catalogue creatives in this line. <span class="conf-v">VERIFIED</span></div>
+        </div>
+        <div class="meta-hd" style="margin-top:8px;">Recently Ended (16 ads)</div>
+        <div class="ad-card ended">
+          <div class="ac-status ended">Ended  ·  VIDEO  ·  3 variants + 10-variant German</div>
+          <div class="ac-title">Headphone (a): Y2K personality lifestyle campaign</div>
+          <div class="ac-copy">"I love listening to the same obscure Y2K playlist on repeat for 5 days straight." English + German variants. Brand/awareness classified. Pattern matches Phone (4a) Pro localised approach. <span class="conf-v">VERIFIED</span></div>
+        </div>
+        <div class="ad-card ended">
+          <div class="ac-status ended">Ended  ·  DCO  ·  13 variants across all ended set</div>
+          <div class="ac-title">Product Catalogue DCO (cycling creative testing cadence)</div>
+          <div class="ac-copy">Consistent pattern: DCO templates cycle on/off. Collation counts range 1-9, suggesting ongoing creative testing cadence rather than fixed campaign windows. <span class="conf-v">VERIFIED</span></div>
+        </div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-hd">Funnel-Stage Distribution (all 20 ads)</div>
+        <div class="funnel-row">
+          <div class="funnel-box awareness"><div class="fb-pct awareness">20%</div><div class="fb-lbl">Awareness (4 ads): lifestyle/personality VIDEO</div></div>
+          <div class="funnel-box consideration"><div class="fb-pct consideration">65%</div><div class="fb-lbl">Consideration (13 ads): product catalogue DCO</div></div>
+          <div class="funnel-box conversion"><div class="fb-pct conversion">0%</div><div class="fb-lbl">Conversion: no price, no urgency, no "Shop Now"</div></div>
+          <div class="funnel-box conversion"><div class="fb-pct conversion">0%</div><div class="fb-lbl">Loyalty: no retention creative in pulled set</div></div>
+        </div>
+        <div class="takeaway-block" style="margin-top:4px;">
+          <div class="tb-lbl">Brand vs Activation: Active Readable Creative</div>
+          <div class="tb-text">Of 4 active ads: 2 are readable VIDEO (100% brand-building intent, "Learn more" CTA only). 2 are DCO catalogue (soft activation via retargeting). Binet and Field benchmark for mature categories: 60% brand-building. Nothing's readable creative is 100% brand-building (no activation). DCO layer may carry significant impression share that would shift the effective ratio, but spend data is unavailable. <span class="conf-u">UNCERTAIN on weighting without spend data</span></div>
+        </div>
+        <div class="takeaway-block">
+          <div class="tb-lbl">Charli XCX Absence from Meta</div>
+          <div class="tb-text">The Charli XCX brand ambassador activation (dominant theme in organic TikTok: 5+ posts confirmed in 250-post dataset) does not appear in the AU/ALL Meta Ads Library pull. This is either a deliberately organic-only play for that campaign, or Meta activity ran in other markets not captured in this pull. Worth asking the client whether the ambassador deal included paid Meta amplification commitment. <span class="conf-p">PROBABLE organic-only hypothesis</span></div>
+        </div>
+        <div class="takeaway-block">
+          <div class="tb-lbl">Strategist Observation: Conversion Layer Gap</div>
+          <div class="tb-text">For Nothing AU strategy targeting Pixel defectors (Audience 2) and Gen Z BNPL buyers (Audience 3), a conversion-layer creative gap is a meaningful finding. If strategy calls for acquisition of new buyers beyond the existing Nothing community, the funnel needs conversion-stage content (price, BNPL framing, "Shop Now") that does not currently exist in the pulled AU Meta set. <span class="conf-p">PROBABLE gap assessment from dataset</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Social Performance Extension v2.2, Brand vs Activation Analysis. All data VERIFIED via Apify curious_coder/facebook-ads-library-scraper, keyword fallback, page ID 724644021637509 confirmed 2026-05-24. 20 ads total: 4 active, 16 ended. Spend data: not available (Meta Ads Library does not expose confirmed spend figures). Charli XCX Meta absence: PROBABLE organic-only hypothesis, not confirmed.</span>
+      <span class="sc-source">p. 59  ·  Part 09  ·  Meta Ads analysis</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="59" data-of="88"></script>
+</body>
+</html>

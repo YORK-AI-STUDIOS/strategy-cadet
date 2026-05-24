@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share of Search, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .sos-layout { margin-top: 16px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; flex: 1; min-height: 0; }
+  .sos-col { display: flex; flex-direction: column; gap: 9px; }
+  .col-hd { font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 7px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .chart-area { background: #F4F7FB; padding: 12px; }
+  .chart-title { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 10px; }
+  .bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+  .bar-label { font: 400 9.5px/1 var(--font-sans); color: var(--fg-body); width: 110px; flex-shrink: 0; text-align: right; }
+  .bar-track { flex: 1; background: #E0E7F0; height: 18px; position: relative; }
+  .bar-fill { height: 100%; }
+  .bar-fill.apple { background: #1A1A1A; }
+  .bar-fill.samsung { background: #1428A0; }
+  .bar-fill.pixel { background: #1A7A4A; }
+  .bar-fill.oppo { background: #856404; }
+  .bar-fill.oneplus { background: #8896A8; }
+  .bar-fill.nothing { background: var(--mr-blue-dark); }
+  .bar-val { font: 700 9.5px/18px var(--font-sans); color: #fff; position: absolute; right: 4px; top: 0; white-space: nowrap; }
+  .bar-val.outside { color: var(--fg-body); position: static; line-height: 18px; }
+  .trend-chip { display: inline-block; font: 700 8px/1 var(--font-sans); padding: 2px 5px; border-radius: 2px; margin-left: 4px; }
+  .trend-up { background: #E8F4EC; color: #1A7A4A; }
+  .trend-down { background: #FFF5F5; color: #EF434E; }
+  .trend-flat { background: #EEF2F7; color: var(--mr-blue-dark); }
+  .chart-source { font: 400 italic 9px/1 var(--font-sans); color: var(--fg-body); margin-top: 8px; border-top: 1px solid var(--bg-rule); padding-top: 5px; }
+  .finding-item { padding: 8px 11px; background: #F4F7FB; }
+  .fi-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 3px; }
+  .fi-title { font: 700 11px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .fi-body { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+  .conf-tag { font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+  .conf-v { color: #1A7A4A; }
+  .conf-p { color: var(--mr-blue-dark); }
+  .conf-u { color: #8896A8; }
+  .impl-box { padding: 8px 11px; background: #EEF2F7; border-left: 3px solid var(--mr-blue-dark); }
+  .ib-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 4px; }
+  .ib-text { font: 400 10px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="76 Share of Search">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Share of Search  ·  AU Consumer Electronics  ·  12-Month Google Trends (May 2025 to May 2026)</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">76</div>
+      <div><h3>Nothing Phone holds 3.6% AU Share of Search over 12 months: ranked 6th of 6 measured brands, tied with OnePlus. Apple and Samsung together hold 62.5% of category search. Nothing is a launch-event brand with near-zero presence between launch windows. Oppo is the only challenger gaining share without a launch spike, making it the most immediate competitive threat in the Nothing lane. [VERIFIED via pytrends]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Share of Search  ·  AU Google Trends</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+    <div class="sos-layout">
+      <div class="sos-col">
+        <div class="chart-area">
+          <div class="chart-title">12-Month AU Share of Search by Brand (May 2025 to May 2026)</div>
+          <div class="bar-row">
+            <div class="bar-label">Apple iPhone</div>
+            <div class="bar-track"><div class="bar-fill apple" style="width:100%"><span class="bar-val">31.8%</span></div></div>
+            <span class="trend-chip trend-down">Decelerating</span>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Samsung Galaxy</div>
+            <div class="bar-track"><div class="bar-fill samsung" style="width:96.5%"><span class="bar-val">30.7%</span></div></div>
+            <span class="trend-chip trend-up">Accelerating</span>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Google Pixel</div>
+            <div class="bar-track"><div class="bar-fill pixel" style="width:50%"><span class="bar-val">15.9%</span></div></div>
+            <span class="trend-chip trend-down">Decelerating</span>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Oppo</div>
+            <div class="bar-track"><div class="bar-fill oppo" style="width:44.9%"><span class="bar-val">14.3%</span></div></div>
+            <span class="trend-chip trend-up">Accelerating</span>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">OnePlus</div>
+            <div class="bar-track"><div class="bar-fill oneplus" style="width:11.6%"><span class="bar-val">3.7%</span></div></div>
+            <span class="trend-chip trend-flat">Marginal up</span>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Nothing Phone</div>
+            <div class="bar-track"><div class="bar-fill nothing" style="width:11.3%"><span class="bar-val">3.6%</span></div></div>
+            <span class="trend-chip trend-flat">Marginal up</span>
+          </div>
+          <div class="chart-source">Source: Google Trends via pytrends v4.9.2, geo AU, 12-month window. Cross-calibrated via Samsung anchor term (scalar 0.7053). VERIFIED. [223][224]</div>
+        </div>
+        <div class="finding-item">
+          <div class="fi-label">Key finding  ·  Duopoly ceiling</div>
+          <div class="fi-title">Apple and Samsung hold 62.5% of AU category search jointly. All challengers fight for 37.5%.</div>
+          <div class="fi-body">For Nothing to reach 5% AU SoS (a doubling from current 3.6%), one of the smaller challengers (OnePlus, Oppo) would need to lose share, or Nothing would need to start intercepting Apple and Samsung launch-event searches at the margin. Neither is imminent without major product or distribution event. [223]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+      </div>
+      <div class="sos-col">
+        <div class="col-hd">Key findings and strategic implications</div>
+        <div class="finding-item">
+          <div class="fi-label">Finding 1  ·  Launch-event brand</div>
+          <div class="fi-title">Nothing's only visible AU search spike: Phone (3a) launch, June to July 2025</div>
+          <div class="fi-body">Peak weeks were 29 Jun 2025 (score 14), 6 Jul 2025 (10), 13 Jul 2025 (10). Outside this window, scores sit at 4 to 5 out of 100. The 3-month improvement (3.6% to 3.7%) is noise-level at this absolute scale, not signal. Every campaign cycle must rebuild awareness from near-scratch. [223]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+        <div class="finding-item">
+          <div class="fi-label">Finding 2  ·  Opportunity</div>
+          <div class="fi-title">Google Pixel deceleration: 15.9% to 13.9% over 3 months, creating a conquesting window</div>
+          <div class="fi-body">Pixel holds 15.9% 12-month SoS but is decelerating to 13.9% over 3 months. Pixel's AU audience skews early-adopter and software-forward, the same psychographic as Nothing's Audience 2. If Pixel continues to decline, Nothing has a viable conquesting window at the consideration stage, if it can fund search presence to intercept Pixel defectors. [223]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+        <div class="finding-item">
+          <div class="fi-label">Finding 3  ·  Competitive threat</div>
+          <div class="fi-title">Oppo acceleration (14.3% to 15.5% over 3 months) without a launch spike is the most important competitive signal in this dataset</div>
+          <div class="fi-body">Oppo gaining search share without a visible launch event means brand-building investment is working. Nothing and Oppo share the design-forward, value-tech positioning lane in AU. If Oppo reaches 17% SoS over the next 6 months, the conquesting argument for Nothing becomes harder to execute. Monitor this window closely. [224]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+        <div class="impl-box">
+          <div class="ib-lbl">Binet framework implication [PROBABLE]</div>
+          <div class="ib-text">Using Binet's SoS framework: a brand needs SoS broadly in line with its market share ambition to hold position. Nothing's 3.6% SoS suggests under 1% AU unit market share. To grow to 2% unit share, Nothing likely needs 6 to 8% SoS. That requires either a sustained always-on media investment (expensive) or a product or cultural event large enough to drive a structural search baseline shift. The Charli XCX partnership and the AI-native device launch in 2026 are the two most plausible triggers for the latter. [SoS Extension, Implications for Strategy]</div>
+        </div>
+        <div class="finding-item">
+          <div class="fi-label">Methodology note  ·  VERIFIED</div>
+          <div class="fi-title">pytrends v4.9.2, cross-calibrated via Samsung anchor. 54-week window.</div>
+          <div class="fi-body">Google Trends caps at 5 terms per query. Two queries run: Query 1 (Nothing, Apple, Samsung, OnePlus, Pixel) and Query 2 (Nothing, Samsung, Oppo, Motorola, Xiaomi). Samsung used as anchor for cross-calibration (scalar 0.7053 = Samsung Q1 mean 46.48 divided by Samsung Q2 mean 65.91). Introduces estimated plus or minus 0.5 percentage point error band. pytrends archived April 2025 but functional as of May 2026. [223][224]</div>
+          <div class="conf-tag conf-v">VERIFIED</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Share of Search Extension, Strategy Cadet v1.2 Run J Mk2. pytrends v4.9.2, Google Trends geo AU, 12-month window May 2025 to May 2026. Query 1 [223], Query 2 [224]. Cross-calibration scalar 0.7053 (VERIFIED mathematically). SoS percentages: VERIFIED. 3-month SoS: VERIFIED. Peak attribution to launch events: PROBABLE. Binet SoS framework: well-established in FMCG; consumer electronics correlation moderate, PROBABLE.</span>
+      <span class="sc-source">p. 76  ·  Share of Search  ·  AU Google Trends 12-month</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="76" data-of="88"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience 1 Profile, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .aud-layout { margin-top: 24px; display: grid; grid-template-columns: 340px 1fr; gap: 44px; flex: 1; min-height: 0; }
+  .aud-badge { padding: 20px 22px; border-top: 4px solid var(--mr-blue-dark); background: #F4F7FB; margin-bottom: 18px; }
+  .aud-badge .ab-num { font: 700 9px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
+  .aud-badge .ab-name { font: 800 17px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .aud-badge .ab-age { font: 400 13px/1 var(--font-sans); color: var(--fg-body); margin-top: 6px; }
+  .aud-left { display: flex; flex-direction: column; gap: 0; }
+  .aud-block { padding: 11px 0; border-bottom: 1px solid var(--bg-rule); }
+  .aud-block .ab-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+  .aud-block p { margin: 0; font: 400 12.5px/1.45 var(--font-sans); color: var(--fg-body); }
+  .aud-block p strong { color: var(--fg-heading); }
+  .aud-right { display: flex; flex-direction: column; gap: 0; }
+  .driver-table { width: 100%; border-collapse: collapse; }
+  .driver-table thead tr { border-bottom: 2px solid var(--mr-blue-dark); }
+  .driver-table th { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); padding: 0 8px 8px 0; text-align: left; }
+  .driver-table tbody tr { border-bottom: 1px solid var(--bg-rule); }
+  .driver-table tbody tr:nth-child(even) { background: #F5F7FA; }
+  .driver-table td { padding: 9px 8px 9px 0; font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); vertical-align: top; }
+  .driver-table td:first-child { font-weight: 600; color: var(--fg-heading); }
+  .score-bar { display: inline-flex; gap: 3px; align-items: center; }
+  .score-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--mr-blue-dark); }
+  .score-dot.empty { background: #E5EAF0; }
+  .cep-list { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-direction: column; gap: 6px; }
+  .cep-list li { font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); padding-left: 14px; position: relative; }
+  .cep-list li::before { content: ""; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--mr-blue-dark); }
+  .cep-list li strong { color: var(--fg-heading); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="19 Audience 1 Profile">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03  ·  Audiences  ·  Audience 1 of 3  ·  Profile</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">19</div>
+      <div><h3>Audience 1: Tech-Forward Urban Creatives. The phone is an aesthetic credential. Brand Image (5/5) and Innovation (5/5) are the top purchase drivers. Price is a secondary filter. [PROBABLE]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Audiences  ·  Audience 1 profile</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+    <div class="aud-layout">
+      <div class="aud-left">
+        <div class="aud-badge">
+          <div class="ab-num">Audience 01 of 03</div>
+          <div class="ab-name">Tech-Forward Urban Creatives</div>
+          <div class="ab-age">Aged 22-34  ·  Design-Obsessed</div>
+        </div>
+        <div class="aud-block"><div class="ab-lbl">Gender</div><p>Broadly gender-balanced; slight male skew (~55%/45%); strong non-binary representation relative to other CE segments.</p></div>
+        <div class="aud-block"><div class="ab-lbl">Income</div><p>AUD 60,000-110,000. Freelancers variable, often supplemented by multiple income streams.</p></div>
+        <div class="aud-block"><div class="ab-lbl">Location</div><p>Inner-city Melbourne (Fitzroy/Collingwood), Sydney (Surry Hills/Newtown), Brisbane (Fortitude Valley). <strong>Renting is the baseline.</strong></p></div>
+        <div class="aud-block"><div class="ab-lbl">Employment</div><p>Full-time or freelance in creative industries: graphic design, content creation, UX, brand, film, music production.</p></div>
+        <div class="aud-block"><div class="ab-lbl">Values summary</div><p>Aesthetics as identity. Deeply sceptical of mass-market positioning. Sustainability consciousness without moralism. Community over advertising.</p></div>
+        <div class="aud-block"><div class="ab-lbl">Category entry points (top 3)</div>
+          <ul class="cep-list">
+            <li><strong>Glyph-First Unboxing Moment</strong> (Identity): "I saw the transparent back on Reddit and had to have it."</li>
+            <li><strong>Portfolio Shoot Prop Upgrade</strong> (Occasion): "I need a phone that looks as considered as my work."</li>
+            <li><strong>Anti-Apple Statement Upgrade</strong> (Emotion): "Everyone at the agency has an iPhone. I wanted something that starts a conversation."</li>
+          </ul>
+        </div>
+      </div>
+      <div class="aud-right">
+        <div style="font: 700 10px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 8px; border-bottom: 2px solid var(--mr-blue-dark); margin-bottom: 4px;">Purchase drivers (1-5 score)</div>
+        <table class="driver-table">
+          <thead><tr><th>Driver</th><th>Score</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>Brand Image and Emotional Connection</td><td><div class="score-bar"><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div></div> 5</td><td>Primary driver. Nothing's aesthetic and cultural positioning IS the product for this audience.</td></tr>
+            <tr><td>Innovation and Creativity</td><td><div class="score-bar"><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div></div> 5</td><td>Glyph and industrial design differentiation are central. Innovation must feel conceptual, not spec-led.</td></tr>
+            <tr><td>Product Quality and Performance</td><td><div class="score-bar"><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot empty"></div></div> 4</td><td>Build quality must clear a credibility bar. Nothing Phone (2a) and Ear (2) have passed muster in community reviews.</td></tr>
+            <tr><td>Trust and Positive Impact</td><td><div class="score-bar"><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot empty"></div></div> 4</td><td>Sustainability and repairability signals matter. Carl Pei's transparent founder narrative builds trust.</td></tr>
+            <tr><td>Price and Cost of Ownership</td><td><div class="score-bar"><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot empty"></div><div class="score-dot empty"></div></div> 3</td><td>Price-aware but not price-led. Willing to pay a premium over generic Android if brand signal justifies it.</td></tr>
+            <tr><td>Customer Service and Experience</td><td><div class="score-bar"><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot"></div><div class="score-dot empty"></div><div class="score-dot empty"></div></div> 3</td><td>Expects frictionless digital support. Community forums and Reddit substitute for formal CS.</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top: 14px; padding: 12px 14px; border-left: 3px solid var(--mr-blue-dark); background: #F4F7FB;">
+          <p style="margin:0; font: 400 12.5px/1.45 var(--font-sans); color: var(--fg-body);">This audience does not separate work identity from consumer identity. The phone they carry to a client meeting or gallery opening is a deliberate signal. They respond to brands that demonstrate genuine design literacy, reward discovery, and feel like they belong to a community rather than a campaign. <span class="sc-chip sc-chip--probable">Probable</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Section 4, Target Audiences, Audience 1. Cultural signals from Perplexity-enriched pre-fetch [4]-[10]. [PROBABLE for audience synthesis; purchase driver scores are Strategy Cadet assessment, not primary survey data]</span>
+      <span class="sc-source">p. 19  ·  Part 03  ·  Audience 1 profile</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="19" data-of="88"></script>
+</body>
+</html>

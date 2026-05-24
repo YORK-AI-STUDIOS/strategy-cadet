@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strategy Cadet, Nothing Technology, Full Discovery Deck, Run J Mk2 v3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #1a1f2b;
+    --label: #e6edf3;
+    --sub: #7d8590;
+    --accent: #539bf5;
+    --border: #232a36;
+    --gap: 28px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--label); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; align-items: center; gap: 18px;
+    padding: 12px 24px;
+    background: rgba(14,17,22,0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+  }
+  .topbar h1 { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+  .topbar .meta { color: var(--sub); font-size: 13px; }
+  .topbar .spacer { flex: 1; }
+  .topbar select {
+    background: #1c2128; color: var(--label);
+    border: 1px solid #30363d; padding: 7px 12px;
+    border-radius: 6px; font-size: 13px;
+    min-width: 320px; cursor: pointer;
+  }
+  .topbar select:focus { outline: none; border-color: var(--accent); }
+
+  .deck { padding: 24px; display: flex; flex-direction: column; gap: var(--gap); max-width: 1600px; margin: 0 auto; }
+  .slide-row { display: flex; flex-direction: column; gap: 8px; scroll-margin-top: 72px; }
+  .slide-label {
+    display: flex; gap: 14px; align-items: baseline;
+    padding: 0 6px;
+  }
+  .slide-label .num { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; min-width: 28px; }
+  .slide-label .name { color: var(--label); font-weight: 500; }
+  .slide-label .file { color: var(--sub); margin-left: auto; font-family: ui-monospace, Menlo, monospace; font-size: 11px; }
+
+  .frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border: 1px solid #232a36;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .frame iframe {
+    position: absolute; top: 0; left: 0;
+    width: 1920px; height: 1080px;
+    border: 0;
+    transform-origin: top left;
+  }
+
+  .footer {
+    padding: 32px 24px 48px;
+    color: var(--sub);
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<!-- password gate -->
+<div id="pw-gate">
+  <div class="pw-box">
+    <div class="pw-logo">Strategy Cadet</div>
+    <div class="pw-sub">This presentation is password protected</div>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="off" autofocus>
+    <button id="pw-go">Unlock</button>
+    <div id="pw-err"></div>
+  </div>
+</div>
+<style>
+#pw-gate{position:fixed;inset:0;z-index:99999;background:#0e1116;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+#pw-gate .pw-box{text-align:center;padding:48px;max-width:380px;width:100%;box-sizing:border-box;}
+#pw-gate .pw-logo{color:#e6edf3;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px;}
+#pw-gate .pw-sub{color:#7d8590;font-size:14px;margin-bottom:28px;}
+#pw-gate input{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:8px;border:1px solid #30363d;background:#1c2128;color:#e6edf3;font-size:15px;outline:none;}
+#pw-gate input:focus{border-color:#539bf5;}
+#pw-gate button{margin-top:12px;width:100%;padding:12px;border-radius:8px;border:none;background:#539bf5;color:#fff;font-size:15px;font-weight:600;cursor:pointer;}
+#pw-gate button:hover{background:#4288e0;}
+#pw-gate #pw-err{color:#f85149;font-size:13px;margin-top:12px;min-height:18px;}
+</style>
+<script>
+(function(){
+  var HASH='2b8d70ae423705ba45b06aa80ad1c4996ebb358053f7678e91fe15eaba05af38';
+  var KEY='sc-deck-unlocked-v1';
+  var gate=document.getElementById('pw-gate');
+  if(localStorage.getItem(KEY)==='yes'){gate.parentNode.removeChild(gate);return;}
+  document.documentElement.style.overflow='hidden';
+  async function check(){
+    var v=document.getElementById('pw-input').value;
+    var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v));
+    var hex=Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+    if(hex===HASH){localStorage.setItem(KEY,'yes');document.documentElement.style.overflow='';gate.parentNode.removeChild(gate);}
+    else{document.getElementById('pw-err').textContent='Incorrect password';document.getElementById('pw-input').value='';document.getElementById('pw-input').focus();}
+  }
+  document.getElementById('pw-go').addEventListener('click',check);
+  document.getElementById('pw-input').addEventListener('keydown',function(e){if(e.key==='Enter')check();});
+})();
+</script>
+<!-- /password gate -->
+
+<div class="topbar">
+  <h1>Strategy Cadet, Nothing Technology</h1>
+  <span class="meta">Run J Mk2 v3, 88 slides, scroll view</span>
+  <div class="spacer"></div>
+  <select id="jump">
+    <option value="">Jump to slide…</option>
+  </select>
+</div>
+
+<div class="deck" id="deck"></div>
+
+<div class="footer">© 2026 York Studios Pty Ltd. Strategy Cadet, Nothing Technology discovery, internal review only.</div>
+
+<script>
+const SLIDES = [
+  ["01","Cover","01-cover.html"],
+  ["02","Divider, Market","02-divider-market.html"],
+  ["03","Quick facts","03-quick-facts.html"],
+  ["04","Industry drivers","04-industry-drivers.html"],
+  ["05","Macroeconomic","05-macroeconomic.html"],
+  ["06","Market size","06-market-size.html"],
+  ["07","Divider, Brand DNA","07-divider-brand.html"],
+  ["08","Founder story","08-founder-story.html"],
+  ["09","Product, Glyph","09-product-glyph.html"],
+  ["10","Brand personality","10-brand-personality.html"],
+  ["11","Messaging themes","11-messaging-themes.html"],
+  ["12","Pillars overview","12-pillars-overview.html"],
+  ["13","Pillar 1, Transparency","13-pillar-1-transparency.html"],
+  ["14","Pillar 2, Show the work","14-pillar-2-show-work.html"],
+  ["15","Pillar 3, Taste tribe","15-pillar-3-taste-tribe.html"],
+  ["16","Pillar 4, Restraint","16-pillar-4-restraint.html"],
+  ["17","Actions recommended","17-actions-recommended.html"],
+  ["18","Divider, Audiences","18-divider-audiences.html"],
+  ["19","Audience 1 profile","19-audience-1-profile.html"],
+  ["20","Audience 2 profile","20-audience-2-profile.html"],
+  ["21","Audience 3 profile","21-audience-3-profile.html"],
+  ["22","Audience summary","22-audience-summary.html"],
+  ["23","Divider, Innovation","23-divider-innovation.html"],
+  ["24","Innovation, Aud 1 experience","24-innovation-aud1-experience.html"],
+  ["25","Innovation, Aud 1 offering","25-innovation-aud1-offering.html"],
+  ["26","Innovation, Aud 2 experience","26-innovation-aud2-experience.html"],
+  ["27","Innovation, Aud 2 offering","27-innovation-aud2-offering.html"],
+  ["28","Innovation, Aud 3 experience","28-innovation-aud3-experience.html"],
+  ["29","Innovation, Aud 3 offering","29-innovation-aud3-offering.html"],
+  ["30","Divider, Competitive","30-divider-competitive.html"],
+  ["31","Competitors overview","31-competitors-overview.html"],
+  ["32","Forensics, Samsung + Apple","32-forensics-samsung-apple.html"],
+  ["33","Forensics, OnePlus + Motorola","33-forensics-oneplus-motorola.html"],
+  ["34","Forensics, Pixel + Oppo","34-forensics-pixel-oppo.html"],
+  ["35","ESOV positioning","35-esov-positioning.html"],
+  ["36","Customer problems","36-customer-problems.html"],
+  ["37","Value propositions","37-value-propositions.html"],
+  ["38","Divider, Brand strategy","38-divider-brand-strategy.html"],
+  ["39","Brand opportunities","39-brand-opportunities.html"],
+  ["40","Forensics, Supply chain","40-forensics-supply-chain.html"],
+  ["41","Forensics, IP + ESG","41-forensics-ip-esg.html"],
+  ["42","Forensics, Litigation + Financials","42-forensics-litigation-financials.html"],
+  ["43","Business trends","43-business-trends.html"],
+  ["44","Strategic goal + KPI","44-strategic-goal-kpi.html"],
+  ["45","Initiatives","45-initiatives.html"],
+  ["46","Roadmap","46-roadmap.html"],
+  ["47","Cadence + kill-switches","47-cadence-killswitches.html"],
+  ["48","Divider, Marketing","48-divider-marketing.html"],
+  ["49","Marketing, Aud 1 channels","49-mktg-aud1-channels.html"],
+  ["50","Marketing, Aud 1 messaging","50-mktg-aud1-messaging.html"],
+  ["51","Marketing, Aud 2 channels","51-mktg-aud2-channels.html"],
+  ["52","Marketing, Aud 2 messaging","52-mktg-aud2-messaging.html"],
+  ["53","Marketing, Aud 3 channels","53-mktg-aud3-channels.html"],
+  ["54","Marketing, Aud 3 messaging","54-mktg-aud3-messaging.html"],
+  ["55","Divider, Social","55-divider-social.html"],
+  ["56","Platform reach","56-platform-reach.html"],
+  ["57","TikTok deep","57-tiktok-deep.html"],
+  ["58","YouTube performance","58-youtube-performance.html"],
+  ["59","Meta ads analysis","59-meta-ads-analysis.html"],
+  ["60","Social takeaways","60-social-takeaways.html"],
+  ["61","Divider, Appendix","61-divider-appendix.html"],
+  ["62","Data gaps + confidence","62-data-gaps-confidence.html"],
+  ["63","Source coverage","63-source-coverage.html"],
+  ["64","Strategic risks","64-strategic-risks.html"],
+  ["65","Five things we know","65-five-things-we-know.html"],
+  ["66","Week-one actions","66-week-one-actions.html"],
+  ["67","Strategic synthesis","67-strategic-synthesis.html"],
+  ["68","Founder voice","68-founder-voice.html"],
+  ["69","India + global expansion","69-india-global-expansion.html"],
+  ["70","CMF + brand architecture","70-cmf-brand-architecture.html"],
+  ["71","CEP master table","71-cep-master-table.html"],
+  ["72","News + PR landscape","72-news-pr-landscape.html"],
+  ["73","Brand momentum","73-brand-momentum.html"],
+  ["74","Social performance","74-social-performance.html"],
+  ["75","Geo scorecard","75-geo-scorecard.html"],
+  ["76","Share of search","76-share-of-search.html"],
+  ["77","Reviews + trust gap","77-reviews-trust-gap.html"],
+  ["78","Methodology","78-methodology.html"],
+  ["79","About Strategy Cadet","79-about-strategy-cadet.html"],
+  ["80","Citations 1","80-citations-1.html"],
+  ["81","Citations 2","81-citations-2.html"],
+  ["82","Citations 3","82-citations-3.html"],
+  ["83","Citations 4","83-citations-4.html"],
+  ["84","Citations 5","84-citations-5.html"],
+  ["85","Honest limitations","85-honest-limitations.html"],
+  ["86","Brand opportunities summary","86-brand-opportunities-summary.html"],
+  ["87","Closing divider","87-closing-divider.html"],
+  ["88","Back cover","88-back-cover.html"],
+];
+
+const BASE = "slides/";
+
+const deck = document.getElementById("deck");
+const jump = document.getElementById("jump");
+
+SLIDES.forEach(([num, name, file]) => {
+  const row = document.createElement("div");
+  row.className = "slide-row";
+  row.id = "s" + num;
+  row.innerHTML = `
+    <div class="slide-label">
+      <span class="num">${num}</span>
+      <span class="name">${name}</span>
+      <span class="file">${file}</span>
+    </div>
+    <div class="frame"><iframe loading="lazy" src="${BASE}${file}"></iframe></div>
+  `;
+  deck.appendChild(row);
+
+  const opt = document.createElement("option");
+  opt.value = "s" + num;
+  opt.textContent = `${num}, ${name}`;
+  jump.appendChild(opt);
+});
+
+function scaleFrames() {
+  document.querySelectorAll(".frame").forEach(f => {
+    const iframe = f.querySelector("iframe");
+    const w = f.clientWidth;
+    const scale = w / 1920;
+    iframe.style.transform = `scale(${scale})`;
+  });
+}
+window.addEventListener("resize", scaleFrames);
+window.addEventListener("load", scaleFrames);
+document.querySelectorAll("iframe").forEach(i => i.addEventListener("load", scaleFrames));
+
+jump.addEventListener("change", e => {
+  const id = e.target.value;
+  if (id) document.getElementById(id).scrollIntoView({ behavior: "smooth", block: "start" });
+  e.target.value = "";
+});
+</script>
+
+</body>
+</html>

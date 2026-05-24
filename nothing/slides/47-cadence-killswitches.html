@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cadence and Kill-Switches, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .ck-layout { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; flex: 1; min-height: 0; }
+  .cadence-col { display: flex; flex-direction: column; gap: 10px; }
+  .cadence-block { border-top: 3px solid var(--mr-blue-dark); padding: 10px 14px; background: #F4F7FB; }
+  .cb-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 7px; }
+  .cb-text { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+  .cb-text strong { color: var(--fg-heading); }
+  .kill-col { display: flex; flex-direction: column; gap: 10px; }
+  .kill-block { border-left: 4px solid #EF434E; padding: 10px 14px; background: #FFF5F5; }
+  .kb-lbl { font: 700 9px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: #EF434E; margin-bottom: 7px; }
+  .kb-trigger { font: 700 11.5px/1.3 var(--font-sans); color: var(--fg-heading); margin-bottom: 5px; }
+  .kb-action { font: 400 11px/1.4 var(--font-sans); color: var(--fg-body); }
+  .kb-action strong { color: var(--fg-heading); }
+  .conf-v { color: #1A7A4A; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-p { color: var(--mr-blue-dark); font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-u { color: #8896A8; font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="47 Cadence and Kill-Switches">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 07  ·  Business Planning  ·  Operating Cadence + Kill-Switches  ·  Agent E</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">47</div>
+      <div><h3>Four-cadence review structure plus four kill-switches. The KPI tree drives the agenda, not the calendar. Kill-switch 1: if AU Search Index stays below 6 by day 90, pause Tier 2 and commission qualitative research immediately. [PROBABLE]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Business Planning  ·  Cadence + Kill-Switches</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+    <div class="ck-layout">
+      <div class="cadence-col">
+        <div style="font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 8px; border-bottom: 2px solid var(--mr-blue-dark);">Operating Cadence</div>
+        <div class="cadence-block">
+          <div class="cb-lbl">Weekly Review (Every Monday)</div>
+          <div class="cb-text"><strong>Attendees:</strong> Nothing AU Strategy Lead and Marketing Lead. <strong>Duration:</strong> 30 minutes maximum. Review: weekly content output count, r/NothingTech AU engagement volume, AU tech press placements from prior week. Any metric more than 30% below weekly target triggers a same-week escalation to the creative brief, not a wait for monthly review.</div>
+        </div>
+        <div class="cadence-block">
+          <div class="cb-lbl">Monthly Review (First Wednesday)</div>
+          <div class="cb-text">Full AU team reviews rolling 4-week KPI snapshot: AU Search Interest Index trend, Pixel Defector Conversion Rate from post-purchase surveys, Earbuds-to-Phone upgrade conversion rate. If any leading indicator is below target for two consecutive weeks before the monthly review, the session opens with a root-cause discussion. The KPI tree drives the agenda, not the calendar.</div>
+        </div>
+        <div class="cadence-block">
+          <div class="cb-lbl">Monthly Distribution Check</div>
+          <div class="cb-text">At monthly review: confirm CMF AU retail placement status and JB Hi-Fi BNPL copy is live at all digital touchpoints. If either is unconfirmed, escalate to distribution lead as P1 blocker, not a planning note.</div>
+        </div>
+        <div class="cadence-block">
+          <div class="cb-lbl">Quarterly Review (Months 3 and 6)</div>
+          <div class="cb-text">Goal itself is revisited. Sanity-check rerun against then-current SoS data (fresh pytrends pull sufficient). If Oppo 3-month SoS exceeds 17%, Alternative Goal 2 (Oppo defensive) is promoted to co-primary. At 180-day mark: goal is retired or extended based on AU Search Interest Index 12-month rolling average.</div>
+        </div>
+      </div>
+      <div class="kill-col">
+        <div style="font: 700 9px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #EF434E; padding-bottom: 8px; border-bottom: 2px solid #EF434E;">Kill-Switches</div>
+        <div class="kill-block">
+          <div class="kb-lbl">Kill-Switch 1</div>
+          <div class="kb-trigger">If AU Search Index remains below 6 by day 90</div>
+          <div class="kb-action">Pause all Tier 2 initiatives except BNPL visibility. Commission qualitative research: minimum 12 depth interviews with AU Pixel owners aged 25-38. Restart only after insight returned. A score of 6 from a baseline of 5 is a 20% lift; failure to reach it signals mechanism failure, not goal failure. <span class="conf-p">PROBABLE</span></div>
+        </div>
+        <div class="kill-block">
+          <div class="kb-lbl">Kill-Switch 2</div>
+          <div class="kb-trigger">If Oppo 3-month AU SoS exceeds 17% at month 3 or 6</div>
+          <div class="kb-action">Immediately add Oppo defensive creative brief to Tier 1 running brief. Head-to-head design comparison content targeting Anti-Mainstream Gadget Upgraders pulled by Oppo brand-building momentum. Do not wait for the next planning cycle. Oppo acceleration from 14.3% to 15.5% in 3 months already flagged. <span class="conf-v">VERIFIED pytrends</span></div>
+        </div>
+        <div class="kill-block">
+          <div class="kb-lbl">Kill-Switch 3</div>
+          <div class="kb-trigger">If AU DTC Revenue Growth (6-month rolling) is negative at month 6</div>
+          <div class="kb-action">Halt all brand-building initiatives (Design Residency, TikTok content). Redirect budget to performance-led acquisition (Google Search, Meta retargeting against Pixel-owning audiences). Brand-building without a conversion floor is a runway risk at Nothing's AU scale. No AU DTC baseline currently available; establish in month 1. <span class="conf-u">UNCERTAIN</span></div>
+        </div>
+        <div class="kill-block">
+          <div class="kb-lbl">Kill-Switch 4</div>
+          <div class="kb-trigger">If CMF AU Market Entry not confirmed by day 60</div>
+          <div class="kb-action">Remove CMF from 31-90 day roadmap. Redirect Gen Z acquisition to Nothing Phone (2a) at AUD 499 with aggressive BNPL framing. Day 60 is a hard gate, not a soft checkpoint. <span class="conf-p">PROBABLE</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Section 18, Agent E Business Planning, Sections 6 (Operating Cadence) and 7 (Kill-Switches). Oppo SoS acceleration 14.3% to 15.5%: VERIFIED pytrends. AU DTC baseline: UNCERTAIN (no internal data available). Kill-switch 1 threshold (score of 6): PROBABLE analytical threshold.</span>
+      <span class="sc-source">p. 47  ·  Part 07  ·  Cadence + kill-switches</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="47" data-of="88"></script>
+</body>
+</html>
