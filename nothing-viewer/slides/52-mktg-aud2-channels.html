@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aud 2 Channel Mix, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .aud-snapshot { margin-top: 14px; padding: 10px 14px; background: #EEF2F7; border-left: 4px solid var(--mr-blue-dark); font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); }
+  .aud-snapshot strong { color: var(--fg-heading); }
+  .ch-grid { margin-top: 12px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; flex: 1; min-height: 0; }
+  .ch-card { padding: 10px 12px; background: #F4F7FB; border-top: 3px solid var(--mr-blue-dark); }
+  .ch-card.secondary { border-top-color: #5A7A9F; }
+  .ch-card.experimental { border-top-color: #8896A8; }
+  .ch-pri { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 6px; }
+  .ch-pri.s { color: #5A7A9F; }
+  .ch-pri.e { color: #8896A8; }
+  .ch-name { font: 700 14px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 5px; }
+  .ch-rat { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
+  .ch-fmt { font: 400 12px/1.35 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 6px; margin-top: 6px; }
+  .ch-fmt strong { color: var(--mr-blue-dark); }
+  .conf-v { color: #1A7A4A; font: 700 10px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+  .conf-p { color: var(--mr-blue-dark); font: 700 10px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="51 Aud 2 Channel Mix">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 08  ·  Marketing Plans  ·  Audience 2: Anti-Mainstream Gadget Upgraders  ·  Channel Mix</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">51</div>
+      <div><h3>Audience 2 researches obsessively, buys through community validation. YouTube AU tech reviewers and Reddit are primary. Google Search intercepts Pixel defectors at peak research intensity. Meta Ads currently show no conversion-layer creative for this audience: a gap at the bottom of the funnel. [VERIFIED Meta Ads data]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Marketing Plans  ·  Aud 2 Channels</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified Meta Ads</span></div>
+      </div>
+    </div>
+    <div class="aud-snapshot">
+      <strong>Audience 2: Anti-Mainstream Gadget Upgraders (25-38, Challenger-Brand Champions).</strong> Approx. 65% male. Income: AUD 85,000-140,000. Purchase drivers: Product Quality and Performance (5/5), Trust and Positive Impact (5/5). Top CEPs: Reddit Rabbit Hole Discovery (Social), Spec-Sheet Validation Cross-Over (Need-State). Signal: Omnichannel Research Culture and Authenticity Over Gloss confirm the research environment is the media. Pixel 15.9% AU SoS vs Nothing 3.6% [VERIFIED Google Trends]. Intercepting defectors at research stage is the highest-ROI mechanism.
+    </div>
+    <!-- Channel mix donut: Audience 2 estimated budget allocation -->
+    <!-- Primary 55%: YouTube 25% + Reddit 15% + Search 15% | Secondary 35%: TikTok 15% + JB Hi-Fi 10% + Spotify 10% | Experimental 10% -->
+    <svg viewBox="0 0 760 90" preserveAspectRatio="xMidYMid meet" style="width:100%;display:block;margin:10px 0 8px;" aria-label="Audience 2 estimated channel budget allocation donut">
+      <rect x="0" y="0" width="760" height="90" fill="#F4F7FB" rx="4"/>
+      <!-- Donut cx=80 cy=45 r=32 circumference=201.1 -->
+      <!-- YouTube 25% = 50.3 | start -90 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#4971B7" stroke-width="14"
+        stroke-dasharray="50.3 201.1" transform="rotate(-90 80 45)" stroke-linecap="butt"/>
+      <!-- Reddit 15% = 30.2 | offset 50.3 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#2E4A63" stroke-width="14"
+        stroke-dasharray="30.2 201.1" transform="rotate(0 80 45)" stroke-linecap="butt"/>
+      <!-- Search 15% = 30.2 | offset 80.5 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#1A5C9A" stroke-width="14"
+        stroke-dasharray="30.2 201.1" transform="rotate(54 80 45)" stroke-linecap="butt"/>
+      <!-- TikTok 15% = 30.2 | offset 110.7 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#5A9BD5" stroke-width="14"
+        stroke-dasharray="30.2 201.1" transform="rotate(108 80 45)" stroke-linecap="butt"/>
+      <!-- JB Hi-Fi 10% = 20.1 | offset 140.9 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#7AA8D0" stroke-width="14"
+        stroke-dasharray="20.1 201.1" transform="rotate(162 80 45)" stroke-linecap="butt"/>
+      <!-- Discord/Email 10% = 20.1 | offset 161.0 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#8896A8" stroke-width="14"
+        stroke-dasharray="20.1 201.1" transform="rotate(198 80 45)" stroke-linecap="butt"/>
+      <!-- Experimental 10% = 20.1 | offset 181.1 -->
+      <circle cx="80" cy="45" r="32" fill="none" stroke="#C2CDD6" stroke-width="14"
+        stroke-dasharray="20.1 201.1" transform="rotate(234 80 45)" stroke-linecap="butt"/>
+      <text x="80" y="42" text-anchor="middle" font-family="Open Sans" font-size="11" font-weight="800" fill="#2E4A63">Aud 2</text>
+      <text x="80" y="54" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#8896A8">budget mix</text>
+      <!-- Legend -->
+      <rect x="130" y="14" width="9" height="9" rx="1" fill="#4971B7"/>
+      <text x="143" y="22" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">YouTube AU reviews</text>
+      <text x="143" y="32" font-family="Open Sans" font-size="9" fill="#8896A8">25% Primary</text>
+      <rect x="270" y="14" width="9" height="9" rx="1" fill="#2E4A63"/>
+      <text x="283" y="22" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">Reddit</text>
+      <text x="283" y="32" font-family="Open Sans" font-size="9" fill="#8896A8">15% Primary</text>
+      <rect x="370" y="14" width="9" height="9" rx="1" fill="#1A5C9A"/>
+      <text x="383" y="22" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">Google Search</text>
+      <text x="383" y="32" font-family="Open Sans" font-size="9" fill="#8896A8">15% Primary</text>
+      <rect x="490" y="14" width="9" height="9" rx="1" fill="#5A9BD5"/>
+      <text x="503" y="22" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">TikTok (spec)</text>
+      <text x="503" y="32" font-family="Open Sans" font-size="9" fill="#8896A8">15% Secondary</text>
+      <rect x="130" y="54" width="9" height="9" rx="1" fill="#7AA8D0"/>
+      <text x="143" y="62" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">JB Hi-Fi in-store</text>
+      <text x="143" y="72" font-family="Open Sans" font-size="9" fill="#8896A8">10% Secondary</text>
+      <rect x="290" y="54" width="9" height="9" rx="1" fill="#8896A8"/>
+      <text x="303" y="62" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">Discord + Email CRM</text>
+      <text x="303" y="72" font-family="Open Sans" font-size="9" fill="#8896A8">10% Secondary</text>
+      <rect x="460" y="54" width="9" height="9" rx="1" fill="#C2CDD6"/>
+      <text x="473" y="62" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">Experimental</text>
+      <text x="473" y="72" font-family="Open Sans" font-size="9" fill="#8896A8">10%</text>
+      <text x="760" y="84" text-anchor="end" font-family="Open Sans" font-size="7.5" font-style="italic" fill="#8896A8">Estimated allocation. PROBABLE synthesis from Section 19.</text>
+    </svg>
+    <div class="ch-grid">
+      <div class="ch-card">
+        <div class="ch-pri">Primary</div>
+        <div class="ch-name">YouTube (AU tech review channel partnerships)</div>
+        <div class="ch-rat">Omnichannel Research Culture signal and the recommended initiative both confirm AU tech YouTubers are the primary consideration-stage medium for this audience. Nothing's global YouTube average 2,828,594 views per top-20 video confirms the channel works at scale. [VERIFIED YouTube Data API] AU-specific review seeding compounds this at lower cost.</div>
+        <div class="ch-fmt"><strong>Format:</strong> Long-form review access (10-20 minutes), unrestricted editorial, embargo date only.</div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-pri">Primary</div>
+        <div class="ch-name">Reddit (r/NothingTech, r/Android AU)</div>
+        <div class="ch-rat">Reddit Rabbit Hole Discovery CEP is the verbatim description of how this audience enters the purchase funnel. Nothing's ESOV Under-Indexed classification means earned community presence is higher-ROI than paid. the recommended initiative (r/NothingTech AU verified presence) directly activates this channel. <span class="conf-p">PROBABLE</span></div>
+        <div class="ch-fmt"><strong>Format:</strong> Weekly AMAs, verified brand presence, bug acknowledgement posts, spec transparency threads.</div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-pri">Primary</div>
+        <div class="ch-name">Google Search (SEO, comparison content)</div>
+        <div class="ch-rat">Spec-Sheet Validation Cross-Over CEP and the always-on search presence goal both confirm search as the interception channel. Competitor Switcher Programme ("Switching from Pixel to Nothing" guide) intercepts Pixel defectors at their highest-intent research moment. <span class="conf-p">PROBABLE</span></div>
+        <div class="ch-fmt"><strong>Format:</strong> Long-form comparison articles, spec-comparison landing pages, FAQ content targeting Pixel vs Nothing queries.</div>
+      </div>
+      <div class="ch-card secondary">
+        <div class="ch-pri s">Secondary</div>
+        <div class="ch-name">TikTok (spec-comparison content)</div>
+        <div class="ch-rat">Anti-Status Tech Signaling signal suggests a younger slice of this cohort (25-30) is discoverable on TikTok. Durability test content (8.9M plays on Phone 3 USB test [VERIFIED]) performs with spec-curious audiences. A spec-focused honest comparison brief for this audience operates on the existing account. <span class="conf-v">VERIFIED views</span></div>
+        <div class="ch-fmt"><strong>Format:</strong> Honest spec comparison, durability proof, Pixel vs Nothing format, 30-60 seconds.</div>
+      </div>
+      <div class="ch-card secondary">
+        <div class="ch-pri s">Secondary</div>
+        <div class="ch-name">JB Hi-Fi In-Store (staff briefing programme)</div>
+        <div class="ch-rat">JB Hi-Fi In-Store Encounter CEP confirms physical retail is a real purchase pathway for a segment of this audience. JB Hi-Fi is Nothing's primary AU retail partner. [VERIFIED] Quarterly staff technical briefings address the quality of the floor encounter, not just unit availability. <span class="conf-v">VERIFIED retail distribution</span></div>
+        <div class="ch-fmt"><strong>Format:</strong> Quarterly staff technical briefings, demo unit with live Glyph configuration.</div>
+      </div>
+      <div class="ch-card experimental">
+        <div class="ch-pri e">Experimental</div>
+        <div class="ch-name">Discord (Nothing AU Owner Community) + Email CRM</div>
+        <div class="ch-rat">Nothing AU Owner Community: Private Discord with Brand Access targets this audience's desire for brand access beyond the transaction. Email supports Community Early Access Drop CEP and post-purchase relationship depth. <span class="conf-p">PROBABLE</span></div>
+        <div class="ch-fmt"><strong>Format:</strong> Monthly live Q&A, device-verified Discord membership, monthly Nothing OS update notes, early Beta Labs AU access.</div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Section 19, cross-platform analysis, Audience 2, F.2 Channel Mix Recommendation. YouTube avg views 2,828,594: VERIFIED YouTube Data API v3. TikTok USB test 8.9M plays: VERIFIED cross-platform pull. Pixel 15.9% AU SoS: VERIFIED Google Trends. Meta Ads no conversion-layer creative: VERIFIED cross-platform scrape. JB Hi-Fi primary retail partner: VERIFIED retail distribution research.</span>
+      <span class="sc-source">p. 51  ·  Part 08  ·  Aud 2 channel mix</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="52" data-of="91"></script>
+</body>
+</html>

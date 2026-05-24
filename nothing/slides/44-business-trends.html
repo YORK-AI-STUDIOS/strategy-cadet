@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Business Trends, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .std .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); }
+  .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
+  .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .std .head .meta { margin-left: auto; text-align: right; }
+  .trends-grid { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; min-height: 0; }
+  .trend-card { border-top: 4px solid var(--mr-blue-dark); padding: 14px 16px; background: #F4F7FB; display: flex; flex-direction: column; gap: 8px; }
+  .trend-card .tc-cat { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); }
+  .trend-card .tc-title { font: 700 15px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .trend-card .tc-shift { font: 400 13px/1.4 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 7px; margin-top: 2px; }
+  .trend-card .tc-shift strong { color: var(--fg-heading); }
+  .trend-card .tc-impl { font: 400 13px/1.4 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 7px; }
+  .trend-card .tc-impl strong { color: var(--mr-blue-dark); }
+  .trend-card .tc-who { font: 400 12px/1.35 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 6px; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide std" data-screen-label="43 Business Trends">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 06  ·  Brand Strategy  ·  Emerging Business Trends</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <div class="num">43</div>
+      <div><h3>Six emerging business trends across four domains: Business Model, Marketing Strategy, Product Strategy, and Retail/Supply Chain. Ambient Intelligence and AI-native architecture are the two highest-stakes forward bets for Nothing. [PROBABLE]</h3></div>
+      <div class="meta">
+        <div style="font: var(--t-eyebrow); color: var(--fg-body);">Brand Strategy  ·  Business Trends</div>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+    <!-- Trend strength radar: 6 axes, Nothing strategic relevance score vs industry adoption score -->
+    <!-- Axes: Drop Commerce, Subscription HW, Creator Discovery, Cultural Partnership, Ambient Intelligence, AI-Native Architecture -->
+    <!-- Angles (6 axes, 60deg apart): 270, 330, 30, 90, 150, 210 deg -->
+    <!-- cx=160 cy=100 r=72. Score 0-10. Nothing relevance, Industry adoption -->
+    <!-- Axis coords: 270=top(160,28), 330=(160+72*cos330,100-72*sin330)=(160+62.4,100-36)=(222,64), 30=(222,136), 90=(160,172), 150=(98,136), 210=(98,64) -->
+    <svg viewBox="0 0 1540 210" preserveAspectRatio="xMidYMid meet" style="width:100%;display:block;margin:10px 0 6px;" aria-label="Trend strength radar: Nothing strategic relevance vs industry adoption across 6 emerging trends">
+      <rect x="0" y="0" width="1540" height="210" fill="#F4F7FB" rx="4"/>
+      <!-- Grid rings at r=24,48,72 -->
+      <polygon points="160,76 210,88 210,112 160,124 110,112 110,88" fill="none" stroke="#D0D8E4" stroke-width="0.8" opacity="0.6"/>
+      <polygon points="160,52 234,76 234,124 160,148 86,124 86,76" fill="none" stroke="#D0D8E4" stroke-width="0.8" opacity="0.6"/>
+      <polygon points="160,28 258,64 258,136 160,172 62,136 62,64" fill="none" stroke="#D0D8E4" stroke-width="1" opacity="0.8"/>
+      <!-- Axis spokes -->
+      <line x1="160" y1="100" x2="160" y2="28" stroke="#D0D8E4" stroke-width="0.8"/>
+      <line x1="160" y1="100" x2="222" y2="64" stroke="#D0D8E4" stroke-width="0.8"/>
+      <line x1="160" y1="100" x2="222" y2="136" stroke="#D0D8E4" stroke-width="0.8"/>
+      <line x1="160" y1="100" x2="160" y2="172" stroke="#D0D8E4" stroke-width="0.8"/>
+      <line x1="160" y1="100" x2="98" y2="136" stroke="#D0D8E4" stroke-width="0.8"/>
+      <line x1="160" y1="100" x2="98" y2="64" stroke="#D0D8E4" stroke-width="0.8"/>
+      <!-- Industry adoption polygon (scores: DropCom=6, SubHW=7, Creator=9, CultPart=8, AmbIntel=5, AINative=7) -->
+      <!-- Score fraction * 72: 6=43.2, 7=50.4, 9=64.8, 8=57.6, 5=36, 7=50.4 -->
+      <!-- Points: top=160,100-43.2=56.8; TR=160+50.4*0.866,100-50.4*0.5=203.6,74.8; BR=203.6,125.2; Bot=160,164.8; BL=116.4,125.2; TL=116.4,74.8 -->
+      <polygon points="160,56.8 203.6,74.8 203.6,125.2 160,164.8 116.4,125.2 116.4,74.8" fill="#4971B7" fill-opacity="0.12" stroke="#4971B7" stroke-width="1.5" stroke-opacity="0.5"/>
+      <!-- Nothing strategic relevance polygon (scores: DropCom=8, SubHW=6, Creator=9, CultPart=9, AmbIntel=10, AINative=9) -->
+      <!-- Fractions*72: 8=57.6, 6=43.2, 9=64.8, 9=64.8, 10=72, 9=64.8 -->
+      <!-- Points: top=160,100-57.6=42.4; TR=160+43.2*0.866,100-43.2*0.5=197.4,78.4; BR=197.4,121.6; Bot=160,164.8; BL=143.8,121.6; TL=143.8,78.4 -->
+      <!-- Corrected for hexagonal layout: TR=160+64.8*sin60,100-64.8*cos60=216.1,67.6; BR=216.1,132.4; Bot=160,164.8; BL=103.9,132.4; TL=103.9,67.6 -->
+      <!-- Nothing relevance: top(ambintel)=160,28; TR(aInative)=160+64.8*0.866,100-64.8*0.5=216.1,67.6; BR(cultpart)=160+64.8*0.866,100+64.8*0.5=216.1,132.4; bot(creator)=160,172; BL(subhw)=103.9,132.4; TL(dropcom)=103.9,67.6 -->
+      <!-- Fix axes order: top=AmbIntel(10), TR=AINative(9), BR=CultPart(9), Bot=Creator(9), BL=SubHW(6), TL=DropCom(8) -->
+      <!-- AmbIntel 10: 160, 100-72=28; AINative 9: 160+64.8*0.866, 100-64.8*0.5 = 216.1, 67.6 -->
+      <!-- CultPart 9: 160+64.8*0.866, 100+64.8*0.5 = 216.1, 132.4; Creator 9: 160, 100+64.8=164.8 -->
+      <!-- SubHW 6: 160-43.2*0.866, 100+43.2*0.5 = 122.6, 121.6; DropCom 8: 160-57.6*0.866, 100-57.6*0.5 = 110.1, 71.2 -->
+      <polygon points="160,28 216.1,67.6 216.1,132.4 160,164.8 122.6,121.6 110.1,71.2" fill="#FCB900" fill-opacity="0.22" stroke="#FCB900" stroke-width="2"/>
+      <!-- Axis labels -->
+      <text x="160" y="22" text-anchor="middle" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Ambient Intelligence</text>
+      <text x="265" y="62" text-anchor="start" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">AI-Native</text>
+      <text x="265" y="72" text-anchor="start" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Architecture</text>
+      <text x="265" y="138" text-anchor="start" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Cultural</text>
+      <text x="265" y="148" text-anchor="start" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Partnership</text>
+      <text x="160" y="185" text-anchor="middle" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Creator Discovery</text>
+      <text x="50" y="148" text-anchor="end" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Subscription</text>
+      <text x="50" y="158" text-anchor="end" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Hardware</text>
+      <text x="50" y="68" text-anchor="end" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Drop-to-Community</text>
+      <text x="50" y="78" text-anchor="end" font-family="Open Sans" font-size="8.5" font-weight="700" fill="#2E4A63">Commerce</text>
+      <!-- Legend -->
+      <rect x="340" y="30" width="10" height="3" rx="1" fill="#FCB900"/>
+      <text x="354" y="35" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">Nothing strategic relevance</text>
+      <rect x="340" y="46" width="10" height="3" rx="1" fill="#4971B7" opacity="0.5"/>
+      <text x="354" y="51" font-family="Open Sans" font-size="9" font-weight="700" fill="#2E4A63">Industry adoption level</text>
+      <text x="354" y="63" font-family="Open Sans" font-size="8" fill="#8896A8">Scale: 0 (low) to 10 (high). PROBABLE synthesis from Section 16.</text>
+      <!-- Score table -->
+      <text x="340" y="90" font-family="Open Sans" font-size="9" font-weight="700" fill="#8896A8" letter-spacing="0.06em">TREND</text>
+      <text x="650" y="90" font-family="Open Sans" font-size="9" font-weight="700" fill="#FCB900" letter-spacing="0.06em">NOTHING</text>
+      <text x="760" y="90" font-family="Open Sans" font-size="9" font-weight="700" fill="#4971B7" letter-spacing="0.06em">INDUSTRY</text>
+      <line x1="340" y1="94" x2="900" y2="94" stroke="#D0D8E4" stroke-width="0.8"/>
+      <!-- Row data -->
+      <text x="340" y="108" font-family="Open Sans" font-size="9" fill="#2E4A63">Ambient Intelligence as Product Category</text>
+      <text x="650" y="108" font-family="Open Sans" font-size="9" font-weight="800" fill="#FCB900">10 / 10</text>
+      <text x="760" y="108" font-family="Open Sans" font-size="9" fill="#4971B7">5 / 10</text>
+      <line x1="340" y1="112" x2="900" y2="112" stroke="#EEF2F7" stroke-width="0.8"/>
+      <text x="340" y="126" font-family="Open Sans" font-size="9" fill="#2E4A63">AI-Native Device Architecture</text>
+      <text x="650" y="126" font-family="Open Sans" font-size="9" font-weight="800" fill="#FCB900">9 / 10</text>
+      <text x="760" y="126" font-family="Open Sans" font-size="9" fill="#4971B7">7 / 10</text>
+      <line x1="340" y1="130" x2="900" y2="130" stroke="#EEF2F7" stroke-width="0.8"/>
+      <text x="340" y="144" font-family="Open Sans" font-size="9" fill="#2E4A63">Creator-Led Product Discovery</text>
+      <text x="650" y="144" font-family="Open Sans" font-size="9" font-weight="800" fill="#FCB900">9 / 10</text>
+      <text x="760" y="144" font-family="Open Sans" font-size="9" fill="#4971B7">9 / 10</text>
+      <line x1="340" y1="148" x2="900" y2="148" stroke="#EEF2F7" stroke-width="0.8"/>
+      <text x="340" y="162" font-family="Open Sans" font-size="9" fill="#2E4A63">Cultural Partnership Architecture</text>
+      <text x="650" y="162" font-family="Open Sans" font-size="9" font-weight="800" fill="#FCB900">9 / 10</text>
+      <text x="760" y="162" font-family="Open Sans" font-size="9" fill="#4971B7">8 / 10</text>
+      <line x1="340" y1="166" x2="900" y2="166" stroke="#EEF2F7" stroke-width="0.8"/>
+      <text x="340" y="180" font-family="Open Sans" font-size="9" fill="#2E4A63">Drop-to-Community Commerce</text>
+      <text x="650" y="180" font-family="Open Sans" font-size="9" font-weight="800" fill="#FCB900">8 / 10</text>
+      <text x="760" y="180" font-family="Open Sans" font-size="9" fill="#4971B7">6 / 10</text>
+      <line x1="340" y1="184" x2="900" y2="184" stroke="#EEF2F7" stroke-width="0.8"/>
+      <text x="340" y="198" font-family="Open Sans" font-size="9" fill="#2E4A63">Subscription Hardware Access</text>
+      <text x="650" y="198" font-family="Open Sans" font-size="9" font-weight="800" fill="#FCB900">6 / 10</text>
+      <text x="760" y="198" font-family="Open Sans" font-size="9" fill="#4971B7">7 / 10</text>
+      <text x="900" y="205" text-anchor="end" font-family="Open Sans" font-size="7.5" font-style="italic" fill="#8896A8">PROBABLE synthesis, Section 16 Emerging Business Trends.</text>
+    </svg>
+    <div class="trends-grid">
+      <div class="trend-card">
+        <div class="tc-cat">Business Model</div>
+        <div class="tc-title">Drop-to-Community Commerce</div>
+        <div class="tc-shift"><strong>Shift:</strong> High-value early adopters expect to participate in product launches as contributors, not as a market to be sold at. Early access, community votes on colourways, beta purchasing, and founder AMAs at launch moments are now expected by Anti-Mainstream Gadget Upgraders, not merely appreciated.</div>
+        <div class="tc-impl"><strong>Brand implication:</strong> Nothing's community-first launch model needs to become a structured commerce channel: formalised community commerce tier, contribution-weighted access, community-exclusive configurations.</div>
+        <div class="tc-who">Who is doing this: Nothing (informal), OnePlus (Invite System 2014-17), Framework Laptop, Teenage Engineering.</div>
+      </div>
+      <div class="trend-card">
+        <div class="tc-cat">Business Model</div>
+        <div class="tc-title">Subscription Hardware Access</div>
+        <div class="tc-shift"><strong>Shift:</strong> Australian consumers are increasingly open to accessing premium hardware on subscription or lease rather than outright ownership, particularly for devices replaced every 18-24 months. Predictable cost and guaranteed upgrade cycles are the primary appeal.</div>
+        <div class="tc-impl"><strong>Brand implication:</strong> A Nothing+ subscription tier (annual Phone upgrade access, priority software updates, community early access) converts a one-time transaction into a recurring revenue relationship and locks in the highest-LTV Audience 2 cohort.</div>
+        <div class="tc-who">Who is doing this: Apple (iPhone Upgrade Programme AU), Samsung (Care+), Fairphone (as a Service, EU), Google (Pixel Pass, US).</div>
+      </div>
+      <div class="trend-card">
+        <div class="tc-cat">Marketing Strategy</div>
+        <div class="tc-title">Creator-Led Product Discovery</div>
+        <div class="tc-shift"><strong>Shift:</strong> Australian consumers across 18-38 are increasingly discovering consumer electronics through creator-led content rather than brand advertising. TikTok unboxings, YouTube teardowns, and Reddit deep-dives carry higher trust and conversion weight than above-the-line campaigns.</div>
+        <div class="tc-impl"><strong>Brand implication:</strong> Nothing's transparent back and Glyph Interface are inherently content-generative. The marketing model should formalise creator seeding as a primary channel with hardware arriving before announcement and brief freedom granted to encourage genuine content.</div>
+        <div class="tc-who">Who is doing this: Nothing (existing seeding, informal), Google Pixel (AU Open "Courtside Magic"), Teenage Engineering (zero ad spend, 100% creator-driven), Peak Design.</div>
+      </div>
+      <div class="trend-card">
+        <div class="tc-cat">Marketing Strategy</div>
+        <div class="tc-title">Cultural Partnership Architecture</div>
+        <div class="tc-shift"><strong>Shift:</strong> The most resonant tech marketing for 22-34 cohort is cultural adjacency: brands appearing in music, fashion, art, and sport in ways that feel earned. Sponsorship fatigue means the bar for authenticity is rising; partnerships must be genuinely generative, not merely badged.</div>
+        <div class="tc-impl"><strong>Brand implication:</strong> The Charli XCX partnership in 2026 is a model to formalise into an ongoing cultural architecture rather than a single campaign cycle. Build a roster of Australian cultural partnerships who use the product as a genuine creative tool [251].</div>
+        <div class="tc-who">Who is doing this: Nothing (Charli XCX 2026), New Balance (Joe Freshgoods, ALD), Apple (Shot on iPhone), Spotify, Red Bull.</div>
+      </div>
+      <div class="trend-card">
+        <div class="tc-cat">Product Strategy</div>
+        <div class="tc-title">Ambient Intelligence as a Product Category</div>
+        <div class="tc-shift"><strong>Shift:</strong> The next consumer expectation in smartphones is AI as ambient context: the phone that surfaces the right information at the right moment without being asked, without requiring app navigation. Glyph's existing paradigm is structurally positioned to meet this expectation before competitors realise the connection.</div>
+        <div class="tc-impl"><strong>Brand implication:</strong> Nothing is uniquely positioned to frame Glyph as the hardware interface for ambient intelligence. The AI-first device roadmap should be narrated as the completion of Glyph's original argument, not a separate AI product category.</div>
+        <div class="tc-who">Who is doing this: Nothing (Glyph 1.0 as foundation), Apple (Dynamic Island), Samsung (Galaxy AI ambient experiments), Humane AI Pin (cautionary case), Rabbit r1 (cautionary case).</div>
+      </div>
+      <div class="trend-card">
+        <div class="tc-cat">Product Strategy</div>
+        <div class="tc-title">AI-Native Device Architecture</div>
+        <div class="tc-shift"><strong>Shift:</strong> Consumers and tech reviewers are beginning to distinguish between AI as a marketing badge and AI as genuinely native capability. Expectations are shifting toward on-device intelligence that is private, fast, and contextually aware rather than dependent on cloud connectivity or subscription unlocks.</div>
+        <div class="tc-impl"><strong>Brand implication:</strong> Nothing's Series C-funded AI-first device is an opportunity to define what AI-native consumer electronics means at mid-range price: on-device models, Glyph-integrated contextual intelligence, privacy-forward approach contrasting with cloud-dependent Samsung Galaxy AI and Apple Intelligence [159].</div>
+        <div class="tc-who">Who is doing this: Apple (Apple Intelligence, on-device private cloud), Samsung (Galaxy AI, Gemini), Google Pixel (Gemini Nano, on-device), Qualcomm (Snapdragon AI platform), Nothing (AI-first device in development).</div>
+      </div>
+    </div>
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Section 16 Emerging Business Trends. Charli XCX [251]; Series C [159]; Google Pixel AU Open [194]. All trends PROBABLE synthesis from Section 16. Retail/Supply Chain trends (Experience Retail, Online-First Friction Removal, Supply Chain Transparency, Circular End-of-Life) covered in Corporate Forensics slides.</span>
+      <span class="sc-source">p. 43  ·  Part 06  ·  Business trends</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="44" data-of="91"></script>
+</body>
+</html>

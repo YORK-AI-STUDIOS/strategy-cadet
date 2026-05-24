@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ESOV Positioning Matrix, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .esov .sc-body-frame { display: flex; flex-direction: column; height: 100%; }
+  .esov .head { display:flex; align-items:flex-start; gap: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .esov .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .esov .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+  .esov-body { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 460px; gap: 32px; flex: 1; min-height: 0; align-items: start; justify-content: start; }
+
+  .scatter-wrap { position: relative; }
+  .scatter-title { font: 700 12px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 8px; }
+  .scatter-sub { font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 10px; }
+
+  /* Table panel */
+  .esov-table-panel { display: flex; flex-direction: column; gap: 10px; }
+  .esov-lbl { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); padding-bottom: 6px; border-bottom: 2px solid var(--mr-blue-dark); }
+  .esov-row { display: grid; grid-template-columns: 100px 80px 1fr; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--bg-rule); align-items: baseline; }
+  .er-name { font: 700 14px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .er-chip { display: inline-block; font: 700 10px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 6px; border-radius: 2px; white-space: nowrap; }
+  .esov-defense { background: #E8F4EC; color: #1A7A4A; }
+  .esov-expansion { background: #FFF3E0; color: #C56A00; }
+  .esov-under { background: #F0F2F5; color: #5A6472; }
+  .er-rationale { font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide esov" data-screen-label="35 ESOV Positioning">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive  ·  ESOV Analysis + Positioning Matrix</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Nothing is Under-Indexed relative to product ambition. Google Pixel is the sole Expansion Mode brand with active AU spend. Nothing holds 3.6% Share of Search against Samsung 30.7% and Apple 31.8%. The ESOV gap is the single biggest strategic lever available. [VERIFIED SoS data]</h3>
+      <div class="meta">
+        Competitive  ·  ESOV + Scatter<br>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified SoS</span></div>
+      </div>
+    </div>
+
+    <div class="esov-body">
+      <!-- SCATTER CHART -->
+      <div class="scatter-wrap">
+        <div class="scatter-title">Share of Voice vs Share of Market -- ESOV Scatter</div>
+        <div class="scatter-sub">Bubble position = estimated AU SoS (x-axis) vs relative AU market share proxy (y-axis). Fair-share diagonal: brands above line are ESOV positive (Defence/Expansion). Brands below line are Under-Indexed. [VERIFIED SoS; market share ESTIMATED]</div>
+        <svg viewBox="0 0 820 430" preserveAspectRatio="xMidYMid meet" aria-label="ESOV scatter chart" style="width:100%; max-height:380px; display:block;">
+          <defs>
+            <marker id="arrowX" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6 Z" fill="#9AA3AD"/>
+            </marker>
+            <marker id="arrowY" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto">
+              <path d="M0,8 L3,0 L6,8 Z" fill="#9AA3AD"/>
+            </marker>
+          </defs>
+
+          <!-- Axis lines -->
+          <line x1="60" y1="380" x2="800" y2="380" stroke="#9AA3AD" stroke-width="1.5" marker-end="url(#arrowX)"/>
+          <line x1="60" y1="380" x2="60" y2="10" stroke="#9AA3AD" stroke-width="1.5" marker-end="url(#arrowY)"/>
+
+          <!-- Axis labels -->
+          <text x="430" y="420" text-anchor="middle" font-family="Open Sans" font-size="11" fill="#9AA3AD" font-weight="600">Share of Voice (AU Share of Search, %)</text>
+          <text x="16" y="200" text-anchor="middle" font-family="Open Sans" font-size="11" fill="#9AA3AD" font-weight="600" transform="rotate(-90 16 200)">Share of Market (relative, AU)</text>
+
+          <!-- X axis ticks -->
+          <text x="60" y="395" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD">0%</text>
+          <text x="207" y="395" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD">10%</text>
+          <text x="354" y="395" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD">20%</text>
+          <text x="501" y="395" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD">30%</text>
+          <text x="648" y="395" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#9AA3AD">40%</text>
+
+          <!-- Y axis ticks -->
+          <text x="50" y="380" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">0%</text>
+          <text x="50" y="295" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">25%</text>
+          <text x="50" y="210" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">50%</text>
+          <text x="50" y="125" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">75%</text>
+          <text x="50" y="40" text-anchor="end" font-family="Open Sans" font-size="9" fill="#9AA3AD">100%</text>
+
+          <!-- Quadrant grid lines (light) -->
+          <line x1="60" y1="210" x2="800" y2="210" stroke="#E5EAF0" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="207" y1="10" x2="207" y2="380" stroke="#E5EAF0" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="354" y1="10" x2="354" y2="380" stroke="#E5EAF0" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="501" y1="10" x2="501" y2="380" stroke="#E5EAF0" stroke-width="1" stroke-dasharray="4,4"/>
+
+          <!-- Fair share diagonal line -->
+          <!-- Maps SoS% to X: x = 60 + (sos/50)*740; maps market% to Y: y = 380 - (mkt/100)*340 -->
+          <!-- Fair share: SoS = market share (proportional). So diagonal from (60,380) to approx (800,40) -->
+          <line x1="60" y1="380" x2="800" y2="40" stroke="#FCB900" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+          <text x="720" y="55" font-family="Open Sans" font-size="9" fill="#C56A00" font-weight="600">Fair-share line</text>
+          <text x="720" y="67" font-family="Open Sans" font-size="9" fill="#C56A00">(SoV = SoM)</text>
+
+          <!-- Quadrant labels -->
+          <text x="430" y="60" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#1A7A4A" font-weight="700" opacity="0.6">DEFENCE MODE</text>
+          <text x="150" y="300" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#5A6472" font-weight="700" opacity="0.6">UNDER-INDEXED</text>
+
+          <!-- BRAND DOTS -->
+          <!-- Apple: SoS 31.8%, market ~45%. x=60+(31.8/50)*740=530, y=380-(45/100)*340=227 -->
+          <circle cx="530" cy="227" r="22" fill="#1A1A1A" opacity="0.85"/>
+          <text x="530" y="231" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Apple</text>
+          <text x="530" y="242" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">31.8%</text>
+
+          <!-- Samsung: SoS 30.7%, market ~40%. x=60+(30.7/50)*740=514, y=380-(40/100)*340=244 -->
+          <circle cx="514" cy="244" r="20" fill="#1428A0" opacity="0.85"/>
+          <text x="514" y="248" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Samsung</text>
+          <text x="514" y="259" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">30.7%</text>
+
+          <!-- Google Pixel: SoS 15.9%, market ~8%. x=60+(15.9/50)*740=295, y=380-(8/100)*340=353 -->
+          <!-- Pixel is Expansion Mode: above diagonal -->
+          <circle cx="295" cy="232" r="16" fill="#1A7A4A" opacity="0.85"/>
+          <text x="295" y="236" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Pixel</text>
+          <text x="295" y="247" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">15.9%</text>
+
+          <!-- Oppo: SoS 14.3%, market ~6%. x=60+(14.3/50)*740=272, y=380-(6/100)*340=360 -->
+          <circle cx="272" cy="340" r="14" fill="#856404" opacity="0.85"/>
+          <text x="272" y="344" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Oppo</text>
+          <text x="272" y="355" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">14.3%</text>
+
+          <!-- OnePlus: SoS 3.7%, market ~2%. x=60+(3.7/50)*740=115, y=380-(2/100)*340=373 -->
+          <circle cx="115" cy="356" r="11" fill="#8896A8" opacity="0.85"/>
+          <text x="115" y="360" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff" font-weight="700">OnePlus</text>
+          <text x="115" y="370" text-anchor="middle" font-family="Open Sans" font-size="7" fill="#fff">3.7%</text>
+
+          <!-- Motorola: SoS ~2%, market ~2%. x=60+(2/50)*740=90, y=380-(2/100)*340=373 -->
+          <circle cx="90" cy="345" r="10" fill="#767676" opacity="0.85"/>
+          <text x="90" y="348" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff" font-weight="700">Moto</text>
+
+          <!-- Nothing: SoS 3.6%, market ~1%. x=60+(3.6/50)*740=113, y=380-(1/100)*340=377 -->
+          <!-- HIGHLIGHTED -- below diagonal = Under-Indexed -->
+          <circle cx="113" cy="370" r="16" fill="var(--mr-blue-dark)" stroke="#FCB900" stroke-width="2.5" opacity="1"/>
+          <text x="113" y="367" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="800">Nothing</text>
+          <text x="113" y="378" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">3.6%</text>
+
+          <!-- ESOV gap arrow for Nothing -->
+          <line x1="113" y1="368" x2="113" y2="320" stroke="#FCB900" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <text x="122" y="340" font-family="Open Sans" font-size="9" fill="#C56A00" font-weight="700">ESOV gap</text>
+          <text x="122" y="352" font-family="Open Sans" font-size="9" fill="#C56A00">to close</text>
+        </svg>
+        <div style="font: 400 italic 13px/1.4 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 6px; margin-top: 4px;">
+          Source: AU Share of Search via Google Trends (VERIFIED). Market share: ESTIMATED proxy. Apple/Samsung classified Defence Mode; Pixel: Expansion Mode (AU Open spend confirmed). Nothing, OnePlus, Motorola, Oppo: Under-Indexed. [184]-[198]
+        </div>
+      </div>
+
+      <!-- ESOV TABLE PANEL -->
+      <div class="esov-table-panel">
+        <div class="esov-lbl">ESOV Classifications</div>
+        <div class="esov-row">
+          <div class="er-name" style="color:var(--mr-blue-dark);">Nothing</div>
+          <div><span class="er-chip esov-under">Under-Indexed</span></div>
+          <div class="er-rationale">3.6% SoS. Minimal above-the-line AU presence. [143][1]</div>
+        </div>
+        <div class="esov-row">
+          <div class="er-name">Samsung</div>
+          <div><span class="er-chip esov-defense">Defence Mode</span></div>
+          <div class="er-rationale">AUD 120M billings. 2025 Advertiser of Year, Spikes Asia. [184][185]</div>
+        </div>
+        <div class="esov-row">
+          <div class="er-name">Apple</div>
+          <div><span class="er-chip esov-defense">Defence Mode</span></div>
+          <div class="er-rationale">Consistent AU presence. Sustaining loyalty, not fighting for volume. [188][189]</div>
+        </div>
+        <div class="esov-row">
+          <div class="er-name">Google Pixel</div>
+          <div><span class="er-chip esov-expansion">Expansion Mode</span></div>
+          <div class="er-rationale">AU Open 2025 partnership. "Courtside Magic" campaign. [194][195]</div>
+        </div>
+        <div class="esov-row">
+          <div class="er-name">Oppo</div>
+          <div><span class="er-chip esov-under">Under-Indexed</span></div>
+          <div class="er-rationale">SoS accelerating (14.3% to 15.5%). No confirmed AU campaign. [196][197]</div>
+        </div>
+        <div class="esov-row">
+          <div class="er-name">OnePlus</div>
+          <div><span class="er-chip esov-under">Under-Indexed</span></div>
+          <div class="er-rationale">No AU-specific campaign found 2025. Product-launch-led only. [191][192]</div>
+        </div>
+        <div class="esov-row">
+          <div class="er-name">Motorola</div>
+          <div><span class="er-chip esov-under">Under-Indexed</span></div>
+          <div class="er-rationale">Low ad-spend visibility. Price and shelf presence only. [193]</div>
+        </div>
+        <div style="margin-top:10px; padding: 10px 12px; border-left: 3px solid var(--mr-blue-dark); background: #F4F7FB;">
+          <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.08em; text-transform:uppercase; color:var(--mr-blue-dark); margin-bottom:5px;">Strategic read</div>
+          <p style="margin:0; font: 400 10.5px/1.45 var(--font-sans); color: var(--fg-body);">Nothing is the only brand where design language is the primary positioning pillar. The Glyph/transparency moat exists but is not converting in AU retail environments consistently. Google Pixel's deceleration (15.9% to 13.9% over 3 months) opens the conquesting window now. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified SoS</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Section 9 ESOV [184]-[198]; AU SoS VERIFIED Google Trends. Scatter chart: SoS axis VERIFIED; market share axis ESTIMATED proxy (relative positioning, not absolute volume).</span>
+      <span class="sc-source">p. 35  ·  Part 05  ·  ESOV + positioning</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="36" data-of="91"></script>
+</body>
+</html>

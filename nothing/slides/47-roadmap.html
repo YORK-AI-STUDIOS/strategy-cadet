@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roadmap, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .rdmp .sc-body-frame { display: flex; flex-direction: column; height: 100%; }
+  .rdmp .head { display:flex; align-items:flex-start; gap: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--bg-rule); }
+  .rdmp .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .rdmp .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); white-space: nowrap; }
+  .rdmp-body { margin-top: 12px; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+
+  .dep-note { padding: 8px 12px; background: #FFF3CD; border-left: 3px solid #856404; }
+  .dep-note .dn-lbl { font: 700 10px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #856404; margin-bottom: 4px; }
+  .dep-note .dn-text { font: 400 12px/1.4 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide rdmp" data-screen-label="46 Roadmap">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 07  ·  Business Planning  ·  180-Day Roadmap</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>180-day Gantt roadmap across three horizons. Nine initiatives sequenced by dependency and effort. Critical gate at day 60: CMF AU distribution decision. Miss it and redirect to Phone (2a) BNPL -- do not wait past this gate. [PROBABLE]</h3>
+      <div class="meta">
+        Business Planning  ·  Gantt timeline<br>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="rdmp-body">
+      <!-- GANTT SVG -->
+      <svg viewBox="0 0 1540 440" preserveAspectRatio="xMidYMid meet" style="width:100%; display:block; flex:1;" aria-label="180-day Gantt roadmap">
+        <!-- Column definitions:
+             Label column: x=0..240
+             Timeline: x=250..1530 = 1280px wide for 180 days
+             Day 0 = x=250, Day 180 = x=1530
+             1 day = 1280/180 = 7.11px/day
+        -->
+
+        <!-- Header band -->
+        <rect x="0" y="0" width="1540" height="36" fill="var(--mr-blue-dark)"/>
+        <text x="120" y="22" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.05em">INITIATIVE</text>
+        <text x="390" y="22" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.05em">DAYS 0-30</text>
+        <text x="677" y="22" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.05em">DAYS 31-90</text>
+        <text x="1034" y="22" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.05em">DAYS 91-180</text>
+
+        <!-- Horizon separator lines -->
+        <!-- Day 30 = 250 + 30*7.11 = 250+213 = 463 -->
+        <!-- Day 90 = 250 + 90*7.11 = 250+640 = 890 -->
+        <line x1="463" y1="0" x2="463" y2="440" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+        <line x1="890" y1="0" x2="890" y2="440" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+
+        <!-- Horizon colour bands (subtle) -->
+        <rect x="250" y="36" width="213" height="404" fill="#F4F8FF" opacity="0.6"/>
+        <rect x="463" y="36" width="427" height="404" fill="#F9F4FF" opacity="0.4"/>
+        <rect x="890" y="36" width="640" height="404" fill="#F4FFF8" opacity="0.4"/>
+
+        <!-- Day tick marks -->
+        <line x1="250" y1="36" x2="250" y2="440" stroke="#CBD5E0" stroke-width="1"/>
+        <text x="250" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">D0</text>
+        <line x1="463" y1="36" x2="463" y2="440" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="463" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">D30</text>
+        <line x1="676" y1="36" x2="676" y2="440" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="2,4"/>
+        <text x="676" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">D60</text>
+        <line x1="890" y1="36" x2="890" y2="440" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="890" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">D90</text>
+        <line x1="1174" y1="36" x2="1174" y2="440" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="2,4"/>
+        <text x="1174" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">D135</text>
+        <line x1="1530" y1="36" x2="1530" y2="440" stroke="#CBD5E0" stroke-width="1"/>
+        <text x="1530" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9AA3AD">D180</text>
+
+        <!-- Day 60 GATE marker -->
+        <rect x="668" y="36" width="16" height="404" fill="#856404" opacity="0.12"/>
+        <text x="676" y="68" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#856404">GATE</text>
+        <text x="676" y="78" text-anchor="middle" font-family="Open Sans" font-size="7" fill="#856404">CMF</text>
+        <text x="676" y="87" text-anchor="middle" font-family="Open Sans" font-size="7" fill="#856404">decision</text>
+
+        <!-- ROW BACKGROUNDS alternating -->
+        <rect x="0" y="95" width="1540" height="36" fill="#F8FAFB"/>
+        <rect x="0" y="167" width="1540" height="36" fill="#F8FAFB"/>
+        <rect x="0" y="239" width="1540" height="36" fill="#F8FAFB"/>
+        <rect x="0" y="311" width="1540" height="36" fill="#F8FAFB"/>
+        <rect x="0" y="383" width="1540" height="36" fill="#F8FAFB"/>
+
+        <!-- ROW SEPARATOR LINES -->
+        <line x1="0" y1="59" x2="1540" y2="59" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="95" x2="1540" y2="95" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="131" x2="1540" y2="131" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="167" x2="1540" y2="167" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="203" x2="1540" y2="203" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="239" x2="1540" y2="239" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="275" x2="1540" y2="275" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="311" x2="1540" y2="311" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="347" x2="1540" y2="347" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="383" x2="1540" y2="383" stroke="#E5EAF0" stroke-width="1"/>
+        <line x1="0" y1="419" x2="1540" y2="419" stroke="#E5EAF0" stroke-width="1"/>
+
+        <!-- LABEL COLUMN separator -->
+        <line x1="248" y1="36" x2="248" y2="440" stroke="#CBD5E0" stroke-width="1.5"/>
+
+        <!-- Row labels -->
+        <!-- Tier badge boxes -->
+        <rect x="2" y="60" width="28" height="34" fill="var(--mr-blue-dark)" rx="2"/>
+        <text x="16" y="81" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T1</text>
+        <rect x="2" y="96" width="28" height="34" fill="var(--mr-blue-dark)" rx="2"/>
+        <text x="16" y="117" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T1</text>
+        <rect x="2" y="132" width="28" height="34" fill="var(--mr-blue-dark)" rx="2"/>
+        <text x="16" y="153" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T1</text>
+        <rect x="2" y="168" width="28" height="34" fill="#5A7A9F" rx="2"/>
+        <text x="16" y="189" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T2</text>
+        <rect x="2" y="204" width="28" height="34" fill="#5A7A9F" rx="2"/>
+        <text x="16" y="225" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T2</text>
+        <rect x="2" y="240" width="28" height="34" fill="#5A7A9F" rx="2"/>
+        <text x="16" y="261" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T2</text>
+        <rect x="2" y="276" width="28" height="34" fill="#8896A8" rx="2"/>
+        <text x="16" y="297" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T3</text>
+        <rect x="2" y="312" width="28" height="34" fill="#8896A8" rx="2"/>
+        <text x="16" y="333" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T3</text>
+        <rect x="2" y="348" width="28" height="34" fill="#8896A8" rx="2"/>
+        <text x="16" y="369" text-anchor="middle" font-family="Open Sans" font-size="7" font-weight="700" fill="#fff">T3</text>
+
+        <!-- Initiative names -->
+        <text x="38" y="73" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">Competitor Switcher Guide (Pixel)</text>
+        <text x="38" y="84" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  Low effort  ·  Aud 2</text>
+
+        <text x="38" y="109" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">r/NothingTech AU Brand Presence</text>
+        <text x="38" y="120" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  Low effort  ·  Aud 2</text>
+
+        <text x="38" y="145" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">YouTube Tech Press Priority Access</text>
+        <text x="38" y="156" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  Low effort  ·  Aud 1+2</text>
+
+        <text x="38" y="181" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">Nothing AU TikTok Account Launch</text>
+        <text x="38" y="192" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  Medium effort  ·  Aud 3</text>
+
+        <text x="38" y="217" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">BNPL Visibility at AU Purchase Points</text>
+        <text x="38" y="228" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  Low effort  ·  Aud 3</text>
+
+        <text x="38" y="253" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">CMF by Nothing AU Market Entry</text>
+        <text x="38" y="264" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  Medium effort  ·  Aud 3</text>
+
+        <text x="38" y="289" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">Glyph Intelligence Layer: Ambient AI</text>
+        <text x="38" y="300" font-family="Open Sans" font-size="8" fill="var(--fg-body)">High impact  ·  High effort  ·  Aud 1+2</text>
+
+        <text x="38" y="325" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">Sustainability Passport QR at AU Retail</text>
+        <text x="38" y="336" font-family="Open Sans" font-size="8" fill="var(--fg-body)">Medium impact  ·  Medium effort  ·  Aud 1</text>
+
+        <text x="38" y="361" font-family="Open Sans" font-size="9.5" font-weight="700" fill="var(--fg-heading)">Nothing AU Design Residency (RMIT/UTS)</text>
+        <text x="38" y="372" font-family="Open Sans" font-size="8" fill="var(--fg-body)">Medium impact  ·  High effort  ·  Aud 1</text>
+
+        <!-- GANTT BARS
+             x = 250 + startDay * 7.111
+             width = duration * 7.111
+        -->
+
+        <!-- T1: Switcher Guide: D0-D30 launch, ongoing -->
+        <rect x="250" y="66" width="213" height="20" rx="3" fill="var(--mr-blue-dark)" opacity="0.9"/>
+        <text x="356" y="80" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Launch</text>
+        <rect x="463" y="66" width="640" height="20" rx="3" fill="var(--mr-blue-dark)" opacity="0.35"/>
+        <text x="783" y="80" text-anchor="middle" font-family="Open Sans" font-size="8" fill="var(--mr-blue-dark)">Always-on</text>
+
+        <!-- T1: r/NothingTech: D3-D30 setup, ongoing -->
+        <rect x="271" y="102" width="192" height="20" rx="3" fill="var(--mr-blue-dark)" opacity="0.9"/>
+        <text x="367" y="116" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Setup + launch</text>
+        <rect x="463" y="102" width="640" height="20" rx="3" fill="var(--mr-blue-dark)" opacity="0.35"/>
+        <text x="783" y="116" text-anchor="middle" font-family="Open Sans" font-size="8" fill="var(--mr-blue-dark)">Ongoing community management</text>
+
+        <!-- T1: YouTube Press: D7-D30 brief, D30-D90 review wave -->
+        <rect x="300" y="138" width="163" height="20" rx="3" fill="var(--mr-blue-dark)" opacity="0.9"/>
+        <text x="381" y="152" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Briefing</text>
+        <rect x="463" y="138" width="427" height="20" rx="3" fill="var(--mr-blue-dark)" opacity="0.5"/>
+        <text x="676" y="152" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">Review wave + seeding</text>
+
+        <!-- T2: TikTok AU: D35-D90 launch, ongoing -->
+        <rect x="499" y="174" width="391" height="20" rx="3" fill="#5A7A9F" opacity="0.9"/>
+        <text x="694" y="188" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Build + launch TikTok channel</text>
+        <rect x="890" y="174" width="640" height="20" rx="3" fill="#5A7A9F" opacity="0.35"/>
+        <text x="1210" y="188" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#5A7A9F">Always-on content cadence</text>
+
+        <!-- T2: BNPL: D7-D45 implementation -->
+        <rect x="300" y="210" width="320" height="20" rx="3" fill="#5A7A9F" opacity="0.9"/>
+        <text x="460" y="224" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Retailer + DTC BNPL copy implementation</text>
+
+        <!-- T2: CMF AU: D30-D90 preparation (contingent on gate) -->
+        <rect x="463" y="246" width="213" height="20" rx="3" fill="#856404" opacity="0.7"/>
+        <text x="569" y="260" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Prep (gate D60)</text>
+        <rect x="676" y="246" width="213" height="20" rx="3" fill="#5A7A9F" opacity="0.55"/>
+        <text x="782" y="260" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#5A7A9F">Launch if confirmed</text>
+
+        <!-- T3: Glyph Intelligence: D90-D180 -->
+        <rect x="890" y="282" width="640" height="20" rx="3" fill="#8896A8" opacity="0.9"/>
+        <text x="1210" y="296" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">Glyph AI layer build + comms rollout</text>
+
+        <!-- T3: Sustainability Passport: D60-D135 -->
+        <rect x="676" y="318" width="498" height="20" rx="3" fill="#8896A8" opacity="0.9"/>
+        <text x="925" y="332" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="700" fill="#fff">QR design + AU retail implementation</text>
+
+        <!-- T3: Design Residency: D90-D180 -->
+        <rect x="890" y="354" width="640" height="20" rx="3" fill="#8896A8" opacity="0.7"/>
+        <text x="1210" y="368" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">Partner outreach + programme design</text>
+
+        <!-- KPI measurement row -->
+        <rect x="0" y="383" width="1540" height="36" fill="#EEF2F7"/>
+        <text x="120" y="400" text-anchor="middle" font-family="Open Sans" font-size="8.5" font-weight="700" fill="var(--mr-blue-dark)">KPI MEASUREMENT</text>
+        <text x="120" y="412" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="var(--fg-body)">Baselines set</text>
+        <!-- D30 KPI read -->
+        <rect x="440" y="388" width="46" height="24" rx="3" fill="var(--mr-blue-dark)" opacity="0.15"/>
+        <text x="463" y="399" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="var(--mr-blue-dark)" font-weight="700">D30</text>
+        <text x="463" y="409" text-anchor="middle" font-family="Open Sans" font-size="7" fill="var(--fg-body)">SoS read</text>
+        <!-- D90 KPI read -->
+        <rect x="867" y="388" width="46" height="24" rx="3" fill="var(--mr-blue-dark)" opacity="0.15"/>
+        <text x="890" y="399" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="var(--mr-blue-dark)" font-weight="700">D90</text>
+        <text x="890" y="409" text-anchor="middle" font-family="Open Sans" font-size="7" fill="var(--fg-body)">Defector rate</text>
+        <!-- D180 KPI read -->
+        <rect x="1507" y="388" width="32" height="24" rx="3" fill="var(--mr-blue-dark)" opacity="0.25"/>
+        <text x="1523" y="399" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="var(--mr-blue-dark)" font-weight="700">D180</text>
+        <text x="1523" y="409" text-anchor="middle" font-family="Open Sans" font-size="7" fill="var(--fg-body)">Revenue</text>
+
+        <!-- Legend -->
+        <rect x="250" y="420" width="12" height="10" rx="2" fill="var(--mr-blue-dark)"/>
+        <text x="268" y="429" font-family="Open Sans" font-size="8.5" fill="var(--fg-body)">Tier 1 (active)</text>
+        <rect x="390" y="420" width="12" height="10" rx="2" fill="var(--mr-blue-dark)" opacity="0.35"/>
+        <text x="408" y="429" font-family="Open Sans" font-size="8.5" fill="var(--fg-body)">Tier 1 (ongoing)</text>
+        <rect x="540" y="420" width="12" height="10" rx="2" fill="#5A7A9F"/>
+        <text x="558" y="429" font-family="Open Sans" font-size="8.5" fill="var(--fg-body)">Tier 2</text>
+        <rect x="610" y="420" width="12" height="10" rx="2" fill="#8896A8"/>
+        <text x="628" y="429" font-family="Open Sans" font-size="8.5" fill="var(--fg-body)">Tier 3</text>
+        <rect x="680" y="420" width="12" height="10" rx="2" fill="#856404" opacity="0.7"/>
+        <text x="698" y="429" font-family="Open Sans" font-size="8.5" fill="var(--fg-body)">Contingent on gate</text>
+      </svg>
+
+      <div class="dep-note">
+        <div class="dn-lbl">CMF Day-60 Gate</div>
+        <div class="dn-text">If CMF AU Market Entry is not confirmed by day 60, remove from the 31-90 horizon. Redirect Gen Z acquisition to Nothing Phone (2a) at AUD 499 with aggressive BNPL framing. Do not wait past day 60 for a distribution decision outside marketing's control. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Section 18, Section 5 Roadmap. CMF distribution dependency: HYPOTHESISED. AU smartphone sub-category sizing gap: HYPOTHESISED (IMARC AU covers total consumer electronics). All other dependencies: PROBABLE.</span>
+      <span class="sc-source">p. 46  ·  Part 07  ·  180-day roadmap</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="47" data-of="91"></script>
+</body>
+</html>

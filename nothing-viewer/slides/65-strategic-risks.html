@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strategic Risks, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .srisk .sc-body-frame { display: flex; flex-direction: column; height: 100%; }
+  .srisk .head { display:flex; align-items:flex-start; gap: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--bg-rule); }
+  .srisk .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .srisk .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); white-space: nowrap; }
+  .srisk-body { margin-top: 12px; display: grid; grid-template-columns: minmax(0, 880px) 480px; gap: 32px; flex: 1; min-height: 0; align-items: start; justify-content: start; }
+
+  /* Risk detail cards */
+  .risk-list { display: flex; flex-direction: column; gap: 7px; }
+  .risk-card { border-left: 4px solid; padding: 8px 11px; }
+  .risk-card.high { border-left-color: #EF434E; background: #FFF5F5; }
+  .risk-card.medium { border-left-color: #856404; background: #FFF9EC; }
+  .risk-card.low { border-left-color: #8896A8; background: #F4F7FB; }
+  .rc-sev { font: 700 7.5px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 4px; }
+  .rc-sev.high { color: #EF434E; }
+  .rc-sev.medium { color: #856404; }
+  .rc-sev.low { color: #8896A8; }
+  .rc-title { font: 700 13px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 3px; }
+  .rc-body { font: 400 9.5px/1.4 var(--font-sans); color: var(--fg-body); }
+  .rc-mit { font: 400 9.5px/1.4 var(--font-sans); color: var(--fg-body); border-top: 1px solid var(--bg-rule); padding-top: 4px; margin-top: 4px; }
+  .rc-mit strong { color: var(--mr-blue-dark); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide srisk" data-screen-label="64 Strategic Risks">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Appendix  ·  Strategic Risks  ·  Likelihood x Impact Heat Map</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Six strategic risks plotted on a likelihood x impact heat map. Two HIGH risks in the critical zone: Oppo SoS acceleration and Trustpilot service gap. Each has a defined mitigation path and kill-switch trigger. [VERIFIED Oppo SoS; PROBABLE others]</h3>
+      <div class="meta">
+        Appendix  ·  Risk heat map<br>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--hypothesised">Risks flagged</span></div>
+      </div>
+    </div>
+
+    <div class="srisk-body">
+      <!-- LEFT: HEAT MAP SVG -->
+      <div>
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:10px;">Risk heat map -- Likelihood x Impact</div>
+        <svg viewBox="0 0 680 490" preserveAspectRatio="xMidYMid meet" style="width:100%; display:block;" aria-label="Risk likelihood impact heat map">
+          <!-- Grid layout:
+               X axis: Likelihood (Low/Med/High) cols at x=80, 80+180=260, 260+180=440, 440+180=620
+               Y axis: Impact (Low/Med/High) rows
+               Cell width=180, cell height=140
+               Origin bottom-left
+          -->
+
+          <!-- CELL COLOUR FILLS -->
+          <!-- Row 3 (High Impact) top row -->
+          <!-- Low likelihood, High impact = orange -->
+          <rect x="80" y="10" width="180" height="140" fill="#FFF3E0" rx="2"/>
+          <!-- Med likelihood, High impact = red -->
+          <rect x="260" y="10" width="180" height="140" fill="#FFEBEE" rx="2"/>
+          <!-- High likelihood, High impact = dark red -->
+          <rect x="440" y="10" width="180" height="140" fill="#FFCDD2" rx="2"/>
+
+          <!-- Row 2 (Med Impact) middle row -->
+          <!-- Low likelihood, Med impact = yellow -->
+          <rect x="80" y="150" width="180" height="140" fill="#FFF9E6" rx="2"/>
+          <!-- Med likelihood, Med impact = orange -->
+          <rect x="260" y="150" width="180" height="140" fill="#FFF3E0" rx="2"/>
+          <!-- High likelihood, Med impact = red -->
+          <rect x="440" y="150" width="180" height="140" fill="#FFEBEE" rx="2"/>
+
+          <!-- Row 1 (Low Impact) bottom row -->
+          <!-- Low likelihood, Low impact = green -->
+          <rect x="80" y="290" width="180" height="140" fill="#F0F7F2" rx="2"/>
+          <!-- Med likelihood, Low impact = yellow -->
+          <rect x="260" y="290" width="180" height="140" fill="#FFF9E6" rx="2"/>
+          <!-- High likelihood, Low impact = orange -->
+          <rect x="440" y="290" width="180" height="140" fill="#FFF3E0" rx="2"/>
+
+          <!-- Grid lines -->
+          <rect x="80" y="10" width="540" height="420" fill="none" stroke="#CBD5E0" stroke-width="1.5"/>
+          <line x1="260" y1="10" x2="260" y2="430" stroke="#CBD5E0" stroke-width="1.5"/>
+          <line x1="440" y1="10" x2="440" y2="430" stroke="#CBD5E0" stroke-width="1.5"/>
+          <line x1="80" y1="150" x2="620" y2="150" stroke="#CBD5E0" stroke-width="1.5"/>
+          <line x1="80" y1="290" x2="620" y2="290" stroke="#CBD5E0" stroke-width="1.5"/>
+
+          <!-- Zone labels -->
+          <text x="170" y="82" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#856404" opacity="0.7">MONITOR</text>
+          <text x="350" y="82" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#EF434E" opacity="0.7">CRITICAL</text>
+          <text x="530" y="82" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#B71C1C" opacity="0.7">CRITICAL</text>
+          <text x="170" y="222" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#856404" opacity="0.5">LOW</text>
+          <text x="350" y="222" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#856404" opacity="0.7">MONITOR</text>
+          <text x="530" y="222" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#EF434E" opacity="0.7">CRITICAL</text>
+          <text x="170" y="362" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#1A7A4A" opacity="0.5">LOW</text>
+          <text x="350" y="362" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#856404" opacity="0.5">LOW</text>
+          <text x="530" y="362" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="#856404" opacity="0.6">MONITOR</text>
+
+          <!-- Axis labels -->
+          <!-- X axis: Likelihood -->
+          <text x="170" y="448" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9AA3AD" font-weight="600">Low</text>
+          <text x="350" y="448" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9AA3AD" font-weight="600">Medium</text>
+          <text x="530" y="448" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9AA3AD" font-weight="600">High</text>
+          <text x="350" y="465" text-anchor="middle" font-family="Open Sans" font-size="11" fill="#9AA3AD" font-weight="700" letter-spacing="0.05em">LIKELIHOOD</text>
+
+          <!-- Y axis: Impact -->
+          <text x="60" y="85" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9AA3AD" font-weight="600" transform="rotate(-90 60 85)">High</text>
+          <text x="60" y="222" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9AA3AD" font-weight="600" transform="rotate(-90 60 222)">Medium</text>
+          <text x="60" y="362" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9AA3AD" font-weight="600" transform="rotate(-90 60 362)">Low</text>
+          <text x="20" y="220" text-anchor="middle" font-family="Open Sans" font-size="11" fill="#9AA3AD" font-weight="700" letter-spacing="0.05em" transform="rotate(-90 20 220)">IMPACT</text>
+
+          <!--
+            RISK DOTS:
+            R1: Oppo SoS acceleration -- High likelihood, High impact -> x=530, y=82 zone
+            R2: Trustpilot 2.5/5 service gap -- High likelihood, High impact
+            R3: Pixel Expansion Mode -- Med likelihood, Med impact
+            R4: AI device timeline -- Med likelihood, High impact
+            R5: Facebook dual-page -- Low likelihood, Low impact
+            R6: ProductReview absent -- Med likelihood, Low impact
+
+            Dot centres within cells (slight variation to avoid overlap):
+            R1: x=510, y=55
+            R2: x=560, y=100
+            R3: x=310, y=195
+            R4: x=290, y=55
+            R5: x=130, y=355
+            R6: x=330, y=340
+          -->
+
+          <!-- R1: Oppo acceleration -->
+          <circle cx="510" cy="55" r="22" fill="#EF434E" opacity="0.9"/>
+          <text x="510" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="800" fill="#fff">R1</text>
+          <text x="510" y="62" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">Oppo</text>
+          <text x="510" y="72" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">Accel.</text>
+
+          <!-- R2: Trustpilot -->
+          <circle cx="560" cy="105" r="20" fill="#EF434E" opacity="0.9"/>
+          <text x="560" y="100" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="800" fill="#fff">R2</text>
+          <text x="560" y="112" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">Trust</text>
+          <text x="560" y="122" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">pilot</text>
+
+          <!-- R3: Pixel Expansion -->
+          <circle cx="310" cy="195" r="18" fill="#856404" opacity="0.85"/>
+          <text x="310" y="190" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="800" fill="#fff">R3</text>
+          <text x="310" y="202" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">Pixel</text>
+          <text x="310" y="212" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">Expand</text>
+
+          <!-- R4: AI device timeline -->
+          <circle cx="290" cy="55" r="18" fill="#856404" opacity="0.85"/>
+          <text x="290" y="50" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="800" fill="#fff">R4</text>
+          <text x="290" y="62" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">AI</text>
+          <text x="290" y="72" text-anchor="middle" font-family="Open Sans" font-size="7.5" fill="#fff">Timeline</text>
+
+          <!-- R5: Facebook dual-page -->
+          <circle cx="130" cy="355" r="14" fill="#8896A8" opacity="0.8"/>
+          <text x="130" y="350" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="800" fill="#fff">R5</text>
+          <text x="130" y="362" text-anchor="middle" font-family="Open Sans" font-size="7" fill="#fff">FB page</text>
+
+          <!-- R6: ProductReview absent -->
+          <circle cx="330" cy="340" r="14" fill="#8896A8" opacity="0.8"/>
+          <text x="330" y="335" text-anchor="middle" font-family="Open Sans" font-size="8" font-weight="800" fill="#fff">R6</text>
+          <text x="330" y="347" text-anchor="middle" font-family="Open Sans" font-size="7" fill="#fff">PR.com</text>
+        </svg>
+      </div>
+
+      <!-- RIGHT: Risk summary cards -->
+      <div class="risk-list">
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:6px;">Risk register</div>
+        <div class="risk-card high">
+          <div class="rc-sev high">R1  ·  HIGH  ·  Competitive</div>
+          <div class="rc-title">Oppo AU SoS Acceleration (14.3% to 15.5% in 3 months)</div>
+          <div class="rc-body">Oppo gaining share without a launch spike. If it reaches 17%, Nothing's mid-tier positioning is under direct pressure. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified SoS</span></div>
+          <div class="rc-mit"><strong>Mitigation:</strong> Kill-Switch 2 at 17% threshold. Head-to-head design content for Audience 2.</div>
+        </div>
+        <div class="risk-card high">
+          <div class="rc-sev high">R2  ·  HIGH  ·  Brand Reputation</div>
+          <div class="rc-title">Trustpilot 2.5/5 Rating (587 reviews)</div>
+          <div class="rc-body">Product quality averages 3.8/5 in specialist press. The customer service gap can undo brand investment faster than content can repair. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
+          <div class="rc-mit"><strong>Mitigation:</strong> Warranty Escalation Transparency initiative. DM-based warranty response commitment.</div>
+        </div>
+        <div class="risk-card medium">
+          <div class="rc-sev medium">R3  ·  MEDIUM  ·  Competitive</div>
+          <div class="rc-title">Google Pixel Remains in Expansion Mode AU</div>
+          <div class="rc-body">Pixel 15.9% SoS (4.4x Nothing), still spending to grow. Deceleration (15.9% to 13.9%) is not confirmed as permanent. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified SoS</span></div>
+          <div class="rc-mit"><strong>Mitigation:</strong> Always-on Pixel comparison content intercepts defectors at research stage.</div>
+        </div>
+        <div class="risk-card medium">
+          <div class="rc-sev medium">R4  ·  MEDIUM  ·  Strategic</div>
+          <div class="rc-title">AI-Native Device Timeline Dependency</div>
+          <div class="rc-body">USD 200M Series C directed at AI-first device. If launch is delayed, Tier 3 roadmap highest-impact initiative is de-risked. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
+          <div class="rc-mit"><strong>Mitigation:</strong> Two parallel Tier 3 initiatives proceed independently. Kill-switch pauses, not kills.</div>
+        </div>
+        <div class="risk-card low">
+          <div class="rc-sev low">R5  ·  LOWER  ·  Operational</div>
+          <div class="rc-title">Facebook Dual-Page Attribution Risk</div>
+          <div class="rc-body">Two live page IDs found. Low urgency now; material if paid Meta scales. <span class="sc-chip sc-chip--verified" style="font-size:11px;">Verified</span></div>
+          <div class="rc-mit"><strong>Mitigation:</strong> Consolidate under page ID 724644021637509 before any paid Meta scale-up.</div>
+        </div>
+        <div class="risk-card low">
+          <div class="rc-sev low">R6  ·  LOWER  ·  Brand Visibility</div>
+          <div class="rc-title">No ProductReview.com.au Listing</div>
+          <div class="rc-body">Missing presence on AU's primary consumer trust platform. Pixel, Samsung, Oppo all have listings. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
+          <div class="rc-mit"><strong>Mitigation:</strong> Create listing. Under 30 minutes, zero cost, high trust signal for Audience 3.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Oppo SoS: VERIFIED Google Trends. Pixel SoS: VERIFIED Google Trends. Trustpilot 2.5/5: PROBABLE (Scamadviser third-party; direct scrape bot-blocked). AI-first device: VERIFIED TechCrunch Series C. Facebook dual-page: VERIFIED cross-platform pull. ProductReview absence: PROBABLE (scraping gap not ruled out).</span>
+      <span class="sc-source">p. 64  ·  Appendix  ·  Strategic risks</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="65" data-of="91"></script>
+</body>
+</html>

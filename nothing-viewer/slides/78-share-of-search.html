@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share of Search Trend, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="chart-styles.css">
+<style>
+  .sos .sc-body-frame { display: flex; flex-direction: column; height: 100%; }
+  .sos .head { display:flex; align-items:flex-start; gap: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--bg-rule); }
+  .sos .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .sos .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); white-space: nowrap; }
+  .sos-body { margin-top: 12px; display: grid; grid-template-columns: minmax(0, 880px) 460px; gap: 32px; flex: 1; min-height: 0; align-items: start; justify-content: start; }
+
+  /* Paired bar rows */
+  .twin-rows { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .twin-row { display: grid; grid-template-columns: 140px 1fr 74px; gap: 14px; align-items: center; }
+  .twin-row .name { font: 600 14px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .twin-row .name .sub { display:block; font: 400 9.5px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 2px; }
+  .twin-row .pair { display: flex; flex-direction: column; gap: 4px; }
+  .twin-row .lane { position: relative; height: 18px; background: #EEF2F6; border-radius: 2px; }
+  .twin-row .lane .fill { height: 18px; position: relative; border-radius: 2px; }
+  .fill.w12 { background: var(--mr-blue-dark); }
+  .fill.w3  { background: var(--mr-blue-light); }
+  .fill.h12 { background: #C56A00; }
+  .fill.h3  { background: #FCB900; }
+  .twin-row .lane .dl { position: absolute; right: -44px; top: 50%; transform: translateY(-50%); font: 700 12px/1 var(--font-sans); color: var(--fg-heading); white-space: nowrap; }
+  .twin-row .lane .dl.inside { right: 5px; color: #fff; }
+  .twin-row .delta { font: 700 13px/1.1 var(--font-sans); color: var(--fg-muted); text-align: right; white-space: nowrap; }
+  .twin-row .delta.up   { color: #0E8A52; }
+  .twin-row .delta.down { color: #EF434E; }
+  .twin-row .delta .tt  { display:block; font: 400 8.5px/1.2 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+
+  .twin-axis { display:flex; justify-content: space-between; margin-top: 8px; padding-left: 154px; padding-right: 84px; }
+  .twin-axis span { font: 400 11px/1 var(--font-sans); color: var(--fg-muted); }
+
+  .legend-row { display: flex; gap: 20px; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--bg-rule); }
+  .legend-item { display: flex; align-items: center; gap: 6px; font: 400 12px/1 var(--font-sans); color: var(--fg-body); }
+  .legend-swatch { width: 28px; height: 8px; border-radius: 2px; }
+
+  /* Right panel */
+  .impl-list { display: flex; flex-direction: column; gap: 0; }
+  .imp { padding: 11px 0; border-bottom: 1px solid var(--bg-rule); display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: baseline; }
+  .imp:last-child { border-bottom: 0; }
+  .imp .n { font: 800 14px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.02em; }
+  .imp .tx { font: 600 11.5px/1.35 var(--font-sans); color: var(--fg-heading); }
+  .imp .tx span { display:block; font: 400 10.5px/1.45 var(--font-sans); color: var(--fg-body); margin-top: 3px; }
+
+  .binet-box { margin-top: 12px; padding: 9px 11px; background: #EEF2F7; border-left: 3px solid var(--mr-blue-dark); }
+  .bb-lbl { font: 700 10px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+  .bb-text { font: 400 12px/1.45 var(--font-sans); color: var(--fg-body); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide sos" data-screen-label="77 Share of Search Trend">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Share of Search  ·  AU Consumer Electronics  ·  12-Month vs 3-Month Window Comparison</span></div>
+  <div class="sc-body-frame">
+    <div class="head">
+      <h3>Read across both windows: Apple and Samsung decelerating, Oppo accelerating. Nothing marginal up. Google Pixel losing ground (15.9% to 13.9%) -- the conquesting window is open now. Nothing must capture Pixel defectors before the window closes. [VERIFIED Google Trends]</h3>
+      <div class="meta">
+        Share of Search  ·  Paired-bar trend<br>
+        <div style="margin-top:6px;"><span class="sc-chip sc-chip--verified">Verified</span></div>
+      </div>
+    </div>
+
+    <div class="sos-body">
+      <!-- LEFT: PAIRED BAR CHART -->
+      <div>
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.1em; text-transform:uppercase; color:var(--mr-blue-dark); margin-bottom:6px;">AU Share of Search -- 12-month avg vs recent 3-month window</div>
+        <!-- SVG snapshot bar chart: 12-month SoS absolute values -->
+        <svg viewBox="0 0 860 58" preserveAspectRatio="xMidYMid meet" style="width:100%; display:block; margin-bottom:8px;" aria-label="AU Share of Search 12-month snapshot">
+          <rect x="0" y="0" width="860" height="58" fill="#F4F7FB" rx="3"/>
+          <text x="8" y="12" font-family="Open Sans" font-size="7.5" font-weight="700" fill="#9AA3AD" letter-spacing="0.06em">12-MONTH SOS SNAPSHOT (AU)</text>
+          <!-- Apple 31.8% -- bar width proportional, max=31.8=560px -->
+          <rect x="8" y="18" width="560" height="14" rx="2" fill="#1A1A1A" opacity="0.75"/>
+          <text x="572" y="29" font-family="Open Sans" font-size="9" font-weight="700" fill="#1A1A1A">Apple 31.8%</text>
+          <!-- Samsung 30.7% -->
+          <rect x="8" y="34" width="541" height="14" rx="2" fill="#1428A0" opacity="0.75"/>
+          <text x="553" y="45" font-family="Open Sans" font-size="9" font-weight="700" fill="#1428A0">Samsung 30.7%</text>
+          <!-- Pixel 15.9% -->
+          <rect x="650" y="18" width="50" height="14" rx="2" fill="#1A7A4A" opacity="0.85"/>
+          <text x="704" y="29" font-family="Open Sans" font-size="9" font-weight="700" fill="#1A7A4A">Pixel 15.9%</text>
+          <!-- Oppo 14.3% -->
+          <rect x="650" y="34" width="45" height="14" rx="2" fill="#856404" opacity="0.85"/>
+          <text x="699" y="45" font-family="Open Sans" font-size="9" font-weight="700" fill="#856404">Oppo 14.3%</text>
+          <!-- Nothing 3.6% label -->
+          <rect x="790" y="18" width="12" height="14" rx="2" fill="#4971B7"/>
+          <text x="806" y="29" font-family="Open Sans" font-size="9" font-weight="800" fill="#4971B7">Nothing 3.6%</text>
+          <!-- OnePlus -->
+          <rect x="790" y="34" width="12" height="14" rx="2" fill="#8896A8" opacity="0.6"/>
+          <text x="806" y="45" font-family="Open Sans" font-size="9" fill="#8896A8">OnePlus 3.7%</text>
+          <!-- Divider -->
+          <line x1="640" y1="14" x2="640" y2="56" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="644" y="12" font-family="Open Sans" font-size="7" fill="#9AA3AD">Challengers</text>
+        </svg>
+        <div style="font: 400 9.5px/1.4 var(--font-sans); color:var(--fg-body); margin-bottom:10px;">Google Trends via pytrends, geo=AU. Upper bar = 12-month avg (May 2025 to May 2026). Lower bar = recent 3-month window. Delta is the directional signal.</div>
+
+        <div class="twin-rows">
+          <!-- Apple iPhone: 31.8% / 30.2% -->
+          <div class="twin-row">
+            <div class="name">Apple iPhone<span class="sub">Decelerating</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill w12" style="width:100%;"><span class="dl inside">31.8%</span></div></div>
+              <div class="lane"><div class="fill w3" style="width:94.9%;"><span class="dl inside">30.2%</span></div></div>
+            </div>
+            <div class="delta down">&minus;1.6 pp<span class="tt">Sliding</span></div>
+          </div>
+
+          <!-- Samsung Galaxy: 30.7% / 32.1% -->
+          <div class="twin-row">
+            <div class="name">Samsung Galaxy<span class="sub">Accelerating</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill w12" style="width:96.5%;"><span class="dl inside">30.7%</span></div></div>
+              <div class="lane"><div class="fill w3" style="width:100%;"><span class="dl inside">32.1%</span></div></div>
+            </div>
+            <div class="delta up">+1.4 pp<span class="tt">Gaining</span></div>
+          </div>
+
+          <!-- Google Pixel: 15.9% / 13.9% -->
+          <div class="twin-row">
+            <div class="name">Google Pixel<span class="sub">Decelerating</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill w12" style="width:50%;"><span class="dl inside">15.9%</span></div></div>
+              <div class="lane"><div class="fill w3" style="width:43.7%;"><span class="dl inside">13.9%</span></div></div>
+            </div>
+            <div class="delta down">&minus;2.0 pp<span class="tt">Window open</span></div>
+          </div>
+
+          <!-- Oppo: 14.3% / 15.5% -->
+          <div class="twin-row">
+            <div class="name">Oppo<span class="sub">Accelerating -- threat</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill h12" style="width:44.9%;"><span class="dl inside">14.3%</span></div></div>
+              <div class="lane"><div class="fill h3" style="width:48.7%;"><span class="dl inside">15.5%</span></div></div>
+            </div>
+            <div class="delta up" style="color:#856404;">+1.2 pp<span class="tt" style="color:#856404;">Watch this</span></div>
+          </div>
+
+          <!-- OnePlus: 3.7% / 3.8% -->
+          <div class="twin-row">
+            <div class="name">OnePlus<span class="sub">Marginal up</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill w12" style="width:11.6%;"><span class="dl">3.7%</span></div></div>
+              <div class="lane"><div class="fill w3" style="width:11.9%;"><span class="dl">3.8%</span></div></div>
+            </div>
+            <div class="delta">+0.1 pp<span class="tt">Noise</span></div>
+          </div>
+
+          <!-- Nothing: 3.6% / 3.7% -- HERO ROW -->
+          <div class="twin-row">
+            <div class="name" style="color:var(--mr-blue-dark);">Nothing Phone<span class="sub" style="color:var(--fg-muted);">This report  ·  Marginal up</span></div>
+            <div class="pair">
+              <div class="lane"><div class="fill" style="width:11.3%; background:var(--mr-blue-dark);"><span class="dl" style="right:-44px; top:50%; transform:translateY(-50%); position:absolute; font:700 12px/1 var(--font-sans); color:var(--fg-heading);">3.6%</span></div></div>
+              <div class="lane"><div class="fill" style="width:11.6%; background:#FCB900;"><span class="dl" style="right:-44px; top:50%; transform:translateY(-50%); position:absolute; font:700 12px/1 var(--font-sans); color:var(--fg-heading);">3.7%</span></div></div>
+            </div>
+            <div class="delta up">+0.1 pp<span class="tt">Marginal</span></div>
+          </div>
+        </div>
+
+        <div class="twin-axis">
+          <span>0%</span><span>8%</span><span>16%</span><span>24%</span><span>32%</span>
+        </div>
+
+        <div class="legend-row">
+          <div class="legend-item"><div class="legend-swatch" style="background:var(--mr-blue-dark);"></div>12-month avg (May 2025 to May 2026)</div>
+          <div class="legend-item"><div class="legend-swatch" style="background:var(--mr-blue-light);"></div>Recent 3-month window</div>
+          <div class="legend-item"><div class="legend-swatch" style="background:#FCB900;"></div>Nothing 3-month</div>
+        </div>
+        <div style="font:400 italic 12px/1.4 var(--font-sans); color:var(--fg-body); border-top:1px solid var(--bg-rule); padding-top:6px; margin-top:6px;">
+          Source: Google Trends API, geo AU. Two queries cross-calibrated via Samsung anchor (scalar 0.7053). VERIFIED. [223][224]
+        </div>
+      </div>
+
+      <!-- RIGHT: Implications panel -->
+      <div>
+        <div style="font: 700 11px/1 var(--font-sans); letter-spacing:0.1em; text-transform:uppercase; color:var(--mr-blue-dark); padding-bottom:6px; border-bottom:2px solid var(--mr-blue-dark); margin-bottom:6px;">Strategic implications</div>
+        <div class="impl-list">
+          <div class="imp">
+            <span class="n">1</span>
+            <span class="tx">Pixel deceleration is the conquesting signal.<span>Pixel losing 2.0pp in 3 months while Nothing's 3.6% base holds. Pixel's AU audience (early-adopter, software-forward) directly overlaps Nothing's Audience 2 psychographic. Act now before Pixel re-activates paid media.</span></span>
+          </div>
+          <div class="imp">
+            <span class="n">2</span>
+            <span class="tx">Oppo acceleration without a launch spike is the threat.<span>14.3% to 15.5% organic SoS gain means brand-building investment is taking hold. Nothing and Oppo share the design-forward, value-tech lane. If Oppo reaches 17%, Kill-Switch 2 triggers.</span></span>
+          </div>
+          <div class="imp">
+            <span class="n">3</span>
+            <span class="tx">Nothing is a launch-event brand with near-zero base SoS.<span>Peak weeks June to July 2025 scored 10-14. Outside launch windows, SoS sits at 4-5 out of 100. Every campaign must rebuild awareness from scratch. Always-on community content is the structural fix.</span></span>
+          </div>
+          <div class="imp">
+            <span class="n">4</span>
+            <span class="tx">Apple and Samsung duopoly holds 62.5% of AU category search.<span>All challengers fight for 37.5%. To reach 5% SoS (doubling current), Nothing needs to intercept Pixel defectors or Samsung A-series rejecters. Neither is achievable without a structural always-on presence.</span></span>
+          </div>
+        </div>
+
+        <div class="binet-box">
+          <div class="bb-lbl">Binet framework implication</div>
+          <div class="bb-text">Using Binet's SoS framework: a brand needs SoS broadly in line with market share ambition. Nothing's 3.6% SoS implies under 1% AU unit share. To grow to 2% unit share, Nothing likely needs 6-8% SoS. Requires sustained always-on investment or a product/cultural event large enough to shift the structural search baseline. The AI-native device launch in 2026 is the most plausible trigger. <span class="sc-chip sc-chip--probable" style="font-size:11px;">Probable</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-source-line">
+      <span class="sc-source">Sources: Share of Search Extension, Strategy Cadet Run J Mk2. Google Trends API geo AU, 12-month window May 2025 to May 2026. Query 1 [223], Query 2 [224]. Cross-calibration scalar 0.7053 (VERIFIED mathematically). SoS percentages: VERIFIED. 3-month SoS: VERIFIED. Binet SoS framework: PROBABLE (consumer electronics correlation moderate).</span>
+      <span class="sc-source">p. 77  ·  Share of Search  ·  AU paired-bar trend</span>
+    </div>
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="78" data-of="91"></script>
+</body>
+</html>
