@@ -5,14 +5,23 @@
 <title>Back Cover, Strategy Cadet, Nothing Technology</title>
 <link rel="stylesheet" href="slide-base.css">
 <style>
-  .back-cover .sc-back-center { position: absolute; top: 50%; left: 120px; transform: translateY(-50%); max-width: 900px; }
-  .back-cover .sc-back-center .rule { width: 56px; height: 2px; background: var(--fg-on-dark-2); margin-bottom: 32px; }
-  .back-cover .sc-back-center h2 { margin: 0 0 20px; font: 800 52px/1.1 var(--font-sans); color: var(--fg-on-dark); letter-spacing: -0.02em; }
-  .back-cover .sc-back-center p { margin: 0 0 10px; font: 400 18px/1.5 var(--font-sans); color: var(--fg-on-dark-2); }
-  .back-cover .sc-back-center .contact { margin-top: 36px; font: 600 16px/1.4 var(--font-sans); color: var(--fg-on-dark); }
-  .back-cover .sc-back-stats { position: absolute; bottom: 120px; left: 120px; display: flex; gap: 64px; }
-  .back-cover .sc-back-stats .stat .val { font: 800 32px/1 var(--font-sans); color: var(--fg-on-dark); }
-  .back-cover .sc-back-stats .stat .lbl { font: 400 13px/1.3 var(--font-sans); color: var(--fg-on-dark-3); margin-top: 6px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .back-cover .sc-back-center { position: absolute; top: 80px; left: 120px; right: 480px; }
+  .back-cover .sc-back-center .rule { width: 56px; height: 2px; background: var(--fg-on-dark-2); margin-bottom: 28px; }
+  .back-cover .sc-back-center h2 { margin: 0 0 36px; font: 800 44px/1.1 var(--font-sans); color: var(--fg-on-dark); letter-spacing: -0.015em; }
+  .back-cover .dict-entries { display: flex; flex-direction: column; gap: 22px; max-width: 940px; }
+  .back-cover .dict { padding: 22px 0 24px; border-top: 1px solid rgba(255,255,255,0.18); }
+  .back-cover .dict:first-child { border-top: 2px solid rgba(255,255,255,0.42); }
+  .back-cover .dict .hw-line { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
+  .back-cover .dict .hw { font: 800 26px/1 var(--font-sans); color: var(--fg-on-dark); letter-spacing: -0.005em; }
+  .back-cover .dict .pron { font: 400 italic 17px/1 var(--font-sans); color: rgba(255,255,255,0.62); }
+  .back-cover .dict .pos { font: 400 italic 17px/1 var(--font-sans); color: rgba(255,255,255,0.62); }
+  .back-cover .dict p { margin: 0; font: 400 17px/1.5 var(--font-sans); color: rgba(255,255,255,0.92); max-width: 920px; }
+  .back-cover .dict p em { font-style: italic; color: var(--fg-on-dark); }
+  .back-cover .tagline { margin-top: 36px; font: 700 italic 22px/1.3 var(--font-sans); color: var(--fg-on-dark); max-width: 920px; }
+  .back-cover .contact { margin-top: 18px; font: 600 15px/1.4 var(--font-sans); color: rgba(255,255,255,0.78); letter-spacing: 0.02em; }
+  .back-cover .sc-back-stats { position: absolute; top: 120px; right: 28px; display: flex; flex-direction: column; gap: 22px; text-align: right; }
+  .back-cover .sc-back-stats .stat .val { font: 800 28px/1 var(--font-sans); color: var(--fg-on-dark); }
+  .back-cover .sc-back-stats .stat .lbl { font: 400 11px/1.3 var(--font-sans); color: var(--fg-on-dark-3); margin-top: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
   .back-cover .sc-prepared { position: absolute; bottom: 100px; right: 28px; text-align: right; }
   .back-cover .sc-prepared .lbl { font: var(--t-eyebrow); color: var(--fg-on-dark-3); margin-bottom: 14px; }
   .back-cover .sc-prepared .mr-logo { width: 220px; height: auto; display: inline-block; }
@@ -22,7 +31,7 @@
 </head>
 <body>
 <div class="sc-stage">
-<section class="sc-slide gradient back-cover" data-screen-label="90 Back Cover">
+<section class="sc-slide gradient back-cover" data-screen-label="91 Back Cover">
 
   <!-- SVG geometric hero panel symmetric with cover -->
   <div class="back-cover-geo">
@@ -52,14 +61,42 @@
 
   <div class="sc-back-center">
     <div class="rule"></div>
-    <h2>Strategy Cadet.<br>Evidence-led brand<br>intelligence.</h2>
-    <p>Three-phase research pipeline. Cross-referenced adjudication. Honest confidence ratings.</p>
-    <p>Does the grind. Hands you the brief. You make the call.</p>
-    <div class="contact">York Studios  ·  Melbourne, Australia  ·  yorkmade.com.au</div>
+    <h2>A new entry in the strategist's dictionary.</h2>
+
+    <div class="dict-entries">
+      <article class="dict">
+        <div class="hw-line">
+          <span class="hw">strat&middot;e&middot;gy</span>
+          <span class="pron">/&#712;str&aelig;t&#601;d&#658;i/</span>
+          <span class="pos">noun.</span>
+        </div>
+        <p>The disciplined business of analysing markets, audiences and competitors to decide where to play and how to win. Strategy turns evidence into direction.</p>
+      </article>
+
+      <article class="dict">
+        <div class="hw-line">
+          <span class="hw">ca&middot;det</span>
+          <span class="pron">/k&#601;&#712;d&#603;t/</span>
+          <span class="pos">noun.</span>
+        </div>
+        <p>From French <em>cadet</em>, Gascon <em>capdet</em> (little head), via Latin <em>caput</em>. A trainee attached to a senior officer. Disciplined, methodical, willing to do the legwork. Never the author of the decision.</p>
+      </article>
+
+      <article class="dict">
+        <div class="hw-line">
+          <span class="hw">Strategy Cadet</span>
+          <span class="pron">/&#712;str&aelig;t&#601;d&#658;i k&#601;&#712;d&#603;t/</span>
+        </div>
+        <p>An AI research and ideation assistant for brand and media strategists. Performs the upfront grind, gathers the data, builds the evidence base, drafts the first cut of strategic and creative thinking. Hands the strategist a briefing, not a verdict. The officer still makes the call.</p>
+      </article>
+    </div>
+
+    <div class="tagline">Does the grind. Hands you the brief. You make the call.</div>
+    <div class="contact">York Studios  ·  Melbourne, Australia</div>
   </div>
 
   <div class="sc-back-stats">
-    <div class="stat"><div class="val">90</div><div class="lbl">Slides</div></div>
+    <div class="stat"><div class="val">91</div><div class="lbl">Slides</div></div>
     <div class="stat"><div class="val">308</div><div class="lbl">Unique citations</div></div>
     <div class="stat"><div class="val">19</div><div class="lbl">Research sections</div></div>
     <div class="stat"><div class="val">3</div><div class="lbl">Adjudication phases</div></div>
