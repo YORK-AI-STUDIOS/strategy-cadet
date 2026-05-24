@@ -9,7 +9,8 @@
   .std .head .num { font: 800 28px/1 var(--font-sans); color: var(--mr-blue-dark); }
   .std .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
   .std .head .meta { margin-left: auto; text-align: right; }
-  .aud-layout { margin-top: 16px; display: grid; grid-template-columns: 340px 1fr; gap: 44px; flex: 1; min-height: 0; overflow: hidden; }
+  .aud-layout { margin-top: 16px; display: grid; grid-template-columns: 340px 1fr; gap: 44px; flex: 1; min-height: 0; overflow: hidden; max-height: calc(100% - 180px); }
+  .sc-source-line { position: relative; z-index: 10; background: var(--bg-slide, #fff); flex-shrink: 0; }
   .aud-badge { padding: 20px 22px; border-top: 4px solid var(--mr-blue-dark); background: #F4F7FB; margin-bottom: 18px; }
   .aud-badge .ab-num { font: 700 9px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
   .aud-badge .ab-name { font: 800 17px/1.2 var(--font-sans); color: var(--fg-heading); }
@@ -49,6 +50,30 @@
         <div style="margin-top:6px;"><span class="sc-chip sc-chip--probable">Probable</span></div>
       </div>
     </div>
+    <!-- Hero band: Audience 3 abstract silhouette + key stats -->
+    <svg viewBox="0 0 1400 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:80px;display:block;margin-bottom:12px;overflow:visible;">
+      <rect x="0" y="0" width="1400" height="80" rx="4" fill="#EEF2F7"/>
+      <!-- Abstract silhouette: Gen Z slightly asymmetric pose -->
+      <circle cx="58" cy="28" r="15" fill="#4971B7" opacity="0.7"/>
+      <path d="M26 80 Q34 58 58 58 Q82 58 90 80Z" fill="#4971B7" opacity="0.7"/>
+      <!-- Secondary circle overlap for dynamic feel -->
+      <circle cx="76" cy="24" r="10" fill="#5A9BD5" opacity="0.4"/>
+      <!-- Accent stripe -->
+      <rect x="0" y="0" width="6" height="80" fill="#4971B7" opacity="0.7"/>
+      <!-- Audience label -->
+      <text x="120" y="26" font-family="'Open Sans',sans-serif" font-weight="800" font-size="15" fill="#1D2B3A">Budget-Conscious Gen Z Experimenters</text>
+      <text x="120" y="46" font-family="'Open Sans',sans-serif" font-size="11" fill="#5A6B7A">Aged 18-27  ·  Social-Proof Driven  ·  AUD 25-65K income</text>
+      <!-- Key stat pills -->
+      <rect x="560" y="16" width="140" height="36" rx="4" fill="#4971B7" opacity="0.10"/>
+      <text x="630" y="30" text-anchor="middle" font-family="'Open Sans',sans-serif" font-weight="700" font-size="11" fill="#4971B7">Price / BNPL</text>
+      <text x="630" y="46" text-anchor="middle" font-family="'Open Sans',sans-serif" font-size="10" fill="#5A6B7A">Top driver: 5/5</text>
+      <rect x="720" y="16" width="160" height="36" rx="4" fill="#4971B7" opacity="0.10"/>
+      <text x="800" y="30" text-anchor="middle" font-family="'Open Sans',sans-serif" font-weight="700" font-size="11" fill="#4971B7">Product Quality</text>
+      <text x="800" y="46" text-anchor="middle" font-family="'Open Sans',sans-serif" font-size="10" fill="#5A6B7A">Driver: 4/5</text>
+      <rect x="900" y="16" width="200" height="36" rx="4" fill="#4971B7" opacity="0.10"/>
+      <text x="1000" y="30" text-anchor="middle" font-family="'Open Sans',sans-serif" font-weight="700" font-size="11" fill="#4971B7">Primary Channel</text>
+      <text x="1000" y="46" text-anchor="middle" font-family="'Open Sans',sans-serif" font-size="10" fill="#5A6B7A">TikTok  ·  YouTube  ·  Afterpay</text>
+    </svg>
     <div class="aud-layout">
       <div class="aud-left">
         <div class="aud-badge">

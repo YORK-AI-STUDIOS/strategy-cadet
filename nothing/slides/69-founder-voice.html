@@ -17,7 +17,8 @@
   .pi-title { font: 700 12px/1.2 var(--font-sans); color: var(--fg-heading); margin-bottom: 4px; }
   .pi-body { font: 400 10.5px/1.4 var(--font-sans); color: var(--fg-body); }
   .pi-conf { font: 700 8px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); margin-top: 5px; }
-  .quote-block { padding: 12px 14px; border-left: 4px solid var(--mr-blue-dark); background: #EEF2F7; }
+  .quote-block { padding: 12px 14px 12px 48px; border-left: 4px solid var(--mr-blue-dark); background: #EEF2F7; position: relative; }
+  .quote-block .qmark { position: absolute; left: 10px; top: 8px; }
   .qb-text { font: 400 italic 12px/1.5 var(--font-sans); color: var(--fg-heading); margin-bottom: 6px; }
   .qb-source { font: 700 9px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--mr-blue-dark); }
   .word-row { display: flex; gap: 8px; }
@@ -82,14 +83,23 @@
       <div class="founder-col">
         <div class="col-hd">Founder voice in market context</div>
         <div class="quote-block">
+          <svg class="qmark" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg" width="28" height="22">
+            <text x="0" y="20" font-family="Georgia,serif" font-size="36" fill="#4971B7" opacity="0.5">"</text>
+          </svg>
           <div class="qb-text">"We exist to make technology fun and relevant again."</div>
           <div class="qb-source">Carl Pei, Nothing Mission Statement  ·  VERIFIED via brand DNA input</div>
         </div>
         <div class="quote-block">
+          <svg class="qmark" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg" width="28" height="22">
+            <text x="0" y="20" font-family="Georgia,serif" font-size="36" fill="#4971B7" opacity="0.5">"</text>
+          </svg>
           <div class="qb-text">"Apps are going to disappear. AI agents will replace the smartphone interface as we know it."</div>
           <div class="qb-source">Carl Pei, TechCrunch interview, March 2026 [260]  ·  VERIFIED</div>
         </div>
         <div class="quote-block">
+          <svg class="qmark" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg" width="28" height="22">
+            <text x="0" y="20" font-family="Georgia,serif" font-size="36" fill="#4971B7" opacity="0.5">"</text>
+          </svg>
           <div class="qb-text">"Making tech fun again and inspiring human creativity."</div>
           <div class="qb-source">Carl Pei, Euronews profile, February 2026 [263]  ·  VERIFIED</div>
         </div>

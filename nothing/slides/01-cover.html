@@ -19,12 +19,37 @@
   .cover .sc-prepared .mr-logo img { width: 100%; height: auto; display: block; filter: brightness(0) invert(1); }
   .cover .sc-chrome-cadet { top: 60px; right: 28px; height: auto; }
   .cover .sc-chrome-cadet img { width: 220px; height: auto; }
+  .cover-geo { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 </style>
 </head>
 <body>
 <div class="sc-stage">
 <section class="sc-slide gradient cover" data-screen-label="01 Cover">
-  <img src="../assets/photography/melbourne-1.jpg" class="sc-cityscape" alt="">
+  <!-- CSS/SVG geometric hero panel replacing photography -->
+  <div class="cover-geo">
+    <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;">
+      <!-- Dot grid pattern top-right -->
+      <defs>
+        <pattern id="dotgrid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.5" fill="rgba(90,155,213,0.22)"/>
+        </pattern>
+      </defs>
+      <rect x="960" y="0" width="960" height="600" fill="url(#dotgrid)"/>
+      <!-- Large concentric circles, right side -->
+      <circle cx="1580" cy="380" r="420" fill="none" stroke="rgba(90,155,213,0.12)" stroke-width="1.5"/>
+      <circle cx="1580" cy="380" r="320" fill="none" stroke="rgba(90,155,213,0.16)" stroke-width="1.5"/>
+      <circle cx="1580" cy="380" r="220" fill="none" stroke="rgba(90,155,213,0.20)" stroke-width="1.5"/>
+      <circle cx="1580" cy="380" r="120" fill="none" stroke="rgba(73,113,183,0.30)" stroke-width="2"/>
+      <circle cx="1580" cy="380" r="50" fill="rgba(73,113,183,0.18)"/>
+      <!-- Diagonal hairlines -->
+      <line x1="900" y1="0" x2="1920" y2="600" stroke="rgba(90,155,213,0.10)" stroke-width="1"/>
+      <line x1="1050" y1="0" x2="1920" y2="450" stroke="rgba(90,155,213,0.08)" stroke-width="1"/>
+      <!-- Bottom-right accent block -->
+      <rect x="1600" y="900" width="320" height="180" rx="0" fill="rgba(73,113,183,0.08)"/>
+      <!-- Thin angled rule across full width -->
+      <line x1="0" y1="680" x2="1920" y2="580" stroke="rgba(90,155,213,0.12)" stroke-width="1"/>
+    </svg>
+  </div>
 
   <div class="sc-stack-eyebrow">
     <span class="ln"></span>
@@ -51,7 +76,7 @@
     </div>
     <div class="col">
       <div class="lbl">Length</div>
-      <div class="val">88 slides  ·  308 unique citations</div>
+      <div class="val">90 slides  ·  308 unique citations</div>
     </div>
   </div>
 

@@ -11,6 +11,7 @@
   .std .head .meta { margin-left: auto; text-align: right; }
   .msg-layout { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; flex: 1; min-height: 0; }
   .msg-card { display: flex; flex-direction: column; gap: 0; border-top: 3px solid var(--mr-blue-dark); padding-top: 16px; }
+  .msg-card .mc-icon { display: block; margin-bottom: 14px; }
   .msg-card .mc-num { font: 800 11px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
   .msg-card h4 { margin: 0 0 12px; font: 700 18px/1.2 var(--font-sans); color: var(--fg-heading); }
   .msg-card .mc-body { font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); margin-bottom: 16px; }
@@ -37,6 +38,14 @@
     </div>
     <div class="msg-layout">
       <div class="msg-card">
+        <!-- SVG: eye / visibility icon -->
+        <svg class="mc-icon" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" width="64" height="40">
+          <ellipse cx="32" cy="20" rx="30" ry="16" fill="none" stroke="#4971B7" stroke-width="2.5"/>
+          <circle cx="32" cy="20" r="8" fill="#4971B7"/>
+          <circle cx="32" cy="20" r="4" fill="#fff"/>
+          <line x1="2" y1="20" x2="14" y2="20" stroke="#5A9BD5" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="50" y1="20" x2="62" y2="20" stroke="#5A9BD5" stroke-width="1.5" stroke-dasharray="3,2"/>
+        </svg>
         <div class="mc-num">Theme 01</div>
         <h4>Visible thinking, invisible noise.</h4>
         <div class="mc-body">Nothing's central marketing argument is that transparency (literal and figurative) produces a calmer, more intentional relationship with technology. <strong>The Glyph Interface is the executional proof.</strong> The message is not "look at this cool feature" but "your phone is making you anxious and we built something that doesn't."</div>
@@ -50,6 +59,14 @@
         </div>
       </div>
       <div class="msg-card">
+        <!-- SVG: magnifier / notice icon -->
+        <svg class="mc-icon" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" width="64" height="40">
+          <circle cx="24" cy="20" r="13" fill="none" stroke="#4971B7" stroke-width="2.5"/>
+          <line x1="33" y1="29" x2="50" y2="38" stroke="#4971B7" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="20" r="5" fill="#5A9BD5" opacity="0.6"/>
+          <line x1="20" y1="20" x2="28" y2="20" stroke="#fff" stroke-width="1.5"/>
+          <line x1="24" y1="16" x2="24" y2="24" stroke="#fff" stroke-width="1.5"/>
+        </svg>
         <div class="mc-num">Theme 02</div>
         <h4>The phone for people who notice things.</h4>
         <div class="mc-body">Nothing positions its target customer as someone who pays attention to craft, whether in music, fashion, industrial design, or food. <strong>The brand does not sell to everyone; it sells to people who have already opted out of defaulting.</strong></div>
@@ -63,6 +80,12 @@
         </div>
       </div>
       <div class="msg-card">
+        <!-- SVG: shield / longevity icon -->
+        <svg class="mc-icon" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" width="64" height="40">
+          <path d="M32 4 L52 12 L52 24 Q52 34 32 38 Q12 34 12 24 L12 12 Z" fill="none" stroke="#4971B7" stroke-width="2.5"/>
+          <path d="M32 10 L46 16 L46 24 Q46 31 32 34 Q18 31 18 24 L18 16 Z" fill="#5A9BD5" opacity="0.18"/>
+          <polyline points="24,20 29,26 40,14" stroke="#4971B7" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <div class="mc-num">Theme 03</div>
         <h4>Built to be seen, designed to last.</h4>
         <div class="mc-body">Nothing's transparent aesthetic is a long-term brand argument, not a trend cycle play. <strong>Showing your work (literally, the circuit board) is a mark of confidence rather than a compromise.</strong> The brand wants to own this idea across device generations.</div>
