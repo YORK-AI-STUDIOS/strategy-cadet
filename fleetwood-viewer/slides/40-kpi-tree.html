@@ -7,8 +7,15 @@
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
   /* Restructured 2026-05-26: KPI tree spans full width on top; tables below in 2-up row */
-  .sc-slide .sc-body-frame { inset: 52px var(--slide-margin-x) 160px; }
-  .sc-slide .sc-source-line { margin-bottom: 40px; }
+  .sc-slide .sc-body-frame { inset: 52px var(--slide-margin-x) 130px; }
+  /* Pin source-line to a SPECIFIC y on the slide, not the bottom of the flex container */
+  .sc-slide .sc-source-line {
+    position: absolute;
+    bottom: 80px;
+    left: var(--slide-margin-x);
+    right: var(--slide-margin-x);
+    margin-top: 0;
+  }
   .sc-slide .sc-h2 { margin-bottom: 6px; }
   .kpi-tree-wrap { margin-top: 0; }
   .kpi-tables { margin-top: 8px; }
