@@ -14,8 +14,8 @@
  .hex-wheel { position: relative; width: 800px; height: 667px; }
  .hex-wheel svg { width: 100%; height: 100%; display: block; }
 
- /* Driver cards */
- .driver-list { display: flex; flex-direction: column; gap: 14px; }
+ /* Driver cards — right column lifted 30px so card stack finishes higher, freeing bottom slide space */
+ .driver-list { display: flex; flex-direction: column; gap: 14px; margin-top: -30px; }
  .driver-card { padding: 14px 16px; border-left: 4px solid; display: flex; flex-direction: column; gap: 5px; }
  .driver-card.tailwind { border-color: #00D084; background: #F2FBF6; }
  .driver-card.headwind { border-color: #E68A2D; background: #FFF6EB; }
