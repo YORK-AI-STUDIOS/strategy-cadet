@@ -108,7 +108,7 @@ const slideData = [
 // indexData — TOC by part (used by chassis sidebar)
 // =============================================================================
 const indexData = [
-  { title: '00 - StratCadet Overview', subs: [
+  { title: '<strong>STRATEGY CADET OVERVIEW</strong>', subs: [
     { label: 'Overview Cover', slide: 1 },
     { label: 'What it Delivers (8 chapters)', slide: 2 },
     { label: 'How it Works (the engine)', slide: 3 },
