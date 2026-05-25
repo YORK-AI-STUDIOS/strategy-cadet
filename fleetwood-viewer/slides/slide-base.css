@@ -142,7 +142,7 @@ html, body {
 /* ---------- Body container ------------------------------------------------ */
 .sc-body-frame {
   position: absolute;
-  inset: 96px var(--slide-margin-x) 80px;   /* leaves room for chrome */
+  inset: 96px var(--slide-margin-x) 90px;   /* leaves room for chrome + locked citation band */
   display: flex;
   flex-direction: column;
 }
@@ -152,9 +152,29 @@ html, body {
 .sc-rule-strong { height: 1px; background: var(--fg-heading); width: 100%; }
 .sc-rule.on-dark { background: var(--fg-on-dark-3); }
 
-/* ---------- Source line --------------------------------------------------- */
+/* ---------- Source line — LOCKED CITATION BAND ------------------------------
+   Source-line is CHROME, not content. It lives as a direct child of .sc-slide
+   (not inside .sc-body-frame) so composition edits to body-frame content can
+   never collide with the citation. Reserves ~90px at the very bottom of every
+   slide. (Stuart 2026-05-26 09:30 AEST, ratified after slide-43 source-line
+   collapse fix consumed 9 commits.)
+*/
+.sc-slide > .sc-source-line {
+  position: absolute;
+  left: var(--slide-margin-x);
+  right: var(--slide-margin-x);
+  bottom: 24px;
+  margin: 0;
+  padding-top: 10px;
+  border-top: var(--rule-hairline);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  z-index: 2;
+}
+/* Legacy nested form retained for backwards-compat on slides not yet migrated. */
 .sc-source-line {
-  margin-top: auto;        /* pinned to bottom of body-frame */
+  margin-top: auto;        /* pinned to bottom of body-frame (legacy) */
   padding-top: 10px;
   border-top: var(--rule-hairline);
   display: flex;
