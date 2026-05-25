@@ -102,40 +102,45 @@
         <!-- Re-plot with correct interpretation:
              x=SoS(%), y=Revenue share(%), scale: x 0-50%, y 0-60%
              x: 80 + (SoS/50)*720; y: 360 - (Rev/60)*340
+             Labels rendered OUTSIDE each bubble to avoid text-overflow at scale.
         -->
-        <!-- Ausco: SoS 35%, rev 35%. x=80+504=584, y=360-198=162 -->
+
+        <!-- Ausco: SoS 35%, rev 35% -->
         <circle cx="584" cy="162" r="20" fill="#2E5F8A" opacity="0.85"/>
-        <text x="584" y="158" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Ausco</text>
-        <text x="584" y="169" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">~35%</text>
+        <text x="610" y="158" text-anchor="start" font-family="Open Sans" font-size="11" fill="#1A1A1A" font-weight="700">Ausco</text>
+        <text x="610" y="171" text-anchor="start" font-family="Open Sans" font-size="9" fill="#6B7E96">~35% SoS / ~35% rev</text>
 
-        <!-- Hickory: SoS 20%, rev 8%. x=80+288=368, y=360-45=315. BELOW diagonal=Expansion Mode. -->
+        <!-- Hickory: SoS 20%, rev 8%. Expansion. -->
         <circle cx="368" cy="315" r="16" fill="#2A5E3A" opacity="0.85"/>
-        <text x="368" y="311" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Hickory</text>
-        <text x="368" y="322" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">~20% SoS</text>
+        <text x="390" y="311" text-anchor="start" font-family="Open Sans" font-size="11" fill="#1A1A1A" font-weight="700">Hickory</text>
+        <text x="390" y="324" text-anchor="start" font-family="Open Sans" font-size="9" fill="#6B7E96">~20% SoS / ~8% rev</text>
 
-        <!-- Modscape: SoS 18%, rev 4%. x=80+259=339, y=360-23=337. Below diagonal=Expansion. -->
+        <!-- Modscape: SoS 18%, rev 4%. Expansion. Label LEFT to avoid collision with Hickory's right label. -->
         <circle cx="339" cy="337" r="14" fill="#3A7A50" opacity="0.85"/>
-        <text x="339" y="333" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Modscape</text>
-        <text x="339" y="344" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">~18%</text>
+        <text x="319" y="333" text-anchor="end" font-family="Open Sans" font-size="11" fill="#1A1A1A" font-weight="700">Modscape</text>
+        <text x="319" y="346" text-anchor="end" font-family="Open Sans" font-size="9" fill="#6B7E96">~18% SoS / ~4% rev</text>
 
-        <!-- Jayco: SoS 10%, rev 12% (RV only). x=80+144=224, y=360-68=292. Near diagonal=Defense. -->
+        <!-- Jayco: SoS 10%, rev 12%. Defense-near. -->
         <circle cx="224" cy="292" r="14" fill="#6B7E96" opacity="0.85"/>
-        <text x="224" y="288" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="700">Jayco</text>
-        <text x="224" y="299" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff">~10%</text>
+        <text x="244" y="288" text-anchor="start" font-family="Open Sans" font-size="11" fill="#1A1A1A" font-weight="700">Jayco</text>
+        <text x="244" y="301" text-anchor="start" font-family="Open Sans" font-size="9" fill="#6B7E96">~10% SoS / ~12% rev</text>
 
-        <!-- Decmil: SoS 3%, rev 3%. x=80+43=123, y=360-17=343. Near origin=Under-Indexed. -->
+        <!-- Decmil: SoS 3%, rev 3%. -->
         <circle cx="123" cy="343" r="11" fill="#8A7A6A" opacity="0.85"/>
-        <text x="123" y="340" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff" font-weight="700">Decmil</text>
+        <text x="138" y="340" text-anchor="start" font-family="Open Sans" font-size="11" fill="#1A1A1A" font-weight="700">Decmil</text>
+        <text x="138" y="352" text-anchor="start" font-family="Open Sans" font-size="9" fill="#6B7E96">~3% SoS / ~3% rev</text>
 
-        <!-- THL: SoS 8%, rev 8%. x=80+115=195, y=360-45=315. Near diagonal=Defense. -->
+        <!-- THL: SoS 8%, rev 8%. Defense. Label LEFT to avoid collision with Jayco (right). -->
         <circle cx="195" cy="315" r="12" fill="#7A6AAA" opacity="0.75"/>
-        <text x="195" y="312" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#fff" font-weight="700">THL</text>
+        <text x="178" y="311" text-anchor="end" font-family="Open Sans" font-size="11" fill="#1A1A1A" font-weight="700">THL</text>
+        <text x="178" y="324" text-anchor="end" font-family="Open Sans" font-size="9" fill="#6B7E96">~8% / ~8%</text>
 
-        <!-- FLEETWOOD: SoS ~3.5%, rev ~14-18%. x=80+50=130, y=360-79=281. ABOVE diagonal=Under-Voicing/Defense. HIGHLIGHTED. -->
+        <!-- FLEETWOOD: SoS ~3.5%, rev ~16%. HIGHLIGHTED hero. Label below bubble outside. -->
         <circle cx="130" cy="241" r="22" fill="var(--mr-blue-dark)" stroke="#FCB900" stroke-width="2.5" opacity="1"/>
-        <text x="130" y="236" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="800">Fleetwood</text>
-        <text x="130" y="247" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#FCB900">~3.5% SoS</text>
-        <text x="130" y="258" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#FCB900">~16% rev</text>
+        <text x="130" y="244" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#fff" font-weight="800">Fleetwood</text>
+        <text x="158" y="232" text-anchor="start" font-family="Open Sans" font-size="11" fill="#8A6000" font-weight="800">Fleetwood</text>
+        <text x="158" y="245" text-anchor="start" font-family="Open Sans" font-size="9" fill="#8A6000">~3.5% SoS</text>
+        <text x="158" y="257" text-anchor="start" font-family="Open Sans" font-size="9" fill="#8A6000">~16% rev share</text>
 
         <!-- ESOV gap arrow: Fleetwood should move right (more voice) -->
         <line x1="153" y1="241" x2="280" y2="241" stroke="#FCB900" stroke-width="1.5" stroke-dasharray="4,3"/>
