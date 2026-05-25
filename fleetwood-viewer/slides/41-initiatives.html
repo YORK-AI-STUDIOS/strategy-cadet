@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .init-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 360px; gap: 28px; align-items: start; }
+  /* Comp-pass 2026-05-26: close top negative space + enlarge chart + shrink right col */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .init-layout { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1140px) 340px; gap: 36px; align-items: start; }
 
   .quad-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .quad-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
@@ -39,7 +41,7 @@
       <div class="quad-title">Priority quadrant, Effort (x) vs Impact (y)</div>
       <div class="quad-sub">9 initiatives plotted by Effort and Impact. Colour-coded by tier. "DO FIRST" zone: high impact, low effort (top-left). "STRATEGIC BETS" zone: high impact, high effort (top-right).</div>
 
-      <svg viewBox="0 0 820 400" preserveAspectRatio="xMidYMid meet" aria-label="Priority 2x2 quadrant chart" style="width:100%; max-height:390px; display:block;">
+      <svg viewBox="0 0 820 400" preserveAspectRatio="xMidYMid meet" aria-label="Priority 2x2 quadrant chart" style="width:100%; max-height:560px; display:block;">
 
         <!-- Quadrant background fills -->
         <!-- DO FIRST: top-left, high impact low effort (green tint) -->
@@ -95,10 +97,10 @@
         <text x="190" y="87" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="800">T1.2</text>
         <text x="190" y="99" text-anchor="middle" font-family="Open Sans" font-size="7" fill="rgba(255,255,255,0.8)">Wellbeing Spec</text>
 
-        <!-- T1.3 AASB S2 Readiness: Impact High, Effort Low-Med. x=220, y=130 -->
-        <circle cx="220" cy="130" r="22" fill="var(--mr-blue-dark)" opacity="0.9"/>
-        <text x="220" y="127" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="800">T1.3</text>
-        <text x="220" y="139" text-anchor="middle" font-family="Open Sans" font-size="7" fill="rgba(255,255,255,0.8)">AASB S2</text>
+        <!-- T1.3 AASB S2 Readiness: Impact High, Effort Low-Med. Moved (220,130)->(280,170) to clear T1.2 collision (rule b) -->
+        <circle cx="280" cy="170" r="22" fill="var(--mr-blue-dark)" opacity="0.9"/>
+        <text x="280" y="167" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#fff" font-weight="800">T1.3</text>
+        <text x="280" y="179" text-anchor="middle" font-family="Open Sans" font-size="7" fill="rgba(255,255,255,0.8)">AASB S2</text>
 
         <!-- T2.1 Wellbeing Spec open standard: Impact High, Effort Med. x=380, y=100 -->
         <circle cx="380" cy="145" r="20" fill="#2E5F8A" opacity="0.9"/>
