@@ -6,10 +6,10 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
- .drivers-layout { display: grid; grid-template-columns: minmax(0, 780px) 1fr; gap: 40px; margin-top: 18px; align-items: start; }
+ .drivers-layout { display: grid; grid-template-columns: minmax(0, 760px) 1fr; gap: 40px; margin-top: 18px; align-items: start; }
 
  /* Hex wheel */
- .hex-wheel { position: relative; width: 720px; height: 480px; }
+ .hex-wheel { position: relative; width: 720px; height: 600px; }
 
  /* Driver cards */
  .driver-list { display: flex; flex-direction: column; gap: 14px; }
@@ -33,67 +33,57 @@
  <div class="drivers-layout">
  <div>
  <!-- Hexagonal driver wheel SVG -->
- <svg viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg" width="720" height="480">
- <defs>
- <!-- Flat-top hex path helper: cx,cy, r=90 -->
- <!-- Flat-top hex: points offset by 30deg from pointy-top -->
- </defs>
- <!-- Centre label -->
- <text x="360" y="228" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63" letter-spacing="1">FLEETWOOD</text>
- <text x="360" y="246" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" fill="#5A9BD5" letter-spacing="1">TWO VOLTAGES</text>
+ <!-- Geometry: centre hex w=160 h=185 at (360,290). 6 outer hexes w=140 h=160 at r=200, 60deg apart. No label overlap. -->
+ <svg viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg" width="720" height="600">
 
- <!-- Centre hex -->
- <polygon points="360,175 437,218 437,302 360,345 283,302 283,218" fill="#E8EEF6" stroke="#4971B7" stroke-width="2"/>
+ <!-- DRIVER 1 top, Federal Modular Mandate (TAILWIND) — centre (360, 90) -->
+ <polygon points="360,10 430,50 430,130 360,170 290,130 290,50" fill="#E8F7F0" stroke="#00D084" stroke-width="2"/>
+ <text x="360" y="62" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#00A86B" letter-spacing="0.8">TAILWIND</text>
+ <text x="360" y="86" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Federal Modular</text>
+ <text x="360" y="104" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Mandate</text>
+ <text x="360" y="130" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#3D7A5A">AUD 54M direct</text>
 
- <!-- DRIVER 1 top, Federal Policy -->
- <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(0,-90)"/>
- <text x="360" y="102" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
- <text x="360" y="116" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Federal</text>
- <text x="360" y="130" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Modular</text>
- <text x="360" y="144" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Mandate</text>
- <text x="360" y="160" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">AUD 54M direct</text>
+ <!-- DRIVER 2 top-right, Labour Shortage (TAILWIND) — centre (533, 190) -->
+ <polygon points="533,110 603,150 603,230 533,270 463,230 463,150" fill="#E8F7F0" stroke="#00D084" stroke-width="2"/>
+ <text x="533" y="162" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#00A86B" letter-spacing="0.8">TAILWIND</text>
+ <text x="533" y="186" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Labour</text>
+ <text x="533" y="204" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Shortage</text>
+ <text x="533" y="230" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#3D7A5A">300K gap by 2027</text>
 
- <!-- DRIVER 2 top-right, Labour shortage -->
- <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(156,-45)"/>
- <text x="516" y="112" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
- <text x="516" y="126" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Labour</text>
- <text x="516" y="140" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Shortage</text>
- <text x="516" y="156" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">300K gap by 2027</text>
+ <!-- DRIVER 3 bottom-right, Pilbara Capex Cycle (TAILWIND) — centre (533, 390) -->
+ <polygon points="533,310 603,350 603,430 533,470 463,430 463,350" fill="#E8F7F0" stroke="#00D084" stroke-width="2"/>
+ <text x="533" y="362" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#00A86B" letter-spacing="0.8">TAILWIND</text>
+ <text x="533" y="386" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Pilbara</text>
+ <text x="533" y="404" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Capex Cycle</text>
+ <text x="533" y="430" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#3D7A5A">993Mt forecast FY26</text>
 
- <!-- DRIVER 3 bottom-right, Pilbara cycle -->
- <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(156,45)"/>
- <text x="516" y="202" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
- <text x="516" y="216" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Pilbara</text>
- <text x="516" y="230" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Capex Cycle</text>
- <text x="516" y="246" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">993Mt forecast FY26</text>
+ <!-- DRIVER 4 bottom, NCC 2025 Compliance (TAILWIND) — centre (360, 490) -->
+ <polygon points="360,410 430,450 430,530 360,570 290,530 290,450" fill="#E8F7F0" stroke="#00D084" stroke-width="2"/>
+ <text x="360" y="462" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#00A86B" letter-spacing="0.8">TAILWIND</text>
+ <text x="360" y="486" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">NCC 2025</text>
+ <text x="360" y="504" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Compliance</text>
+ <text x="360" y="530" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#3D7A5A">Modular wins on audit</text>
 
- <!-- DRIVER 4 bottom, NCC 2025 -->
- <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#E8F7F0" stroke="#00D084" stroke-width="2" transform="translate(0,90)"/>
- <text x="360" y="372" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#00A86B">TAILWIND</text>
- <text x="360" y="386" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">NCC 2025</text>
- <text x="360" y="400" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Compliance</text>
- <text x="360" y="416" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#3D7A5A">Modular wins on audit</text>
+ <!-- DRIVER 5 bottom-left, RV Demand Contraction (HEADWIND) — centre (187, 390) -->
+ <polygon points="187,310 257,350 257,430 187,470 117,430 117,350" fill="#FFF3E8" stroke="#E68A2D" stroke-width="2"/>
+ <text x="187" y="362" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#C0681A" letter-spacing="0.8">HEADWIND</text>
+ <text x="187" y="386" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">RV Demand</text>
+ <text x="187" y="404" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Contraction</text>
+ <text x="187" y="430" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#C0681A">-20% units 2024</text>
 
- <!-- HEADWIND 5 bottom-left, RV demand contraction -->
- <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#FFF3E8" stroke="#E68A2D" stroke-width="2" transform="translate(-156,45)"/>
- <text x="204" y="202" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#C0681A">HEADWIND</text>
- <text x="204" y="216" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">RV Demand</text>
- <text x="204" y="230" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Contraction</text>
- <text x="204" y="246" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#C0681A">-20% units 2024</text>
+ <!-- DRIVER 6 top-left, Import Competition (HEADWIND) — centre (187, 190) -->
+ <polygon points="187,110 257,150 257,230 187,270 117,230 117,150" fill="#FFF3E8" stroke="#E68A2D" stroke-width="2"/>
+ <text x="187" y="162" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#C0681A" letter-spacing="0.8">HEADWIND</text>
+ <text x="187" y="186" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Import</text>
+ <text x="187" y="204" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">Competition</text>
+ <text x="187" y="230" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#C0681A">Middle RV squeezed</text>
 
- <!-- HEADWIND 6 top-left, Import competition -->
- <polygon points="360,85 437,128 437,212 360,255 283,212 283,128" fill="#FFF3E8" stroke="#E68A2D" stroke-width="2" transform="translate(-156,-45)"/>
- <text x="204" y="112" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#C0681A">HEADWIND</text>
- <text x="204" y="126" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Import</text>
- <text x="204" y="140" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Competition</text>
- <text x="204" y="156" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#C0681A">Middle RV squeezed</text>
-
- <!-- Centre label -->
- <polygon points="360,175 437,218 437,302 360,345 283,302 283,218" fill="#E8EEF6" stroke="#4971B7" stroke-width="2.5"/>
- <text x="360" y="252" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="12" font-weight="800" fill="#2E4A63">FLEETWOOD</text>
- <text x="360" y="270" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" fill="#5A9BD5">TWO VOLTAGES</text>
- <text x="360" y="288" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#4971B7">83% industrial</text>
- <text x="360" y="302" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" fill="#4971B7">17% consumer</text>
+ <!-- CENTRE hex, Fleetwood Two Voltages — centre (360, 290) -->
+ <polygon points="360,197.5 440,243.75 440,336.25 360,382.5 280,336.25 280,243.75" fill="#E8EEF6" stroke="#4971B7" stroke-width="2.5"/>
+ <text x="360" y="252" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" font-weight="800" fill="#2E4A63" letter-spacing="1">FLEETWOOD</text>
+ <text x="360" y="276" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" fill="#5A9BD5" letter-spacing="1">TWO VOLTAGES</text>
+ <text x="360" y="308" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#4971B7">83% industrial</text>
+ <text x="360" y="326" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#4971B7">17% consumer</text>
  </svg>
  <div class="sc-source-line"><span class="sc-source">Source: Build Australia [105]; Property Council [106]; Farmonaut [107][108]; The Good Builder [109]; Caravan Industry Association [110]; FY25 Annual Report [2]</span></div>
  </div>
