@@ -6,11 +6,14 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .kpi-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 360px; gap: 28px; align-items: start; }
+  /* Restructured 2026-05-26: KPI tree spans full width on top; tables below in 2-up row */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .kpi-tree-wrap { margin-top: 12px; }
 
-  .tree-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
+  .tree-title { font: 700 12px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .tree-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
 
+  .kpi-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 14px; align-items: start; }
   .kpi-detail-panel { display: flex; flex-direction: column; gap: 8px; }
   .kpi-panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 6px; }
   .kpi-row { display: grid; grid-template-columns: 28px 1fr 80px; gap: 8px; padding: 6px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
@@ -31,14 +34,12 @@
   <div class="sc-body-frame">
   <h2 class="sc-h2">One top metric, six lagging KPIs, six leading indicators: engineered so every kill-switch in Section 7 references a real metric here, not an invented one.</h2>
 
-  <div class="kpi-layout">
-
-    <!-- LEFT: SVG KPI Tree Diagram -->
-    <div>
+  <!-- FULL-WIDTH KPI tree at the top -->
+  <div class="kpi-tree-wrap">
       <div class="tree-title">KPI tree structure, root goal to branches to leaf metrics</div>
       <div class="tree-sub">Root goal (L1 Tier 1 Modular Tender Win Rate) drives three branch families: Business Growth, Operational Excellence, and Market Voice. Each branch carries 2 leaf metrics.</div>
 
-      <svg viewBox="0 0 820 380" preserveAspectRatio="xMidYMid meet" aria-label="KPI tree diagram" style="width:100%; max-height:370px; display:block;">
+      <svg viewBox="0 0 820 380" preserveAspectRatio="xMidYMid meet" aria-label="KPI tree diagram" style="width:100%; max-height:460px; display:block;">
 
         <!-- ROOT NODE: centre-left -->
         <rect x="20" y="148" width="180" height="60" rx="6" fill="var(--mr-blue-dark)"/>
@@ -142,12 +143,10 @@
         <text x="360" y="361" font-family="Open Sans" font-size="9" fill="#2E4A63" font-weight="600">Leaf KPIs (L2-L6, Le6)</text>
       </svg>
 
-      <div style="margin-top:6px; padding-top:6px; border-top:1px solid var(--bg-rule);">
-        <p style="margin:0; font:400 italic var(--t-caption)/1.4 var(--font-sans); color:var(--fg-muted);">Source: Business Planning Section 3 (KPI Tree); Searipple Village occupancy [2][83]; AASB S2 Group 1 obligation [2] p.26; AusTender panel reference [Audience 2]; SoS extension not yet run (ESTIMATED) [Note 1]</p>
-      </div>
-    </div>
+  </div>
 
-    <!-- RIGHT: Detail panel (key KPIs tabulated) -->
+  <!-- 2-up KPI tables below the tree -->
+  <div class="kpi-tables">
     <div class="kpi-detail-panel">
       <div>
         <div class="kpi-panel-hd">Lagging KPIs (L1-L6)</div>
@@ -201,6 +200,9 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="kpi-detail-panel">
       <div>
         <div class="kpi-panel-hd leading-hd">Key Leading Indicators (Le1, Le2, Le5, Le6)</div>
         <div class="kpi-row leading">
