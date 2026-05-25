@@ -270,3 +270,21 @@ html, body {
   text-align: right;
   margin-top: 2px;
 }
+
+/* ---------- Subject brand mark (per K.12 + K.13, e.g. Fleetwood logo on
+   cover + dividers). Distinct from chrome (Cadet + York Studios) and from
+   agency logo (Mode A). Sits in the gradient slides as the deck-subject
+   identity. Added 2026-05-25 22:33 AEST. */
+.sc-subject-mark {
+  position: absolute;
+  z-index: 4;
+  display: inline-block;
+  pointer-events: none;
+}
+.sc-subject-mark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sc-subject-mark.cover    { top: 80px;  left: 120px; width: 480px; }
+.sc-subject-mark.divider  { top: 100px; right: 120px; width: 220px; }
