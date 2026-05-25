@@ -39,12 +39,14 @@
   /* ---------------------------------------------------------------------------
      3. CONFIDENCE CHIPS  (data-quality flag on every synthesis claim)
      --------------------------------------------------------------------------- */
-  /* 4-tier confidence system locked 2026-05-24. Red retired from chips —
-     reserved for crisis flags + forbidden callouts only. */
+  /* 4-tier confidence system locked 2026-05-24, palette revised 2026-05-25.
+     PROBABLE + ESTIMATED moved away from amber/orange (read as warnings) to
+     deep-teal + muted-purple (read as confidence/considered/calculated).
+     Red retired from chips — reserved for crisis flags + forbidden callouts only. */
   --chip-verified-bg:     #00D084;   --chip-verified-fg:     #FFFFFF;  /* externally confirmed */
-  --chip-probable-bg:     #FCB900;   --chip-probable-fg:     #1A1A1A;  /* externally sourced, partial */
-  --chip-estimated-bg:    #E68A2D;   --chip-estimated-fg:    #FFFFFF;  /* numeric estimate from available data */
-  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* AI synthesis, working hypothesis */
+  --chip-probable-bg:     #3B8FA1;   --chip-probable-fg:     #FFFFFF;  /* deep teal, considered, secondary source */
+  --chip-estimated-bg:    #7B5EA8;   --chip-estimated-fg:    #FFFFFF;  /* muted purple, calculated from data */
+  --chip-hypothesised-bg: #6B7E96;   --chip-hypothesised-fg: #FFFFFF;  /* cool slate, AI synthesis */
   /* Legacy alias — UNCERTAIN repointed to HYPOTHESISED slate during slide migration.
      Retire this alias after the audit lands. Do not introduce new UNCERTAIN usage. */
   --chip-uncertain-bg:    #6B7E96;   --chip-uncertain-fg:    #FFFFFF;
@@ -134,14 +136,18 @@
 .sc-kpi-big     { font: var(--t-kpi-big);    color: var(--mr-blue-dark); letter-spacing: -0.025em; }
 .sc-kpi-big.on-dark { color: var(--fg-on-dark); }
 
-/* Confidence chips — inline, slab corners. */
+/* Confidence chips — inline, slab corners.
+   Chip font bumped 9px → 11px on 2026-05-25 per Stuart decision: the v6 build
+   surfaced 31 slides with inline `style="font-size:11px"` overrides on chip
+   spans because the 9px token rendered visually too small. Bumping the token
+   keeps the visual the same while restoring design-token discipline. */
 .sc-chip {
   display: inline-flex;
   align-items: center;
-  height: 16px;
-  padding: 0 6px;
+  height: 18px;
+  padding: 0 7px;
   border-radius: var(--r-chip);
-  font: 700 9px/1 var(--font-sans);
+  font: 700 11px/1 var(--font-sans);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   vertical-align: 1px;
