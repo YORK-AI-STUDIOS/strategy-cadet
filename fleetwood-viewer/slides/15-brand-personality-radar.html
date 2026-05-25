@@ -9,7 +9,7 @@
  /* Bigger radar on left, right text-block column moved across for breathing room */
  .radar-layout { display: grid; grid-template-columns: minmax(0, 960px) 560px; gap: 60px; margin-top: 18px; align-items: start; }
  .radar-wrap { position: relative; }
- .radar-wrap svg { width: 100%; height: auto; max-height: 660px; display: block; overflow: visible; }
+ .radar-wrap svg { width: 100%; height: auto; max-height: 726px; display: block; overflow: visible; }
  .radar-legend { margin-top: 18px; display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
  .rl-item { display: flex; align-items: center; gap: 8px; font: 400 var(--t-caption)/1 var(--font-sans); color: var(--fg-body); }
  .rl-dot { width: 12px; height: 12px; border-radius: 50%; }
@@ -103,12 +103,12 @@
  <!-- Axis 4 (288°): (124.8*sin288, -124.8*cos288) = (124.8*(-0.9511), -124.8*(0.309)) = (-118.7, -38.6) -->
  <polygon points="0,-136 45.6,-14.8 75.2,103.6 -26.3,36.2 -118.7,-38.6" class="fwd-poly"/>
 
- <!-- Score labels on Fleetwood polygon vertices -->
- <text x="6" y="-142" class="score-label">85%</text>
- <text x="50" y="-18" class="score-label">30%</text>
- <text x="78" y="115" class="score-label">80%</text>
- <text x="-55" y="42" class="score-label">28%</text>
- <text x="-148" y="-44" class="score-label">78%</text>
+ <!-- Score labels on Fleetwood polygon vertices, repositioned INSIDE the polygon to avoid colliding with axis labels/subtitles -->
+ <text x="0" y="-118" text-anchor="middle" class="score-label">85%</text>
+ <text x="34" y="-4" text-anchor="start" class="score-label">30%</text>
+ <text x="58" y="92" text-anchor="start" class="score-label">80%</text>
+ <text x="-32" y="30" text-anchor="end" class="score-label">28%</text>
+ <text x="-102" y="-32" text-anchor="end" class="score-label">78%</text>
 
  <!-- Axis labels -->
  <text x="0" y="-172" text-anchor="middle" class="ax-label">Sincerity</text>
