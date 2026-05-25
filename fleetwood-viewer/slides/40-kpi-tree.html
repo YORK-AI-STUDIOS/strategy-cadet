@@ -7,15 +7,7 @@
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
   /* Restructured 2026-05-26: KPI tree spans full width on top; tables below in 2-up row */
-  .sc-slide .sc-body-frame { inset: 52px var(--slide-margin-x) 130px; }
-  /* Pin source-line to a SPECIFIC y on the slide, not the bottom of the flex container */
-  .sc-slide .sc-source-line {
-    position: absolute;
-    bottom: 80px;
-    left: var(--slide-margin-x);
-    right: var(--slide-margin-x);
-    margin-top: 0;
-  }
+  .sc-slide .sc-body-frame { inset: 52px var(--slide-margin-x) 110px; }
   .sc-slide .sc-h2 { margin-bottom: 6px; }
   .kpi-tree-wrap { margin-top: 0; }
   .kpi-tables { margin-top: 8px; }
@@ -51,12 +43,12 @@
 
       <svg viewBox="0 0 820 380" preserveAspectRatio="xMidYMid meet" aria-label="KPI tree diagram" style="width:100%; max-height:460px; display:block;">
 
-        <!-- ROOT NODE: centre-left -->
-        <rect x="20" y="148" width="180" height="60" rx="6" fill="var(--mr-blue-dark)"/>
-        <text x="110" y="169" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="rgba(255,255,255,0.6)" letter-spacing="0.1em">TOP METRIC (L1)</text>
-        <text x="110" y="182" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="800" fill="#fff">Tier 1 Modular</text>
-        <text x="110" y="194" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="800" fill="#fff">Tender Win Rate</text>
-        <text x="110" y="208" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#FCB900" font-weight="700">Target: 30% by Day 180</text>
+        <!-- ROOT NODE: centre-left. Height 60->76 so all 4 lines fit inside the box without bottom overflow. -->
+        <rect x="20" y="140" width="180" height="76" rx="6" fill="var(--mr-blue-dark)"/>
+        <text x="110" y="158" text-anchor="middle" font-family="Open Sans" font-size="9" font-weight="700" fill="rgba(255,255,255,0.6)" letter-spacing="0.1em">TOP METRIC (L1)</text>
+        <text x="110" y="174" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="800" fill="#fff">Tier 1 Modular</text>
+        <text x="110" y="188" text-anchor="middle" font-family="Open Sans" font-size="10" font-weight="800" fill="#fff">Tender Win Rate</text>
+        <text x="110" y="206" text-anchor="middle" font-family="Open Sans" font-size="9" fill="#FCB900" font-weight="700">Target: 30% by Day 180</text>
 
         <!-- Trunk line from root to branch split -->
         <line x1="200" y1="178" x2="260" y2="178" stroke="#2E4A63" stroke-width="2"/>
