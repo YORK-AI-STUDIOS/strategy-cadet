@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+Slide 03 (combined deck) — StratCadet Overview, How it works (the engine)
+Infographic page 3 of 4, rebuilt as Cadet-native HTML slide.
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StratCadet Overview, How it works, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="palette-fleetwood.css">
+<style>
+  .engine .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+
+  .engine .top-row { display: grid; grid-template-columns: 1fr 700px; gap: 40px; align-items: start; margin-bottom: 28px; }
+
+  .engine .left h2 { margin: 0; font: 800 52px/1.05 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.018em; }
+  .engine .left h2 .alt { color: #4971B7; }
+  .engine .left p { margin: 16px 0 0; font: 400 15px/1.55 var(--font-sans); color: var(--fg-body); max-width: 640px; }
+  .engine .left p strong { color: var(--fg-heading); font-weight: 700; }
+
+  .engine .right-panel {
+    background: linear-gradient(135deg, #5A9BD5 0%, #4971B7 100%);
+    color: var(--fg-on-dark);
+    padding: 28px 32px;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .engine .right-panel::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .engine .right-panel .eb {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #FCB900;
+    margin-bottom: 12px;
+  }
+  .engine .right-panel h3 {
+    margin: 0 0 24px;
+    font: 800 28px/1.15 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: -0.005em;
+  }
+  .engine .right-panel .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .engine .right-panel .stat .v {
+    font: 800 56px/1 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: -0.025em;
+    display: block;
+  }
+  .engine .right-panel .stat .l {
+    margin-top: 6px;
+    font: 700 11px/1.3 var(--font-sans);
+    color: #FCB900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .engine .right-panel .stat .sub {
+    font: 400 12px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.78);
+    margin-top: 2px;
+  }
+
+  .engine .layers-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--bg-rule);
+    margin-bottom: 14px;
+  }
+  .engine .layers-head h4 {
+    margin: 0;
+    font: 700 20px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+  }
+  .engine .layers-head .meta {
+    font: var(--t-eyebrow);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .engine .layers-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    flex: 1;
+    min-height: 0;
+  }
+  .engine .lyr {
+    background: #F4F7FB;
+    padding: 14px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .engine .lyr .lyr-lbl {
+    font: 700 10px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4971B7;
+  }
+  .engine .lyr .ico {
+    width: 36px;
+    height: 36px;
+    margin: 6px 0 4px;
+  }
+  .engine .lyr .ico svg { width: 100%; height: 100%; }
+  .engine .lyr .name {
+    font: 700 15px/1.25 var(--font-sans);
+    color: var(--fg-heading);
+  }
+  .engine .lyr .desc {
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid var(--bg-rule);
+    font: 400 12px/1.4 var(--font-sans);
+    color: var(--fg-body);
+  }
+
+  .engine .footer-band {
+    background: #1A1A1A;
+    color: #fff;
+    padding: 14px 20px;
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .engine .footer-band .fb-hd {
+    font: 800 italic 16px/1.2 var(--font-sans);
+    color: #FCB900;
+    white-space: nowrap;
+    max-width: 260px;
+  }
+  .engine .footer-band .fb-body {
+    font: 400 13px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.88);
+  }
+  .engine .footer-band .fb-body strong { color: #fff; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide engine" data-screen-label="03 StratCadet Overview How it works">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Strategy Cadet  ·  How it works  ·  The engine</span></div>
+  <div class="sc-body-frame">
+
+    <div class="top-row">
+      <div class="left">
+        <h2>60-80 hours of senior strategist research. <span class="alt">Compressed into one brief.</span></h2>
+        <p>Cadet orchestrates <strong>hundreds of sub-agent actions across six data layers</strong>: local AI models, frontier APIs, and authoritative public records, all running in parallel, all citing as they go.</p>
+      </div>
+
+      <div class="right-panel">
+        <div class="eb">Under the hood</div>
+        <h3>A multi-agent intelligence pipeline.</h3>
+        <div class="stat-grid">
+          <div class="stat"><span class="v">100+</span><div class="l">Sub-agent actions</div><div class="sub">Per run, orchestrated</div></div>
+          <div class="stat"><span class="v">6</span><div class="l">Data layers</div><div class="sub">Running in parallel</div></div>
+          <div class="stat"><span class="v">3</span><div class="l">Phases</div><div class="sub">Gather, Reason, Adjudicate</div></div>
+          <div class="stat"><span class="v">5</span><div class="l">Public records</div><div class="sub">Regulatory regimes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layers-head">
+      <h4>Six data layers, orchestrated in a single run.</h4>
+      <div class="meta">Local AI models  ·  Frontier APIs  ·  Authoritative public records</div>
+    </div>
+
+    <div class="layers-grid">
+      <div class="lyr">
+        <div class="lyr-lbl">Layer 01</div>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#4971B7" stroke-width="1.5"><circle cx="18" cy="18" r="14"/><ellipse cx="18" cy="18" rx="6" ry="14"/><line x1="4" y1="18" x2="32" y2="18"/></svg></div>
+        <div class="name">Live web research with citation discipline</div>
+        <div class="desc">1 URL per 100 words. AU-localised wherever possible.</div>
+      </div>
+
+      <div class="lyr">
+        <div class="lyr-lbl">Layer 02</div>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#4971B7" stroke-width="1.5"><circle cx="18" cy="10" r="3"/><circle cx="8" cy="24" r="3"/><circle cx="28" cy="24" r="3"/><line x1="18" y1="13" x2="9" y2="22"/><line x1="18" y1="13" x2="27" y2="22"/><line x1="11" y1="24" x2="25" y2="24"/></svg></div>
+        <div class="name">Managed social scraping</div>
+        <div class="desc">TikTok, Instagram, Meta Ads, YouTube.</div>
+      </div>
+
+      <div class="lyr">
+        <div class="lyr-lbl">Layer 03</div>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#4971B7" stroke-width="1.5"><path d="M10 6 L24 6 L30 12 L30 30 L10 30 Z"/><path d="M24 6 L24 12 L30 12"/><line x1="14" y1="18" x2="26" y2="18"/><line x1="14" y1="22" x2="26" y2="22"/><line x1="14" y1="26" x2="22" y2="26"/></svg></div>
+        <div class="name">PDF parsing of regulatory filings</div>
+        <div class="desc">Annual reports, sustainability, half-year, prospectuses.</div>
+      </div>
+
+      <div class="lyr">
+        <div class="lyr-lbl">Layer 04</div>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#4971B7" stroke-width="1.5"><path d="M4 14 L18 6 L32 14"/><rect x="6" y="14" width="24" height="14"/><line x1="10" y1="14" x2="10" y2="28"/><line x1="18" y1="14" x2="18" y2="28"/><line x1="26" y1="14" x2="26" y2="28"/><line x1="4" y1="30" x2="32" y2="30"/></svg></div>
+        <div class="name">Authoritative public records</div>
+        <div class="desc">ABR, SEC EDGAR, Companies House, IP Australia, OpenCorporates.</div>
+      </div>
+
+      <div class="lyr">
+        <div class="lyr-lbl">Layer 05</div>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#4971B7" stroke-width="1.5"><circle cx="18" cy="18" r="14"/><circle cx="18" cy="18" r="9"/><circle cx="18" cy="18" r="4" fill="#4971B7"/></svg></div>
+        <div class="name">Perplexity Sonar grounding</div>
+        <div class="desc">Market sizing, industry drivers, ESOV positioning.</div>
+      </div>
+
+      <div class="lyr">
+        <div class="lyr-lbl">Layer 06</div>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#4971B7" stroke-width="1.5"><path d="M10 6 L26 6 L18 18 L26 30 L10 30 L18 18 Z"/></svg></div>
+        <div class="name">AI-engine query proxying</div>
+        <div class="desc">GEO visibility, share-of-search trend analysis.</div>
+      </div>
+    </div>
+
+    <div class="footer-band">
+      <div class="fb-hd">The analyst your strategist wishes they had before every brief.</div>
+      <div class="fb-body">Thorough. <strong>Transparent about what it does not know.</strong> Fast enough to run before a pitch, not after it. Cadet does the grind. The strategist makes the call.</div>
+    </div>
+
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="03" data-of="85"></script>
+</body>
+</html>

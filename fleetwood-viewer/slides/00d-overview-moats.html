@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+Slide 04 (combined deck) — StratCadet Overview, What sets it apart (moats + chips)
+Infographic page 4 of 4, rebuilt as Cadet-native HTML slide.
+Confidence chips updated to NEW palette per Stuart lock 2026-05-25:
+  PROBABLE  amber #FCB900 → teal #3B8FA1
+  ESTIMATED orange #E68A2D → purple #7B5EA8
+VERIFIED green + HYPOTHESISED slate unchanged.
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StratCadet Overview, What sets it apart, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="palette-fleetwood.css">
+<style>
+  .moats .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+
+  .moats .head h2 { margin: 0; font: 800 48px/1.05 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.018em; max-width: 1500px; }
+  .moats .head h2 .alt { color: #4971B7; }
+  .moats .head h2 .zero { color: #FCB900; text-transform: uppercase; }
+  .moats .head .sub { margin-top: 14px; font: 400 16px/1.5 var(--font-sans); color: var(--fg-body); max-width: 1500px; }
+
+  .moats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+  .moat-card {
+    background: #F4F7FB;
+    border-top: 4px solid #4971B7;
+    padding: 18px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .moat-card.green { border-top-color: #00D084; background: #F2FBF6; }
+
+  .moat-card .lbl-row { display: flex; align-items: center; gap: 12px; }
+  .moat-card .num-circle {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: #4971B7;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font: 800 13px/1 var(--font-sans);
+  }
+  .moat-card.green .num-circle { background: #00D084; }
+  .moat-card .lbl {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4971B7;
+  }
+  .moat-card.green .lbl { color: #008F58; }
+  .moat-card h3 { margin: 4px 0 0; font: 800 22px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .moat-card p { margin: 0; font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); }
+
+  .moat-card .test-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 8px;
+    padding: 12px;
+    background: #fff;
+  }
+  .moat-card .test {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .moat-card .test .t-lbl {
+    font: 700 9px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4971B7;
+  }
+  .moat-card .test .t-name {
+    font: 700 13px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+  }
+  .moat-card .test .t-body {
+    font: 400 11px/1.4 var(--font-sans);
+    color: var(--fg-body);
+  }
+
+  .moat-card .caught {
+    margin-top: 8px;
+    padding: 12px 14px;
+    background: #fff;
+    border-left: 3px solid #008F58;
+  }
+  .moat-card .caught .c-lbl {
+    font: 700 9px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #008F58;
+    margin-bottom: 6px;
+  }
+  .moat-card .caught p { font: 400 italic 12px/1.45 var(--font-sans); color: var(--fg-body); }
+  .moat-card .caught .resolved {
+    margin-top: 8px;
+    font: 700 12px/1.3 var(--font-sans);
+    color: #008F58;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .moat-card .caught .resolved svg { width: 14px; height: 14px; }
+
+  .chip-section { margin-top: 24px; }
+  .chip-section-head { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--bg-rule); margin-bottom: 14px; }
+  .chip-section-head h4 { margin: 0; font: 700 18px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .chip-section-head .meta { font: var(--t-eyebrow); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-muted); }
+
+  .chip-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+  .chip-card {
+    padding: 14px 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .chip-card.v { background: #F2FBF6; border-top: 5px solid #00D084; }
+  .chip-card.p { background: #EBF4F7; border-top: 5px solid #3B8FA1; }
+  .chip-card.e { background: #F1ECF8; border-top: 5px solid #7B5EA8; }
+  .chip-card.h { background: #F0F3F7; border-top: 5px solid #6B7E96; }
+
+  .chip-card .chip-lbl-row { display: flex; justify-content: space-between; align-items: center; }
+  .chip-card .big-chip {
+    display: inline-flex;
+    align-self: flex-start;
+    font: 800 24px/1 var(--font-sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    color: #fff;
+  }
+  .chip-card.v .big-chip { background: #00D084; }
+  .chip-card.p .big-chip { background: #3B8FA1; color: #fff; }
+  .chip-card.e .big-chip { background: #7B5EA8; }
+  .chip-card.h .big-chip { background: #6B7E96; }
+  .chip-card .strength {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+  .chip-card .c-title { font: 700 15px/1.25 var(--font-sans); color: var(--fg-heading); }
+  .chip-card .c-body { font: 400 12px/1.45 var(--font-sans); color: var(--fg-body); }
+
+  .moats .footer-band {
+    background: #1A1A1A;
+    color: #fff;
+    padding: 14px 20px;
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .moats .footer-band .fb-hd {
+    font: 800 italic 16px/1.2 var(--font-sans);
+    color: #FCB900;
+    white-space: nowrap;
+  }
+  .moats .footer-band .fb-body {
+    font: 400 13px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.88);
+  }
+  .moats .footer-band .fb-body strong { color: #fff; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide moats" data-screen-label="04 StratCadet Overview What sets it apart">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Strategy Cadet  ·  How it works  ·  What sets it apart</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h2>Two structural moats. <span class="alt">Four confidence tags.</span> <span class="zero">Zero pretending.</span></h2>
+      <div class="sub">Single-pass AI tools produce one output and hope it holds up. Trouble is, a fluent hallucination reads exactly like a verified fact, and humans are easily fooled. Cadet adjudicates its own work, then labels every claim with the evidence behind it.</div>
+    </div>
+
+    <div class="moats-row">
+      <div class="moat-card">
+        <div class="lbl-row">
+          <span class="num-circle">1</span>
+          <span class="lbl">Moat  ·  Adjudication-Grade Goal Validation</span>
+        </div>
+        <h3>Every recommended goal is tested against three failure modes before it ships.</h3>
+        <p>Most tools stop at proposing a goal. Cadet runs three independent tests. Any goal that fails one is reworked before the report ships.</p>
+        <div class="test-grid">
+          <div class="test">
+            <div class="t-lbl">Test 01</div>
+            <div class="t-name">Market reality</div>
+            <div class="t-body">Is the addressable market large enough to support the goal?</div>
+          </div>
+          <div class="test">
+            <div class="t-lbl">Test 02</div>
+            <div class="t-name">Competitive density</div>
+            <div class="t-body">Is the positioning still available, or is it already owned?</div>
+          </div>
+          <div class="test">
+            <div class="t-lbl">Test 03</div>
+            <div class="t-name">Brand capability</div>
+            <div class="t-body">Does the brand have the assets to deliver on this goal?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="moat-card green">
+        <div class="lbl-row">
+          <span class="num-circle">2</span>
+          <span class="lbl">Moat  ·  Phase 3 Cross-Reference Verification</span>
+        </div>
+        <h3>Every factual claim is independently re-verified before the report is built.</h3>
+        <p>Every factual claim is extracted and re-checked against a second authoritative source. Discrepancies are flagged for operator verification.</p>
+        <div class="caught">
+          <div class="c-lbl">Caught in a recent run</div>
+          <p>"A Big-Four firm was named as the auditor instead of the correct Big-Four firm. The kind of error any reader in financial services would spot."</p>
+          <div class="resolved">
+            <svg viewBox="0 0 14 14" fill="none" stroke="#00A865" stroke-width="2">
+              <circle cx="7" cy="7" r="6"/>
+              <path d="M4 7 L6 9 L10 5"/>
+            </svg>
+            Corrected before the report shipped. That class of error never reaches the client.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chip-section">
+      <div class="chip-section-head">
+        <h4>Four confidence tags. Colour-coded on every claim.</h4>
+        <div class="meta">Tagged at generation  ·  upgraded only after explicit re-research</div>
+      </div>
+      <div class="chip-grid">
+        <div class="chip-card v">
+          <div class="chip-lbl-row">
+            <span class="big-chip">Verified</span>
+            <span class="strength">Strongest</span>
+          </div>
+          <div class="c-title">Externally confirmed via authoritative source.</div>
+          <div class="c-body">Multiple independent sources, or one definitive primary record, confirm the claim. Defensible in a boardroom without further audit.</div>
+        </div>
+        <div class="chip-card p">
+          <div class="chip-lbl-row">
+            <span class="big-chip">Probable</span>
+            <span class="strength">Strong</span>
+          </div>
+          <div class="c-title">Externally sourced but partial.</div>
+          <div class="c-body">Single credible source, logical inference from verified adjacent data, or industry consensus. Strong, but worth checking before a high-stakes commitment.</div>
+        </div>
+        <div class="chip-card e">
+          <div class="chip-lbl-row">
+            <span class="big-chip">Estimated</span>
+            <span class="strength">Calculated</span>
+          </div>
+          <div class="c-title">Numeric estimate with stated assumptions.</div>
+          <div class="c-body">A figure computed from available data because the exact number is not externally published. Every input and assumption disclosed alongside.</div>
+        </div>
+        <div class="chip-card h">
+          <div class="chip-lbl-row">
+            <span class="big-chip">Hypothesised</span>
+            <span class="strength">Working</span>
+          </div>
+          <div class="c-title">AI synthesis, working hypothesis.</div>
+          <div class="c-body">A possibility reasoned from available signals, not directly evidenced. Surfaces a thread worth pulling. Never asserts itself as fact.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-band">
+      <div class="fb-hd">Honest confidence, throughout.</div>
+      <div class="fb-body">Your strategist sees exactly what's <strong>grounded research</strong>, what's a <strong>calculated estimate</strong>, and what's <strong>inventive synthesis worth stress-testing</strong>. Cadet labels its work. The strategist makes the call.</div>
+    </div>
+
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="04" data-of="85"></script>
+</body>
+</html>

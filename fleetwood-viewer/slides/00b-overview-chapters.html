@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+Slide 02 (combined deck) — StratCadet Overview, What it delivers (8 chapters)
+Infographic page 2 of 4, rebuilt as Cadet-native HTML slide.
+White background, MR-blue accents kept (page 1 carries the grey gradient).
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StratCadet Overview, What it delivers, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="palette-fleetwood.css">
+<style>
+  .chapt .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .chapt .head h2 { margin: 0; font: 800 48px/1.1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.015em; max-width: 1500px; }
+  .chapt .head h2 .alt { color: #4971B7; }
+  .chapt .head .sub { margin-top: 12px; font: 400 17px/1.45 var(--font-sans); color: var(--fg-body); max-width: 1300px; }
+
+  .chapt .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 28px 0; padding: 20px 0; border-top: 1px solid var(--bg-rule); border-bottom: 1px solid var(--bg-rule); }
+  .chapt .hs { display: flex; align-items: baseline; gap: 14px; }
+  .chapt .hs .v { font: 800 36px/1 var(--font-sans); color: #4971B7; letter-spacing: -0.02em; }
+  .chapt .hs .l {
+    font: 700 11px/1.3 var(--font-sans);
+    color: var(--fg-body);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .chapt .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; flex: 1; min-height: 0; }
+  .chapt .card {
+    background: #F4F7FB;
+    border-top: 4px solid #4971B7;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .chapt .card.gold   { border-top-color: #FCB900; }
+  .chapt .card.green  { border-top-color: #00D084; }
+  .chapt .card.purple { border-top-color: #7B5EA8; }
+  .chapt .card.teal   { border-top-color: #3B8FA1; }
+  .chapt .card.orange { border-top-color: #E68A2D; }
+  .chapt .card.slate  { border-top-color: #6B7E96; }
+
+  .chapt .card .top-row { display: flex; justify-content: space-between; align-items: center; }
+  .chapt .card .ch-num {
+    font: 700 12px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+  .chapt .card .ch-cat {
+    font: 700 12px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4971B7;
+  }
+  .chapt .card.gold .ch-cat { color: #C56A00; }
+  .chapt .card.green .ch-cat { color: #008F58; }
+  .chapt .card.purple .ch-cat { color: #5E4080; }
+  .chapt .card.teal .ch-cat { color: #1E6F80; }
+  .chapt .card.orange .ch-cat { color: #B5651A; }
+  .chapt .card.slate .ch-cat { color: #4A5566; }
+
+  .chapt .card .big-num { font: 800 36px/1 var(--font-sans); color: #4971B7; letter-spacing: -0.02em; }
+  .chapt .card.gold .big-num { color: #C56A00; }
+  .chapt .card.green .big-num { color: #008F58; }
+  .chapt .card.purple .big-num { color: #5E4080; }
+  .chapt .card.teal .big-num { color: #1E6F80; }
+  .chapt .card.orange .big-num { color: #B5651A; }
+  .chapt .card.slate .big-num { color: #4A5566; }
+
+  .chapt .card .num-sub {
+    font: 700 10px/1.2 var(--font-sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fg-body);
+  }
+  .chapt .card .ch-title {
+    font: 700 16px/1.25 var(--font-sans);
+    color: var(--fg-heading);
+    margin-top: 2px;
+  }
+  .chapt .card ul {
+    margin: 6px 0 0;
+    padding-left: 16px;
+    list-style: none;
+  }
+  .chapt .card ul li {
+    position: relative;
+    font: 400 12px/1.5 var(--font-sans);
+    color: var(--fg-body);
+    margin-bottom: 2px;
+  }
+  .chapt .card ul li::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    background: #4971B7;
+  }
+  .chapt .card.gold ul li::before { background: #C56A00; }
+  .chapt .card.green ul li::before { background: #008F58; }
+  .chapt .card.purple ul li::before { background: #5E4080; }
+  .chapt .card.teal ul li::before { background: #1E6F80; }
+  .chapt .card.orange ul li::before { background: #B5651A; }
+  .chapt .card.slate ul li::before { background: #4A5566; }
+
+  .chapt .footer-band {
+    background: #1A1A1A;
+    color: #fff;
+    padding: 14px 20px;
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .chapt .footer-band .fb-hd {
+    font: 800 16px/1.2 var(--font-sans);
+    color: #FCB900;
+    white-space: nowrap;
+  }
+  .chapt .footer-band .fb-body {
+    font: 400 13px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.88);
+  }
+  .chapt .footer-band .fb-body strong { color: #fff; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide chapt" data-screen-label="02 StratCadet Overview What it delivers">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Strategy Cadet  ·  What it delivers  ·  One report. Every angle of the brief.</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h2>From brand DNA to media plan. <span class="alt">One report. Every angle the strategist needs.</span></h2>
+      <div class="sub">A complete brand discovery package. Every chapter sourced, confidence-tagged, and ready to brief.</div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hs"><span class="v">8</span><span class="l">Chapters<br>per report</span></div>
+      <div class="hs"><span class="v">40k+</span><span class="l">Words of<br>strategic intelligence</span></div>
+      <div class="hs"><span class="v">300+</span><span class="l">Cited sources,<br>every claim footnoted</span></div>
+      <div class="hs"><span class="v">80+</span><span class="l">Boardroom-ready<br>dossier</span></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="top-row"><span class="ch-num">01</span><span class="ch-cat">Brand</span></div>
+        <div class="big-num">16 <span class="num-sub">DIMENSIONS</span></div>
+        <div class="ch-title">Brand DNA, top to bottom.</div>
+        <ul>
+          <li>Three messaging themes</li>
+          <li>Voice and personality profile</li>
+          <li>Founder story and origin</li>
+        </ul>
+      </div>
+
+      <div class="card teal">
+        <div class="top-row"><span class="ch-num">02</span><span class="ch-cat">Audiences</span></div>
+        <div class="big-num">3 <span class="num-sub">NAMED AUDIENCES</span></div>
+        <div class="ch-title">Profiles a creative can actually brief.</div>
+        <ul>
+          <li>Psychographic profile</li>
+          <li>Cultural signals, purchase drivers</li>
+          <li>Category entry points</li>
+        </ul>
+      </div>
+
+      <div class="card green">
+        <div class="top-row"><span class="ch-num">03</span><span class="ch-cat">Competitors</span></div>
+        <div class="big-num">6 <span class="num-sub">PROFILED IN DEPTH</span></div>
+        <div class="ch-title">Competitor forensics, not just logos.</div>
+        <ul>
+          <li>Ownership, financials, ESG</li>
+          <li>Litigation history</li>
+          <li>Side-by-side positioning matrix</li>
+        </ul>
+      </div>
+
+      <div class="card gold">
+        <div class="top-row"><span class="ch-num">04</span><span class="ch-cat">Market</span></div>
+        <div class="big-num">6-8 <span class="num-sub">EMERGING TRENDS</span></div>
+        <div class="ch-title">Sized, dated, and pressure-tested.</div>
+        <ul>
+          <li>Market sizing, industry drivers</li>
+          <li>Macroeconomic factors</li>
+          <li>Forward-looking trend read</li>
+        </ul>
+      </div>
+
+      <div class="card purple">
+        <div class="top-row"><span class="ch-num">05</span><span class="ch-cat">Strategy</span></div>
+        <div class="big-num">4 <span class="num-sub">STRATEGY PILLARS</span></div>
+        <div class="ch-title">Named, defensible, ready to brief.</div>
+        <ul>
+          <li>Customer problem themes, value props</li>
+          <li>Named brand opportunity ideas</li>
+          <li>Five recommended actions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="top-row"><span class="ch-num">06</span><span class="ch-cat">Innovation</span></div>
+        <div class="big-num">10 <span class="num-sub">INNOVATION TYPES</span></div>
+        <div class="ch-title">Deloitte Ten Types, per audience.</div>
+        <ul>
+          <li>Innovation matrix per audience</li>
+          <li>Mapped across the three audiences</li>
+          <li>Concrete plays, not categories</li>
+        </ul>
+      </div>
+
+      <div class="card slate">
+        <div class="top-row"><span class="ch-num">07</span><span class="ch-cat">Business Plan</span></div>
+        <div class="big-num">180 <span class="num-sub">DAY ROADMAP</span></div>
+        <div class="ch-title">Goal, KPI tree, initiatives.</div>
+        <ul>
+          <li>Strategic goal and KPI tree</li>
+          <li>Three tiers of prioritised initiatives</li>
+          <li>Operating cadence, named kill-switches</li>
+        </ul>
+      </div>
+
+      <div class="card orange">
+        <div class="top-row"><span class="ch-num">08</span><span class="ch-cat">Marketing</span></div>
+        <div class="big-num">7 <span class="num-sub">SECTIONS &times; 3 AUDIENCES</span></div>
+        <div class="ch-title">A real activation plan, not a brief.</div>
+        <ul>
+          <li>Channel mix, funnel-stage messaging</li>
+          <li>Creative direction, budget allocation</li>
+          <li>Measurement framework, tactics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-band">
+      <div class="fb-hd">Eight chapters. One brief.</div>
+      <div class="fb-body">A <strong>40,000-word boardroom-ready dossier</strong> covering everything a senior strategist would normally spend 60-80 hours producing. Sourced. Confidence-tagged. Defensible at the line-item level.</div>
+    </div>
+
+  </div>
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="02" data-of="85"></script>
+</body>
+</html>

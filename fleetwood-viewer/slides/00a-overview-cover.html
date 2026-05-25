@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+Slide 01 (combined deck) — StratCadet Overview Cover
+Infographic page 1 of 4, rebuilt as Cadet-native HTML slide.
+Uses Fleetwood charcoal gradient per Stuart 2026-05-25 22:54 AEST.
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StratCadet Overview Cover, Strategy Cadet</title>
+<link rel="stylesheet" href="slide-base.css">
+<link rel="stylesheet" href="palette-fleetwood.css">
+<style>
+  .sc-cov .sc-eyebrow-line { position: absolute; top: 60px; left: 120px; display: flex; align-items: center; gap: 14px; }
+  .sc-cov .sc-eyebrow-line .dot { width: 8px; height: 8px; border-radius: 50%; background: #FCB900; }
+  .sc-cov .sc-eyebrow-line .eb {
+    font: 700 13px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.78);
+  }
+  .sc-cov .sc-eyebrow-line .sep { color: rgba(255,255,255,0.42); margin: 0 4px; }
+
+  .sc-cov .cov-left {
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .sc-cov .cov-left .cad-mark {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255,255,255,0.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sc-cov .cov-left .cad-mark svg { width: 130px; height: 130px; }
+  .sc-cov .cov-left .cad-wordmark {
+    font: 800 88px/0.95 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: -0.03em;
+  }
+
+  .sc-cov .cov-right {
+    position: absolute;
+    top: 130px;
+    right: 100px;
+    width: 720px;
+  }
+  .sc-cov .dict-entry { padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.22); }
+  .sc-cov .dict-entry:first-child { border-top: 2px solid rgba(255,255,255,0.42); }
+  .sc-cov .dict-entry:last-child { border-bottom: 1px solid rgba(255,255,255,0.22); }
+  .sc-cov .hw-line { display: flex; gap: 12px; align-items: baseline; margin-bottom: 10px; }
+  .sc-cov .hw { font: 800 28px/1 var(--font-sans); color: var(--fg-on-dark); letter-spacing: -0.005em; }
+  .sc-cov .hw.gold { color: #FCB900; }
+  .sc-cov .pron { font: 400 italic 15px/1 var(--font-sans); color: rgba(255,255,255,0.55); }
+  .sc-cov .pos  { font: 400 italic 14px/1 var(--font-sans); color: rgba(255,255,255,0.55); }
+  .sc-cov .dict-entry p { margin: 0; font: 400 15px/1.55 var(--font-sans); color: rgba(255,255,255,0.88); }
+  .sc-cov .dict-entry p em { font-style: italic; color: var(--fg-on-dark); }
+
+  .sc-cov .tagline {
+    position: absolute;
+    bottom: 110px;
+    left: 120px;
+    font: 800 italic 28px/1.2 var(--font-sans);
+    color: #FCB900;
+    letter-spacing: -0.005em;
+    max-width: 880px;
+  }
+  .sc-cov .attribution {
+    position: absolute;
+    bottom: 110px;
+    right: 100px;
+    text-align: right;
+  }
+  .sc-cov .attribution .a-name {
+    font: 700 15px/1.2 var(--font-sans);
+    color: var(--fg-on-dark);
+  }
+  .sc-cov .attribution .a-sub {
+    font: 400 12px/1.4 var(--font-sans);
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+  }
+  .sc-cov .footer-band {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 40px;
+    background: #1A1A1A;
+  }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide gradient sc-cov" data-screen-label="01 StratCadet Overview Cover">
+
+  <div class="sc-eyebrow-line">
+    <span class="dot"></span>
+    <span class="eb">Strategy Cadet</span>
+    <span class="sep">·</span>
+    <span class="eb">A York Studios Product</span>
+    <span class="sep">·</span>
+    <span class="eb">Melbourne, Australia</span>
+  </div>
+
+  <div class="cov-left">
+    <div class="cad-mark">
+      <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path d="M 30 22 L 100 22 L 60 75 L 80 88 Z" fill="#FFFFFF"/>
+        <circle cx="38" cy="92" r="5" fill="#FFFFFF"/>
+        <circle cx="58" cy="105" r="4" fill="#FFFFFF" opacity="0.7"/>
+        <circle cx="78" cy="115" r="3" fill="#FFFFFF" opacity="0.5"/>
+        <line x1="38" y1="92" x2="78" y2="115" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="cad-wordmark">Strategy<br>Cadet</div>
+  </div>
+
+  <div class="cov-right">
+    <article class="dict-entry">
+      <div class="hw-line">
+        <span class="hw">strat&middot;e&middot;gy</span>
+        <span class="pron">/&#712;str&aelig;t&#601;d&#658;i/</span>
+        <span class="pos">noun.</span>
+      </div>
+      <p>The disciplined business of analysing markets, audiences and competitors to decide where to play and how to win. Strategy turns evidence into direction.</p>
+    </article>
+
+    <article class="dict-entry">
+      <div class="hw-line">
+        <span class="hw">ca&middot;det</span>
+        <span class="pron">/k&#601;&#712;d&#603;t/</span>
+        <span class="pos">noun.</span>
+      </div>
+      <p>From French <em>cadet</em>, Gascon <em>capdet</em> (little head), via Latin <em>caput</em>. A trainee attached to a senior officer. Disciplined, methodical, willing to do the legwork. Never the author of the decision.</p>
+    </article>
+
+    <article class="dict-entry">
+      <div class="hw-line">
+        <span class="hw gold">Strategy Cadet</span>
+        <span class="pron">/&#712;str&aelig;t&#601;d&#658;i k&#601;&#712;d&#603;t/</span>
+      </div>
+      <p>An AI research and ideation assistant for brand and media strategists. Performs the upfront grind, gathers the data, builds the evidence base, drafts the first cut of strategic and creative thinking. Hands the strategist a briefing, not a verdict. The officer still makes the call.</p>
+    </article>
+  </div>
+
+  <div class="tagline">Does the grind. Hands you the brief. You make the call.</div>
+
+  <div class="attribution">
+    <div class="a-name">York Studios</div>
+    <div class="a-sub">Melbourne, Australia  ·  &copy; 2026</div>
+  </div>
+
+  <div class="footer-band"></div>
+
+</section>
+</div>
+<script src="_scale.js"></script>
+<script src="_chrome.js" data-page="01" data-of="85"></script>
+</body>
+</html>
