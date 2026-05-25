@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 10, Personalised divider (Mode B per Pattern K.12)
+=============================================================================
+Patterns demonstrated:
+- K.12 Mode B personalisation, "Prepared for [Name]" text block
+       replaces the agency logo. Stuart lock #7 for the Fleetwood deck
+       (Anthony Charles). For decks delivered TO an agency, use Mode A
+       (agency logo) instead.
+- K.7  Gradient-slide approach (full-slide brand gradient)
+- Full 40-46 line divider master (NOT minimal blue-screen-with-text per
+  yesterday's Stuart-caught failure pattern)
+- K.3  Section-label small caps for eyebrow + TOC labels
+- K.10 Source line / chrome injection
+
+Brand: Lululemon Athletica (example)
+Recipient: Anthony Charles (example, same name as Fleetwood deck recipient
+to demonstrate the personalisation pattern consistently)
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 01, The Market, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .divider .sc-numeral {
+    position: absolute;
+    left: 80px;
+    top: -40px;
+    font: 800 920px/0.85 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: -0.05em;
+    z-index: 2;
+  }
+  .divider .sc-toc {
+    position: absolute;
+    right: 120px;
+    top: 320px;
+    width: 580px;
+  }
+  .divider .sc-toc .lbl-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .divider .sc-toc .lbl-row .ln {
+    width: 56px;
+    height: 2px;
+    background: var(--fg-on-dark);
+  }
+  .divider .sc-toc .sc-h2 {
+    color: var(--fg-on-dark);
+    margin: 0 0 8px;
+    font: 700 48px/1.05 var(--font-sans);
+    letter-spacing: -0.01em;
+  }
+  .divider .sc-toc .sc-sub {
+    font: 400 18px/1.4 var(--font-sans);
+    color: var(--fg-on-dark-2);
+    margin-bottom: 28px;
+    max-width: 520px;
+  }
+  .divider .sc-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--fg-on-dark-3);
+  }
+  .divider .sc-toc li {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--fg-on-dark-3);
+    align-items: baseline;
+  }
+  .divider .sc-toc li .pg {
+    font: 600 15px/1 var(--font-sans);
+    color: var(--fg-on-dark-2);
+  }
+  .divider .sc-toc li .nm {
+    font: 600 14px/1.3 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Personalised name block (Mode B), Pattern K.12 */
+  .divider .divider-prepared {
+    position: absolute;
+    right: 120px;
+    bottom: 96px;
+    text-align: right;
+    z-index: 3;
+  }
+  .divider .divider-prepared .dp-lbl {
+    font: 600 13px/1.3 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-on-dark-3);
+    margin-bottom: 10px;
+  }
+  /* Mode B: name as text, not logo */
+  .divider .divider-prepared .dp-name {
+    font: 700 22px/1.2 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: -0.005em;
+  }
+  /* Optional sub-line for title / role (e.g. "Strategy Director, Acme Co") */
+  .divider .divider-prepared .dp-role {
+    margin-top: 6px;
+    font: 400 13px/1.4 var(--font-sans);
+    color: var(--fg-on-dark-3);
+  }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide gradient divider" data-screen-label="03 Section Divider Market">
+  <div class="sc-numeral">01</div>
+  <div class="sc-toc">
+    <div class="lbl-row">
+      <span class="ln"></span>
+      <span class="sc-eyebrow on-dark">Part one of seven</span>
+    </div>
+    <h2 class="sc-h2">The Market</h2>
+    <div class="sc-sub">Premium athleisure in Australia 2026: the wellness-as-identity wave, the men's category opening, cost-of-living headwinds, and the international voice attack. Where Lululemon sits in all four.</div>
+    <ul>
+      <li><span class="pg">p. 04</span><span class="nm">Quick facts</span></li>
+      <li><span class="pg">p. 05</span><span class="nm">Six industry drivers</span></li>
+      <li><span class="pg">p. 06</span><span class="nm">Macro tailwinds</span></li>
+      <li><span class="pg">p. 07</span><span class="nm">Macro headwinds</span></li>
+      <li><span class="pg">p. 08</span><span class="nm">Market size, AU + global</span></li>
+    </ul>
+  </div>
+
+  <!-- Mode B personalisation: name text replaces agency logo -->
+  <div class="divider-prepared">
+    <div class="dp-lbl">Prepared for</div>
+    <div class="dp-name">Anthony Charles</div>
+    <!-- Optional: dp-role line shown only when relevant. Comment out otherwise.
+         The personalisation can include role + organisation if Stuart
+         specifies (e.g. CMO, Acme Co). Keep concise, max 1-2 lines. -->
+    <!-- <div class="dp-role">Strategy Director, Premium Athleisure</div> -->
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="03" data-of="EXAMPLE"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 06, Roadmap Gantt Timeline
+=============================================================================
+Patterns demonstrated:
+- K.4  SOLID tier-coloured bars (no transparency on bars themselves;
+       only on the D60 gate marker's vertical highlight band)
+- K.3  Section-label small caps for axis + tier labels
+- K.9  Editorial finding headline
+- K.10 Source line discipline
+
+Brand: Lululemon Athletica (example)
+7 initiatives plotted across 180-day horizon. D60 gate marker. D90 stage-gate
+on the run sub-brand (per initiative #5 in the priority quadrant exemplar).
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roadmap, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .rm .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .rm .head { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .rm .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .rm .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .gantt-wrap { flex: 1; min-height: 0; margin-top: 24px; }
+  .gantt-wrap svg { width: 100%; height: auto; max-height: 580px; }
+
+  .legend { display: flex; gap: 28px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bg-rule); }
+  .legend .key { display: flex; align-items: center; gap: 8px; font: 600 12px/1 var(--font-sans); color: var(--fg-body); letter-spacing: 0.04em; text-transform: uppercase; }
+  .legend .key .swatch { width: 24px; height: 12px; }
+  .legend .key .t1 { background: #4971B7; }
+  .legend .key .t2 { background: #FCB900; }
+  .legend .key .t3 { background: #6B7E96; }
+  .legend .key .gate-mark { width: 4px; height: 14px; background: var(--mr-red); }
+
+  .sc-source-line { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--bg-rule); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide rm" data-screen-label="42 Roadmap Cadence">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 06  ·  Brand Strategy  ·  Roadmap and Cadence</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>D60 gate: sustainability content and ambassador APAC must show measurable signal. D90 stage-gate decides the run sub-brand go or no-go.</h3>
+      <div class="meta">180-day execution horizon  ·  7 initiatives sequenced</div>
+    </div>
+
+    <div class="gantt-wrap">
+      <svg viewBox="0 0 1620 540" xmlns="http://www.w3.org/2000/svg">
+        <!-- Plot area: 240,40 → 1560,500 (1320 wide = 180 days, 7.33 px/day) -->
+        <!-- Each row 48px tall starting from y=80 -->
+
+        <!-- Background row striping -->
+        <rect x="240" y="80"  width="1320" height="40" fill="rgba(46,74,99,0.025)"/>
+        <rect x="240" y="180" width="1320" height="40" fill="rgba(46,74,99,0.025)"/>
+        <rect x="240" y="280" width="1320" height="40" fill="rgba(46,74,99,0.025)"/>
+        <rect x="240" y="380" width="1320" height="40" fill="rgba(46,74,99,0.025)"/>
+
+        <!-- D60 gate marker, SOLID red vertical line with light band behind -->
+        <rect x="676" y="40" width="56" height="460" fill="rgba(239,67,78,0.08)"/>
+        <line x1="680" y1="40" x2="680" y2="500" stroke="var(--mr-red, #EF434E)" stroke-width="3"/>
+        <rect x="640" y="14" width="80" height="22" fill="var(--mr-red, #EF434E)"/>
+        <text x="680" y="30" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="800" fill="#fff" letter-spacing="0.14em" style="text-transform:uppercase">D60 GATE</text>
+
+        <!-- D90 stage-gate marker (smaller, on run sub-brand row only) -->
+        <line x1="900" y1="280" x2="900" y2="320" stroke="#C56A00" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="900" y="276" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" font-weight="800" fill="#C56A00" letter-spacing="0.12em" style="text-transform:uppercase">D90 GO/NO-GO</text>
+
+        <!-- Day-axis ticks at 0/30/60/90/120/150/180 -->
+        <line x1="240" y1="500" x2="1560" y2="500" stroke="#2E4A63" stroke-width="2"/>
+        <g font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63" text-anchor="middle" letter-spacing="0.08em">
+          <text x="240"  y="528">D0</text>
+          <text x="460"  y="528">D30</text>
+          <text x="680"  y="528">D60</text>
+          <text x="900"  y="528">D90</text>
+          <text x="1120" y="528">D120</text>
+          <text x="1340" y="528">D150</text>
+          <text x="1560" y="528">D180</text>
+        </g>
+        <!-- Tick lines on axis -->
+        <g stroke="#2E4A63" stroke-width="1.5">
+          <line x1="240"  y1="500" x2="240"  y2="510"/>
+          <line x1="460"  y1="500" x2="460"  y2="510"/>
+          <line x1="680"  y1="500" x2="680"  y2="510"/>
+          <line x1="900"  y1="500" x2="900"  y2="510"/>
+          <line x1="1120" y1="500" x2="1120" y2="510"/>
+          <line x1="1340" y1="500" x2="1340" y2="510"/>
+          <line x1="1560" y1="500" x2="1560" y2="510"/>
+        </g>
+        <!-- Faint vertical gridlines -->
+        <g stroke="rgba(46,74,99,0.06)" stroke-width="1">
+          <line x1="460"  y1="60" x2="460"  y2="500"/>
+          <line x1="900"  y1="60" x2="900"  y2="500"/>
+          <line x1="1120" y1="60" x2="1120" y2="500"/>
+          <line x1="1340" y1="60" x2="1340" y2="500"/>
+        </g>
+
+        <!-- Row 1: I1 Men's Footwear Wave 2 (T1) D30 → D165 -->
+        <text x="222" y="106" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">Men's Footwear W2</text>
+        <text x="222" y="120" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I1  ·  Tier 1</text>
+        <rect x="460" y="88" width="1027" height="24" rx="2" fill="#4971B7"/>
+        <text x="466" y="105" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#fff">Pre-launch retail loadin  ·  Launch  ·  Sustain</text>
+
+        <!-- Row 2: I2 Ambassador APAC (T1) D0 → D120 -->
+        <text x="222" y="156" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">Ambassador APAC</text>
+        <text x="222" y="170" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I2  ·  Tier 1</text>
+        <rect x="240" y="138" width="880" height="24" rx="2" fill="#4971B7"/>
+        <text x="246" y="155" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#fff">Sourcing  ·  Onboard  ·  Activation</text>
+
+        <!-- Row 3: I3 Sustainability content (T1) D0 → D60 (completes at D60 gate) -->
+        <text x="222" y="206" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">Sustainability content</text>
+        <text x="222" y="220" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I3  ·  Tier 1</text>
+        <rect x="240" y="188" width="440" height="24" rx="2" fill="#4971B7"/>
+        <text x="246" y="205" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#fff">Content + measurement  ·  Quick win</text>
+
+        <!-- Row 4: I4 TikTok Shop intl (T2) D45 → D150 -->
+        <text x="222" y="256" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">TikTok Shop intl</text>
+        <text x="222" y="270" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I4  ·  Tier 2</text>
+        <rect x="570" y="238" width="770" height="24" rx="2" fill="#FCB900"/>
+        <text x="576" y="255" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">3 EMEA market pilot  ·  Q3 dispatch</text>
+
+        <!-- Row 5: I5 Run sub-brand (T2) D60 → D180 (D90 gate) -->
+        <text x="222" y="306" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">Run sub-brand</text>
+        <text x="222" y="320" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I5  ·  Tier 2</text>
+        <rect x="680" y="288" width="880" height="24" rx="2" fill="#FCB900"/>
+        <text x="686" y="305" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Concept  ·  D90 gate  ·  Pilot retail</text>
+
+        <!-- Row 6: I6 Community studio expansion (T2) D30 → D180 -->
+        <text x="222" y="356" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">Studio expansion</text>
+        <text x="222" y="370" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I6  ·  Tier 2</text>
+        <rect x="460" y="338" width="1100" height="24" rx="2" fill="#FCB900"/>
+        <text x="466" y="355" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Site selection  ·  Build  ·  Open 10 community studios</text>
+
+        <!-- Row 7: I7 Wholesale refresh (T3) D90 → D180 -->
+        <text x="222" y="406" text-anchor="end" font-family="Open Sans, sans-serif" font-size="13" font-weight="700" fill="#2E4A63">Wholesale refresh</text>
+        <text x="222" y="420" text-anchor="end" font-family="Open Sans, sans-serif" font-size="10" font-weight="400" fill="#767676">I7  ·  Tier 3</text>
+        <rect x="900" y="388" width="660" height="24" rx="2" fill="#6B7E96"/>
+        <text x="906" y="405" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#fff">Partner audit  ·  Refresh contracts</text>
+
+        <!-- Axis label -->
+        <text x="900" y="468" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="12" font-weight="700" fill="#2E4A63" letter-spacing="0.16em" style="text-transform:uppercase">EXECUTION TIMELINE  ·  D0 IS FY26 KICKOFF</text>
+      </svg>
+
+      <div class="legend">
+        <div class="key"><span class="swatch t1"></span>Tier 1 priority</div>
+        <div class="key"><span class="swatch t2"></span>Tier 2 priority</div>
+        <div class="key"><span class="swatch t3"></span>Tier 3 priority</div>
+        <div class="key"><span class="gate-mark"></span>D60 gate / D90 stage-gate</div>
+      </div>
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 42  ·  Part 06  ·  Source: Initiative sequencing derived from Strategy Pillars + Initiative Quadrant; D60 gate per assisted-not-directed strategist methodology (sustainability content must show measurable signal); D90 stage-gate for run sub-brand per Calvin McDonald public commentary on category extension. Tier classification ESTIMATED.</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="42" data-of="EXAMPLE"></script>
+</body>
+</html>

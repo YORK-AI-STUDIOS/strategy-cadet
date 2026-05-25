@@ -1,0 +1,202 @@
+/* =============================================================================
+   chart-styles.css
+   Shared chart primitives reused across the 11 chart masters.
+   Each chart container carries data-chart-name="Chart_*" so the python-pptx
+   population pipeline can find and replace it by name.
+
+   HARD RULES (locked 2026-05-25 per REFERENCE-deck-build-fixes-comprehensive-audit):
+   - Chart containers MUST cap at max-width 880px. Yesterday's `1fr 380px` produced
+     ~1400px charts that filled the slide and pushed side panels off-screen on 6
+     slides (risk register, opportunity quadrant, ESOV, SoS, CEP heatmap, initiatives).
+     New default: `minmax(0, 880px) 460px`.
+   - SVG inside .svg-frame must respect the 880px container cap. Do NOT lift
+     max-width on a per-slide basis without explicit Stuart approval.
+   - Narrow-bar label rule: bars under ~15% fill use `left: calc(100% + 8px)` for
+     label positioning, not `right: -56px`. Confirmed via C.12 fix on slides 7,
+     57, 58, 60.
+   - No inline `font-size: Npx` in slide body. Use design tokens from
+     colors_and_type.css (--t-body, --t-caption, etc.). Verification script
+     slides/_verify-deck.sh rejects inline px.
+   ============================================================================= */
+
+/* Shared chart slide layout ---------------------------------------------- */
+.cm .head { padding-bottom: 18px; border-bottom: 1px solid var(--bg-rule); display:flex; align-items:flex-start; gap: 24px; }
+.cm .head h3 { margin: 0; font: 700 30px/1.2 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.01em; max-width: 1300px; }
+.cm .head h3 .alt { color: var(--mr-red); }
+.cm .head h3 .alt2 { color: var(--mr-blue-dark); }
+.cm .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); }
+
+/* Chart grid: chart column capped at 880px to prevent slide-wide overflow
+   (audit Section 6.3). Side panel 460px. Override on a per-slide basis only
+   with explicit justification — do NOT lift this cap globally. */
+.cm .chart-grid { display: grid; grid-template-columns: minmax(0, 880px) 460px; gap: 56px; align-items: start; justify-content: start; flex: 1; margin-top: 24px; min-height: 0; }
+.cm .chart-area { display: flex; flex-direction: column; min-height: 0; }
+.cm .ctitle { font: 600 13px/1.3 var(--font-sans); color: var(--fg-heading); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.cm .csub   { font: 400 12px/1.3 var(--font-sans); color: var(--fg-muted); margin-bottom: 22px; }
+
+/* Side callout ------------------------------------------------------------ */
+.cm .callout {
+  background: #F4F7FB;
+  padding: 22px 24px;
+  border-left: 3px solid var(--mr-blue-dark);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.cm .callout.alt { border-left-color: var(--mr-red); }
+.cm .callout .lbl { font: var(--t-eyebrow); color: var(--mr-blue-dark); }
+.cm .callout.alt .lbl { color: var(--mr-red); }
+.cm .callout .h { font: 700 18px/1.3 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.005em; }
+.cm .callout p { margin: 0; font: 400 13px/1.5 var(--font-sans); color: var(--fg-body); }
+.cm .callout .sep { height: 1px; background: var(--bg-rule); }
+.cm .callout ul { margin: 0; padding-left: 18px; font: 400 12.5px/1.5 var(--font-sans); color: var(--fg-body); }
+.cm .callout ul li { margin-bottom: 6px; }
+
+/* Vertical bar chart ------------------------------------------------------ */
+.cm .vbar { display: flex; align-items: flex-end; gap: 28px; flex: 1; min-height: 0; padding: 16px 0; border-bottom: 1px solid var(--bg-rule); }
+.cm .vbar .col { display: flex; flex-direction: column; align-items: center; flex: 1; }
+.cm .vbar .col .v { font: 800 22px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; margin-bottom: 8px; }
+.cm .vbar .col .v.hero { color: #D9A000; }
+.cm .vbar .col .bar { width: 100%; background: var(--mr-blue-dark); }
+.cm .vbar .col .bar.alt   { background: var(--mr-blue-light); }
+.cm .vbar .col .bar.muted { background: #C8D2DC; }
+.cm .vbar .col .bar.hero  { background: #FCB900; }
+.cm .vbar .col .l { font: 600 12px/1.3 var(--font-sans); color: var(--fg-heading); margin-top: 10px; text-align: center; }
+.cm .vbar .col .l .sub { display: block; font: 400 10.5px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 2px; }
+
+/* Horizontal bar (compact reused from slide 06) --------------------------- */
+.cm .hbar-rows { display: flex; flex-direction: column; gap: 12px; }
+.cm .hbar-row  { display: grid; grid-template-columns: 200px 1fr 70px; gap: 14px; align-items: center; }
+.cm .hbar-row .name { font: 600 13.5px/1.2 var(--font-sans); color: var(--fg-heading); }
+.cm .hbar-row .name .sub { display:block; font: 400 11px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 2px; }
+.cm .hbar-row .wrap { position: relative; height: 26px; }
+.cm .hbar-row .bar { height: 26px; background: var(--mr-blue-dark); position: relative; }
+.cm .hbar-row .bar.alt { background: var(--mr-blue-light); }
+.cm .hbar-row .bar.muted { background: #C8D2DC; }
+.cm .hbar-row .bar.hero { background: #FCB900; }
+.cm .hbar-row .bar.neg  { background: var(--mr-red); }
+.cm .hbar-row .bar .dl { position: absolute; right: -56px; top: 50%; transform: translateY(-50%); font: 700 13px/1 var(--font-sans); color: var(--fg-heading); }
+.cm .hbar-row .bar .dl.inside { right: 10px; color: var(--fg-on-dark); }
+.cm .hbar-row .delta { font: 700 11px/1 var(--font-sans); color: var(--fg-muted); white-space: nowrap; text-align: right; }
+.cm .hbar-row .delta.up   { color: #0E8A52; }
+.cm .hbar-row .delta.down { color: var(--mr-red); }
+
+.cm .x-axis { display: flex; justify-content: space-between; margin-top: 16px; padding-left: 214px; padding-right: 84px; }
+.cm .x-axis span { font: var(--t-caption); color: var(--fg-muted); }
+
+/* Stacked bar timeline ---------------------------------------------------- */
+.cm .stack { display: flex; flex-direction: column; gap: 10px; flex: 1; min-height: 0; }
+.cm .stack .row { display: grid; grid-template-columns: 70px 1fr 110px; gap: 14px; align-items: center; }
+.cm .stack .row .lbl { font: 600 12px/1 var(--font-sans); color: var(--fg-heading); }
+.cm .stack .row .lbl .sub { display:block; font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); margin-top: 2px; }
+.cm .stack .row .bar { height: 24px; display: flex; align-items: stretch; }
+.cm .stack .row .seg { height: 24px; display: flex; align-items: center; justify-content: center; font: 700 10px/1 var(--font-sans); color: var(--fg-on-dark); }
+.cm .stack .row .seg.alt   { background: var(--mr-blue-light); }
+.cm .stack .row .seg.main  { background: var(--mr-blue-dark); }
+.cm .stack .row .seg.slate { background: var(--fg-heading); }
+.cm .stack .row .seg.neg   { background: var(--mr-red); }
+.cm .stack .row .seg.amber { background: #FCB900; color: #1a1a1a; }
+.cm .stack .row .seg.muted { background: #C8D2DC; color: var(--fg-heading); }
+.cm .stack .row .tot { font: 700 13px/1 var(--font-sans); color: var(--fg-heading); text-align: right; font-variant-numeric: tabular-nums; }
+
+.cm .legend-row { display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap; }
+.cm .legend-row .key { display: flex; align-items: center; gap: 6px; font: 400 11px/1 var(--font-sans); color: var(--fg-body); }
+.cm .legend-row .key .swatch { width: 12px; height: 10px; }
+
+/* SVG charts (donut, line, quadrant, radar) ------------------------------- */
+.cm .svg-frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cm .svg-frame svg { width: 100%; height: 100%; max-width: 880px; max-height: 540px; }
+
+.cm .stat-overlay {
+  position: absolute;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.cm .stat-overlay .num { font: 800 56px/1 var(--font-sans); color: var(--fg-heading); letter-spacing: -0.025em; }
+.cm .stat-overlay .num.amber { color: #D9A000; }
+.cm .stat-overlay .lbl { font: 600 11px/1.2 var(--font-sans); color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Quadrant chart --------------------------------------------------------- */
+.cm .quad {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  margin-top: 12px;
+}
+.cm .quad .axes {
+  position: absolute;
+  inset: 32px 64px 56px 64px;
+  border-left: 1px solid var(--fg-heading);
+  border-bottom: 1px solid var(--fg-heading);
+}
+.cm .quad .axes::before,
+.cm .quad .axes::after {
+  content: '';
+  position: absolute;
+  background: var(--bg-rule);
+}
+.cm .quad .axes::before { left: 0; right: 0; top: 50%; height: 1px; }
+.cm .quad .axes::after  { top: 0; bottom: 0; left: 50%; width: 1px; }
+.cm .quad .pt {
+  position: absolute;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  transform: translate(-50%, -50%);
+}
+.cm .quad .pt .dot {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--mr-blue-dark);
+  box-shadow: 0 0 0 4px rgba(73, 113, 183, 0.18);
+}
+.cm .quad .pt.hero .dot { background: #FCB900; box-shadow: 0 0 0 6px rgba(252, 185, 0, 0.25); }
+.cm .quad .pt.alt .dot  { background: var(--mr-blue-light); }
+.cm .quad .pt.subject .dot { background: var(--mr-red); box-shadow: 0 0 0 6px rgba(239, 67, 78, 0.22); width: 22px; height: 22px; }
+.cm .quad .pt .lbl { font: 700 12px/1.2 var(--font-sans); color: var(--fg-heading); white-space: nowrap; background: rgba(255,255,255,0.92); padding: 2px 6px; }
+.cm .quad .pt.subject .lbl { color: var(--mr-red); }
+.cm .quad .quad-lbl {
+  position: absolute;
+  font: 600 10px/1.2 var(--font-sans);
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.cm .quad .ax-x {
+  position: absolute;
+  bottom: 28px; left: 0; right: 0;
+  text-align: center;
+  font: 600 11px/1.2 var(--font-sans);
+  color: var(--fg-heading);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.cm .quad .ax-y {
+  position: absolute;
+  top: 50%; left: 4px;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font: 600 11px/1.2 var(--font-sans);
+  color: var(--fg-heading);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Radar chart ------------------------------------------------------------ */
+.cm .radar { position: relative; flex: 1; min-height: 0; }
+.cm .radar svg { display: block; margin: 0 auto; }
+.cm .radar .lbl {
+  position: absolute;
+  font: 600 11px/1.2 var(--font-sans);
+  color: var(--fg-heading);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.cm .radar .lbl .v {
+  display: block;
+  font: 700 13px/1 var(--font-sans);
+  color: var(--mr-blue-dark);
+  margin-top: 2px;
+}

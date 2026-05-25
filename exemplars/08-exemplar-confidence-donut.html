@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 08, Confidence-distribution donut chart
+=============================================================================
+Patterns demonstrated:
+- K.4  SOLID donut segments (NO transparency on segment fills, Stuart's
+       lock #1 "bolder Kantar fills"). Small gaps between segments via
+       stroke-dasharray, not opacity.
+- K.11 NEW chip palette in legend:
+         VERIFIED green #00D084 / PROBABLE teal #3B8FA1
+         ESTIMATED purple #7B5EA8 / HYPOTHESISED slate #6B7E96
+- K.3  Section-label small caps for legend headers
+- K.9  Editorial finding headline
+- K.10 Source line discipline
+
+Brand: Lululemon Athletica (example)
+350 confidence chips across deck. The "considered confidence ramp" reads
+healthy when ESTIMATED is non-zero (Stuart's structural check).
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Confidence Distribution, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .conf .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .conf .head { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .conf .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .conf .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .conf-body { margin-top: 24px; display: grid; grid-template-columns: minmax(0, 680px) 1fr; gap: 56px; flex: 1; min-height: 0; align-items: start; }
+
+  /* Donut */
+  .donut-frame { position: relative; display: flex; align-items: center; justify-content: center; }
+  .donut-frame svg { width: 100%; max-width: 600px; height: auto; }
+  .donut-centre {
+    position: absolute;
+    text-align: center;
+  }
+  .donut-centre .total {
+    font: 800 76px/1 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.03em;
+  }
+  .donut-centre .lbl {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    margin-top: 6px;
+  }
+
+  /* Legend / breakdown */
+  .conf-panel { display: flex; flex-direction: column; gap: 22px; min-height: 0; }
+  .panel-hd {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mr-blue-dark);
+    margin-bottom: 0;
+  }
+  .tier-list { display: flex; flex-direction: column; gap: 8px; }
+  .tier-row {
+    display: grid;
+    grid-template-columns: 8px 1fr 80px 60px;
+    gap: 14px;
+    align-items: center;
+    padding: 12px 16px;
+    background: #F4F7FB;
+  }
+  .tier-row .swatch { width: 8px; height: 40px; }
+  .tier-row.v .swatch { background: #00D084; }
+  .tier-row.p .swatch { background: #3B8FA1; }
+  .tier-row.e .swatch { background: #7B5EA8; }
+  .tier-row.h .swatch { background: #6B7E96; }
+  .tier-row .name {
+    font: 700 13px/1.2 var(--font-sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-heading);
+  }
+  .tier-row .name .desc {
+    display: block;
+    font: 400 11px/1.4 var(--font-sans);
+    color: var(--fg-body);
+    margin-top: 4px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .tier-row .count {
+    font: 800 24px/1 var(--font-sans);
+    color: var(--fg-heading);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .tier-row.v .count { color: #00A865; }
+  .tier-row.p .count { color: #3B8FA1; }
+  .tier-row.e .count { color: #7B5EA8; }
+  .tier-row.h .count { color: #6B7E96; }
+  .tier-row .pct {
+    font: 700 12px/1 var(--font-sans);
+    color: var(--fg-muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .read-card {
+    background: #2E4A63;
+    border-left: 3px solid #FCB900;
+    padding: 14px 16px;
+    color: var(--fg-on-dark);
+  }
+  .read-card .lbl { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 8px; }
+  .read-card p { margin: 0; font: 400 13px/1.5 var(--font-sans); color: rgba(255,255,255,0.92); }
+
+  .sc-source-line { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--bg-rule); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide conf" data-screen-label="63 Data Gaps and Confidence">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 09  ·  Appendix  ·  Data Gaps and Confidence Distribution</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>68% of claims externally sourced (Verified + Probable). 26% AI synthesis, flagged. 6% numeric estimates with stated assumptions. Boardroom-defensible.</h3>
+      <div class="meta">350 chips across deck  ·  4-tier confidence system</div>
+    </div>
+
+    <div class="conf-body">
+
+      <div class="donut-frame">
+        <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <!-- Donut: cx=300, cy=300, radius=200, stroke-width=64 -->
+          <!-- Circumference = 2 * π * 200 = 1256.64 -->
+          <!-- Segments are SOLID (Stuart lock #1) -->
+          <!-- Distribution: V=82/350=23.4% / P=158/350=45.1% / E=20/350=5.7% / H=90/350=25.7% -->
+          <!-- Arc lengths from 1256.64: V=294.05 / P=566.74 / E=71.63 / H=323.21 (with 1px gaps absorbed) -->
+
+          <!-- Track ring (faint) -->
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#F0F3F7" stroke-width="64"/>
+
+          <!-- V, green segment starting at 12 o'clock, rotating clockwise -->
+          <!-- transform="rotate(-90 300 300)" puts 0 at top -->
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#00D084" stroke-width="64"
+                  stroke-dasharray="290 967"
+                  stroke-dashoffset="0"
+                  transform="rotate(-90 300 300)"/>
+
+          <!-- P, teal segment after V -->
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#3B8FA1" stroke-width="64"
+                  stroke-dasharray="562 695"
+                  stroke-dashoffset="-294"
+                  transform="rotate(-90 300 300)"/>
+
+          <!-- E, purple segment after P -->
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#7B5EA8" stroke-width="64"
+                  stroke-dasharray="68 1189"
+                  stroke-dashoffset="-860"
+                  transform="rotate(-90 300 300)"/>
+
+          <!-- H, slate segment after E -->
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#6B7E96" stroke-width="64"
+                  stroke-dasharray="320 937"
+                  stroke-dashoffset="-932"
+                  transform="rotate(-90 300 300)"/>
+
+          <!-- Centre numeric -->
+          <text x="300" y="296" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="76" font-weight="800" fill="#2E4A63" letter-spacing="-0.03em">350</text>
+          <text x="300" y="330" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#767676" letter-spacing="0.18em" style="text-transform:uppercase">CONFIDENCE CHIPS</text>
+
+          <!-- Segment labels positioned around the ring -->
+          <g font-family="Open Sans, sans-serif" font-weight="800" font-size="16" fill="#fff">
+            <!-- V label at midpoint of V segment ~ 12% around -->
+            <text x="386" y="153" text-anchor="middle">23%</text>
+            <!-- P label at midpoint of P segment ~ 46% around -->
+            <text x="468" y="385" text-anchor="middle">45%</text>
+            <!-- E label at midpoint of E segment ~ 73% around (small, may need leader) -->
+            <text x="198" y="478" text-anchor="middle">6%</text>
+            <!-- H label at midpoint of H segment ~ 87% around -->
+            <text x="148" y="282" text-anchor="middle">26%</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="conf-panel">
+        <div class="panel-hd">Confidence breakdown</div>
+
+        <div class="tier-list">
+          <div class="tier-row v">
+            <div class="swatch"></div>
+            <div class="name">Verified<span class="desc">Multiple independent sources confirm. Boardroom-defensible without further audit.</span></div>
+            <div class="count">82</div>
+            <div class="pct">23%</div>
+          </div>
+          <div class="tier-row p">
+            <div class="swatch"></div>
+            <div class="name">Probable<span class="desc">Single credible source or industry consensus. Worth checking for high-stakes use.</span></div>
+            <div class="count">158</div>
+            <div class="pct">45%</div>
+          </div>
+          <div class="tier-row e">
+            <div class="swatch"></div>
+            <div class="name">Estimated<span class="desc">Numeric estimate computed from data with explicit assumptions stated inline.</span></div>
+            <div class="count">20</div>
+            <div class="pct">6%</div>
+          </div>
+          <div class="tier-row h">
+            <div class="swatch"></div>
+            <div class="name">Hypothesised<span class="desc">AI synthesis, working hypothesis from signals. Surfaces possibilities, never asserts.</span></div>
+            <div class="count">90</div>
+            <div class="pct">26%</div>
+          </div>
+        </div>
+
+        <div class="read-card">
+          <div class="lbl">Distribution read</div>
+          <p>68% of claims externally sourced, strongest position for prospect-facing material. ESTIMATED non-zero (20 claims) means the 4-tier system held; no collapse into 3-tier. Numeric estimates are isolated to market sizing, audience share, and forward forecasts where calculation is explicit.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 63  ·  Part 09  ·  Source: Verification script chip count across 81 slides. Distribution computed at build verification (Check 15). Healthy distribution = ESTIMATED count &gt; 0 alongside HYPOTHESISED non-zero. 4-tier confidence system locked 2026-05-24, palette retuned 2026-05-25 (PROBABLE teal #3B8FA1, ESTIMATED purple #7B5EA8).</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="63" data-of="EXAMPLE"></script>
+</body>
+</html>

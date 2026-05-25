@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 02, Aaker brand personality radar (5-axis)
+=============================================================================
+Patterns demonstrated:
+- K.4  BOLDER fill, polygon at rgba 0.40 alpha (was 0.22 in v6) + 3px stroke
+       Data dots: SOLID brand colour with 6px halo ring
+- K.6  Light-blue cards with coloured left rule for description column
+- K.9  Editorial finding-style headline (var(--t-h3-finding))
+- K.10 Source line discipline with hairline above
+- K.11 Confidence chips using NEW teal/purple palette
+
+Brand: Lululemon Athletica (example)
+The radar polygon fill is 40% (not 22%) because two polygons overlap and
+need transparency for legibility, but at 40% they still have weight.
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand Personality, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .bp .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .bp .head { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .bp .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .bp .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+
+  .bp-body { margin-top: 20px; display: grid; grid-template-columns: 720px 1fr; gap: 56px; flex: 1; min-height: 0; }
+
+  /* Radar chart container */
+  .radar-frame { position: relative; display: flex; align-items: center; justify-content: center; }
+  .radar-frame svg { width: 100%; max-width: 680px; height: auto; }
+  .radar-legend { display: flex; gap: 28px; justify-content: center; margin-top: 4px; }
+  .radar-legend .key { display: flex; align-items: center; gap: 8px; font: 600 12px/1 var(--font-sans); color: var(--fg-body); letter-spacing: 0.04em; text-transform: uppercase; }
+  .radar-legend .key .swatch { width: 14px; height: 14px; }
+  .radar-legend .key .swatch.brand { background: #4971B7; }
+  .radar-legend .key .swatch.cat { background: transparent; border: 1.5px dashed #8896A8; }
+
+  /* Right column: dimension descriptions */
+  .dim-list { display: flex; flex-direction: column; gap: 10px; }
+  .panel-hd {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mr-blue-dark);
+    margin-bottom: 16px;
+  }
+  .dim-row {
+    background: #F4F7FB;
+    border-left: 3px solid var(--mr-blue-dark);
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    gap: 14px;
+    align-items: center;
+  }
+  .dim-row.hi { border-left-color: #FCB900; background: #FFF8E6; }
+  .dim-row.lo { border-left-color: #6B7E96; background: #F0F3F7; }
+  .dim-name {
+    font: 700 13px/1.1 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .dim-name .score {
+    display: block;
+    font: 800 22px/1 var(--font-sans);
+    color: var(--mr-blue-dark);
+    letter-spacing: -0.02em;
+    margin-top: 4px;
+    text-transform: none;
+  }
+  .dim-row.hi .dim-name .score { color: #C56A00; }
+  .dim-row.lo .dim-name .score { color: #6B7E96; }
+  .dim-body { font: 400 13px/1.45 var(--font-sans); color: var(--fg-body); }
+
+  .sc-chip { font: 700 11px/1 var(--font-sans); }
+
+  .sc-source-line { margin-top: 20px; padding-top: 10px; border-top: 1px solid var(--bg-rule); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide bp" data-screen-label="15 Brand Personality Aaker">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 02  ·  The Brand  ·  Aaker Five-Dimension Personality</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>Competence and sophistication dominant. Sincerity solid via community model. Ruggedness the deliberate strategic gap.</h3>
+      <div class="meta">Aaker (1997)  ·  5-dim assessment</div>
+    </div>
+
+    <div class="bp-body">
+
+      <div class="radar-frame">
+        <svg viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg">
+          <!-- 5 concentric guide rings (20% / 40% / 60% / 80% / 100%) -->
+          <g fill="none" stroke="rgba(46,74,99,0.08)" stroke-width="1">
+            <polygon points="300,40 540,213 448,460 152,460 60,213"/>
+            <polygon points="300,92 492,230 416,428 184,428 108,230"/>
+            <polygon points="300,144 444,247 384,396 216,396 156,247"/>
+            <polygon points="300,196 396,264 352,364 248,364 204,264"/>
+            <polygon points="300,248 348,281 320,332 280,332 252,281"/>
+          </g>
+          <!-- Ring labels -->
+          <g font-family="Open Sans, sans-serif" font-size="9" font-weight="700" fill="rgba(46,74,99,0.32)" letter-spacing="0.08em" text-anchor="middle">
+            <text x="300" y="51">100</text>
+            <text x="300" y="103">80</text>
+            <text x="300" y="155">60</text>
+            <text x="300" y="207">40</text>
+            <text x="300" y="259">20</text>
+          </g>
+          <!-- Axis lines from centre -->
+          <g stroke="rgba(46,74,99,0.18)" stroke-width="1">
+            <line x1="300" y1="280" x2="300" y2="40"/>
+            <line x1="300" y1="280" x2="540" y2="213"/>
+            <line x1="300" y1="280" x2="448" y2="460"/>
+            <line x1="300" y1="280" x2="152" y2="460"/>
+            <line x1="300" y1="280" x2="60" y2="213"/>
+          </g>
+
+          <!-- Category average polygon (dashed, lighter, behind) -->
+          <!-- Scores: 55 / 60 / 65 / 55 / 60 -->
+          <polygon points="300,148 444,247 357,402 235,394 156,247"
+                   fill="rgba(136,150,168,0.18)"
+                   stroke="#8896A8"
+                   stroke-width="1.5"
+                   stroke-dasharray="6 4"/>
+
+          <!-- Lululemon brand polygon, SOLID 40% alpha + 3px stroke (Pattern K.4 bolder) -->
+          <!-- Scores: Sincerity 65 / Excitement 78 / Competence 88 / Sophistication 82 / Ruggedness 42 -->
+          <polygon points="300,124 487,224 365,418 196,408 199,225"
+                   fill="rgba(73,113,183,0.40)"
+                   stroke="#4971B7"
+                   stroke-width="3"
+                   stroke-linejoin="round"/>
+
+          <!-- Data dots with halo ring (Pattern K.4 solid dot + 5-6px alpha halo) -->
+          <g>
+            <circle cx="300" cy="124" r="11" fill="none" stroke="rgba(73,113,183,0.22)" stroke-width="6"/>
+            <circle cx="300" cy="124" r="6" fill="#4971B7"/>
+
+            <circle cx="487" cy="224" r="11" fill="none" stroke="rgba(73,113,183,0.22)" stroke-width="6"/>
+            <circle cx="487" cy="224" r="6" fill="#4971B7"/>
+
+            <circle cx="365" cy="418" r="13" fill="none" stroke="rgba(252,185,0,0.28)" stroke-width="7"/>
+            <circle cx="365" cy="418" r="7" fill="#FCB900"/>
+
+            <circle cx="196" cy="408" r="13" fill="none" stroke="rgba(252,185,0,0.28)" stroke-width="7"/>
+            <circle cx="196" cy="408" r="7" fill="#FCB900"/>
+
+            <circle cx="199" cy="225" r="11" fill="none" stroke="rgba(107,126,150,0.32)" stroke-width="6"/>
+            <circle cx="199" cy="225" r="6" fill="#6B7E96"/>
+          </g>
+
+          <!-- Score tags positioned outside vertices -->
+          <g font-family="Open Sans, sans-serif" font-weight="800" font-size="14" fill="#2E4A63" text-anchor="middle">
+            <text x="300" y="105">65</text>
+            <text x="515" y="220">78</text>
+            <text x="385" y="445" fill="#C56A00">88</text>
+            <text x="170" y="435" fill="#C56A00">82</text>
+            <text x="175" y="220" fill="#6B7E96">42</text>
+          </g>
+
+          <!-- Axis labels -->
+          <g font-family="Open Sans, sans-serif" font-weight="700" font-size="13" fill="#2E4A63" text-anchor="middle" letter-spacing="0.04em">
+            <text x="300" y="28" style="text-transform:uppercase">SINCERITY</text>
+            <text x="540" y="208" style="text-transform:uppercase">EXCITEMENT</text>
+            <text x="460" y="482" style="text-transform:uppercase">COMPETENCE</text>
+            <text x="140" y="482" style="text-transform:uppercase">SOPHISTICATION</text>
+            <text x="60" y="208" style="text-transform:uppercase">RUGGEDNESS</text>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <div class="panel-hd">Dimension read</div>
+        <div class="dim-list">
+
+          <div class="dim-row hi">
+            <div class="dim-name">Competence<span class="score">88 / 100</span></div>
+            <div class="dim-body">Technical fabric, fit engineering, ambassador testing. The deepest moat. Performance buyers default to this signal first. <span class="sc-chip sc-chip--verified">Verified</span></div>
+          </div>
+
+          <div class="dim-row hi">
+            <div class="dim-name">Sophistication<span class="score">82 / 100</span></div>
+            <div class="dim-body">Premium pricing held without discounting. Store environment + ambassador curation read as elevated. <span class="sc-chip sc-chip--verified">Verified</span></div>
+          </div>
+
+          <div class="dim-row">
+            <div class="dim-name">Excitement<span class="score">78 / 100</span></div>
+            <div class="dim-body">Movement, energy, drop culture in newer formats. Higher than apparel average via community studios. <span class="sc-chip sc-chip--probable">Probable</span></div>
+          </div>
+
+          <div class="dim-row">
+            <div class="dim-name">Sincerity<span class="score">65 / 100</span></div>
+            <div class="dim-body">Community + ambassador authenticity solid; 2013 quality scandals still residual. Recovered but capped. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+          </div>
+
+          <div class="dim-row lo">
+            <div class="dim-name">Ruggedness<span class="score">42 / 100</span></div>
+            <div class="dim-body">Urban-studio register, not outdoor-rugged. Deliberate ceiling, not a gap to close, a category boundary. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
+          </div>
+
+        </div>
+
+        <div class="radar-legend">
+          <div class="key"><span class="swatch brand"></span>Lululemon (assessed)</div>
+          <div class="key"><span class="swatch cat"></span>Apparel category avg (est.)</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 15  ·  Part 02  ·  Source: Aaker (1997) brand personality framework applied to Brand DNA prompts 9-11. Scores analyst-assessed from communications + ambassador content + earnings transcripts. Category average estimated from publicly available competitor brand communications. Estimated and Hypothesised dimensions flagged.</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="15" data-of="EXAMPLE"></script>
+</body>
+</html>

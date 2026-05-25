@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 05, Initiatives 2×2 Priority Quadrant (Effort × Impact)
+=============================================================================
+Patterns demonstrated:
+- K.4  SOLID tier-coloured dots with halo rings
+       "STRATEGIC BETS" zone with radial highlight (top-right)
+       "DO FIRST" zone with dashed accent border (top-left)
+- K.3  Section-label small caps for quadrant labels
+- K.9  Editorial finding headline
+- K.10 Source line discipline
+
+Brand: Lululemon Athletica (example)
+9 initiatives plotted, Tier 1/2/3 colour-coded.
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prioritised Initiatives, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .init .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .init .head { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .init .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .init .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .init-body { margin-top: 20px; display: grid; grid-template-columns: minmax(0, 880px) 1fr; gap: 48px; flex: 1; min-height: 0; }
+
+  .quad-frame { position: relative; }
+  .quad-frame svg { width: 100%; height: auto; max-height: 620px; }
+
+  .legend { display: flex; gap: 24px; margin-top: 10px; }
+  .legend .key { display: flex; align-items: center; gap: 8px; font: 600 12px/1 var(--font-sans); color: var(--fg-body); letter-spacing: 0.04em; text-transform: uppercase; }
+  .legend .key .swatch { width: 14px; height: 14px; border-radius: 50%; }
+  .legend .key .t1 { background: #4971B7; }
+  .legend .key .t2 { background: #FCB900; }
+  .legend .key .t3 { background: #6B7E96; }
+
+  /* Right column: initiative list */
+  .init-list { display: flex; flex-direction: column; gap: 8px; min-height: 0; overflow: hidden; }
+  .panel-hd {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mr-blue-dark);
+    margin-bottom: 12px;
+  }
+  .init-row {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 9px 12px;
+    background: #F4F7FB;
+    border-left: 3px solid var(--mr-blue-dark);
+  }
+  .init-row.t2 { border-left-color: #FCB900; background: #FFF8E6; }
+  .init-row.t3 { border-left-color: #6B7E96; background: #F0F3F7; }
+  .init-row .id {
+    font: 800 16px/1 var(--font-sans);
+    color: var(--mr-blue-dark);
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .init-row.t2 .id { color: #C56A00; }
+  .init-row.t3 .id { color: #6B7E96; }
+  .init-row .name {
+    font: 700 13px/1.25 var(--font-sans);
+    color: var(--fg-heading);
+  }
+  .init-row .name .sub {
+    display: block;
+    font: 400 11px/1.35 var(--font-sans);
+    color: var(--fg-body);
+    margin-top: 2px;
+  }
+  .init-row .tier {
+    font: 700 9px/1 var(--font-sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 7px;
+    background: var(--mr-blue-dark);
+    color: #fff;
+  }
+  .init-row.t2 .tier { background: #FCB900; color: #1A1A1A; }
+  .init-row.t3 .tier { background: #6B7E96; color: #fff; }
+
+  .sc-source-line { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--bg-rule); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide init" data-screen-label="41 Prioritised Initiatives">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 06  ·  Brand Strategy  ·  Initiative Priority Quadrant</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>Three strategic bets in the top-right. Two quick wins in the do-first zone. Defer the loyalty rev2, it does not move the brand-momentum needle.</h3>
+      <div class="meta">Effort × Impact  ·  9 initiatives plotted</div>
+    </div>
+
+    <div class="init-body">
+
+      <div class="quad-frame">
+        <svg viewBox="0 0 860 620" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="betGrad" cx="100%" cy="0%" r="80%">
+              <stop offset="0%" stop-color="rgba(252,185,0,0.18)"/>
+              <stop offset="60%" stop-color="rgba(252,185,0,0.04)"/>
+              <stop offset="100%" stop-color="rgba(252,185,0,0)"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Plot area: 80,40 → 820,540 -->
+
+          <!-- STRATEGIC BETS zone (top-right): radial highlight -->
+          <rect x="450" y="40" width="370" height="250" fill="url(#betGrad)"/>
+
+          <!-- DO FIRST zone (top-left): dashed accent border -->
+          <rect x="80" y="40" width="370" height="250"
+                fill="rgba(0,168,101,0.04)"
+                stroke="#00A865"
+                stroke-width="2"
+                stroke-dasharray="8 5"/>
+
+          <!-- Outer frame -->
+          <rect x="80" y="40" width="740" height="500" fill="none" stroke="#2E4A63" stroke-width="2"/>
+
+          <!-- Mid-axis lines (50% horizontal and vertical) -->
+          <line x1="450" y1="40" x2="450" y2="540" stroke="#2E4A63" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.45"/>
+          <line x1="80" y1="290" x2="820" y2="290" stroke="#2E4A63" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.45"/>
+
+          <!-- Quadrant labels (corners) -->
+          <text x="100" y="64" font-family="Open Sans, sans-serif" font-size="11" font-weight="700"
+                fill="#00A865" letter-spacing="0.18em" style="text-transform:uppercase">DO FIRST</text>
+          <text x="100" y="80" font-family="Open Sans, sans-serif" font-size="9" font-weight="400"
+                fill="#00A865" opacity="0.78">High impact, low effort</text>
+
+          <text x="800" y="64" text-anchor="end" font-family="Open Sans, sans-serif" font-size="11" font-weight="700"
+                fill="#C56A00" letter-spacing="0.18em" style="text-transform:uppercase">STRATEGIC BETS</text>
+          <text x="800" y="80" text-anchor="end" font-family="Open Sans, sans-serif" font-size="9" font-weight="400"
+                fill="#C56A00" opacity="0.78">High impact, high effort</text>
+
+          <text x="100" y="528" font-family="Open Sans, sans-serif" font-size="11" font-weight="700"
+                fill="rgba(46,74,99,0.45)" letter-spacing="0.18em" style="text-transform:uppercase">DEFER</text>
+          <text x="800" y="528" text-anchor="end" font-family="Open Sans, sans-serif" font-size="11" font-weight="700"
+                fill="rgba(46,74,99,0.45)" letter-spacing="0.18em" style="text-transform:uppercase">RECONSIDER</text>
+
+          <!-- Axis labels -->
+          <text x="450" y="588" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="12" font-weight="700"
+                fill="#2E4A63" letter-spacing="0.14em" style="text-transform:uppercase">EFFORT  →</text>
+          <text x="40" y="290" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="12" font-weight="700"
+                fill="#2E4A63" letter-spacing="0.14em" transform="rotate(-90 40 290)" style="text-transform:uppercase">IMPACT  →</text>
+
+          <!-- Initiative dots -->
+          <!-- I1 Men's footwear wave 2: Tier 1, effort 92, impact 88 (STRATEGIC BET) -->
+          <g>
+            <circle cx="760" cy="100" r="16" fill="none" stroke="rgba(73,113,183,0.28)" stroke-width="7"/>
+            <circle cx="760" cy="100" r="11" fill="#4971B7"/>
+            <text x="760" y="105" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#fff">1</text>
+            <text x="760" y="135" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63">Men's Footwear W2</text>
+          </g>
+
+          <!-- I2 Ambassador APAC: Tier 1, effort 58, impact 82 (DO FIRST/borderline) -->
+          <g>
+            <circle cx="510" cy="120" r="16" fill="none" stroke="rgba(73,113,183,0.28)" stroke-width="7"/>
+            <circle cx="510" cy="120" r="11" fill="#4971B7"/>
+            <text x="510" y="125" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#fff">2</text>
+            <text x="510" y="155" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63">Ambassador APAC</text>
+          </g>
+
+          <!-- I3 Sustainability content: Tier 1, effort 32, impact 70 (DO FIRST) -->
+          <g>
+            <circle cx="240" cy="180" r="16" fill="none" stroke="rgba(73,113,183,0.28)" stroke-width="7"/>
+            <circle cx="240" cy="180" r="11" fill="#4971B7"/>
+            <text x="240" y="185" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#fff">3</text>
+            <text x="240" y="215" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63">Sustainability content</text>
+          </g>
+
+          <!-- I4 TikTok Shop intl: Tier 2, effort 65, impact 72 (STRATEGIC BET) -->
+          <g>
+            <circle cx="600" cy="170" r="14" fill="none" stroke="rgba(252,185,0,0.28)" stroke-width="6"/>
+            <circle cx="600" cy="170" r="10" fill="#FCB900"/>
+            <text x="600" y="174" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#1A1A1A">4</text>
+            <text x="600" y="200" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63">TikTok Shop intl</text>
+          </g>
+
+          <!-- I5 Run shoe sub-brand: Tier 2, effort 88, impact 50 (between BET and RECONSIDER) -->
+          <g>
+            <circle cx="745" cy="295" r="14" fill="none" stroke="rgba(252,185,0,0.28)" stroke-width="6"/>
+            <circle cx="745" cy="295" r="10" fill="#FCB900"/>
+            <text x="745" y="299" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#1A1A1A">5</text>
+            <text x="745" y="325" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63">Run sub-brand</text>
+          </g>
+
+          <!-- I6 Community studio expansion: Tier 2, effort 50, impact 60 (centre) -->
+          <g>
+            <circle cx="430" cy="225" r="14" fill="none" stroke="rgba(252,185,0,0.28)" stroke-width="6"/>
+            <circle cx="430" cy="225" r="10" fill="#FCB900"/>
+            <text x="430" y="229" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#1A1A1A">6</text>
+            <text x="430" y="255" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="11" font-weight="700" fill="#2E4A63">Studio expansion</text>
+          </g>
+
+          <!-- I7 Wholesale refresh: Tier 3, effort 78, impact 45 (RECONSIDER) -->
+          <g>
+            <circle cx="685" cy="335" r="13" fill="none" stroke="rgba(107,126,150,0.32)" stroke-width="6"/>
+            <circle cx="685" cy="335" r="9" fill="#6B7E96"/>
+            <text x="685" y="339" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#fff">7</text>
+            <text x="685" y="362" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#2E4A63">Wholesale refresh</text>
+          </g>
+
+          <!-- I8 Loyalty rev2: Tier 3, effort 28, impact 32 (DEFER) -->
+          <g>
+            <circle cx="220" cy="420" r="13" fill="none" stroke="rgba(107,126,150,0.32)" stroke-width="6"/>
+            <circle cx="220" cy="420" r="9" fill="#6B7E96"/>
+            <text x="220" y="424" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#fff">8</text>
+            <text x="220" y="445" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#2E4A63">Loyalty rev2</text>
+          </g>
+
+          <!-- I9 B2B uniform pilot: Tier 3, effort 60, impact 22 (DEFER/RECONSIDER border) -->
+          <g>
+            <circle cx="560" cy="475" r="13" fill="none" stroke="rgba(107,126,150,0.32)" stroke-width="6"/>
+            <circle cx="560" cy="475" r="9" fill="#6B7E96"/>
+            <text x="560" y="479" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="800" fill="#fff">9</text>
+            <text x="560" y="500" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="10" font-weight="700" fill="#2E4A63">B2B uniform pilot</text>
+          </g>
+        </svg>
+
+        <div class="legend">
+          <div class="key"><span class="swatch t1"></span>Tier 1 priority</div>
+          <div class="key"><span class="swatch t2"></span>Tier 2 priority</div>
+          <div class="key"><span class="swatch t3"></span>Tier 3 priority</div>
+        </div>
+      </div>
+
+      <div class="init-list">
+        <div class="panel-hd">Initiative inventory</div>
+
+        <div class="init-row">
+          <div class="id">1</div>
+          <div class="name">Men's Footwear Wave 2<span class="sub">Strategic bet. Largest revenue lever in the men's plan.</span></div>
+          <div class="tier">T1</div>
+        </div>
+        <div class="init-row">
+          <div class="id">2</div>
+          <div class="name">Ambassador APAC roster<span class="sub">High impact at moderate effort. Locks community moat in APAC.</span></div>
+          <div class="tier">T1</div>
+        </div>
+        <div class="init-row">
+          <div class="id">3</div>
+          <div class="name">Sustainability content rollup<span class="sub">Quick win, addresses CEP pressure across all three audiences.</span></div>
+          <div class="tier">T1</div>
+        </div>
+        <div class="init-row t2">
+          <div class="id">4</div>
+          <div class="name">TikTok Shop international<span class="sub">Digital channel test in 3 EMEA markets, Q3 dispatch.</span></div>
+          <div class="tier">T2</div>
+        </div>
+        <div class="init-row t2">
+          <div class="id">5</div>
+          <div class="name">Run shoe sub-brand<span class="sub">High effort, impact uncertain. Stage-gate at D90.</span></div>
+          <div class="tier">T2</div>
+        </div>
+        <div class="init-row t2">
+          <div class="id">6</div>
+          <div class="name">Community studio expansion<span class="sub">10 new studios in priority cities. Audience-acquisition layer.</span></div>
+          <div class="tier">T2</div>
+        </div>
+        <div class="init-row t3">
+          <div class="id">7</div>
+          <div class="name">Wholesale partnership refresh<span class="sub">Reconsider. Heavy execution, modest brand impact.</span></div>
+          <div class="tier">T3</div>
+        </div>
+        <div class="init-row t3">
+          <div class="id">8</div>
+          <div class="name">Loyalty programme rev2<span class="sub">Defer. Does not move brand momentum index.</span></div>
+          <div class="tier">T3</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 41  ·  Part 06  ·  Source: Initiative inventory from Strategy Pillars 1-4 prompts; Effort and Impact scores triangulated against Q4 FY24 capex disclosure and competitor benchmarks; Tier classification per assisted-not-directed strategist framework. All scores ESTIMATED unless otherwise noted.</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="41" data-of="EXAMPLE"></script>
+</body>
+</html>

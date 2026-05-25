@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 01, Quick Facts on gradient slide, Kantar 4-col Category-Focus
+=============================================================================
+Patterns demonstrated:
+- K.1  Big-number hero with nestled label
+- K.2  Multi-color KPI tile system (blue / gold / green / slate top borders)
+- K.4  Bolder Kantar fills (KPI tiles on gradient = no transparency)
+- K.7  Gradient-slide approach (whole-slide gradient + transparent/white overlay cards)
+- K.9  Editorial finding-style headline using var(--t-h3-finding)
+- K.10 Source line discipline
+
+Brand: Lululemon Athletica (example)
+Replace placeholders with target brand's actual data when cloning.
+
+WHY THIS SLIDE MATTERS: it's the FIRST content slide after cover + frame.
+Sets the register for the entire deck. Stuart's bar = "reads as Kantar BrandZ".
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quick Facts, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .qf-grad .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+
+  .qf-grad .head { padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.32); }
+  .qf-grad .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-on-dark); max-width: 1400px; }
+  .qf-grad .head .meta { margin-top: 6px; font: var(--t-eyebrow); color: rgba(255,255,255,0.72); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  /* Kantar 4-col Category-Focus layout (Section 3) */
+  .kantar-quad { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; flex: 1; margin-top: 28px; }
+  .kantar-quad .col { padding: 0 32px; border-right: 1px solid rgba(255,255,255,0.22); display: flex; flex-direction: column; }
+  .kantar-quad .col:first-child { padding-left: 0; }
+  .kantar-quad .col:last-child { padding-right: 0; border-right: none; }
+
+  /* Column header, extreme small caps (Pattern K.3) */
+  .kantar-quad .col-hd {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.42);
+  }
+
+  /* KPI tiles on gradient, SOLID fill per K.4 (no transparency on tiles) */
+  .kpi-on-dark { display: flex; flex-direction: column; gap: 4px; }
+  .kpi-on-dark .num {
+    font: 800 80px/0.9 var(--font-sans);
+    color: var(--fg-on-dark);
+    letter-spacing: -0.035em;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  /* Nestled unit label per Pattern K.1 */
+  .kpi-on-dark .num .unit-tuck {
+    font: 700 12px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.62);
+  }
+  .kpi-on-dark .label {
+    font: 700 13px/1.2 var(--font-sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-on-dark);
+    margin-top: 12px;
+  }
+  .kpi-on-dark .descriptor {
+    font: 400 14px/1.5 var(--font-sans);
+    color: rgba(255,255,255,0.85);
+    margin-top: 8px;
+    max-width: 380px;
+  }
+  .kpi-on-dark .chip-row { margin-top: 14px; }
+
+  /* Accent stripe above each KPI (K.2 multi-color tile signal) */
+  .kpi-on-dark .accent { width: 56px; height: 4px; margin-bottom: 18px; }
+  .kpi-on-dark.col-gold .accent  { background: #FCB900; }
+  .kpi-on-dark.col-green .accent { background: #00D084; }
+  .kpi-on-dark.col-teal .accent  { background: #3B8FA1; }
+  .kpi-on-dark.col-light .accent { background: #5A9BD5; }
+
+  /* Highlight number for hero KPI */
+  .kpi-on-dark.hero .num { color: #FCB900; }
+
+  /* YoY indicator chip */
+  .yoy {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font: 700 12px/1 var(--font-sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    background: rgba(0,208,132,0.22);
+    color: #C0FBE0;
+    margin-top: 14px;
+  }
+  .yoy svg { width: 10px; height: 10px; }
+  .yoy.neg { background: rgba(239,67,78,0.28); color: #FFD0D4; }
+
+  /* Source line on gradient, lighter colour */
+  .qf-grad .sc-source-line { margin-top: 24px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.32); }
+  .qf-grad .sc-source-line .sc-source { font: var(--t-source); color: rgba(255,255,255,0.62); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide gradient qf-grad" data-screen-label="04 Quick Facts">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow on-dark">Part 01  ·  The Market  ·  Quick Facts</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>A premium technical apparel brand built on community, scaling beyond yoga into menswear, footwear, and global markets.</h3>
+      <div class="meta">FY24 financial snapshot  ·  4 hero metrics</div>
+    </div>
+
+    <div class="kantar-quad">
+
+      <div class="col">
+        <div class="col-hd">FY24 Revenue</div>
+        <div class="kpi-on-dark col-gold hero">
+          <div class="accent"></div>
+          <div class="num">9.6<span class="unit-tuck">USD Bn</span></div>
+          <div class="label">Net revenue, FY24</div>
+          <div class="descriptor">Driven by international expansion and men's category growth. Americas remains 73% of total revenue but international growing 31% YoY.</div>
+          <div class="yoy"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 1 L9 7 L1 7 Z"/></svg>+18.6% YoY</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-hd">Global Footprint</div>
+        <div class="kpi-on-dark col-teal">
+          <div class="accent"></div>
+          <div class="num">711<span class="unit-tuck">stores</span></div>
+          <div class="label">Owned-store network</div>
+          <div class="descriptor">Across 26 countries. Pop-up + community studio formats running in parallel as audience-acquisition layer ahead of full-store opens.</div>
+          <div class="yoy"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 1 L9 7 L1 7 Z"/></svg>+9.1% net new</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-hd">Founded</div>
+        <div class="kpi-on-dark col-light">
+          <div class="accent"></div>
+          <div class="num">1998<span class="unit-tuck">Vancouver</span></div>
+          <div class="label">Chip Wilson, founder</div>
+          <div class="descriptor">27 years of category creation. Originated technical yoga apparel as a category. Now leadership-tested under CEO Calvin McDonald (2018-present).</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-hd">Brand Value</div>
+        <div class="kpi-on-dark col-green">
+          <div class="accent"></div>
+          <div class="num">25.4<span class="unit-tuck">USD Bn</span></div>
+          <div class="label">Estimated brand value, 2026</div>
+          <div class="descriptor">Top-quartile apparel brand by enterprise value. Premium pricing power sustained through community + ambassador model, not paid promotion.</div>
+          <div class="yoy"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 1 L9 7 L1 7 Z"/></svg>+12% est.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 04  ·  Part 01  ·  Source: Lululemon Athletica FY24 Annual Report [2]; Q4 FY24 earnings release [3]; Kantar BrandZ 2026 Apparel category report (estimated entry) [4]; Store count from corporate factsheet 2025 [5]</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="04" data-of="EXAMPLE"></script>
+</body>
+</html>

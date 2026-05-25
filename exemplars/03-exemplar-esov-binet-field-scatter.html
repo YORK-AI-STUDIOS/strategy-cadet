@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 03, ESOV Binet & Field 2-axis scatter chart
+=============================================================================
+THE classic brand-strategy chart. Audit Section 5.4 #2 calls this out
+specifically. Plots Share of Voice (x) against Share of Market (y) with
+a fair-share diagonal. Above the diagonal = over-investing in voice
+(attack mode); below = under-investing (defense / harvesting).
+
+Patterns demonstrated:
+- K.4  Bolder fills, SOLID brand dots with multi-tone halo rings
+- K.4  Fair-share diagonal as dashed reference line
+- K.3  Section-label small caps for axis labels + quadrant labels
+- K.9  Editorial finding-style headline
+- K.10 Source line discipline
+
+Brand: Lululemon Athletica (example, plotted in subject-red)
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ESOV Positioning, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .esov .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .esov .head { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .esov .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .esov .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  .esov-body { margin-top: 20px; display: grid; grid-template-columns: minmax(0, 980px) 1fr; gap: 48px; flex: 1; min-height: 0; }
+
+  .scatter-frame { position: relative; display: flex; flex-direction: column; min-height: 0; }
+  .scatter-frame svg { width: 100%; height: auto; max-height: 600px; }
+
+  /* Right panel: ESOV table + read */
+  .esov-panel { display: flex; flex-direction: column; gap: 18px; min-height: 0; }
+  .panel-hd {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mr-blue-dark);
+    margin-bottom: 4px;
+  }
+  .esov-table { display: flex; flex-direction: column; gap: 0; }
+  .esov-row {
+    display: grid;
+    grid-template-columns: 1fr 60px 60px 80px;
+    gap: 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--bg-rule);
+    align-items: center;
+  }
+  .esov-row.subject { background: rgba(239,67,78,0.06); border-left: 3px solid var(--mr-red); padding-left: 10px; }
+  .esov-row.head-row { font: 700 10px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); border-bottom: 2px solid var(--bg-rule); padding-bottom: 6px; }
+  .esov-row .brand { font: 700 14px/1.2 var(--font-sans); color: var(--fg-heading); }
+  .esov-row.subject .brand { color: var(--mr-red); }
+  .esov-row .v {
+    font: 700 14px/1 var(--font-sans);
+    color: var(--fg-heading);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .esov-row .delta {
+    font: 700 14px/1 var(--font-sans);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .esov-row .delta.pos { color: #00A865; }
+  .esov-row .delta.neg { color: var(--mr-red); }
+  .esov-row .mode {
+    font: 700 9px/1 var(--font-sans);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 4px 6px;
+    text-align: center;
+  }
+  .mode.attack { background: #00A865; }
+  .mode.defense { background: var(--mr-blue-dark); }
+  .mode.steady { background: #6B7E96; }
+
+  .esov-read {
+    background: #2E4A63;
+    border-left: 3px solid #FCB900;
+    padding: 14px 16px;
+    color: var(--fg-on-dark);
+  }
+  .esov-read .lbl { font: 700 11px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+  .esov-read p { margin: 0; font: 400 13px/1.5 var(--font-sans); color: rgba(255,255,255,0.92); }
+
+  .sc-source-line { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--bg-rule); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide esov" data-screen-label="36 ESOV positioning">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 05  ·  Competitive  ·  ESOV Positioning, Binet and Field</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>Lululemon over-indexes market share against voice, defense mode. Vuori and Alo running attack-mode investment ratios; growth implication clear.</h3>
+      <div class="meta">Share of Voice × Share of Market  ·  AU + US blended</div>
+    </div>
+
+    <div class="esov-body">
+
+      <div class="scatter-frame">
+        <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg">
+          <!-- Plot area inset: 80,40,840,520 -->
+          <!-- Background grid -->
+          <g stroke="rgba(46,74,99,0.06)" stroke-width="1">
+            <line x1="80" y1="120" x2="840" y2="120"/>
+            <line x1="80" y1="200" x2="840" y2="200"/>
+            <line x1="80" y1="280" x2="840" y2="280"/>
+            <line x1="80" y1="360" x2="840" y2="360"/>
+            <line x1="80" y1="440" x2="840" y2="440"/>
+            <line x1="232" y1="40" x2="232" y2="520"/>
+            <line x1="384" y1="40" x2="384" y2="520"/>
+            <line x1="536" y1="40" x2="536" y2="520"/>
+            <line x1="688" y1="40" x2="688" y2="520"/>
+          </g>
+
+          <!-- Axis spines -->
+          <line x1="80" y1="520" x2="840" y2="520" stroke="#2E4A63" stroke-width="2"/>
+          <line x1="80" y1="40" x2="80" y2="520" stroke="#2E4A63" stroke-width="2"/>
+
+          <!-- Fair-share diagonal (where SoV == SoM): from (80,520) to (840,40) -->
+          <line x1="80" y1="520" x2="840" y2="40"
+                stroke="#2E4A63"
+                stroke-width="1.5"
+                stroke-dasharray="6 4"
+                opacity="0.55"/>
+          <text x="780" y="55" font-family="Open Sans, sans-serif" font-size="11" font-weight="700"
+                fill="#2E4A63" letter-spacing="0.08em" opacity="0.7">FAIR SHARE LINE</text>
+
+          <!-- Quadrant labels: DEFENSE top-left (SoM>SoV), ATTACK bottom-right (SoV>SoM) -->
+          <rect x="100" y="60" width="190" height="40" fill="rgba(73,113,183,0.10)"/>
+          <text x="110" y="78" font-family="Open Sans, sans-serif" font-size="10" font-weight="700"
+                fill="#4971B7" letter-spacing="0.14em">DEFENSE MODE</text>
+          <text x="110" y="92" font-family="Open Sans, sans-serif" font-size="9" font-weight="400"
+                fill="#4971B7" opacity="0.85">Market &gt; Voice. Harvesting share.</text>
+
+          <rect x="620" y="460" width="200" height="40" fill="rgba(0,168,101,0.12)"/>
+          <text x="630" y="478" font-family="Open Sans, sans-serif" font-size="10" font-weight="700"
+                fill="#00A865" letter-spacing="0.14em">ATTACK MODE</text>
+          <text x="630" y="492" font-family="Open Sans, sans-serif" font-size="9" font-weight="400"
+                fill="#00A865" opacity="0.85">Voice &gt; Market. Buying growth.</text>
+
+          <!-- Axis tick labels -->
+          <g font-family="Open Sans, sans-serif" font-size="10" font-weight="600" fill="#767676" text-anchor="middle">
+            <text x="80" y="540">0%</text>
+            <text x="232" y="540">10%</text>
+            <text x="384" y="540">20%</text>
+            <text x="536" y="540">30%</text>
+            <text x="688" y="540">40%</text>
+            <text x="840" y="540">50%</text>
+          </g>
+          <g font-family="Open Sans, sans-serif" font-size="10" font-weight="600" fill="#767676" text-anchor="end">
+            <text x="68" y="525">0%</text>
+            <text x="68" y="443">10%</text>
+            <text x="68" y="363">20%</text>
+            <text x="68" y="283">30%</text>
+            <text x="68" y="203">40%</text>
+            <text x="68" y="44">50%</text>
+          </g>
+
+          <!-- Axis titles -->
+          <text x="460" y="575" font-family="Open Sans, sans-serif" font-size="12" font-weight="700"
+                fill="#2E4A63" text-anchor="middle" letter-spacing="0.14em" style="text-transform:uppercase">SHARE OF VOICE (%)</text>
+          <text x="22" y="280" font-family="Open Sans, sans-serif" font-size="12" font-weight="700"
+                fill="#2E4A63" text-anchor="middle" letter-spacing="0.14em" transform="rotate(-90 22 280)" style="text-transform:uppercase">SHARE OF MARKET (%)</text>
+
+          <!-- Brand dots, SOLID + halo (Pattern K.4) -->
+          <!-- Lululemon: SoV 18, SoM 22, subject, red, larger -->
+          <g>
+            <circle cx="354" cy="344" r="18" fill="none" stroke="rgba(239,67,78,0.28)" stroke-width="8"/>
+            <circle cx="354" cy="344" r="11" fill="var(--mr-red, #EF434E)"/>
+            <text x="380" y="338" font-family="Open Sans, sans-serif" font-size="13" font-weight="800" fill="#EF434E">LULULEMON</text>
+            <text x="380" y="352" font-family="Open Sans, sans-serif" font-size="10" font-weight="600" fill="#767676">SoV 18  ·  SoM 22  ·  ESOV -4</text>
+          </g>
+
+          <!-- Nike: SoV 38, SoM 35, solid blue + halo -->
+          <g>
+            <circle cx="658" cy="248" r="13" fill="none" stroke="rgba(73,113,183,0.22)" stroke-width="6"/>
+            <circle cx="658" cy="248" r="8" fill="#4971B7"/>
+            <text x="678" y="244" font-family="Open Sans, sans-serif" font-size="12" font-weight="700" fill="#2E4A63">Nike</text>
+            <text x="678" y="258" font-family="Open Sans, sans-serif" font-size="9" font-weight="600" fill="#767676">38 / 35  ·  +3</text>
+          </g>
+
+          <!-- Adidas: SoV 24, SoM 19 -->
+          <g>
+            <circle cx="445" cy="376" r="13" fill="none" stroke="rgba(73,113,183,0.22)" stroke-width="6"/>
+            <circle cx="445" cy="376" r="8" fill="#4971B7"/>
+            <text x="468" y="372" font-family="Open Sans, sans-serif" font-size="12" font-weight="700" fill="#2E4A63">Adidas</text>
+            <text x="468" y="386" font-family="Open Sans, sans-serif" font-size="9" font-weight="600" fill="#767676">24 / 19  ·  +5 ATK</text>
+          </g>
+
+          <!-- Athleta: SoV 9, SoM 7 -->
+          <g>
+            <circle cx="217" cy="464" r="13" fill="none" stroke="rgba(73,113,183,0.22)" stroke-width="6"/>
+            <circle cx="217" cy="464" r="8" fill="#4971B7"/>
+            <text x="240" y="460" font-family="Open Sans, sans-serif" font-size="12" font-weight="700" fill="#2E4A63">Athleta</text>
+            <text x="240" y="474" font-family="Open Sans, sans-serif" font-size="9" font-weight="600" fill="#767676">9 / 7  ·  +2</text>
+          </g>
+
+          <!-- Vuori: SoV 6, SoM 4 (attack mode signal) -->
+          <g>
+            <circle cx="172" cy="488" r="14" fill="none" stroke="rgba(0,168,101,0.28)" stroke-width="7"/>
+            <circle cx="172" cy="488" r="8" fill="#00A865"/>
+            <text x="196" y="484" font-family="Open Sans, sans-serif" font-size="12" font-weight="700" fill="#00A865">Vuori</text>
+            <text x="196" y="498" font-family="Open Sans, sans-serif" font-size="9" font-weight="600" fill="#767676">6 / 4  ·  +2 ATK</text>
+          </g>
+
+          <!-- Alo Yoga: SoV 11, SoM 8 -->
+          <g>
+            <circle cx="247" cy="456" r="14" fill="none" stroke="rgba(0,168,101,0.28)" stroke-width="7"/>
+            <circle cx="247" cy="456" r="8" fill="#00A865"/>
+            <text x="270" y="452" font-family="Open Sans, sans-serif" font-size="12" font-weight="700" fill="#00A865">Alo Yoga</text>
+            <text x="270" y="466" font-family="Open Sans, sans-serif" font-size="9" font-weight="600" fill="#767676">11 / 8  ·  +3 ATK</text>
+          </g>
+
+          <!-- Sweaty Betty: SoV 4, SoM 3 -->
+          <g>
+            <circle cx="141" cy="496" r="13" fill="none" stroke="rgba(107,126,150,0.22)" stroke-width="6"/>
+            <circle cx="141" cy="496" r="7" fill="#6B7E96"/>
+            <text x="160" y="492" font-family="Open Sans, sans-serif" font-size="11" font-weight="600" fill="#6B7E96">Sweaty Betty</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="esov-panel">
+
+        <div>
+          <div class="panel-hd">ESOV Read</div>
+          <div class="esov-table">
+            <div class="esov-row head-row">
+              <div>Brand</div>
+              <div style="text-align:right">SoV</div>
+              <div style="text-align:right">SoM</div>
+              <div style="text-align:right">ESOV</div>
+            </div>
+            <div class="esov-row subject">
+              <div class="brand">Lululemon</div>
+              <div class="v">18</div>
+              <div class="v">22</div>
+              <div class="delta neg">-4 DEF</div>
+            </div>
+            <div class="esov-row">
+              <div class="brand">Nike</div>
+              <div class="v">38</div>
+              <div class="v">35</div>
+              <div class="delta pos">+3</div>
+            </div>
+            <div class="esov-row">
+              <div class="brand">Adidas</div>
+              <div class="v">24</div>
+              <div class="v">19</div>
+              <div class="delta pos">+5 ATK</div>
+            </div>
+            <div class="esov-row">
+              <div class="brand">Alo Yoga</div>
+              <div class="v">11</div>
+              <div class="v">8</div>
+              <div class="delta pos">+3 ATK</div>
+            </div>
+            <div class="esov-row">
+              <div class="brand">Athleta</div>
+              <div class="v">9</div>
+              <div class="v">7</div>
+              <div class="delta pos">+2</div>
+            </div>
+            <div class="esov-row">
+              <div class="brand">Vuori</div>
+              <div class="v">6</div>
+              <div class="v">4</div>
+              <div class="delta pos">+2 ATK</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="esov-read">
+          <div class="lbl">Strategic read</div>
+          <p>Lululemon's -4 ESOV says category competitors are buying voice ahead of share. Vuori and Alo each running +2-3 attack ratios at much smaller bases. If sustained two more quarters, expect Lululemon SoM to compress 1.5-2.5 points. Defense move: lift voice in the women's run and men's training segments where attackers concentrate.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 36  ·  Part 05  ·  Source: Share of Voice from Mention API news + social blended Q4 FY24; Share of Market from Euromonitor athleisure category AU+US blended; ESOV per Binet and Field (2013) Long and Short of It; Vuori private but estimated via Crunchbase + Statista [37][39][41][45]</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="36" data-of="EXAMPLE"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+EXEMPLAR 07, Audience profile with distinct abstract silhouette
+=============================================================================
+Patterns demonstrated:
+- K.5  DISTINCT abstract silhouette per audience (NOT generic stick figure)
+       Each audience gets different head shape, shoulder curve, accent
+       stripe colour. This audience uses softer shoulder curve + cool blue
+       stripe, for the audience-2 and audience-3 variants below see the
+       "VARIATIONS PER AUDIENCE" comment block.
+- K.6  Light-blue cards with coloured left rule (purchase drivers + CEPs)
+- K.8  Hairline rules between columns
+- K.9  Editorial finding-style headline
+- K.10 Source line discipline
+- K.11 New chip palette (PROBABLE teal, ESTIMATED purple)
+
+Brand: Lululemon Athletica (example)
+Audience: Wellness-Driven Premium Women (Audience 1 of 3)
+
+VARIATIONS PER AUDIENCE (so the agent makes 3 distinct silhouettes):
+- A1 (this slide), softer shoulders, oval head, cool blue stripe
+- A2, squarer shoulders, round head, gold stripe (e.g. tech-pro male)
+- A3, leaning forward, smaller head, green stripe (e.g. instructor pose)
+Each audience SVG must be visually distinct, not just colour-swapped.
+=============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience 1 Profile, Lululemon Athletica, Strategy Cadet</title>
+<link rel="stylesheet" href="./slide-base.css">
+<style>
+  .aud .sc-body-frame { display: flex; flex-direction: column; height: 100%; padding-top: 4px; }
+  .aud .head { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-rule); }
+  .aud .head h3 { margin: 0; font: var(--t-h3-finding); color: var(--fg-heading); max-width: 1300px; }
+  .aud .head .meta { margin-left: auto; text-align: right; font: var(--t-eyebrow); color: var(--fg-body); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  /* Hero band: silhouette + stat pills */
+  .aud-hero {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    background: #F4F7FB;
+    border-left: 6px solid #4971B7;
+    padding: 24px 28px;
+    align-items: center;
+  }
+  .aud-silhouette {
+    width: 120px;
+    height: 140px;
+  }
+  .aud-hero-meta { display: flex; flex-direction: column; gap: 6px; }
+  .aud-hero-name {
+    font: 800 28px/1.1 var(--font-sans);
+    color: var(--fg-heading);
+    letter-spacing: -0.01em;
+  }
+  .aud-hero-tag {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #4971B7;
+  }
+  .aud-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+  .aud-stat {
+    padding: 10px 14px;
+    background: #fff;
+    border-left: 3px solid #4971B7;
+  }
+  .aud-stat .lbl {
+    font: 700 9px/1 var(--font-sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    margin-bottom: 4px;
+  }
+  .aud-stat .v {
+    font: 700 14px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+  }
+
+  /* Two-column body */
+  .aud-body {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+    min-height: 0;
+  }
+  .aud-col {
+    padding: 0 32px;
+  }
+  .aud-col:first-child { padding-left: 0; border-right: 1px solid var(--bg-rule); }
+  .aud-col:last-child { padding-right: 0; }
+
+  .panel-hd {
+    font: 700 11px/1 var(--font-sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--mr-blue-dark);
+    margin-bottom: 14px;
+  }
+
+  /* Demographic profile rows */
+  .demo-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--bg-rule);
+    align-items: baseline;
+  }
+  .demo-row .demo-lbl {
+    font: 700 10px/1 var(--font-sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mr-blue-dark);
+  }
+  .demo-row .demo-val {
+    font: 400 13px/1.45 var(--font-sans);
+    color: var(--fg-body);
+  }
+  .demo-row .demo-val strong { color: var(--fg-heading); font-weight: 700; }
+
+  /* Purchase driver bars */
+  .drivers { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  .driver-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 36px;
+    gap: 14px;
+    align-items: center;
+  }
+  .driver-row .d-lbl {
+    font: 600 12px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+  }
+  .driver-row .d-bar {
+    height: 14px;
+    background: #E5EAF0;
+    position: relative;
+  }
+  .driver-row .d-bar .d-fill {
+    height: 14px;
+    background: #4971B7;
+  }
+  .driver-row .d-bar .d-fill.hi { background: #00A865; }
+  .driver-row .d-score {
+    font: 700 13px/1 var(--font-sans);
+    color: var(--fg-heading);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* CEP cards */
+  .ceps { display: flex; flex-direction: column; gap: 8px; }
+  .cep-card {
+    padding: 10px 14px;
+    background: #F4F7FB;
+    border-left: 3px solid #4971B7;
+  }
+  .cep-card .cep-trigger {
+    font: 700 12px/1.2 var(--font-sans);
+    color: var(--fg-heading);
+    margin-bottom: 4px;
+  }
+  .cep-card .cep-body {
+    font: 400 12px/1.4 var(--font-sans);
+    color: var(--fg-body);
+  }
+
+  .sc-source-line { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--bg-rule); }
+
+  .sc-chip { font: 700 11px/1 var(--font-sans); }
+</style>
+</head>
+<body>
+<div class="sc-stage">
+<section class="sc-slide aud" data-screen-label="18 Audience 1 Profile">
+  <div class="sc-eyebrow-strip"><span class="sc-dot"></span><span class="sc-eyebrow">Part 03  ·  Audiences  ·  Audience 1 of 3</span></div>
+  <div class="sc-body-frame">
+
+    <div class="head">
+      <h3>Wellness-Driven Premium Women, aged 28-42. Buys identity, not utility. Will pay 2-3x category baseline for performance + community signal.</h3>
+      <div class="meta">Audience profile  ·  A1</div>
+    </div>
+
+    <div class="aud-hero">
+      <!-- AUDIENCE 1 SILHOUETTE, distinct shape per Pattern K.5 -->
+      <!-- A1 signature: softer shoulder curve, oval head, cool blue accent -->
+      <svg class="aud-silhouette" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" aria-label="Audience 1 silhouette">
+        <!-- Background tile -->
+        <rect x="0" y="0" width="120" height="140" fill="#EEF4FB"/>
+        <!-- A1 accent stripe, cool blue, left side -->
+        <rect x="0" y="0" width="6" height="140" fill="#4971B7"/>
+        <!-- Head, slightly oval, soft -->
+        <ellipse cx="60" cy="42" rx="18" ry="20" fill="#4971B7"/>
+        <!-- Neck/shoulder curve, softer arc -->
+        <path d="M 28 140 Q 28 78 60 70 Q 92 78 92 140 Z" fill="#4971B7"/>
+        <!-- Subtle highlight ring on shoulder for distinction -->
+        <path d="M 60 70 Q 36 78 30 100" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+        <!-- Activity signal: small barre-pose accent (yoga mat horizontal line) -->
+        <rect x="20" y="128" width="80" height="2" fill="#5A9BD5"/>
+      </svg>
+
+      <div>
+        <div class="aud-hero-tag">A1  ·  Sarah-archetype  ·  AU primary buyer</div>
+        <div class="aud-hero-name">Wellness-Driven Premium Women</div>
+
+        <div class="aud-stats">
+          <div class="aud-stat">
+            <div class="lbl">AGE</div>
+            <div class="v">28-42 (peak 33-37)</div>
+          </div>
+          <div class="aud-stat">
+            <div class="lbl">INCOME</div>
+            <div class="v">AUD 110-220K</div>
+          </div>
+          <div class="aud-stat">
+            <div class="lbl">LIFESTAGE</div>
+            <div class="v">Pre-family or 1 child</div>
+          </div>
+          <div class="aud-stat">
+            <div class="lbl">LOCATION</div>
+            <div class="v">Inner-ring metro AU</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aud-body">
+
+      <div class="aud-col">
+        <div class="panel-hd">Profile and cultural signal</div>
+
+        <div class="demo-row">
+          <div class="demo-lbl">Employer type</div>
+          <div class="demo-val"><strong>Tier 1 professional services</strong>, healthcare leadership, top-tier consultancies, fintech. Usually salaried + bonus structure.</div>
+        </div>
+        <div class="demo-row">
+          <div class="demo-lbl">Role titles</div>
+          <div class="demo-val">Senior Manager, Director, GP, Lawyer, Senior Consultant, Product Lead, In-house Counsel</div>
+        </div>
+        <div class="demo-row">
+          <div class="demo-lbl">Key values</div>
+          <div class="demo-val">Self-investment, longevity over intensity, identity through routine, community as accountability layer, low-tolerance for performative wellness <span class="sc-chip sc-chip--probable">Probable</span></div>
+        </div>
+        <div class="demo-row">
+          <div class="demo-lbl">Decision context</div>
+          <div class="demo-val">Identity purchase. Researches via Instagram + ambassador content. Trial via studio class then buys head-to-toe. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
+        </div>
+        <div class="demo-row">
+          <div class="demo-lbl">Key geography</div>
+          <div class="demo-val">Inner Melbourne, Sydney Eastern Suburbs + Northern Beaches, Brisbane Newstead, Perth Cottesloe</div>
+        </div>
+        <div class="demo-row">
+          <div class="demo-lbl">Headline finding</div>
+          <div class="demo-val"><strong>Brand image is the purchase driver, not price.</strong> 5/5 brand image score. Will switch only if community signal degrades. <span class="sc-chip sc-chip--verified">Verified</span></div>
+        </div>
+      </div>
+
+      <div class="aud-col">
+        <div class="panel-hd">Purchase drivers (1-5 scale)</div>
+        <div class="drivers">
+          <div class="driver-row"><div class="d-lbl">Brand Image</div><div class="d-bar"><div class="d-fill hi" style="width:100%"></div></div><div class="d-score">5/5</div></div>
+          <div class="driver-row"><div class="d-lbl">Community / Ambassador</div><div class="d-bar"><div class="d-fill hi" style="width:100%"></div></div><div class="d-score">5/5</div></div>
+          <div class="driver-row"><div class="d-lbl">Fabric Performance</div><div class="d-bar"><div class="d-fill" style="width:90%"></div></div><div class="d-score">4.5/5</div></div>
+          <div class="driver-row"><div class="d-lbl">Fit / Quality</div><div class="d-bar"><div class="d-fill" style="width:80%"></div></div><div class="d-score">4/5</div></div>
+          <div class="driver-row"><div class="d-lbl">Price / Value</div><div class="d-bar"><div class="d-fill" style="width:40%"></div></div><div class="d-score">2/5</div></div>
+          <div class="driver-row"><div class="d-lbl">Sustainability</div><div class="d-bar"><div class="d-fill" style="width:60%"></div></div><div class="d-score">3/5</div></div>
+        </div>
+
+        <div class="panel-hd" style="margin-top: 22px">Category entry points</div>
+        <div class="ceps">
+          <div class="cep-card">
+            <div class="cep-trigger">First class at a community studio</div>
+            <div class="cep-body">The trigger event. Buys head-to-toe in 14 days of first class for 38% of new entrants.</div>
+          </div>
+          <div class="cep-card">
+            <div class="cep-trigger">Ambassador in social feed</div>
+            <div class="cep-body">A trusted ambassador posts product detail. Drives 28% of first-product-purchase journeys.</div>
+          </div>
+          <div class="cep-card">
+            <div class="cep-trigger">Returning from injury</div>
+            <div class="cep-body">Resuming movement after a break triggers "reward myself" buying behaviour. Premium fabric reads as worth it.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sc-source-line"><span class="sc-source">p. 18  ·  Part 03  ·  Source: Audience 1 profile from Brand DNA prompts 14-18; AU income data ABS 2024; cultural signals from community studio review-mining + Instagram ambassador content analysis [18][19][20]; Purchase driver scores analyst-assessed not survey-derived, PROBABLE confidence; CEPs from category entry point research per Romaniuk 2023.</span></div>
+
+  </div>
+</section>
+</div>
+<script src="./_scale.js"></script>
+<script src="./_chrome.js" data-page="18" data-of="EXAMPLE"></script>
+</body>
+</html>
