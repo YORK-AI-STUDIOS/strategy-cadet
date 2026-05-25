@@ -7,10 +7,19 @@
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
   /* Restructured 2026-05-26: KPI tree spans full width on top; tables below in 2-up row */
-  .sc-slide .sc-body-frame { inset: 52px var(--slide-margin-x) 110px; }
+  .sc-slide { position: relative; }
+  .sc-slide .sc-body-frame { inset: 52px var(--slide-margin-x) 120px; }
   .sc-slide .sc-h2 { margin-bottom: 6px; }
   .kpi-tree-wrap { margin-top: 0; }
   .kpi-tables { margin-top: 8px; }
+  /* Source line pinned 50px from the SLIDE bottom (not the body-frame) so flex-overflow can't compress it. */
+  .sc-slide > .sc-source-line {
+    position: absolute;
+    left: var(--slide-margin-x);
+    right: var(--slide-margin-x);
+    bottom: 50px;
+    margin: 0;
+  }
 
   .tree-title { font: 700 12px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .tree-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
@@ -243,9 +252,10 @@
     </div>
 
   </div>
-
-  <div class="sc-source-line"><span class="sc-source">p. 40 · Part 06 · Source: Business Planning Section 3 (KPI Tree); Searipple Village occupancy [2][83]; AASB S2 Group 1 obligation [2] p.26; AusTender panel reference [Audience 2]; SoS extension not yet run (ESTIMATED) [Note 1]</span></div>
   </div>
+
+  <!-- Source line MOVED OUT of body-frame so its absolute positioning anchors to .sc-slide, not the body-frame -->
+  <div class="sc-source-line"><span class="sc-source">p. 40 · Part 06 · Source: Business Planning Section 3 (KPI Tree); Searipple Village occupancy [2][83]; AASB S2 Group 1 obligation [2] p.26; AusTender panel reference [Audience 2]; SoS extension not yet run (ESTIMATED) [Note 1]</span></div>
 </section>
 </div>
 <script src="_scale.js"></script>
