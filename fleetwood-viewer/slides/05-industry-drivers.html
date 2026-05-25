@@ -6,10 +6,13 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
- .drivers-layout { display: grid; grid-template-columns: minmax(0, 760px) 1fr; gap: 40px; margin-top: 18px; align-items: start; }
+ /* Slide-specific shift: pull content up 30px (per Stuart 2026-05-26 07:43) */
+ .sc-slide .sc-body-frame { inset: 66px var(--slide-margin-x) 80px; }
+ .drivers-layout { display: grid; grid-template-columns: minmax(0, 840px) 1fr; gap: 40px; margin-top: 18px; align-items: start; }
 
- /* Hex wheel */
- .hex-wheel { position: relative; width: 720px; height: 600px; }
+ /* Hex wheel — enlarged ~11% for visual dominance */
+ .hex-wheel { position: relative; width: 800px; height: 667px; }
+ .hex-wheel svg { width: 100%; height: 100%; display: block; }
 
  /* Driver cards */
  .driver-list { display: flex; flex-direction: column; gap: 14px; }
@@ -34,7 +37,7 @@
  <div>
  <!-- Hexagonal driver wheel SVG -->
  <!-- Geometry: centre hex w=160 h=185 at (360,290). 6 outer hexes w=140 h=160 at r=200, 60deg apart. No label overlap. -->
- <svg viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg" width="720" height="600">
+ <svg viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
 
  <!-- DRIVER 1 top, Federal Modular Mandate (TAILWIND) — centre (360, 90) -->
  <polygon points="360,10 430,50 430,130 360,170 290,130 290,50" fill="#E8F7F0" stroke="#00D084" stroke-width="2"/>
