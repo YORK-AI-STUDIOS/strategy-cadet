@@ -19,6 +19,8 @@ Page 1 gradient overridden to charcoal per Stuart 22:54 AEST.
 html, body { margin: 0; padding: 0; background: #1a1f2b; font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
 .sc-stage { position: fixed; inset: 0; overflow: hidden; background: #1a1f2b; }
 .sc-slide { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden; }
+/* CANVAS-FILL-FIX 2026-05-25 23:18 AEST: original .ig + .title-slide had no width/height (relied on deck-stage). Force them to fill the slide canvas. */
+.sc-slide .ig, .sc-slide .title-slide { width: 1920px !important; height: 1080px !important; }
 
 
   :root {
