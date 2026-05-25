@@ -20,13 +20,14 @@
  .ic-label { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #2E4A63; margin-bottom: 6px; }
  .ic-val { font: 800 24px/1.1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.01em; margin-bottom: 6px; }
  .ic-body { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
- .timeline-bar { margin-top: 18px; }
+ /* Full-page-width timeline (sibling of dna-layout, not inside left column) */
+ .timeline-bar { margin-top: 32px; width: 100%; padding-top: 18px; border-top: 1px solid var(--bg-rule); }
  .tl-inner { display: flex; align-items: center; gap: 0; }
- .tl-node { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 80px; }
- .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--mr-blue-dark); flex-shrink: 0; }
- .tl-year { font: 700 11px/1 var(--font-sans); color: var(--mr-blue-dark); }
- .tl-label { font: 400 10px/1.3 var(--font-sans); color: var(--fg-muted); text-align: center; max-width: 72px; }
- .tl-line { flex: 1; height: 2px; background: #D0D8E4; }
+ .tl-node { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 200px; }
+ .tl-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--mr-blue-dark); flex-shrink: 0; }
+ .tl-year { font: 800 18px/1 var(--font-sans); color: var(--mr-blue-dark); letter-spacing: -0.01em; }
+ .tl-label { font: 400 13px/1.35 var(--font-sans); color: var(--fg-body); text-align: center; max-width: 180px; }
+ .tl-line { flex: 1; height: 2px; background: #C8D2DF; }
 </style>
 </head>
 <body>
@@ -54,20 +55,6 @@
  <div class="sb-label">Founding Story (expanded)</div>
  <div class="sb-body">Fleetwood Corporation was founded in 1964 in Perth, Western Australia, as a caravan manufacturer serving the postwar Australian touring market [PROBABLE]. The business listed on the ASX in 1987 and built out a recreational vehicles division alongside an opportunistic move into modular and transportable building, recognising that the same factory disciplines that produced a caravan, namely the welded steel chassis, the standardised cabinetry, the integrated services, applied equally well to a mining camp, a school classroom, or a defence accommodation block [PROBABLE]. The founding logic was therefore not "leisure" or "construction" but "factory-built mobile shelter," a category Fleetwood arguably defined in the Australian context before it had a name. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
  </div>
-
- <div class="timeline-bar" style="margin-top:22px;">
- <div class="tl-inner">
- <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">1964</div><div class="tl-label">Founded Perth WA, caravan OEM</div></div>
- <div class="tl-line"></div>
- <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">1987</div><div class="tl-label">ASX listing (FWD)</div></div>
- <div class="tl-line"></div>
- <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">2000s</div><div class="tl-label">Modular construction expands</div></div>
- <div class="tl-line"></div>
- <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">2024</div><div class="tl-label">Searipple Village key earnings driver</div></div>
- <div class="tl-line"></div>
- <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">2025</div><div class="tl-label">FY25 revenue AUD 505.2M, +20.3% YoY</div></div>
- </div>
- </div>
  </div>
 
  <div class="insight-col">
@@ -86,6 +73,21 @@
  <div class="ic-val">"Factory-built mobile shelter"</div>
  <div class="ic-body">One industrial logic underpins both the caravan and the modular construction arm: build in a factory, deploy wherever Australians are. The category did not have a name when Fleetwood defined it. <span class="sc-chip sc-chip--hypothesised">Hypothesised</span></div>
  </div>
+ </div>
+ </div>
+
+ <!-- Timeline: full-page-width, sits below the two-column dna-layout -->
+ <div class="timeline-bar">
+ <div class="tl-inner">
+ <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">1964</div><div class="tl-label">Founded Perth WA, caravan OEM</div></div>
+ <div class="tl-line"></div>
+ <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">1987</div><div class="tl-label">ASX listing (FWD)</div></div>
+ <div class="tl-line"></div>
+ <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">2000s</div><div class="tl-label">Modular construction expands</div></div>
+ <div class="tl-line"></div>
+ <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">2024</div><div class="tl-label">Searipple Village key earnings driver</div></div>
+ <div class="tl-line"></div>
+ <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">2025</div><div class="tl-label">FY25 revenue AUD 505.2M, +20.3% YoY</div></div>
  </div>
  </div>
 
