@@ -715,6 +715,32 @@ html, body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+
+/* === FLEETWOOD DISCOVERY REPORT divider band — sidebar separator between
+   StratCadet Overview (sec 0) and the actual report content (sec 1+).
+   Locked per Stuart 2026-05-25 23:55 AEST. === */
+.report-divider-band {
+  background: #FFD200;
+  color: #1A1A1A;
+  padding: 16px 14px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 2px;
+}
+.report-divider-band .rd-brand {
+  font: 700 11px/1 'Open Sans', -apple-system, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(26,26,26,0.62);
+  margin-bottom: 6px;
+}
+.report-divider-band .rd-main {
+  font: 900 16px/1.1 'Open Sans', -apple-system, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1A1A1A;
+}
+
 </style>
 </head>
 <body>
@@ -984,6 +1010,11 @@ function renderIndexView() {
             ${sec.subs.map(sub => `<div class="index-sub-item" data-slide="${sub.slide}">${sub.label}</div>`).join('')}
           </div>
         </div>
+        ${i === 0 ? `
+          <div class="report-divider-band">
+            <div class="rd-brand">Fleetwood</div>
+            <div class="rd-main">Discovery Report</div>
+          </div>` : ''}
       `).join('')}
     </div>
   `;
@@ -1014,6 +1045,11 @@ function renderCadetView() {
             ${sec.subs.map(sub => `<div class="index-sub-item" data-slide="${sub.slide}">${sub.label}</div>`).join('')}
           </div>
         </div>
+        ${i === 0 ? `
+          <div class="report-divider-band">
+            <div class="rd-brand">Fleetwood</div>
+            <div class="rd-main">Discovery Report</div>
+          </div>` : ''}
       `).join('')}
     </div>
     <div class="chat-area">
