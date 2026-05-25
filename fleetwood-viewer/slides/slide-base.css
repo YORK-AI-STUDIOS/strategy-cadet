@@ -263,7 +263,7 @@ html, body {
    Added 2026-05-25. Replaces agency logo block on dividers + back cover when
    the deck is personalised to a specific recipient (e.g. Fleetwood → AC). */
 .divider-prepared .dp-name,
-.back-cover .sc-prepared .ac-name {
+.sc-prepared .ac-name {
   font: 700 22px/1.2 var(--font-sans);
   color: var(--fg-on-dark);
   letter-spacing: -0.005em;
