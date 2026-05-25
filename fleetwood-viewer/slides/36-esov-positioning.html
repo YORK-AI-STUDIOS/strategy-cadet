@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .esov-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 420px; gap: 28px; align-items: start; }
+  /* Much bigger chart on left, ESOV classification block anchored to the right edge of the page (Stuart 2026-05-26 08:34) */
+  .esov-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1180px) 460px; gap: 120px; align-items: start; }
 
   .scatter-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
   .scatter-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 8px; }
@@ -41,7 +42,7 @@
       <div class="scatter-title">Binet and Field ESOV Scatter -- Share of Voice vs Share of Market</div>
       <div class="scatter-sub">Brand bubble position: estimated Share of Search (x-axis) vs relative market share proxy (y-axis). Fair-share diagonal: brands above the line are ESOV-positive (Defence or Expansion). Brands below are Under-Indexed. Fleetwood highlighted. <span class="sc-chip sc-chip--estimated">Estimated</span></div>
 
-      <svg viewBox="0 0 820 400" preserveAspectRatio="xMidYMid meet" aria-label="ESOV Binet and Field scatter chart" style="width:100%; max-height:380px; display:block;">
+      <svg viewBox="0 0 820 400" preserveAspectRatio="xMidYMid meet" aria-label="ESOV Binet and Field scatter chart" style="width:100%; max-height:620px; display:block;">
         <defs>
           <marker id="arrowX2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L8,3 L0,6 Z" fill="#9AA3AD"/>
