@@ -6,10 +6,12 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  /* Comp-pass 2026-05-26: restructure - pie full-width above, then 2-col stats+agents | phase3 */
+  /* Comp-pass 2026-05-26 v2: single-column full-width stack (prior 2-col left bottom-heavy vs right 120px callout) */
   .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
   .pie-row { margin-top: 10px; width: 100%; }
-  .src-layout { margin-top: 14px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
+  .src-stack { margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
+  /* legacy class kept harmless for any inline ref */
+  .src-layout { display: contents; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
@@ -134,9 +136,9 @@
 
   </div>
 
-  <div class="src-layout">
+  <div class="src-stack">
 
-    <!-- LEFT: agent summary stats + table -->
+    <!-- Full-width stats band -->
     <div>
       <div class="src-stat-grid">
         <div class="stat-item"><div class="stat-num">~191</div><div class="stat-label">Numbered citations</div></div>
@@ -144,6 +146,10 @@
         <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Discovery phases</div></div>
       </div>
 
+    </div>
+
+    <!-- Full-width agent table -->
+    <div>
       <div class="panel-hd">Agent output summary</div>
       <div class="agent-row">
         <div class="agent-id">Module 01</div>
@@ -187,10 +193,9 @@
         <div class="agent-cites">~30</div>
         <div class="agent-conf">VERIFIED / PROBABLE</div>
       </div>
-
     </div>
 
-    <!-- RIGHT: Phase 3 callout -->
+    <!-- Full-width Phase 3 callout -->
     <div>
       <div class="phase3-box">
         <div class="p3-label">Phase 3 cross-reference finding (resolved)</div>
