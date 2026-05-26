@@ -21,7 +21,6 @@
     } catch (e) { return false; }
   }
   function inject() {
-    if (chromeSuppressed()) return;
     var slide = document.querySelector('.sc-slide');
     if (!slide) return;
     if (slide.dataset.chromeInjected === 'true') return;
@@ -32,14 +31,19 @@
     var page = (script && script.dataset.page) || '';
     var of   = (script && script.dataset.of)   || '';
     var withYork = script && script.dataset.york === 'true';
+    var suppressed = chromeSuppressed();
+
+    // Top-right Cadet logo — ALWAYS injected, even under chrome=off (Stuart 2026-05-26 11:24 AEST).
+    // Chassis viewer suppresses the rest of the chrome but the Cadet wordmark persists across every slide.
+    var cadetHtml = '<div class="sc-chrome-cadet">' +
+      '  <img class="on-white" src="../assets/logos/Strategy-Cadet-logo-blue.png"  alt="Strategy Cadet">' +
+      '  <img class="on-dark"  src="../assets/logos/Strategy-Cadet-logo-white.png" alt="Strategy Cadet">' +
+      '</div>';
+    slide.insertAdjacentHTML('beforeend', cadetHtml);
+
+    if (suppressed) return;
 
     var html = '';
-
-    // Top-right Cadet logo (88px high, swapped white/blue by CSS).
-    html += '<div class="sc-chrome-cadet">';
-    html += '  <img class="on-white" src="../assets/logos/Strategy-Cadet-logo-blue.png"  alt="Strategy Cadet">';
-    html += '  <img class="on-dark"  src="../assets/logos/Strategy-Cadet-logo-white.png" alt="Strategy Cadet">';
-    html += '</div>';
 
     // Bottom-left © line, optionally with York Studios logo on back cover.
     html += '<div class="sc-chrome-copy">';
