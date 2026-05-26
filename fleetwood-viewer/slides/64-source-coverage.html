@@ -6,11 +6,19 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  /* Comp-pass 2026-05-26 v3: single-column stack, all bands tightened so rule-f bottom clearance holds */
+  /* Comp-pass 2026-05-26 v3: single-column stack + source-line lifted to slide-anchor */
   .sc-slide .sc-body-frame { inset: 56px var(--slide-margin-x) 86px; }
   .pie-row { margin-top: 8px; width: 100%; }
   .src-stack { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
   .src-layout { display: contents; }
+  /* Source-line pinned to slide bottom (not body-frame) so content overflow can't compress it off-screen */
+  .sc-slide > .sc-source-line {
+    position: absolute;
+    left: var(--slide-margin-x);
+    right: var(--slide-margin-x);
+    bottom: 38px;
+    margin: 0;
+  }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
@@ -203,9 +211,10 @@
     </div>
 
   </div>
-
-  <div class="sc-source-line"><span class="sc-source">p. 64 · Part 09 · Source registry compiled across all agents and extensions, 2026-05-25. Exact citation counts are approximate; the source report carries numbered footnotes [1]-[191+] throughout. The Phase 3 cross-reference log is held separately. Full citation list appears in the Citations appendix (pp. 73-75).</span></div>
   </div>
+
+  <!-- Source-line lifted out of body-frame so it anchors to slide, not the flex container -->
+  <div class="sc-source-line"><span class="sc-source">p. 64 · Part 09 · Source registry compiled across all agents and extensions, 2026-05-25. Exact citation counts are approximate; the source report carries numbered footnotes [1]-[191+] throughout. The Phase 3 cross-reference log is held separately. Full citation list appears in the Citations appendix (pp. 73-75).</span></div>
 </section>
 </div>
 <script src="_scale.js"></script>
