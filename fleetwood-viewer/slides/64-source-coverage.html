@@ -6,13 +6,15 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .src-layout { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 880px) 340px; gap: 24px; align-items: start; }
+  /* Comp-pass 2026-05-26 v6: right col widened so agent descriptions wrap to 2 lines, not 6. Top inset closed. */
+  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
+  .src-layout { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 820px) 1fr; gap: 32px; align-items: start; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
   .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
 
-  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 6px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 4px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
   .agent-row:last-child { border-bottom: none; }
   .agent-id { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--mr-blue-dark); padding-top: 1px; }
   .agent-desc { font: 400 var(--t-caption)/1.35 var(--font-sans); color: var(--fg-body); }
@@ -24,7 +26,7 @@
   .stat-num { font: 700 22px/1 var(--font-sans); color: #fff; }
   .stat-label { font: 400 9px/1.2 var(--font-sans); color: rgba(255,255,255,0.65); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
 
-  .phase3-box { padding: 10px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 8px; }
+  .phase3-box { padding: 8px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 8px; }
   .p3-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A6B4A; margin-bottom: 4px; }
   .p3-text { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
 </style>
