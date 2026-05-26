@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  .pm-layout { margin-top: 12px; display: flex; flex-direction: column; gap: 12px; }
+  /* Comp-pass 2026-05-26: rule c top + rule f bottom clearance */
+  .sc-slide .sc-body-frame { inset: 56px var(--slide-margin-x) 96px; }
+  .pm-layout { margin-top: 8px; display: flex; flex-direction: column; gap: 12px; }
 
   .heatmap-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 4px; }
   .heatmap-sub { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); margin-bottom: 6px; }
