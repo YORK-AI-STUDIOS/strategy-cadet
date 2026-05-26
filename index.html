@@ -191,8 +191,13 @@
   (function(){
     // SHA-256 of "Electrons"
     var HASH='2b8d70ae423705ba45b06aa80ad1c4996ebb358053f7678e91fe15eaba05af38';
-    var KEY='sc-deck-unlocked-v2';
-    var EMAIL_KEY='sc-deck-email-v2';
+    // SHA-256 of approved emails (lowercase, trimmed). Add new emails here as needed.
+    var EMAIL_ALLOWLIST=[
+      'fa52377853f8c63b8595282dcdaafc8358047d80a4834f6898899c55dd1f8bbb', // stuart.gosling@yorkstudios.tv
+      '13d5d289a5ce57b2256bc7ef31a9b32f209142ab74f6b197bcdda83fc6ce4b62'  // ac@ay-ce.com
+    ];
+    var KEY='sc-deck-unlocked-v3';
+    var EMAIL_KEY='sc-deck-email-v3';
     // Google Forms submit endpoint + field IDs (Strategy Cadet Access Log)
     var LOG_URL='https://docs.google.com/forms/d/e/1FAIpQLScwYCmHp_6CnmsnucZHXVjaoVqXBPrzQgrHcjnsZY_BEZTN_g/formResponse';
     var FIELDS={email:'entry.131814768',timestamp:'entry.271968555',userAgent:'entry.1228102811',referrer:'entry.829402929'};
@@ -232,6 +237,11 @@
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
     }
 
+    async function sha256(s){
+      var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+      return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+    }
+
     async function check(){
       var email=document.getElementById('email-input').value.trim().toLowerCase();
       var pw=document.getElementById('pw-input').value;
@@ -240,9 +250,13 @@
         errEl.textContent='Enter a valid email address';
         return;
       }
-      var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(pw));
-      var hex=Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
-      if(hex===HASH){
+      var emailHash=await sha256(email);
+      if(EMAIL_ALLOWLIST.indexOf(emailHash)===-1){
+        errEl.textContent='This email is not authorised. Contact Stuart for access.';
+        return;
+      }
+      var pwHash=await sha256(pw);
+      if(pwHash===HASH){
         localStorage.setItem(KEY,'yes');
         localStorage.setItem(EMAIL_KEY,email);
         logAccess(email);
