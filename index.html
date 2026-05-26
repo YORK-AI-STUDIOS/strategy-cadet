@@ -405,6 +405,20 @@
     ];
     var KEY='sc-deck-unlocked-v3';
     var EMAIL_KEY='sc-deck-email-v3';
+    var TS_KEY='sc-deck-unlocked-ts-v3';
+    var SESSION_TTL_MS=3*60*60*1000; // 3 hours
+
+    function isUnlocked(){
+      if(localStorage.getItem(KEY)!=='yes') return false;
+      var ts=parseInt(localStorage.getItem(TS_KEY)||'0',10);
+      if(!ts || (Date.now()-ts) > SESSION_TTL_MS){
+        localStorage.removeItem(KEY);
+        localStorage.removeItem(TS_KEY);
+        // keep EMAIL_KEY so the email field could be prefilled later if desired
+        return false;
+      }
+      return true;
+    }
 
     // Google Forms submit endpoint + field IDs (Strategy Cadet Access Log)
     var LOG_URL='https://docs.google.com/forms/d/e/1FAIpQLScwYCmHp_6CnmsnucZHXVjaoVqXBPrzQgrHcjnsZY_BEZTN_g/formResponse';
@@ -464,6 +478,7 @@
       if(pwHash===HASH){
         localStorage.setItem(KEY,'yes');
         localStorage.setItem(EMAIL_KEY,email);
+        localStorage.setItem(TS_KEY,String(Date.now()));
         logAccess(email);
         setSignedIn(email);
         show('reports');
@@ -476,7 +491,7 @@
 
     // Wire up handlers
     document.getElementById('login-cta').addEventListener('click', function(){
-      if(localStorage.getItem(KEY)==='yes'){
+      if(isUnlocked()){
         setSignedIn(localStorage.getItem(EMAIL_KEY)||'');
         show('reports');
       } else {
@@ -493,12 +508,13 @@
     document.getElementById('signout').addEventListener('click', function(){
       localStorage.removeItem(KEY);
       localStorage.removeItem(EMAIL_KEY);
+      localStorage.removeItem(TS_KEY);
       setSignedIn('');
       show('splash');
     });
 
-    // Init: always start on splash. Pre-populate signed-in label if returning visitor.
-    if(localStorage.getItem(KEY)==='yes'){
+    // Init: always start on splash. Pre-populate signed-in label if still within 3h session.
+    if(isUnlocked()){
       setSignedIn(localStorage.getItem(EMAIL_KEY)||'');
     }
     show('splash');
