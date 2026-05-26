@@ -6,30 +6,29 @@
 <link rel="stylesheet" href="slide-base.css">
 <link rel="stylesheet" href="palette-fleetwood.css">
 <style>
-  /* Comp-pass 2026-05-26 v2: single-column full-width stack (prior 2-col left bottom-heavy vs right 120px callout) */
-  .sc-slide .sc-body-frame { inset: 60px var(--slide-margin-x) 80px; }
-  .pie-row { margin-top: 10px; width: 100%; }
-  .src-stack { margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
-  /* legacy class kept harmless for any inline ref */
+  /* Comp-pass 2026-05-26 v3: single-column stack, all bands tightened so rule-f bottom clearance holds */
+  .sc-slide .sc-body-frame { inset: 56px var(--slide-margin-x) 86px; }
+  .pie-row { margin-top: 8px; width: 100%; }
+  .src-stack { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
   .src-layout { display: contents; }
 
   .chart-title { font: 700 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mr-blue-dark); margin-bottom: 5px; }
 
   .panel-hd { font: 700 10px/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--mr-blue-dark); border-bottom: 2px solid var(--mr-blue-dark); padding-bottom: 5px; margin-bottom: 8px; }
 
-  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 6px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
+  .agent-row { display: grid; grid-template-columns: 76px 1fr 52px 90px; gap: 8px; padding: 4px 0; border-bottom: 1px solid #E8EEF6; align-items: start; }
   .agent-row:last-child { border-bottom: none; }
   .agent-id { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--mr-blue-dark); padding-top: 1px; }
   .agent-desc { font: 400 var(--t-caption)/1.35 var(--font-sans); color: var(--fg-body); }
   .agent-cites { font: 700 var(--t-caption)/1 var(--font-sans); color: var(--fg-heading); text-align: right; padding-top: 1px; }
   .agent-conf { font: 400 10px/1.2 var(--font-sans); color: var(--fg-muted); text-align: right; }
 
-  .src-stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
-  .stat-item { padding: 10px 12px; background: var(--mr-blue-dark); text-align: center; }
+  .src-stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 0; }
+  .stat-item { padding: 7px 12px; background: var(--mr-blue-dark); text-align: center; }
   .stat-num { font: 700 22px/1 var(--font-sans); color: #fff; }
   .stat-label { font: 400 9px/1.2 var(--font-sans); color: rgba(255,255,255,0.65); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
 
-  .phase3-box { padding: 10px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 8px; }
+  .phase3-box { padding: 8px 12px; background: #E6F4EC; border-left: 4px solid #3A6B4A; margin-top: 0; }
   .p3-label { font: 700 9px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: #3A6B4A; margin-bottom: 4px; }
   .p3-text { font: 400 var(--t-caption)/1.4 var(--font-sans); color: var(--fg-body); }
 </style>
@@ -69,7 +68,7 @@
         7. Registry: 6.3% = 35.6px. cumul: 170.3+21.5*3.6=170.3+77.4=247.7 -> rotate(247.7)
       -->
 
-      <svg viewBox="0 0 820 260" preserveAspectRatio="xMidYMid meet" aria-label="Source type pie chart" style="width:100%; max-height:255px; display:block;">
+      <svg viewBox="0 0 820 260" preserveAspectRatio="xMidYMid meet" aria-label="Source type pie chart" style="width:100%; max-height:220px; display:block;">
 
         <!-- Segment 1: ASX filings (dark blue) -->
         <circle cx="140" cy="130" r="90" stroke="#1B3A5C" stroke-width="52" fill="none"
